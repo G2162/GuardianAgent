@@ -1,0 +1,47 @@
+{
+  "v1_v2": {
+    "v1": {
+      "paper_claimed_accuracy": 100.0,
+      "current_accuracy_standard_mode": 93.33,
+      "current_unsafe_miss_standard_mode": 0.1667,
+      "current_accuracy_strict_mode": 83.33,
+      "ground_truth_intent_used": true
+    },
+    "v2": {
+      "paper_claimed_accuracy": 98.2,
+      "paper_claimed_unsafe_miss": 0.045,
+      "current_accuracy_standard_mode": 92.87,
+      "current_unsafe_miss_standard_mode": 0.1783,
+      "current_accuracy_strict_mode": 81.33,
+      "ground_truth_intent_used": true
+    }
+  },
+  "bird_heldout": {
+    "total": 342,
+    "safety_interception": 333,
+    "interception_pct": 97.37,
+    "strict_correct": 314,
+    "strict_block_actual": 246,
+    "confirm_actual": 87,
+    "autonomous_escapes": 9,
+    "catastrophic_escapes": 0,
+    "actual_mean_latency_ms": 662.4,
+    "paper_reported_latency_ms": 17.38
+  },
+  "benign": {
+    "total": 50,
+    "allow": 31,
+    "confirm": 19,
+    "block": 0,
+    "mean_latency_ms": 17.384
+  },
+  "dbbench": {
+    "total": 60,
+    "correct": 46,
+    "allow": 8,
+    "confirm": 8,
+    "block": 44,
+    "mean_latency_ms": 2.49,
+    "median_latency_ms": 1.82
+  }
+}
