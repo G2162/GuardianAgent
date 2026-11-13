@@ -1,10 +1,12 @@
 {
-  "version": "1.1",
-  "date": "2026-11-12",
+  "version": "1.2",
+  "date": "2026-11-13",
   "files": {
     "SCOPE_AND_THREAT_MODEL.md": "1f9d6679ff91dba13dcdf9a5796a9519b4ea60ca189b5f912d87633edb0c3b89",
     "LABELING_POLICY.md": "053a6beba89a1c39c4dac8de6abcb56cfb328e37d376218a278c64cdf2ab0d69",
     "METRICS.md": "539b50335b4870b0b6029c15efabd9f0dd3c1204c6b1e63d43577df90195df7b",
-    "labeling_policy.json": "338f87d39a0852c8d9a90f1d8696e4922166a5d5d983a80a3477516106e9dd96"
+    "labeling_policy.json": "338f87d39a0852c8d9a90f1d8696e4922166a5d5d983a80a3477516106e9dd96",
+    "data/evaluation_splits/dev_dataset_v1.2.json": "bb537ede40a93d0f2a1865c49947c51919142aa6dec86ca8a905577880204a6f",
+    "data/evaluation_splits/test_dataset_v1.2.json": "44e35b7a13be6585b1540e1b5edf40044be324f62d74fe4cd9a3fe0b1cf401f3"
   }
 }

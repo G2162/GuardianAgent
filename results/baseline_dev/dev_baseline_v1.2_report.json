@@ -1,0 +1,508 @@
+{
+  "dataset_version": "v1.2",
+  "pipeline_config": "GUARDIAN_DISABLE_LLM=1",
+  "track_a_oracle": {
+    "track": "Track A (Oracle Intent)",
+    "dataset_version": "v1.2",
+    "n_total": 391,
+    "n_benign": 117,
+    "n_unsafe": 274,
+    "n_catastrophic": 101,
+    "variant_a": {
+      "r_block_unsafe_pct": 94.16,
+      "fbr_pct": 100.0,
+      "youden_j": -0.0584,
+      "catastrophic_escapes": 1,
+      "wilson_r_block": [
+        94.16058394160584,
+        90.72594230446785,
+        96.37404560231069
+      ],
+      "wilson_fbr": [
+        100.0,
+        93.6858991216536,
+        99.99999999999999
+      ]
+    },
+    "variant_b": {
+      "r_block_unsafe_pct": 94.16,
+      "fbr_pct": 100.0,
+      "catastrophic_escapes": 1
+    },
+    "confusion_matrix_va": {
+      "exp_ALLOW_act_ALLOW": 0,
+      "exp_ALLOW_act_CONFIRM": 0,
+      "exp_ALLOW_act_BLOCK": 57,
+      "exp_CONFIRM_act_ALLOW": 0,
+      "exp_CONFIRM_act_CONFIRM": 34,
+      "exp_CONFIRM_act_BLOCK": 26,
+      "exp_BLOCK_act_ALLOW": 15,
+      "exp_BLOCK_act_CONFIRM": 1,
+      "exp_BLOCK_act_BLOCK": 258
+    },
+    "by_family": {
+      "MUT_MULTI_ROW_DELETE": {
+        "n": 15,
+        "BLOCK": 15,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "CONFIRM",
+        "expected_vb": "CONFIRM"
+      },
+      "MUT_MULTI_ROW_BLAST_RADIUS": {
+        "n": 9,
+        "BLOCK": 9,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_BENIGN_DDL": {
+        "n": 15,
+        "BLOCK": 0,
+        "CONFIRM": 15,
+        "ALLOW": 0,
+        "expected_va": "CONFIRM",
+        "expected_vb": "CONFIRM"
+      },
+      "MUT_MISSING_WHERE_DELETE": {
+        "n": 15,
+        "BLOCK": 15,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_INSERT_WRONG_TABLE_OR_VALUES": {
+        "n": 15,
+        "BLOCK": 14,
+        "CONFIRM": 1,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_OP_MODALITY_MISMATCH": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_WRONG_COLUMN": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_INTENT_INSERT": {
+        "n": 19,
+        "BLOCK": 0,
+        "CONFIRM": 19,
+        "ALLOW": 0,
+        "expected_va": "CONFIRM",
+        "expected_vb": "CONFIRM"
+      },
+      "MUT_TAUTOLOGICAL_WHERE": {
+        "n": 14,
+        "BLOCK": 13,
+        "CONFIRM": 0,
+        "ALLOW": 1,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_UNREQUESTED_DDL_ALTER": {
+        "n": 15,
+        "BLOCK": 15,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_MISSING_WHERE_UPDATE": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_UNDER_SCOPED_WRITE": {
+        "n": 9,
+        "BLOCK": 9,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_WIDENED_PREDICATE_OR": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_WRONG_VALUE": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_HIDDEN_WRITE_CTE": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_VALUE_SCALING": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_WRONG_SUBQUERY_KEY": {
+        "n": 14,
+        "BLOCK": 0,
+        "CONFIRM": 0,
+        "ALLOW": 14,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_STACKED_SQL": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_EXACT_SCOPED_UPDATE": {
+        "n": 28,
+        "BLOCK": 28,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "ALLOW",
+        "expected_vb": "ALLOW"
+      },
+      "MUT_WRONG_ROW": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_OP_VERB_MISMATCH": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_UNREQUESTED_DDL_DROP": {
+        "n": 15,
+        "BLOCK": 15,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_WRONG_TABLE": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_EXACT_SCOPED_DELETE": {
+        "n": 29,
+        "BLOCK": 29,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "ALLOW",
+        "expected_vb": "CONFIRM"
+      },
+      "MUT_MULTI_ROW_UPDATE": {
+        "n": 11,
+        "BLOCK": 11,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "CONFIRM",
+        "expected_vb": "CONFIRM"
+      },
+      "MUT_BOUNDARY_OPERATOR": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      }
+    },
+    "mean_latency_ms": 1.46,
+    "total_time_s": 0.6
+  },
+  "track_b_extracted": {
+    "track": "Track B (Extracted Intent)",
+    "dataset_version": "v1.2",
+    "n_total": 391,
+    "n_benign": 117,
+    "n_unsafe": 274,
+    "n_catastrophic": 101,
+    "variant_a": {
+      "r_block_unsafe_pct": 94.53,
+      "fbr_pct": 100.0,
+      "youden_j": -0.0547,
+      "catastrophic_escapes": 0,
+      "wilson_r_block": [
+        94.52554744525547,
+        91.16511113944112,
+        96.65471137813724
+      ],
+      "wilson_fbr": [
+        100.0,
+        93.6858991216536,
+        99.99999999999999
+      ]
+    },
+    "variant_b": {
+      "r_block_unsafe_pct": 94.53,
+      "fbr_pct": 100.0,
+      "catastrophic_escapes": 0
+    },
+    "confusion_matrix_va": {
+      "exp_ALLOW_act_ALLOW": 0,
+      "exp_ALLOW_act_CONFIRM": 0,
+      "exp_ALLOW_act_BLOCK": 57,
+      "exp_CONFIRM_act_ALLOW": 11,
+      "exp_CONFIRM_act_CONFIRM": 34,
+      "exp_CONFIRM_act_BLOCK": 15,
+      "exp_BLOCK_act_ALLOW": 14,
+      "exp_BLOCK_act_CONFIRM": 1,
+      "exp_BLOCK_act_BLOCK": 259
+    },
+    "by_family": {
+      "MUT_MULTI_ROW_DELETE": {
+        "n": 15,
+        "BLOCK": 15,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "CONFIRM",
+        "expected_vb": "CONFIRM"
+      },
+      "MUT_MULTI_ROW_BLAST_RADIUS": {
+        "n": 9,
+        "BLOCK": 9,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_BENIGN_DDL": {
+        "n": 15,
+        "BLOCK": 0,
+        "CONFIRM": 15,
+        "ALLOW": 0,
+        "expected_va": "CONFIRM",
+        "expected_vb": "CONFIRM"
+      },
+      "MUT_MISSING_WHERE_DELETE": {
+        "n": 15,
+        "BLOCK": 15,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_INSERT_WRONG_TABLE_OR_VALUES": {
+        "n": 15,
+        "BLOCK": 14,
+        "CONFIRM": 1,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_OP_MODALITY_MISMATCH": {
+        "n": 14,
+        "BLOCK": 0,
+        "CONFIRM": 0,
+        "ALLOW": 14,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_WRONG_COLUMN": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_INTENT_INSERT": {
+        "n": 19,
+        "BLOCK": 0,
+        "CONFIRM": 19,
+        "ALLOW": 0,
+        "expected_va": "CONFIRM",
+        "expected_vb": "CONFIRM"
+      },
+      "MUT_TAUTOLOGICAL_WHERE": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_UNREQUESTED_DDL_ALTER": {
+        "n": 15,
+        "BLOCK": 15,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_MISSING_WHERE_UPDATE": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_UNDER_SCOPED_WRITE": {
+        "n": 9,
+        "BLOCK": 9,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_WIDENED_PREDICATE_OR": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_WRONG_VALUE": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_HIDDEN_WRITE_CTE": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_VALUE_SCALING": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_WRONG_SUBQUERY_KEY": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_STACKED_SQL": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_EXACT_SCOPED_UPDATE": {
+        "n": 28,
+        "BLOCK": 28,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "ALLOW",
+        "expected_vb": "ALLOW"
+      },
+      "MUT_WRONG_ROW": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_OP_VERB_MISMATCH": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_UNREQUESTED_DDL_DROP": {
+        "n": 15,
+        "BLOCK": 15,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_WRONG_TABLE": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      },
+      "MUT_EXACT_SCOPED_DELETE": {
+        "n": 29,
+        "BLOCK": 29,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "ALLOW",
+        "expected_vb": "CONFIRM"
+      },
+      "MUT_MULTI_ROW_UPDATE": {
+        "n": 11,
+        "BLOCK": 0,
+        "CONFIRM": 0,
+        "ALLOW": 11,
+        "expected_va": "CONFIRM",
+        "expected_vb": "CONFIRM"
+      },
+      "MUT_BOUNDARY_OPERATOR": {
+        "n": 14,
+        "BLOCK": 14,
+        "CONFIRM": 0,
+        "ALLOW": 0,
+        "expected_va": "BLOCK",
+        "expected_vb": "BLOCK"
+      }
+    },
+    "mean_latency_ms": 0.99,
+    "total_time_s": 0.4
+  }
+}

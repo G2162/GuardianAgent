@@ -78,3 +78,50 @@ As part of the verification and repair audit conducted on 2026-11-12 prior to co
 | **Scope Timeout Requirement (§5.2)** | Added mandatory database scope-check timeout (e.g., 500 ms) with safe fallback to `CONFIRM`/`BLOCK`. | Prevents unindexed table scans during gateway verification from causing denial-of-service or pipeline stalls. |
 | **TOCTOU Invariant (§5.3)** | Added explicit disclosure of Time-of-Check to Time-of-Use concurrency race conditions between `COUNT(*)` verification and execution; mandated serializable isolation or table locks for strict production guarantees. | Acknowledges fundamental relational concurrency constraints in pre-execution safety verification. |
 
+
+
+---
+
+## v1.2 Dataset Regeneration — 2026-11-13
+
+**Amendment document:** `PREREG_AMENDMENT_v1.2.md` (committed as `2e25536`, tagged `prereg-v1.2-amendment`)
+
+### Context
+
+Dataset QA conducted under v1.1 (documented in `DATA_DEFECTS.md`) found three structural defects:
+1. **55/55 MUT_MULTI_ROW_UPDATE benign cases were no-ops** (SET col = col): pipeline VALUE_MISMATCH detector would reject all of them regardless of intent match, invalidating that family's contribution to benign OER.
+2. **51 cross-family SQL collisions** between MUT_TAUTOLOGICAL_WHERE and MUT_WIDENED_PREDICATE_OR: both families used `OR 1=1`, making them indistinguishable by SQL alone.
+3. **Single tautology form**: MUT_TAUTOLOGICAL_WHERE used only one syntactic pattern (OR 1=1), failing to test the full breadth of SQL injection tautologies.
+4. **Intent schema mismatch**: dataset stored `ground_truth_intent.table` but `intent_sql_checker.py` reads `intent.target`; a mechanical `intent_spec` field (IntentSpec v2) is now added to all cases.
+
+**No test-split pipeline evaluations were run before this regeneration.** The dev baseline (dev_baseline_report.json) motivated the QA investigation but no test data was evaluated. All test-split reads were logged as `type=data_qa` in `results/test_runs.log`.
+
+### Hashes Before (v1.1, superseded)
+
+| File | SHA-256 |
+|------|---------|
+| `data/evaluation_splits/dev_dataset.json` | `b4ed4c55bdb613ef1da03726648d01f155a139844f5ae169fbd630bf9e42218d` |
+| `data/evaluation_splits/test_dataset.json` | `fc6a2e3c1f6840a919bd188813a6bc0cedf4dc64e4a5ea075ff8b53248be420b` |
+
+### Fixes Applied (generator: `generate_dataset_v1.2.py`)
+
+| Fix | Detail |
+|-----|--------|
+| MUT_MULTI_ROW_UPDATE no-ops | SET clause changed from `col=col` to `col='UPDATED'`; verified n_changed == n_matched ≥ 2 via snapshot diff; pure-junction-table cases (10 total) dropped as unfixable |
+| MUT_TAUTOLOGICAL_WHERE | 8 syntactic forms: TAUT_OR_NUM_EQ, TAUT_OR_TRUE, TAUT_OR_STR_EQ, TAUT_REPLACE_NUM_EQ, TAUT_COL_EQ_COL, TAUT_NOT_FALSE, TAUT_NUM_GT, TAUT_NULL_EXHAUST; DEV uses 5 forms, TEST uses all 8 (3 TEST-only forms guaranteed) |
+| MUT_WIDENED_PREDICATE_OR | Genuine disjunction: WHERE pk=v1 OR pk=v2 (finding second row in same table); 100% have n_matched > 1; 0% == table_size |
+| IntentSpec v2 | `intent_spec` field added to all cases, extracted mechanically from gold/base SQL via sqlglot; never hand-written |
+| Collision guard | Zero cross-mutation-family SQL collisions (MUT_OP_VERB_MISMATCH and MUT_OP_MODALITY_MISMATCH exempted as same-SQL-by-design families) |
+| Dropped cases | 10 MUT_MULTI_ROW_UPDATE + their BLAST_RADIUS/UNDER_SCOPED_WRITE dependents dropped; total DEV: 403 → 391, TEST: 1057 → 1034 |
+
+### Hashes After (v1.2)
+
+| File | SHA-256 |
+|------|---------|
+| `data/evaluation_splits/dev_dataset_v1.2.json` | `bb537ede40a93d0f2a1865c49947c51919142aa6dec86ca8a905577880204a6f` |
+| `data/evaluation_splits/test_dataset_v1.2.json` | `44e35b7a13be6585b1540e1b5edf40044be324f62d74fe4cd9a3fe0b1cf401f3` |
+
+### No Policy Changes
+
+`labeling_policy.json`, `LABELING_POLICY.md`, `METRICS.md`, and `SCOPE_AND_THREAT_MODEL.md` are **unchanged**. No family ID, expected decision, or catastrophic flag was modified. The drop of unfixable cases does not constitute a policy change.
+
