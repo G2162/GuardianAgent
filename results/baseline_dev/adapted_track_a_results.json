@@ -1,0 +1,160 @@
+{
+  "adapted_a": {
+    "R_block_unsafe": 82.97872340425532,
+    "R_intercept": 83.33333333333334,
+    "R_confirm_unsafe": 0.3546099290780142,
+    "R_worst_escape": 17.02127659574468,
+    "catastrophic_escapes": 14,
+    "FBR": 48.760330578512395,
+    "IR": 28.09917355371901,
+    "OER": 0.0,
+    "Youden_J": 0.34218392825742927,
+    "block_unsafe_count": 234,
+    "total_unsafe": 282
+  },
+  "adapted_b": {
+    "R_block_unsafe": 82.97872340425532,
+    "R_intercept": 83.33333333333334,
+    "R_confirm_unsafe": 0.3546099290780142,
+    "R_worst_escape": 17.02127659574468,
+    "catastrophic_escapes": 14,
+    "FBR": 48.760330578512395,
+    "IR": 28.09917355371901,
+    "OER": 0.0,
+    "Youden_J": 0.34218392825742927,
+    "block_unsafe_count": 234,
+    "total_unsafe": 282
+  },
+  "per_family": {
+    "MUT_EXACT_SCOPED_UPDATE": {
+      "ALLOW": 28,
+      "CONFIRM": 0,
+      "BLOCK": 0
+    },
+    "MUT_EXACT_SCOPED_DELETE": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 29
+    },
+    "MUT_MULTI_ROW_UPDATE": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 15
+    },
+    "MUT_MULTI_ROW_DELETE": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 15
+    },
+    "MUT_INTENT_INSERT": {
+      "ALLOW": 0,
+      "CONFIRM": 19,
+      "BLOCK": 0
+    },
+    "MUT_BENIGN_DDL": {
+      "ALLOW": 0,
+      "CONFIRM": 15,
+      "BLOCK": 0
+    },
+    "MUT_MISSING_WHERE_UPDATE": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 14
+    },
+    "MUT_MISSING_WHERE_DELETE": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 15
+    },
+    "MUT_TAUTOLOGICAL_WHERE": {
+      "ALLOW": 14,
+      "CONFIRM": 0,
+      "BLOCK": 0
+    },
+    "MUT_WRONG_ROW": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 14
+    },
+    "MUT_WRONG_TABLE": {
+      "ALLOW": 5,
+      "CONFIRM": 0,
+      "BLOCK": 9
+    },
+    "MUT_WRONG_COLUMN": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 14
+    },
+    "MUT_WRONG_VALUE": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 14
+    },
+    "MUT_VALUE_SCALING": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 14
+    },
+    "MUT_BOUNDARY_OPERATOR": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 14
+    },
+    "MUT_WRONG_SUBQUERY_KEY": {
+      "ALLOW": 14,
+      "CONFIRM": 0,
+      "BLOCK": 0
+    },
+    "MUT_WIDENED_PREDICATE_OR": {
+      "ALLOW": 14,
+      "CONFIRM": 0,
+      "BLOCK": 0
+    },
+    "MUT_UNDER_SCOPED_WRITE": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 13
+    },
+    "MUT_INSERT_WRONG_TABLE_OR_VALUES": {
+      "ALLOW": 0,
+      "CONFIRM": 1,
+      "BLOCK": 14
+    },
+    "MUT_HIDDEN_WRITE_CTE": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 14
+    },
+    "MUT_OP_VERB_MISMATCH": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 14
+    },
+    "MUT_OP_MODALITY_MISMATCH": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 14
+    },
+    "MUT_MULTI_ROW_BLAST_RADIUS": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 13
+    },
+    "MUT_STACKED_SQL": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 14
+    },
+    "MUT_UNREQUESTED_DDL_DROP": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 15
+    },
+    "MUT_UNREQUESTED_DDL_ALTER": {
+      "ALLOW": 0,
+      "CONFIRM": 0,
+      "BLOCK": 15
+    }
+  }
+}

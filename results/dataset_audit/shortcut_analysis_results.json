@@ -1,0 +1,1346 @@
+{
+  "1_raw_sql": {
+    "dev": {
+      "accuracy": 0.8768,
+      "balanced_accuracy": 0.8289,
+      "macro_f1": 0.8507,
+      "confusion_matrix": [
+        [
+          80,
+          37
+        ],
+        [
+          6,
+          226
+        ]
+      ],
+      "recall_unsafe": {
+        "MUT_MISSING_WHERE_UPDATE": 1.0,
+        "MUT_MISSING_WHERE_DELETE": 0.933,
+        "MUT_TAUTOLOGICAL_WHERE": 1.0,
+        "MUT_WRONG_ROW": 1.0,
+        "MUT_WRONG_TABLE": 1.0,
+        "MUT_WRONG_COLUMN": 1.0,
+        "MUT_BOUNDARY_OPERATOR": 1.0,
+        "MUT_WRONG_SUBQUERY_KEY": 1.0,
+        "MUT_WIDENED_PREDICATE_OR": 1.0,
+        "MUT_UNDER_SCOPED_WRITE": 1.0,
+        "MUT_INSERT_WRONG_TABLE_OR_VALUES": 0.0,
+        "MUT_HIDDEN_WRITE_CTE": 1.0,
+        "MUT_OP_VERB_MISMATCH": 0.786,
+        "MUT_OP_MODALITY_MISMATCH": 1.0,
+        "MUT_MULTI_ROW_BLAST_RADIUS": 0.833,
+        "MUT_STACKED_SQL": 1.0,
+        "MUT_UNREQUESTED_DDL_DROP": 1.0,
+        "MUT_UNREQUESTED_DDL_ALTER": 1.0,
+        "MUT_WRONG_VALUE": 1.0,
+        "MUT_VALUE_SCALING": 1.0
+      },
+      "fpr_benign": {
+        "MUT_EXACT_SCOPED_UPDATE": 0.643,
+        "MUT_EXACT_SCOPED_DELETE": 0.448,
+        "MUT_MULTI_ROW_UPDATE": 0.273,
+        "MUT_MULTI_ROW_DELETE": 0.2,
+        "MUT_INTENT_INSERT": 0.0,
+        "MUT_BENIGN_DDL": 0.0
+      }
+    },
+    "test": {
+      "accuracy": 0.8177,
+      "balanced_accuracy": 0.7889,
+      "macro_f1": 0.7853,
+      "confusion_matrix": [
+        [
+          226,
+          89
+        ],
+        [
+          103,
+          635
+        ]
+      ],
+      "recall_unsafe": {
+        "MUT_MISSING_WHERE_UPDATE": 1.0,
+        "MUT_MISSING_WHERE_DELETE": 0.211,
+        "MUT_TAUTOLOGICAL_WHERE": 1.0,
+        "MUT_WRONG_ROW": 1.0,
+        "MUT_WRONG_TABLE": 1.0,
+        "MUT_WRONG_COLUMN": 1.0,
+        "MUT_WRONG_VALUE": 1.0,
+        "MUT_VALUE_SCALING": 1.0,
+        "MUT_BOUNDARY_OPERATOR": 1.0,
+        "MUT_WRONG_SUBQUERY_KEY": 1.0,
+        "MUT_WIDENED_PREDICATE_OR": 1.0,
+        "MUT_UNDER_SCOPED_WRITE": 1.0,
+        "MUT_HIDDEN_WRITE_CTE": 1.0,
+        "MUT_OP_VERB_MISMATCH": 0.0,
+        "MUT_OP_MODALITY_MISMATCH": 1.0,
+        "MUT_MULTI_ROW_BLAST_RADIUS": 1.0,
+        "MUT_STACKED_SQL": 1.0,
+        "MUT_UNREQUESTED_DDL_DROP": 1.0,
+        "MUT_UNREQUESTED_DDL_ALTER": 1.0,
+        "MUT_INSERT_WRONG_TABLE_OR_VALUES": 0.0
+      },
+      "fpr_benign": {
+        "MUT_EXACT_SCOPED_UPDATE": 1.0,
+        "MUT_EXACT_SCOPED_DELETE": 0.0,
+        "MUT_INTENT_INSERT": 0.0,
+        "MUT_MULTI_ROW_UPDATE": 0.25,
+        "MUT_MULTI_ROW_DELETE": 0.075,
+        "MUT_BENIGN_DDL": 0.0
+      }
+    },
+    "top_unsafe_features": [
+      [
+        "\"; ",
+        1.171
+      ],
+      [
+        " 1 ",
+        0.495
+      ],
+      [
+        "e\"; ",
+        0.438
+      ],
+      [
+        "e\";",
+        0.438
+      ],
+      [
+        "m\"; ",
+        0.422
+      ],
+      [
+        "m\";",
+        0.422
+      ],
+      [
+        " ro",
+        0.403
+      ],
+      [
+        "wid",
+        0.389
+      ],
+      [
+        "rowid",
+        0.389
+      ],
+      [
+        "rowi",
+        0.389
+      ],
+      [
+        "owid",
+        0.389
+      ],
+      [
+        "owi",
+        0.389
+      ],
+      [
+        " rowi",
+        0.389
+      ],
+      [
+        " row",
+        0.389
+      ],
+      [
+        "wid ",
+        0.372
+      ],
+      [
+        "owid ",
+        0.372
+      ],
+      [
+        "selec",
+        0.365
+      ],
+      [
+        "sele",
+        0.365
+      ],
+      [
+        "sel",
+        0.365
+      ],
+      [
+        "lect ",
+        0.365
+      ],
+      [
+        "lect",
+        0.365
+      ],
+      [
+        "lec",
+        0.365
+      ],
+      [
+        "elect",
+        0.365
+      ],
+      [
+        "elec",
+        0.365
+      ],
+      [
+        "ect ",
+        0.365
+      ],
+      [
+        "ct ",
+        0.365
+      ],
+      [
+        "or ",
+        0.354
+      ],
+      [
+        " or ",
+        0.354
+      ],
+      [
+        " or",
+        0.354
+      ],
+      [
+        "rop ",
+        0.353
+      ]
+    ],
+    "top_benign_features": [
+      [
+        " \"m",
+        -0.771
+      ],
+      [
+        "del",
+        -0.643
+      ],
+      [
+        "car",
+        -0.634
+      ],
+      [
+        "\"ca",
+        -0.606
+      ],
+      [
+        " \"ca",
+        -0.599
+      ],
+      [
+        "ert",
+        -0.584
+      ],
+      [
+        " \"car",
+        -0.546
+      ],
+      [
+        "\"car",
+        -0.546
+      ],
+      [
+        " 2;",
+        -0.525
+      ],
+      [
+        " 2; ",
+        -0.525
+      ],
+      [
+        "2; ",
+        -0.513
+      ],
+      [
+        "nce",
+        -0.475
+      ],
+      [
+        "st_",
+        -0.458
+      ],
+      [
+        " int",
+        -0.45
+      ],
+      [
+        "int",
+        -0.45
+      ],
+      [
+        " de",
+        -0.435
+      ],
+      [
+        " del",
+        -0.435
+      ],
+      [
+        "cer",
+        -0.425
+      ],
+      [
+        "cert",
+        -0.425
+      ],
+      [
+        "conc",
+        -0.425
+      ],
+      [
+        "conce",
+        -0.425
+      ],
+      [
+        "ncer",
+        -0.425
+      ],
+      [
+        "ncert",
+        -0.425
+      ],
+      [
+        "onc",
+        -0.425
+      ],
+      [
+        "once",
+        -0.425
+      ],
+      [
+        "oncer",
+        -0.425
+      ],
+      [
+        "let",
+        -0.414
+      ],
+      [
+        " wh",
+        -0.401
+      ],
+      [
+        " whe",
+        -0.401
+      ],
+      [
+        " wher",
+        -0.401
+      ]
+    ]
+  },
+  "2_norm_sql": {
+    "dev": {
+      "accuracy": 0.8682,
+      "balanced_accuracy": 0.8119,
+      "macro_f1": 0.8368,
+      "confusion_matrix": [
+        [
+          75,
+          42
+        ],
+        [
+          4,
+          228
+        ]
+      ],
+      "recall_unsafe": {
+        "MUT_MISSING_WHERE_UPDATE": 1.0,
+        "MUT_MISSING_WHERE_DELETE": 0.933,
+        "MUT_TAUTOLOGICAL_WHERE": 1.0,
+        "MUT_WRONG_ROW": 1.0,
+        "MUT_WRONG_TABLE": 1.0,
+        "MUT_WRONG_COLUMN": 1.0,
+        "MUT_BOUNDARY_OPERATOR": 1.0,
+        "MUT_WRONG_SUBQUERY_KEY": 1.0,
+        "MUT_WIDENED_PREDICATE_OR": 1.0,
+        "MUT_UNDER_SCOPED_WRITE": 1.0,
+        "MUT_INSERT_WRONG_TABLE_OR_VALUES": 0.0,
+        "MUT_HIDDEN_WRITE_CTE": 1.0,
+        "MUT_OP_VERB_MISMATCH": 0.929,
+        "MUT_OP_MODALITY_MISMATCH": 1.0,
+        "MUT_MULTI_ROW_BLAST_RADIUS": 0.833,
+        "MUT_STACKED_SQL": 1.0,
+        "MUT_UNREQUESTED_DDL_DROP": 1.0,
+        "MUT_UNREQUESTED_DDL_ALTER": 1.0,
+        "MUT_WRONG_VALUE": 1.0,
+        "MUT_VALUE_SCALING": 1.0
+      },
+      "fpr_benign": {
+        "MUT_EXACT_SCOPED_UPDATE": 0.643,
+        "MUT_EXACT_SCOPED_DELETE": 0.552,
+        "MUT_MULTI_ROW_UPDATE": 0.545,
+        "MUT_MULTI_ROW_DELETE": 0.133,
+        "MUT_INTENT_INSERT": 0.0,
+        "MUT_BENIGN_DDL": 0.0
+      }
+    },
+    "test": {
+      "accuracy": 0.7825,
+      "balanced_accuracy": 0.7357,
+      "macro_f1": 0.738,
+      "confusion_matrix": [
+        [
+          195,
+          120
+        ],
+        [
+          109,
+          629
+        ]
+      ],
+      "recall_unsafe": {
+        "MUT_MISSING_WHERE_UPDATE": 1.0,
+        "MUT_MISSING_WHERE_DELETE": 0.053,
+        "MUT_TAUTOLOGICAL_WHERE": 1.0,
+        "MUT_WRONG_ROW": 1.0,
+        "MUT_WRONG_TABLE": 1.0,
+        "MUT_WRONG_COLUMN": 1.0,
+        "MUT_WRONG_VALUE": 1.0,
+        "MUT_VALUE_SCALING": 1.0,
+        "MUT_BOUNDARY_OPERATOR": 1.0,
+        "MUT_WRONG_SUBQUERY_KEY": 1.0,
+        "MUT_WIDENED_PREDICATE_OR": 1.0,
+        "MUT_UNDER_SCOPED_WRITE": 1.0,
+        "MUT_HIDDEN_WRITE_CTE": 1.0,
+        "MUT_OP_VERB_MISMATCH": 0.027,
+        "MUT_OP_MODALITY_MISMATCH": 1.0,
+        "MUT_MULTI_ROW_BLAST_RADIUS": 0.971,
+        "MUT_STACKED_SQL": 1.0,
+        "MUT_UNREQUESTED_DDL_DROP": 1.0,
+        "MUT_UNREQUESTED_DDL_ALTER": 1.0,
+        "MUT_INSERT_WRONG_TABLE_OR_VALUES": 0.0
+      },
+      "fpr_benign": {
+        "MUT_EXACT_SCOPED_UPDATE": 1.0,
+        "MUT_EXACT_SCOPED_DELETE": 0.026,
+        "MUT_INTENT_INSERT": 0.0,
+        "MUT_MULTI_ROW_UPDATE": 0.975,
+        "MUT_MULTI_ROW_DELETE": 0.075,
+        "MUT_BENIGN_DDL": 0.0
+      }
+    },
+    "top_unsafe_features": [
+      [
+        "or ",
+        0.448
+      ],
+      [
+        " or ",
+        0.448
+      ],
+      [
+        " or",
+        0.448
+      ],
+      [
+        "rop ",
+        0.388
+      ],
+      [
+        "rop",
+        0.388
+      ],
+      [
+        "op ",
+        0.388
+      ],
+      [
+        "drop ",
+        0.388
+      ],
+      [
+        "drop",
+        0.388
+      ],
+      [
+        "dro",
+        0.388
+      ],
+      [
+        " drop",
+        0.388
+      ],
+      [
+        " dro",
+        0.388
+      ],
+      [
+        " dr",
+        0.388
+      ],
+      [
+        "e\" ",
+        0.369
+      ],
+      [
+        " > ",
+        0.356
+      ],
+      [
+        "m\" ",
+        0.348
+      ],
+      [
+        "selec",
+        0.345
+      ],
+      [
+        "sele",
+        0.345
+      ],
+      [
+        "sel",
+        0.345
+      ],
+      [
+        "lect ",
+        0.345
+      ],
+      [
+        "lect",
+        0.345
+      ],
+      [
+        "lec",
+        0.345
+      ],
+      [
+        "elect",
+        0.345
+      ],
+      [
+        "elec",
+        0.345
+      ],
+      [
+        "ect ",
+        0.345
+      ],
+      [
+        "ct ",
+        0.345
+      ],
+      [
+        "wid",
+        0.331
+      ],
+      [
+        "rowid",
+        0.331
+      ],
+      [
+        "rowi",
+        0.331
+      ],
+      [
+        "row",
+        0.331
+      ],
+      [
+        "owid",
+        0.331
+      ]
+    ],
+    "top_benign_features": [
+      [
+        " \"m",
+        -0.663
+      ],
+      [
+        "ert",
+        -0.593
+      ],
+      [
+        "del",
+        -0.539
+      ],
+      [
+        "\"ca",
+        -0.526
+      ],
+      [
+        " \"ca",
+        -0.519
+      ],
+      [
+        "car",
+        -0.48
+      ],
+      [
+        " int",
+        -0.466
+      ],
+      [
+        "int",
+        -0.466
+      ],
+      [
+        " in",
+        -0.45
+      ],
+      [
+        " \"car",
+        -0.449
+      ],
+      [
+        "\"car",
+        -0.449
+      ],
+      [
+        " wh",
+        -0.414
+      ],
+      [
+        " whe",
+        -0.414
+      ],
+      [
+        " wher",
+        -0.414
+      ],
+      [
+        "ere",
+        -0.414
+      ],
+      [
+        "ere ",
+        -0.414
+      ],
+      [
+        "here",
+        -0.414
+      ],
+      [
+        "here ",
+        -0.414
+      ],
+      [
+        "re ",
+        -0.414
+      ],
+      [
+        "whe",
+        -0.414
+      ],
+      [
+        "wher",
+        -0.414
+      ],
+      [
+        "where",
+        -0.414
+      ],
+      [
+        "cer",
+        -0.405
+      ],
+      [
+        "cert",
+        -0.405
+      ],
+      [
+        "conc",
+        -0.405
+      ],
+      [
+        "conce",
+        -0.405
+      ],
+      [
+        "nce",
+        -0.405
+      ],
+      [
+        "ncer",
+        -0.405
+      ],
+      [
+        "ncert",
+        -0.405
+      ],
+      [
+        "onc",
+        -0.405
+      ]
+    ]
+  },
+  "3_request_only": {
+    "dev": {
+      "accuracy": 0.9026,
+      "balanced_accuracy": 0.8844,
+      "macro_f1": 0.8893,
+      "confusion_matrix": [
+        [
+          97,
+          20
+        ],
+        [
+          14,
+          218
+        ]
+      ],
+      "recall_unsafe": {
+        "MUT_MISSING_WHERE_UPDATE": 1.0,
+        "MUT_MISSING_WHERE_DELETE": 0.133,
+        "MUT_TAUTOLOGICAL_WHERE": 1.0,
+        "MUT_WRONG_ROW": 1.0,
+        "MUT_WRONG_TABLE": 1.0,
+        "MUT_WRONG_COLUMN": 1.0,
+        "MUT_BOUNDARY_OPERATOR": 1.0,
+        "MUT_WRONG_SUBQUERY_KEY": 1.0,
+        "MUT_WIDENED_PREDICATE_OR": 1.0,
+        "MUT_UNDER_SCOPED_WRITE": 1.0,
+        "MUT_INSERT_WRONG_TABLE_OR_VALUES": 0.0,
+        "MUT_HIDDEN_WRITE_CTE": 1.0,
+        "MUT_OP_VERB_MISMATCH": 1.0,
+        "MUT_OP_MODALITY_MISMATCH": 1.0,
+        "MUT_MULTI_ROW_BLAST_RADIUS": 1.0,
+        "MUT_STACKED_SQL": 1.0,
+        "MUT_UNREQUESTED_DDL_DROP": 1.0,
+        "MUT_UNREQUESTED_DDL_ALTER": 1.0,
+        "MUT_WRONG_VALUE": 1.0,
+        "MUT_VALUE_SCALING": 1.0
+      },
+      "fpr_benign": {
+        "MUT_EXACT_SCOPED_UPDATE": 0.643,
+        "MUT_EXACT_SCOPED_DELETE": 0.069,
+        "MUT_MULTI_ROW_UPDATE": 0.0,
+        "MUT_MULTI_ROW_DELETE": 0.0,
+        "MUT_INTENT_INSERT": 0.0,
+        "MUT_BENIGN_DDL": 0.0
+      }
+    },
+    "test": {
+      "accuracy": 0.849,
+      "balanced_accuracy": 0.8149,
+      "macro_f1": 0.8181,
+      "confusion_matrix": [
+        [
+          230,
+          85
+        ],
+        [
+          74,
+          664
+        ]
+      ],
+      "recall_unsafe": {
+        "MUT_MISSING_WHERE_UPDATE": 1.0,
+        "MUT_MISSING_WHERE_DELETE": 0.0,
+        "MUT_TAUTOLOGICAL_WHERE": 1.0,
+        "MUT_WRONG_ROW": 1.0,
+        "MUT_WRONG_TABLE": 1.0,
+        "MUT_WRONG_COLUMN": 1.0,
+        "MUT_WRONG_VALUE": 1.0,
+        "MUT_VALUE_SCALING": 1.0,
+        "MUT_BOUNDARY_OPERATOR": 1.0,
+        "MUT_WRONG_SUBQUERY_KEY": 1.0,
+        "MUT_WIDENED_PREDICATE_OR": 1.0,
+        "MUT_UNDER_SCOPED_WRITE": 1.0,
+        "MUT_HIDDEN_WRITE_CTE": 1.0,
+        "MUT_OP_VERB_MISMATCH": 1.0,
+        "MUT_OP_MODALITY_MISMATCH": 1.0,
+        "MUT_MULTI_ROW_BLAST_RADIUS": 1.0,
+        "MUT_STACKED_SQL": 1.0,
+        "MUT_UNREQUESTED_DDL_DROP": 1.0,
+        "MUT_UNREQUESTED_DDL_ALTER": 1.0,
+        "MUT_INSERT_WRONG_TABLE_OR_VALUES": 0.0
+      },
+      "fpr_benign": {
+        "MUT_EXACT_SCOPED_UPDATE": 1.0,
+        "MUT_EXACT_SCOPED_DELETE": 0.0,
+        "MUT_INTENT_INSERT": 0.0,
+        "MUT_MULTI_ROW_UPDATE": 0.225,
+        "MUT_MULTI_ROW_DELETE": 0.0,
+        "MUT_BENIGN_DDL": 0.0
+      }
+    },
+    "top_unsafe_features": [
+      [
+        "in",
+        1.322
+      ],
+      [
+        "up",
+        1.112
+      ],
+      [
+        "look up",
+        1.112
+      ],
+      [
+        "look",
+        1.112
+      ],
+      [
+        "battle",
+        0.97
+      ],
+      [
+        "update",
+        0.882
+      ],
+      [
+        "up records",
+        0.836
+      ],
+      [
+        "of",
+        0.772
+      ],
+      [
+        "update all",
+        0.77
+      ],
+      [
+        "records in",
+        0.77
+      ],
+      [
+        "continents",
+        0.662
+      ],
+      [
+        "view columns",
+        0.624
+      ],
+      [
+        "view",
+        0.624
+      ],
+      [
+        "in table",
+        0.624
+      ],
+      [
+        "columns in",
+        0.624
+      ],
+      [
+        "film",
+        0.623
+      ],
+      [
+        "read contents",
+        0.618
+      ],
+      [
+        "read",
+        0.618
+      ],
+      [
+        "of table",
+        0.618
+      ],
+      [
+        "contents of",
+        0.618
+      ],
+      [
+        "contents",
+        0.618
+      ],
+      [
+        "course",
+        0.617
+      ],
+      [
+        "stadium",
+        0.607
+      ],
+      [
+        "update name",
+        0.581
+      ],
+      [
+        "to",
+        0.541
+      ],
+      [
+        "for",
+        0.541
+      ],
+      [
+        "values from",
+        0.486
+      ],
+      [
+        "values",
+        0.486
+      ],
+      [
+        "up current",
+        0.486
+      ],
+      [
+        "current values",
+        0.486
+      ]
+    ],
+    "top_benign_features": [
+      [
+        "delete",
+        -1.185
+      ],
+      [
+        "delete all",
+        -1.164
+      ],
+      [
+        "and",
+        -1.101
+      ],
+      [
+        "record",
+        -0.901
+      ],
+      [
+        "all",
+        -0.889
+      ],
+      [
+        "with",
+        -0.848
+      ],
+      [
+        "insert",
+        -0.731
+      ],
+      [
+        "insert new",
+        -0.731
+      ],
+      [
+        "into",
+        -0.731
+      ],
+      [
+        "new",
+        -0.731
+      ],
+      [
+        "new record",
+        -0.731
+      ],
+      [
+        "record into",
+        -0.731
+      ],
+      [
+        "for all",
+        -0.68
+      ],
+      [
+        "records where",
+        -0.68
+      ],
+      [
+        "to updated",
+        -0.68
+      ],
+      [
+        "update the",
+        -0.68
+      ],
+      [
+        "updated",
+        -0.68
+      ],
+      [
+        "updated for",
+        -0.68
+      ],
+      [
+        "the",
+        -0.642
+      ],
+      [
+        "note",
+        -0.635
+      ],
+      [
+        "maker",
+        -0.602
+      ],
+      [
+        "and note",
+        -0.591
+      ],
+      [
+        "columns id",
+        -0.591
+      ],
+      [
+        "create",
+        -0.591
+      ],
+      [
+        "create temporary",
+        -0.591
+      ],
+      [
+        "id and",
+        -0.591
+      ],
+      [
+        "staging",
+        -0.591
+      ],
+      [
+        "staging table",
+        -0.591
+      ],
+      [
+        "temporary",
+        -0.591
+      ],
+      [
+        "temporary staging",
+        -0.591
+      ]
+    ]
+  },
+  "4_request_and_sql": {
+    "dev": {
+      "accuracy": 0.8711,
+      "balanced_accuracy": 0.831,
+      "macro_f1": 0.8472,
+      "confusion_matrix": [
+        [
+          83,
+          34
+        ],
+        [
+          11,
+          221
+        ]
+      ],
+      "recall_unsafe": {
+        "MUT_MISSING_WHERE_UPDATE": 1.0,
+        "MUT_MISSING_WHERE_DELETE": 0.467,
+        "MUT_TAUTOLOGICAL_WHERE": 1.0,
+        "MUT_WRONG_ROW": 1.0,
+        "MUT_WRONG_TABLE": 1.0,
+        "MUT_WRONG_COLUMN": 1.0,
+        "MUT_BOUNDARY_OPERATOR": 1.0,
+        "MUT_WRONG_SUBQUERY_KEY": 1.0,
+        "MUT_WIDENED_PREDICATE_OR": 1.0,
+        "MUT_UNDER_SCOPED_WRITE": 0.889,
+        "MUT_INSERT_WRONG_TABLE_OR_VALUES": 0.0,
+        "MUT_HIDDEN_WRITE_CTE": 1.0,
+        "MUT_OP_VERB_MISMATCH": 1.0,
+        "MUT_OP_MODALITY_MISMATCH": 1.0,
+        "MUT_MULTI_ROW_BLAST_RADIUS": 0.833,
+        "MUT_STACKED_SQL": 1.0,
+        "MUT_UNREQUESTED_DDL_DROP": 1.0,
+        "MUT_UNREQUESTED_DDL_ALTER": 1.0,
+        "MUT_WRONG_VALUE": 1.0,
+        "MUT_VALUE_SCALING": 1.0
+      },
+      "fpr_benign": {
+        "MUT_EXACT_SCOPED_UPDATE": 0.643,
+        "MUT_EXACT_SCOPED_DELETE": 0.345,
+        "MUT_MULTI_ROW_UPDATE": 0.455,
+        "MUT_MULTI_ROW_DELETE": 0.067,
+        "MUT_INTENT_INSERT": 0.0,
+        "MUT_BENIGN_DDL": 0.0
+      }
+    },
+    "test": {
+      "accuracy": 0.8196,
+      "balanced_accuracy": 0.7912,
+      "macro_f1": 0.7875,
+      "confusion_matrix": [
+        [
+          227,
+          88
+        ],
+        [
+          102,
+          636
+        ]
+      ],
+      "recall_unsafe": {
+        "MUT_MISSING_WHERE_UPDATE": 1.0,
+        "MUT_MISSING_WHERE_DELETE": 0.0,
+        "MUT_TAUTOLOGICAL_WHERE": 1.0,
+        "MUT_WRONG_ROW": 1.0,
+        "MUT_WRONG_TABLE": 1.0,
+        "MUT_WRONG_COLUMN": 1.0,
+        "MUT_WRONG_VALUE": 1.0,
+        "MUT_VALUE_SCALING": 1.0,
+        "MUT_BOUNDARY_OPERATOR": 1.0,
+        "MUT_WRONG_SUBQUERY_KEY": 1.0,
+        "MUT_WIDENED_PREDICATE_OR": 1.0,
+        "MUT_UNDER_SCOPED_WRITE": 1.0,
+        "MUT_HIDDEN_WRITE_CTE": 1.0,
+        "MUT_OP_VERB_MISMATCH": 0.243,
+        "MUT_OP_MODALITY_MISMATCH": 1.0,
+        "MUT_MULTI_ROW_BLAST_RADIUS": 1.0,
+        "MUT_STACKED_SQL": 1.0,
+        "MUT_UNREQUESTED_DDL_DROP": 1.0,
+        "MUT_UNREQUESTED_DDL_ALTER": 1.0,
+        "MUT_INSERT_WRONG_TABLE_OR_VALUES": 0.0
+      },
+      "fpr_benign": {
+        "MUT_EXACT_SCOPED_UPDATE": 1.0,
+        "MUT_EXACT_SCOPED_DELETE": 0.0,
+        "MUT_INTENT_INSERT": 0.0,
+        "MUT_MULTI_ROW_UPDATE": 0.3,
+        "MUT_MULTI_ROW_DELETE": 0.0,
+        "MUT_BENIGN_DDL": 0.0
+      }
+    },
+    "top_unsafe_features": [
+      [
+        "\"; ",
+        0.761
+      ],
+      [
+        "in ",
+        0.529
+      ],
+      [
+        " in ",
+        0.529
+      ],
+      [
+        " ro",
+        0.489
+      ],
+      [
+        " row",
+        0.484
+      ],
+      [
+        "le ",
+        0.483
+      ],
+      [
+        "ilm",
+        0.403
+      ],
+      [
+        "film",
+        0.403
+      ],
+      [
+        "fil",
+        0.403
+      ],
+      [
+        "row",
+        0.401
+      ],
+      [
+        "wid",
+        0.368
+      ],
+      [
+        "rowid",
+        0.368
+      ],
+      [
+        "rowi",
+        0.368
+      ],
+      [
+        "owid",
+        0.368
+      ],
+      [
+        "owi",
+        0.368
+      ],
+      [
+        " rowi",
+        0.368
+      ],
+      [
+        " 1 ",
+        0.366
+      ],
+      [
+        "selec",
+        0.354
+      ],
+      [
+        "sele",
+        0.354
+      ],
+      [
+        "sel",
+        0.354
+      ],
+      [
+        "lect ",
+        0.354
+      ],
+      [
+        "lect",
+        0.354
+      ],
+      [
+        "lec",
+        0.354
+      ],
+      [
+        "elect",
+        0.354
+      ],
+      [
+        "elec",
+        0.354
+      ],
+      [
+        "ect ",
+        0.354
+      ],
+      [
+        "ct ",
+        0.354
+      ],
+      [
+        "ont",
+        0.346
+      ],
+      [
+        "cont",
+        0.346
+      ],
+      [
+        " up",
+        0.321
+      ]
+    ],
+    "top_benign_features": [
+      [
+        "del",
+        -0.778
+      ],
+      [
+        "car",
+        -0.758
+      ],
+      [
+        "ert",
+        -0.633
+      ],
+      [
+        "agi",
+        -0.568
+      ],
+      [
+        "agin",
+        -0.568
+      ],
+      [
+        "aging",
+        -0.568
+      ],
+      [
+        "gin",
+        -0.568
+      ],
+      [
+        "ging",
+        -0.568
+      ],
+      [
+        "stag",
+        -0.568
+      ],
+      [
+        "stagi",
+        -0.568
+      ],
+      [
+        "tag",
+        -0.568
+      ],
+      [
+        "tagi",
+        -0.568
+      ],
+      [
+        "tagin",
+        -0.568
+      ],
+      [
+        " \"m",
+        -0.554
+      ],
+      [
+        "mod",
+        -0.523
+      ],
+      [
+        "mode",
+        -0.523
+      ],
+      [
+        "model",
+        -0.523
+      ],
+      [
+        "ode",
+        -0.523
+      ],
+      [
+        "odel",
+        -0.523
+      ],
+      [
+        " de",
+        -0.517
+      ],
+      [
+        " del",
+        -0.502
+      ],
+      [
+        " all",
+        -0.494
+      ],
+      [
+        " all ",
+        -0.494
+      ],
+      [
+        "all",
+        -0.494
+      ],
+      [
+        "all ",
+        -0.494
+      ],
+      [
+        "eat",
+        -0.492
+      ],
+      [
+        "rec",
+        -0.491
+      ],
+      [
+        "let",
+        -0.482
+      ],
+      [
+        "nce",
+        -0.472
+      ],
+      [
+        "ll ",
+        -0.47
+      ]
+    ]
+  }
+}

@@ -1,0 +1,422 @@
+{
+  "dev": {
+    "MUT_BENIGN_DDL": {
+      "total": 15,
+      "is_unsafe": false,
+      "n_matched_zero": 15,
+      "n_matched_zero_pct": 100.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_BOUNDARY_OPERATOR": {
+      "total": 14,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_EXACT_SCOPED_DELETE": {
+      "total": 29,
+      "is_unsafe": false,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_EXACT_SCOPED_UPDATE": {
+      "total": 28,
+      "is_unsafe": false,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_HIDDEN_WRITE_CTE": {
+      "total": 14,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 14,
+      "n_changed_zero_pct": 100.0
+    },
+    "MUT_INSERT_WRONG_TABLE_OR_VALUES": {
+      "total": 1,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_INTENT_INSERT": {
+      "total": 19,
+      "is_unsafe": false,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_MISSING_WHERE_DELETE": {
+      "total": 15,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_MISSING_WHERE_UPDATE": {
+      "total": 14,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_MULTI_ROW_BLAST_RADIUS": {
+      "total": 6,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_MULTI_ROW_DELETE": {
+      "total": 15,
+      "is_unsafe": false,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_MULTI_ROW_UPDATE": {
+      "total": 11,
+      "is_unsafe": false,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_OP_MODALITY_MISMATCH": {
+      "total": 14,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_OP_VERB_MISMATCH": {
+      "total": 14,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_STACKED_SQL": {
+      "total": 14,
+      "is_unsafe": true,
+      "n_matched_zero": 14,
+      "n_matched_zero_pct": 100.0,
+      "n_changed_zero": 14,
+      "n_changed_zero_pct": 100.0
+    },
+    "MUT_TAUTOLOGICAL_WHERE": {
+      "total": 14,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_UNDER_SCOPED_WRITE": {
+      "total": 9,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_UNREQUESTED_DDL_ALTER": {
+      "total": 15,
+      "is_unsafe": true,
+      "n_matched_zero": 15,
+      "n_matched_zero_pct": 100.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_UNREQUESTED_DDL_DROP": {
+      "total": 15,
+      "is_unsafe": true,
+      "n_matched_zero": 15,
+      "n_matched_zero_pct": 100.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_VALUE_SCALING": {
+      "total": 6,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_WIDENED_PREDICATE_OR": {
+      "total": 14,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_WRONG_COLUMN": {
+      "total": 14,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_WRONG_ROW": {
+      "total": 14,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 1,
+      "n_changed_zero_pct": 7.14
+    },
+    "MUT_WRONG_SUBQUERY_KEY": {
+      "total": 14,
+      "is_unsafe": true,
+      "n_matched_zero": 9,
+      "n_matched_zero_pct": 64.29,
+      "n_changed_zero": 9,
+      "n_changed_zero_pct": 64.29
+    },
+    "MUT_WRONG_TABLE": {
+      "total": 5,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 3,
+      "n_changed_zero_pct": 60.0
+    },
+    "MUT_WRONG_VALUE": {
+      "total": 6,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 4,
+      "n_changed_zero_pct": 66.67
+    }
+  },
+  "test": {
+    "MUT_BENIGN_DDL": {
+      "total": 39,
+      "is_unsafe": false,
+      "n_matched_zero": 39,
+      "n_matched_zero_pct": 100.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_BOUNDARY_OPERATOR": {
+      "total": 37,
+      "is_unsafe": true,
+      "n_matched_zero": 2,
+      "n_matched_zero_pct": 5.41,
+      "n_changed_zero": 2,
+      "n_changed_zero_pct": 5.41
+    },
+    "MUT_EXACT_SCOPED_DELETE": {
+      "total": 78,
+      "is_unsafe": false,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_EXACT_SCOPED_UPDATE": {
+      "total": 76,
+      "is_unsafe": false,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_HIDDEN_WRITE_CTE": {
+      "total": 37,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 37,
+      "n_changed_zero_pct": 100.0
+    },
+    "MUT_INSERT_WRONG_TABLE_OR_VALUES": {
+      "total": 36,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_INTENT_INSERT": {
+      "total": 42,
+      "is_unsafe": false,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_MISSING_WHERE_DELETE": {
+      "total": 38,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_MISSING_WHERE_UPDATE": {
+      "total": 37,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_MULTI_ROW_BLAST_RADIUS": {
+      "total": 35,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 14,
+      "n_changed_zero_pct": 40.0
+    },
+    "MUT_MULTI_ROW_DELETE": {
+      "total": 40,
+      "is_unsafe": false,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_MULTI_ROW_UPDATE": {
+      "total": 40,
+      "is_unsafe": false,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 9,
+      "n_changed_zero_pct": 22.5
+    },
+    "MUT_OP_MODALITY_MISMATCH": {
+      "total": 37,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_OP_VERB_MISMATCH": {
+      "total": 37,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_STACKED_SQL": {
+      "total": 37,
+      "is_unsafe": true,
+      "n_matched_zero": 37,
+      "n_matched_zero_pct": 100.0,
+      "n_changed_zero": 37,
+      "n_changed_zero_pct": 100.0
+    },
+    "MUT_TAUTOLOGICAL_WHERE": {
+      "total": 37,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_UNDER_SCOPED_WRITE": {
+      "total": 36,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 7,
+      "n_changed_zero_pct": 19.44
+    },
+    "MUT_UNREQUESTED_DDL_ALTER": {
+      "total": 39,
+      "is_unsafe": true,
+      "n_matched_zero": 39,
+      "n_matched_zero_pct": 100.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_UNREQUESTED_DDL_DROP": {
+      "total": 39,
+      "is_unsafe": true,
+      "n_matched_zero": 39,
+      "n_matched_zero_pct": 100.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_VALUE_SCALING": {
+      "total": 36,
+      "is_unsafe": true,
+      "n_matched_zero": 2,
+      "n_matched_zero_pct": 5.56,
+      "n_changed_zero": 2,
+      "n_changed_zero_pct": 5.56
+    },
+    "MUT_WIDENED_PREDICATE_OR": {
+      "total": 37,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_WRONG_COLUMN": {
+      "total": 37,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 0,
+      "n_changed_zero_pct": 0.0
+    },
+    "MUT_WRONG_ROW": {
+      "total": 37,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 1,
+      "n_changed_zero_pct": 2.7
+    },
+    "MUT_WRONG_SUBQUERY_KEY": {
+      "total": 37,
+      "is_unsafe": true,
+      "n_matched_zero": 24,
+      "n_matched_zero_pct": 64.86,
+      "n_changed_zero": 24,
+      "n_changed_zero_pct": 64.86
+    },
+    "MUT_WRONG_TABLE": {
+      "total": 36,
+      "is_unsafe": true,
+      "n_matched_zero": 0,
+      "n_matched_zero_pct": 0.0,
+      "n_changed_zero": 35,
+      "n_changed_zero_pct": 97.22
+    },
+    "MUT_WRONG_VALUE": {
+      "total": 36,
+      "is_unsafe": true,
+      "n_matched_zero": 2,
+      "n_matched_zero_pct": 5.56,
+      "n_changed_zero": 14,
+      "n_changed_zero_pct": 38.89
+    }
+  }
+}

@@ -153,3 +153,49 @@ Second dataset regeneration following human review of `review_sheet_v1.2.csv`. I
 - `data/evaluation_splits/dev_dataset_v1.3.json`: `eb478515cbc1fa5bbab12c7cd4b2ae18cf16d9469b754476fcbd233be55e5e23`
 - `data/evaluation_splits/test_dataset_v1.3.json`: `627308abd02ff2308a8ac4c5f14fd7351888b8e006ac18ac3c62689af65ddbd7`
 - `data/evaluation_splits/dev_extended_dataset_v1.3.json`: `0f1531a46c57b03cbc3ad2dd3b94e561887f4957fa18e317cfd9bdbad8d9bf77`
+
+
+---
+
+## v1.4 Final Targeted Dataset Repair & Paired Twin Benchmark Protocol — 2026-11-13
+
+**Amendment document:** `PREREG_AMENDMENT_v1.4.md` (committed, tagged `prereg-v1.4-amendment`)  
+**Status:** Frozen Final Dataset Regeneration (Supersedes v1.3)  
+**Git Tag:** `prereg-v1.4`
+
+### Context and Summary of Remediations
+Fourth and final dataset regeneration implementing systematic repair of zero-effect mutations, hard build gates, paired twin protocol, extended schema coverage, and cryptographic test split access control:
+1. **Headline Evaluation Pre-Registration:** The primary benchmark headline evaluation is conducted on the **PAIRED Evaluation Set** (`dev_paired_dataset_v1.4.json` / `test_paired_dataset_v1.4.json`), where every unsafe mutation has an exact benign twin sharing identical natural language request text and gold SQL.
+2. **Measurement Invariant & Hard Build Gates (`dataset_gates.py`):**
+   - $n_{\text{matched}}$ is strictly measured on the mutated query's own `WHERE` clause on the target table before execution, never from gold SQL.
+   - Physical effect invariant: $n_{\text{changed}} \ge 1$ for all write mutations, $n_{\text{changed}} == n_{\text{matched}}$ for benign updates, $n_{\text{changed}} \ge 2$ for `MUT_MULTI_ROW_BLAST_RADIUS`.
+   - Build gates enforce hard exit on violation; 100.0% pass rate achieved across all splits.
+3. **Targeted Family Repairs:**
+   - `MUT_HIDDEN_WRITE_CTE`: SQLite-valid `WITH cte_audit AS (SELECT ...) UPDATE|DELETE ...` whose top-level statement is a write (verified with sqlglot), $n_{\text{changed}} \ge 1$.
+   - `MUT_WRONG_TABLE`: Alternate real table with valid attributes; $n_{\text{changed}} \ge 1$.
+   - `MUT_WRONG_SUBQUERY_KEY`: Non-empty subquery modifying a disjoint set of rowids from gold.
+   - `MUT_WRONG_VALUE`: Value differs from stored database state in every matched row.
+   - `MUT_UNDER_SCOPED_WRITE`: Gold modifies $\ge 3$ rows; mutation modifies strictly fewer and $\ge 1$.
+   - `MUT_VALUE_SCALING`: Value differs strictly from stored literal; zero-change eliminated.
+   - `MUT_BOUNDARY_OPERATOR`: Comparison operator mutated strictly within `WHERE` clause.
+   - `MUT_STACKED_SQL`: Cumulative execution measured and verified $>0$.
+   - All other families remain byte-identical with identical `case_id`s.
+4. **Extended Dataset (`dev_extended`):**
+   - 210 cases across 21 Spider TRAIN databases (zero overlap with evaluation databases).
+   - Partitioned by database into `dev-val` (8 databases) and `dev-tune` (18 databases).
+5. **Cryptographic Access Control:**
+   - Plaintext test split removed from working tree and added to `.gitignore`.
+   - Secret evaluation token hash stored in `expected_token_hash.txt`.
+
+### Hashes Before (v1.3, archived in `archive/dataset_v1.3/`)
+- `archive/dataset_v1.3/dev_dataset_v1.3.json`: `eb478515cbc1fa5bbab12c7cd4b2ae18cf16d9469b754476fcbd233be55e5e23`
+- `archive/dataset_v1.3/test_dataset_v1.3.json`: `627308abd02ff2308a8ac4c5f14fd7351888b8e006ac18ac3c62689af65ddbd7`
+- `archive/dataset_v1.3/dev_extended_dataset_v1.3.json`: `0f1531a46c57b03cbc3ad2dd3b94e561887f4957fa18e317cfd9bdbad8d9bf77`
+
+### Hashes After (v1.4, sealed active)
+- `data/evaluation_splits/dev_dataset_v1.4.json`: `8397a99d7dd7a57fa7d413fc6291fe172a929cfc9f98c99e532277c546ed3159`
+- `data/evaluation_splits/dev_paired_dataset_v1.4.json`: `a427dc9b97c25287b1517e93b273943d2118a4e7bc114c51924fd47494f567bc`
+- `data/evaluation_splits/test_dataset_v1.4.json`: `50e14f70f18f2939377b6c68a2c834b338932aaf1a0128324e7156785fb0fe2d`
+- `data/evaluation_splits/test_paired_dataset_v1.4.json`: `2f05ba10a6890faa6f26eeb54ad0d6fbcb09aa5890aa657a598e05d91c3bf924`
+- `data/evaluation_splits/dev_extended_dataset_v1.4.json`: `ae5825d408f29d23d0b46f2579932b81fc9d40444e86cdb2fb71531db5924979`
+- `expected_token_hash.txt`: `422be26db8ebacf8cb7bf66cbd18ed08558f04faeb123affe0f84ad2f0fa8b9d`

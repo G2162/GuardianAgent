@@ -1,60 +1,72 @@
 {
-  "manifest_version": "1.0",
-  "created_at": "2026-11-12T21:55:00+05:30",
-  "pipeline_commit_at_dataset_creation": "46d12ae955f9924aa704d7e2282c4c45ab778a69",
-  "git_tag": "prereg-v1.1",
+  "manifest_version": "1.4",
+  "created_at": "2026-11-13T13:00:00+05:30",
+  "pipeline_commit_at_dataset_creation": "196edb879cf1b504269e33ceef1c7bb5e2c56434",
+  "git_tag": "prereg-v1.4",
   "verified_prereg_hashes": {
     "SCOPE_AND_THREAT_MODEL.md": "1f9d6679ff91dba13dcdf9a5796a9519b4ea60ca189b5f912d87633edb0c3b89",
     "LABELING_POLICY.md": "053a6beba89a1c39c4dac8de6abcb56cfb328e37d376218a278c64cdf2ab0d69",
     "METRICS.md": "539b50335b4870b0b6029c15efabd9f0dd3c1204c6b1e63d43577df90195df7b",
     "labeling_policy.json": "338f87d39a0852c8d9a90f1d8696e4922166a5d5d983a80a3477516106e9dd96"
   },
-  "dataset_files": {
-    "test_dataset.json": {
-      "path": "data/evaluation_splits/test_dataset.json",
-      "sha256": "fc6a2e3c1f6840a919bd188813a6bc0cedf4dc64e4a5ea075ff8b53248be420b",
-      "total_cases": 1057,
-      "split": "test",
-      "databases": 13,
-      "read_only": true
+  "dataset_v1.4": {
+    "created_at": "2026-11-13T13:00:00.000000Z",
+    "headline_benchmark": "PAIRED Evaluation Set (dev_paired_dataset_v1.4.json / test_paired_dataset_v1.4.json)",
+    "dev_dataset": {
+      "file": "data/evaluation_splits/dev_dataset_v1.4.json",
+      "sha256": "8397a99d7dd7a57fa7d413fc6291fe172a929cfc9f98c99e532277c546ed3159",
+      "n_cases": 349
     },
-    "dev_dataset.json": {
-      "path": "data/evaluation_splits/dev_dataset.json",
-      "sha256": "b4ed4c55bdb613ef1da03726648d01f155a139844f5ae169fbd630bf9e42218d",
-      "total_cases": 403,
-      "split": "dev",
-      "databases": 5,
-      "read_only": false
+    "dev_paired_dataset": {
+      "file": "data/evaluation_splits/dev_paired_dataset_v1.4.json",
+      "sha256": "a427dc9b97c25287b1517e93b273943d2118a4e7bc114c51924fd47494f567bc",
+      "n_cases": 448
     },
-    "auxiliary_linguistic_ambiguity.json": {
-      "path": "data/evaluation_splits/auxiliary_linguistic_ambiguity.json",
-      "sha256": "cebd4ae3704a325dd78331db4acc90170d085f762211f33d0860010224a5e1e7",
-      "total_cases": 3,
-      "split": "auxiliary",
-      "read_only": false
-    }
+    "test_dataset": {
+      "file": "data/evaluation_splits/test_dataset_v1.4.json",
+      "sha256": "50e14f70f18f2939377b6c68a2c834b338932aaf1a0128324e7156785fb0fe2d",
+      "n_cases": 1053,
+      "encrypted_archive": "data/test_v1.4.7z"
+    },
+    "test_paired_dataset": {
+      "file": "data/evaluation_splits/test_paired_dataset_v1.4.json",
+      "sha256": "2f05ba10a6890faa6f26eeb54ad0d6fbcb09aa5890aa657a598e05d91c3bf924",
+      "n_cases": 1419,
+      "encrypted_archive": "data/test_v1.4.7z"
+    },
+    "dev_extended_dataset": {
+      "file": "data/evaluation_splits/dev_extended_dataset_v1.4.json",
+      "sha256": "ae5825d408f29d23d0b46f2579932b81fc9d40444e86cdb2fb71531db5924979",
+      "n_cases": 210,
+      "databases": 21,
+      "partitions": {
+        "dev-val": 8,
+        "dev-tune": 13
+      }
+    },
+    "expected_token_hash_file": "expected_token_hash.txt",
+    "generator_script": "build_v14_all_splits.py",
+    "build_gates_script": "dataset_gates.py",
+    "amendment_ref": "PREREG_AMENDMENT_v1.4.md",
+    "status": "active"
   },
   "dataset_v1.3": {
     "created_at": "2026-11-13T11:12:00.000000Z",
     "dev_dataset": {
-      "file": "data/evaluation_splits/dev_dataset_v1.3.json",
+      "file": "archive/dataset_v1.3/dev_dataset_v1.3.json",
       "sha256": "eb478515cbc1fa5bbab12c7cd4b2ae18cf16d9469b754476fcbd233be55e5e23",
       "n_cases": 349
     },
     "test_dataset": {
-      "file": "data/evaluation_splits/test_dataset_v1.3.json",
+      "file": "archive/dataset_v1.3/test_dataset_v1.3.json",
       "sha256": "627308abd02ff2308a8ac4c5f14fd7351888b8e006ac18ac3c62689af65ddbd7",
-      "n_cases": 1054,
-      "read_only": true
+      "n_cases": 1054
     },
     "dev_extended_dataset": {
-      "file": "data/evaluation_splits/dev_extended_dataset_v1.3.json",
+      "file": "archive/dataset_v1.3/dev_extended_dataset_v1.3.json",
       "sha256": "0f1531a46c57b03cbc3ad2dd3b94e561887f4957fa18e317cfd9bdbad8d9bf77",
       "n_cases": 22
     },
-    "generator_script": "dataset_repair_v13.py",
-    "amendment_ref": "PREREG_AMENDMENT_v1.3.md",
-    "execution_harness": "execution_harness.py",
-    "status": "active"
+    "status": "superseded"
   }
 }

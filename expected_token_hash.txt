@@ -1,0 +1,7 @@
+# SHA-256 hash of GUARDIAN_FINAL_EVAL_TOKEN
+# Replace this line with the SHA-256 hash of your chosen secret token.
+# To generate a new token and hash:
+#   python -c "import secrets, hashlib; t=secrets.token_hex(32); print('TOKEN:', t); print('HASH:', hashlib.sha256(t.encode()).hexdigest())"
+# Then set in your environment: $env:GUARDIAN_FINAL_EVAL_TOKEN = "<TOKEN>"
+c9a35e236b2f7685934571ff21a811c79a1f26a5f78233519d55b0a39fbcba72
+

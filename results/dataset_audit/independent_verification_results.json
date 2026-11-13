@@ -1,0 +1,14 @@
+{
+  "dev": {
+    "split": "DEV",
+    "sample_size": 100,
+    "exec_failures": [],
+    "mismatches": []
+  },
+  "test": {
+    "split": "TEST",
+    "sample_size": 100,
+    "exec_failures": [],
+    "mismatches": []
+  }
+}
