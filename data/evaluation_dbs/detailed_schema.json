@@ -1,0 +1,2302 @@
+{
+  "concert_singer": {
+    "stadium": {
+      "count": 9,
+      "cols": [
+        "Stadium_ID",
+        "Location",
+        "Name",
+        "Capacity",
+        "Highest",
+        "Lowest",
+        "Average"
+      ],
+      "sample": [
+        [
+          1,
+          "Raith Rovers",
+          "Stark's Park",
+          10104,
+          4812,
+          1294,
+          2106
+        ],
+        [
+          2,
+          "Ayr United",
+          "Somerset Park",
+          11998,
+          2363,
+          1057,
+          1477
+        ],
+        [
+          3,
+          "East Fife",
+          "Bayview Stadium",
+          2000,
+          1980,
+          533,
+          864
+        ]
+      ]
+    },
+    "singer": {
+      "count": 6,
+      "cols": [
+        "Singer_ID",
+        "Name",
+        "Country",
+        "Song_Name",
+        "Song_release_year",
+        "Age",
+        "Is_male"
+      ],
+      "sample": [
+        [
+          1,
+          "Joe Sharp",
+          "Netherlands",
+          "You",
+          "1992",
+          52,
+          "F"
+        ],
+        [
+          2,
+          "Timbaland",
+          "United States",
+          "Dangerous",
+          "2008",
+          32,
+          "T"
+        ],
+        [
+          3,
+          "Justin Brown",
+          "France",
+          "Hey Oh",
+          "2013",
+          29,
+          "T"
+        ]
+      ]
+    },
+    "concert": {
+      "count": 6,
+      "cols": [
+        "concert_ID",
+        "concert_Name",
+        "Theme",
+        "Stadium_ID",
+        "Year"
+      ],
+      "sample": [
+        [
+          1,
+          "Auditions",
+          "Free choice",
+          "1",
+          "2014"
+        ],
+        [
+          2,
+          "Super bootcamp",
+          "Free choice 2",
+          "2",
+          "2014"
+        ],
+        [
+          3,
+          "Home Visits",
+          "Bleeding Love",
+          "2",
+          "2015"
+        ]
+      ]
+    },
+    "singer_in_concert": {
+      "count": 10,
+      "cols": [
+        "concert_ID",
+        "Singer_ID"
+      ],
+      "sample": [
+        [
+          1,
+          "2"
+        ],
+        [
+          1,
+          "3"
+        ],
+        [
+          1,
+          "5"
+        ]
+      ]
+    }
+  },
+  "cinema": {
+    "film": {
+      "count": 5,
+      "cols": [
+        "Film_ID",
+        "Rank_in_series",
+        "Number_in_season",
+        "Title",
+        "Directed_by",
+        "Original_air_date",
+        "Production_code"
+      ],
+      "sample": [
+        [
+          1,
+          26,
+          1,
+          "The Case of the Mystery Weekend",
+          "Bill Schreiner",
+          "September 21\u201325, 1992",
+          "50021\u201350025"
+        ],
+        [
+          2,
+          27,
+          2,
+          "The Case of the Smart Dummy",
+          "Bill Schreiner",
+          "September 28\u2013October 2, 1992",
+          "50231\u201350235"
+        ],
+        [
+          3,
+          28,
+          3,
+          "The Case: Off the Record",
+          "Bill Schreiner",
+          "October 5\u20139, 1992",
+          "50011\u201350015"
+        ]
+      ]
+    },
+    "cinema": {
+      "count": 10,
+      "cols": [
+        "Cinema_ID",
+        "Name",
+        "Openning_year",
+        "Capacity",
+        "Location"
+      ],
+      "sample": [
+        [
+          1,
+          "Codling",
+          2010,
+          1100,
+          "County Wicklow"
+        ],
+        [
+          2,
+          "Carrowleagh",
+          2012,
+          368,
+          "County Cork"
+        ],
+        [
+          3,
+          "Dublin Array",
+          2015,
+          364,
+          "County Dublin"
+        ]
+      ]
+    },
+    "schedule": {
+      "count": 7,
+      "cols": [
+        "Cinema_ID",
+        "Film_ID",
+        "Date",
+        "Show_times_per_day",
+        "Price"
+      ],
+      "sample": [
+        [
+          1,
+          1,
+          "21 May",
+          5,
+          12.99
+        ],
+        [
+          1,
+          2,
+          "21 May",
+          3,
+          12.99
+        ],
+        [
+          1,
+          3,
+          "21 Jun",
+          2,
+          8.99
+        ]
+      ]
+    }
+  },
+  "car_1": {
+    "continents": {
+      "count": 5,
+      "cols": [
+        "ContId",
+        "Continent"
+      ],
+      "sample": [
+        [
+          1,
+          "america"
+        ],
+        [
+          2,
+          "europe"
+        ],
+        [
+          3,
+          "asia"
+        ]
+      ]
+    },
+    "countries": {
+      "count": 15,
+      "cols": [
+        "CountryId",
+        "CountryName",
+        "Continent"
+      ],
+      "sample": [
+        [
+          1,
+          "usa",
+          1
+        ],
+        [
+          2,
+          "germany",
+          2
+        ],
+        [
+          3,
+          "france",
+          2
+        ]
+      ]
+    },
+    "car_makers": {
+      "count": 22,
+      "cols": [
+        "Id",
+        "Maker",
+        "FullName",
+        "Country"
+      ],
+      "sample": [
+        [
+          1,
+          "amc",
+          "American Motor Company",
+          "1"
+        ],
+        [
+          2,
+          "volkswagen",
+          "Volkswagen",
+          "2"
+        ],
+        [
+          3,
+          "bmw",
+          "BMW",
+          "2"
+        ]
+      ]
+    },
+    "model_list": {
+      "count": 36,
+      "cols": [
+        "ModelId",
+        "Maker",
+        "Model"
+      ],
+      "sample": [
+        [
+          1,
+          1,
+          "amc"
+        ],
+        [
+          2,
+          2,
+          "audi"
+        ],
+        [
+          3,
+          3,
+          "bmw"
+        ]
+      ]
+    },
+    "car_names": {
+      "count": 406,
+      "cols": [
+        "MakeId",
+        "Model",
+        "Make"
+      ],
+      "sample": [
+        [
+          1,
+          "chevrolet",
+          "chevrolet chevelle malibu"
+        ],
+        [
+          2,
+          "buick",
+          "buick skylark 320"
+        ],
+        [
+          3,
+          "plymouth",
+          "plymouth satellite"
+        ]
+      ]
+    },
+    "cars_data": {
+      "count": 406,
+      "cols": [
+        "Id",
+        "MPG",
+        "Cylinders",
+        "Edispl",
+        "Horsepower",
+        "Weight",
+        "Accelerate",
+        "Year"
+      ],
+      "sample": [
+        [
+          1,
+          "18",
+          8,
+          307.0,
+          "130",
+          3504,
+          12.0,
+          1970
+        ],
+        [
+          2,
+          "15",
+          8,
+          350.0,
+          "165",
+          3693,
+          11.5,
+          1970
+        ],
+        [
+          3,
+          "18",
+          8,
+          318.0,
+          "150",
+          3436,
+          11.0,
+          1970
+        ]
+      ]
+    }
+  },
+  "store_product": {
+    "product": {
+      "count": 6,
+      "cols": [
+        "product_id",
+        "product",
+        "dimensions",
+        "dpi",
+        "pages_per_minute_color",
+        "max_page_size",
+        "interface"
+      ],
+      "sample": [
+        [
+          1,
+          "Fujitsu fi-6130 A4 Series Scanner",
+          "301 x 160 x 158",
+          600.0,
+          30.0,
+          "A4",
+          "USB 2.0"
+        ],
+        [
+          2,
+          "Plustek MobileOffice D28 Corporate",
+          "303 x 94 x 60",
+          600.0,
+          28.0,
+          "A4",
+          "USB 2.0"
+        ],
+        [
+          3,
+          "Xerox Travel Scanner 100",
+          "289 x 51 x 38",
+          600.0,
+          4.0,
+          "A4",
+          "USB 2.0"
+        ]
+      ]
+    },
+    "store": {
+      "count": 5,
+      "cols": [
+        "Store_ID",
+        "Store_Name",
+        "Type",
+        "Area_size",
+        "Number_of_product_category",
+        "Ranking"
+      ],
+      "sample": [
+        [
+          1,
+          "Miramichi",
+          "City Mall",
+          179.84,
+          17811.0,
+          2
+        ],
+        [
+          2,
+          "Neguac",
+          "Village Store",
+          26.69,
+          1678.0,
+          3
+        ],
+        [
+          3,
+          "Rogersville",
+          "Village Store",
+          7.23,
+          1170.0,
+          1
+        ]
+      ]
+    },
+    "district": {
+      "count": 15,
+      "cols": [
+        "District_ID",
+        "District_name",
+        "Headquartered_City",
+        "City_Population",
+        "City_Area"
+      ],
+      "sample": [
+        [
+          1,
+          "Attock District",
+          "Attock City",
+          94620.0,
+          20.0
+        ],
+        [
+          2,
+          "Bahawalnagar District",
+          "Bahawalnagar City",
+          134936.0,
+          13.0
+        ],
+        [
+          3,
+          "Bahawalpur District",
+          "Bahawalpur City",
+          530438.0,
+          38.0
+        ]
+      ]
+    },
+    "store_product": {
+      "count": 15,
+      "cols": [
+        "Store_ID",
+        "Product_ID"
+      ],
+      "sample": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    "store_district": {
+      "count": 5,
+      "cols": [
+        "Store_ID",
+        "District_ID"
+      ],
+      "sample": [
+        [
+          1,
+          15
+        ],
+        [
+          2,
+          15
+        ],
+        [
+          3,
+          11
+        ]
+      ]
+    }
+  },
+  "course_teach": {
+    "course": {
+      "count": 10,
+      "cols": [
+        "Course_ID",
+        "Staring_Date",
+        "Course"
+      ],
+      "sample": [
+        [
+          1,
+          "5 May",
+          "Language Arts"
+        ],
+        [
+          2,
+          "6 May",
+          "Math"
+        ],
+        [
+          3,
+          "7 May",
+          "Science"
+        ]
+      ]
+    },
+    "teacher": {
+      "count": 7,
+      "cols": [
+        "Teacher_ID",
+        "Name",
+        "Age",
+        "Hometown"
+      ],
+      "sample": [
+        [
+          1,
+          "Joseph Huts",
+          "32",
+          "Blackrod Urban District"
+        ],
+        [
+          2,
+          "Gustaaf Deloor",
+          "29",
+          "Bolton County Borough"
+        ],
+        [
+          3,
+          "Vicente Carretero",
+          "26",
+          "Farnworth Municipal Borough"
+        ]
+      ]
+    },
+    "course_arrange": {
+      "count": 6,
+      "cols": [
+        "Course_ID",
+        "Teacher_ID",
+        "Grade"
+      ],
+      "sample": [
+        [
+          2,
+          5,
+          1
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          3,
+          2,
+          5
+        ]
+      ]
+    }
+  },
+  "museum_visit": {
+    "museum": {
+      "count": 8,
+      "cols": [
+        "Museum_ID",
+        "Name",
+        "Num_of_Staff",
+        "Open_Year"
+      ],
+      "sample": [
+        [
+          1,
+          "Plaza Museum",
+          62,
+          "2000"
+        ],
+        [
+          2,
+          "Capital Plaza Museum",
+          25,
+          "2012"
+        ],
+        [
+          3,
+          "Jefferson Development Museum",
+          18,
+          "2010"
+        ]
+      ]
+    },
+    "visitor": {
+      "count": 6,
+      "cols": [
+        "ID",
+        "Name",
+        "Level_of_membership",
+        "Age"
+      ],
+      "sample": [
+        [
+          1,
+          "Gonzalo Higua\u00edn ",
+          8,
+          35
+        ],
+        [
+          2,
+          "Guti Midfielder",
+          5,
+          28
+        ],
+        [
+          3,
+          "Arjen Robben",
+          1,
+          27
+        ]
+      ]
+    },
+    "visit": {
+      "count": 6,
+      "cols": [
+        "Museum_ID",
+        "visitor_ID",
+        "Num_of_Ticket",
+        "Total_spent"
+      ],
+      "sample": [
+        [
+          1,
+          "5",
+          20,
+          320.14
+        ],
+        [
+          2,
+          "5",
+          4,
+          89.98
+        ],
+        [
+          4,
+          "3",
+          10,
+          320.44
+        ]
+      ]
+    }
+  },
+  "wta_1": {
+    "players": {
+      "count": 20662,
+      "cols": [
+        "player_id",
+        "first_name",
+        "last_name",
+        "hand",
+        "birth_date",
+        "country_code"
+      ],
+      "sample": [
+        [
+          200001,
+          "Martina",
+          "Hingis",
+          "R",
+          19800930,
+          "SUI"
+        ],
+        [
+          200002,
+          "Mirjana",
+          "Lucic",
+          "R",
+          19820309,
+          "CRO"
+        ],
+        [
+          200003,
+          "Justine",
+          "Henin",
+          "R",
+          19820601,
+          "BEL"
+        ]
+      ]
+    },
+    "matches": {
+      "count": 278,
+      "cols": [
+        "best_of",
+        "draw_size",
+        "loser_age",
+        "loser_entry",
+        "loser_hand",
+        "loser_ht",
+        "loser_id",
+        "loser_ioc",
+        "loser_name",
+        "loser_rank",
+        "loser_rank_points",
+        "loser_seed",
+        "match_num",
+        "minutes",
+        "round",
+        "score",
+        "surface",
+        "tourney_date",
+        "tourney_id",
+        "tourney_level",
+        "tourney_name",
+        "winner_age",
+        "winner_entry",
+        "winner_hand",
+        "winner_ht",
+        "winner_id",
+        "winner_ioc",
+        "winner_name",
+        "winner_rank",
+        "winner_rank_points",
+        "winner_seed",
+        "year"
+      ],
+      "sample": [
+        [
+          3,
+          4,
+          24.626967830300003,
+          "",
+          "R",
+          170,
+          201474,
+          "POL",
+          "Agnieszka Radwanska",
+          4,
+          5890,
+          3,
+          297,
+          82,
+          "RR",
+          "6-2 6-4",
+          "Hard",
+          20131021,
+          "2013-W-WT-TUR-01A-2013",
+          "W",
+          "WTA Championships",
+          32.0684462697,
+          "",
+          "R",
+          175,
+          200033,
+          "USA",
+          "Serena Williams",
+          1,
+          12040,
+          1,
+          2013
+        ],
+        [
+          3,
+          4,
+          23.6221765914,
+          "",
+          "L",
+          183,
+          201520,
+          "CZE",
+          "Petra Kvitova",
+          6,
+          4370,
+          5,
+          296,
+          72,
+          "RR",
+          "6-2 6-3",
+          "Hard",
+          20131021,
+          "2013-W-WT-TUR-01A-2013",
+          "W",
+          "WTA Championships",
+          32.0684462697,
+          "",
+          "R",
+          175,
+          200033,
+          "USA",
+          "Serena Williams",
+          1,
+          12040,
+          1,
+          2013
+        ],
+        [
+          3,
+          4,
+          25.7577002053,
+          "",
+          "L",
+          173,
+          201493,
+          "GER",
+          "Angelique Kerber",
+          9,
+          3715,
+          8,
+          295,
+          64,
+          "RR",
+          "6-3 6-1",
+          "Hard",
+          20131021,
+          "2013-W-WT-TUR-01A-2013",
+          "W",
+          "WTA Championships",
+          32.0684462697,
+          "",
+          "R",
+          175,
+          200033,
+          "USA",
+          "Serena Williams",
+          1,
+          12040,
+          1,
+          2013
+        ]
+      ]
+    },
+    "rankings": {
+      "count": 510437,
+      "cols": [
+        "ranking_date",
+        "ranking",
+        "player_id",
+        "ranking_points",
+        "tours"
+      ],
+      "sample": [
+        [
+          20000101,
+          3,
+          200748,
+          4378,
+          13
+        ],
+        [
+          20000101,
+          4,
+          200033,
+          3021,
+          15
+        ],
+        [
+          20000101,
+          28,
+          200020,
+          960,
+          0
+        ]
+      ]
+    }
+  },
+  "battle_death": {
+    "battle": {
+      "count": 8,
+      "cols": [
+        "id",
+        "name",
+        "date",
+        "bulgarian_commander",
+        "latin_commander",
+        "result"
+      ],
+      "sample": [
+        [
+          1,
+          "Battle of Adrianople",
+          "14 April 1205",
+          "Kaloyan",
+          "Baldwin I",
+          "Bulgarian victory"
+        ],
+        [
+          2,
+          "Battle of Serres",
+          "June 1205",
+          "Kaloyan",
+          "Unknown",
+          "Bulgarian victory"
+        ],
+        [
+          3,
+          "Battle of Rusion",
+          "31 January 1206",
+          "Kaloyan",
+          "Thierry de Termond",
+          "Bulgarian victory"
+        ]
+      ]
+    },
+    "ship": {
+      "count": 7,
+      "cols": [
+        "lost_in_battle",
+        "id",
+        "name",
+        "tonnage",
+        "ship_type",
+        "location",
+        "disposition_of_ship"
+      ],
+      "sample": [
+        [
+          8,
+          1,
+          "Lettice",
+          "t",
+          "Brig",
+          "English Channel",
+          "Captured"
+        ],
+        [
+          7,
+          2,
+          "Bon Accord",
+          "t",
+          "Brig",
+          "English Channel",
+          "Captured"
+        ],
+        [
+          6,
+          3,
+          "Mary",
+          "t",
+          "Brig",
+          "English Channel",
+          "Captured"
+        ]
+      ]
+    },
+    "death": {
+      "count": 13,
+      "cols": [
+        "caused_by_ship_id",
+        "id",
+        "note",
+        "killed",
+        "injured"
+      ],
+      "sample": [
+        [
+          1,
+          1,
+          "Dantewada, Chhattisgarh",
+          8,
+          0
+        ],
+        [
+          2,
+          2,
+          "Dantewada, Chhattisgarh",
+          3,
+          0
+        ],
+        [
+          3,
+          13,
+          "Erraboru, Chhattisgarh",
+          25,
+          0
+        ]
+      ]
+    }
+  },
+  "dog_kennels": {
+    "Breeds": {
+      "count": 3,
+      "cols": [
+        "breed_code",
+        "breed_name"
+      ],
+      "sample": [
+        [
+          "ESK",
+          "Eskimo"
+        ],
+        [
+          "HUS",
+          "Husky"
+        ],
+        [
+          "BUL",
+          "Bulldog"
+        ]
+      ]
+    },
+    "Charges": {
+      "count": 3,
+      "cols": [
+        "charge_id",
+        "charge_type",
+        "charge_amount"
+      ],
+      "sample": [
+        [
+          1,
+          "Daily Accommodation",
+          98
+        ],
+        [
+          2,
+          "Drugs",
+          322
+        ],
+        [
+          3,
+          "Health Check",
+          640
+        ]
+      ]
+    },
+    "Sizes": {
+      "count": 3,
+      "cols": [
+        "size_code",
+        "size_description"
+      ],
+      "sample": [
+        [
+          "SML",
+          "Small"
+        ],
+        [
+          "MED",
+          "Medium"
+        ],
+        [
+          "LGE",
+          "Large"
+        ]
+      ]
+    },
+    "Treatment_Types": {
+      "count": 3,
+      "cols": [
+        "treatment_type_code",
+        "treatment_type_description"
+      ],
+      "sample": [
+        [
+          "EXAM",
+          "Physical examination"
+        ],
+        [
+          "VAC",
+          "Vaccination"
+        ],
+        [
+          "WALK",
+          "Take for a Walk"
+        ]
+      ]
+    },
+    "Owners": {
+      "count": 15,
+      "cols": [
+        "owner_id",
+        "first_name",
+        "last_name",
+        "street",
+        "city",
+        "state",
+        "zip_code",
+        "email_address",
+        "home_phone",
+        "cell_number"
+      ],
+      "sample": [
+        [
+          1,
+          "Nora",
+          "Haley",
+          "0647 Hintz Village Apt. 024",
+          "Lake Tia",
+          "Wisconsin",
+          "93165",
+          "lynn81@example.org",
+          "1-682-845-0116x63235",
+          "478.978.0729"
+        ],
+        [
+          2,
+          "Melisa",
+          "DuBuque",
+          "1204 Mae Highway Apt. 107",
+          "Port Reannamouth",
+          "Virginia",
+          "45244",
+          "ykris@example.com",
+          "(799)563-0260x454",
+          "(722)768-5439x484"
+        ],
+        [
+          3,
+          "Jaclyn",
+          "Stoltenberg",
+          "2635 Caitlyn Plains",
+          "Barrettburgh",
+          "Vermont",
+          "02647",
+          "hudson.favian@example.com",
+          "916.976.9480x13851",
+          "481-483-9083x37986"
+        ]
+      ]
+    },
+    "Dogs": {
+      "count": 15,
+      "cols": [
+        "dog_id",
+        "owner_id",
+        "abandoned_yn",
+        "breed_code",
+        "size_code",
+        "name",
+        "age",
+        "date_of_birth",
+        "gender",
+        "weight",
+        "date_arrived",
+        "date_adopted",
+        "date_departed"
+      ],
+      "sample": [
+        [
+          1,
+          3,
+          "1",
+          "ESK",
+          "LGE",
+          "Kacey",
+          "6",
+          "2012-01-27 05:11:53",
+          "1",
+          "7.57",
+          "2017-09-08 20:10:13",
+          "2018-03-06 16:32:11",
+          "2018-03-25 06:58:44"
+        ],
+        [
+          2,
+          11,
+          "0",
+          "BUL",
+          "LGE",
+          "Hipolito",
+          "9",
+          "2013-02-13 05:15:21",
+          "0",
+          "1.72",
+          "2017-12-22 05:02:02",
+          "2018-03-25 08:12:51",
+          "2018-03-25 02:11:32"
+        ],
+        [
+          3,
+          1,
+          "0",
+          "BUL",
+          "MED",
+          "Mavis",
+          "8",
+          "2008-05-19 15:54:49",
+          "1",
+          "8.04",
+          "2017-06-25 10:14:05",
+          "2018-03-07 21:45:43",
+          "2018-03-25 10:25:46"
+        ]
+      ]
+    },
+    "Professionals": {
+      "count": 15,
+      "cols": [
+        "professional_id",
+        "role_code",
+        "first_name",
+        "street",
+        "city",
+        "state",
+        "zip_code",
+        "last_name",
+        "email_address",
+        "home_phone",
+        "cell_number"
+      ],
+      "sample": [
+        [
+          1,
+          "Employee",
+          "Taryn",
+          "6915 Oberbrunner Point Suite 491\nGleasonville, LA ",
+          "West Heidi",
+          "Indiana",
+          "06646",
+          "Braun",
+          "deanna.schuster@example.com",
+          "+71(6)2898266914",
+          "(275)939-2435x80863"
+        ],
+        [
+          2,
+          "Employee",
+          "Jayson",
+          "88665 Terence Lodge Apt. 904\nCorneliusfort, NC 194",
+          "North Odellfurt",
+          "Connecticut",
+          "43129",
+          "Ullrich",
+          "lucile.shanahan@example.org",
+          "+02(1)0259033559",
+          "889-940-2676"
+        ],
+        [
+          3,
+          "Employee",
+          "Olaf",
+          "68589 Bradly Manor\nNew Audrey, IN 91497",
+          "Jaceton",
+          "Wisconsin",
+          "77129",
+          "Watsica",
+          "uboehm@example.org",
+          "325-155-0801x7005",
+          "(369)908-7311x065"
+        ]
+      ]
+    },
+    "Treatments": {
+      "count": 15,
+      "cols": [
+        "treatment_id",
+        "dog_id",
+        "professional_id",
+        "treatment_type_code",
+        "date_of_treatment",
+        "cost_of_treatment"
+      ],
+      "sample": [
+        [
+          1,
+          14,
+          9,
+          "WALK",
+          "2018-03-19 04:39:54",
+          567
+        ],
+        [
+          2,
+          4,
+          10,
+          "VAC",
+          "2018-03-15 20:25:34",
+          147
+        ],
+        [
+          3,
+          14,
+          4,
+          "EXAM",
+          "2018-03-08 05:26:23",
+          429
+        ]
+      ]
+    }
+  },
+  "network_1": {
+    "Highschooler": {
+      "count": 16,
+      "cols": [
+        "ID",
+        "name",
+        "grade"
+      ],
+      "sample": [
+        [
+          1510,
+          "Jordan",
+          9
+        ],
+        [
+          1689,
+          "Gabriel",
+          9
+        ],
+        [
+          1381,
+          "Tiffany",
+          9
+        ]
+      ]
+    },
+    "Friend": {
+      "count": 20,
+      "cols": [
+        "student_id",
+        "friend_id"
+      ],
+      "sample": [
+        [
+          1510,
+          1381
+        ],
+        [
+          1510,
+          1689
+        ],
+        [
+          1689,
+          1709
+        ]
+      ]
+    },
+    "Likes": {
+      "count": 10,
+      "cols": [
+        "student_id",
+        "liked_id"
+      ],
+      "sample": [
+        [
+          1689,
+          1709
+        ],
+        [
+          1709,
+          1689
+        ],
+        [
+          1782,
+          1709
+        ]
+      ]
+    }
+  },
+  "poker_player": {
+    "poker_player": {
+      "count": 5,
+      "cols": [
+        "Poker_Player_ID",
+        "People_ID",
+        "Final_Table_Made",
+        "Best_Finish",
+        "Money_Rank",
+        "Earnings"
+      ],
+      "sample": [
+        [
+          1,
+          1,
+          42.0,
+          1.0,
+          68.0,
+          476090.0
+        ],
+        [
+          2,
+          2,
+          10.0,
+          2.0,
+          141.0,
+          189233.0
+        ],
+        [
+          3,
+          5,
+          21.0,
+          1.0,
+          166.0,
+          104871.0
+        ]
+      ]
+    },
+    "people": {
+      "count": 7,
+      "cols": [
+        "People_ID",
+        "Nationality",
+        "Name",
+        "Birth_Date",
+        "Height"
+      ],
+      "sample": [
+        [
+          1,
+          "Russia",
+          "Aleksey Ostapenko",
+          "May 26, 1986",
+          207.0
+        ],
+        [
+          2,
+          "Bulgaria",
+          "Teodor Salparov",
+          "August 16, 1982",
+          182.0
+        ],
+        [
+          3,
+          "Russia",
+          "Roman Bragin",
+          "April 17, 1987",
+          187.0
+        ]
+      ]
+    }
+  },
+  "orchestra": {
+    "conductor": {
+      "count": 12,
+      "cols": [
+        "Conductor_ID",
+        "Name",
+        "Age",
+        "Nationality",
+        "Year_of_Work"
+      ],
+      "sample": [
+        [
+          1,
+          "Antal Dor\u00e1ti",
+          40,
+          "USA",
+          10
+        ],
+        [
+          2,
+          "Igor Stravinsky",
+          41,
+          "UK",
+          11
+        ],
+        [
+          3,
+          "Colin Davis",
+          42,
+          "USA",
+          6
+        ]
+      ]
+    },
+    "orchestra": {
+      "count": 12,
+      "cols": [
+        "Orchestra_ID",
+        "Orchestra",
+        "Conductor_ID",
+        "Record_Company",
+        "Year_of_Founded",
+        "Major_Record_Format"
+      ],
+      "sample": [
+        [
+          1,
+          "London Symphony Orchestra",
+          1,
+          "Mercury Records",
+          2003.0,
+          "CD"
+        ],
+        [
+          2,
+          "Columbia Symphony Orchestra",
+          2,
+          "Columbia Masterworks",
+          2009.0,
+          "CD / LP"
+        ],
+        [
+          3,
+          "Royal Concertgebouw Orchestra",
+          3,
+          "Philips",
+          2008.0,
+          "CD"
+        ]
+      ]
+    },
+    "performance": {
+      "count": 11,
+      "cols": [
+        "Performance_ID",
+        "Orchestra_ID",
+        "Type",
+        "Date",
+        "Official_ratings_(millions)",
+        "Weekly_rank",
+        "Share"
+      ],
+      "sample": [
+        [
+          1,
+          1,
+          "Auditions 1",
+          "9 June",
+          5.2,
+          "12",
+          "22.7%"
+        ],
+        [
+          2,
+          2,
+          "Auditions 2",
+          "10 June",
+          6.73,
+          "8",
+          "28.0%"
+        ],
+        [
+          3,
+          3,
+          "Auditions 3",
+          "11 June",
+          7.28,
+          "15",
+          "29.4%"
+        ]
+      ]
+    },
+    "show": {
+      "count": 5,
+      "cols": [
+        "Show_ID",
+        "Performance_ID",
+        "If_first_show",
+        "Result",
+        "Attendance"
+      ],
+      "sample": [
+        [
+          1,
+          1,
+          "Glebe Park",
+          "T",
+          1026.0
+        ],
+        [
+          2,
+          2,
+          "Fir Park",
+          "T",
+          695.0
+        ],
+        [
+          3,
+          3,
+          "St. Mirren Park",
+          "F",
+          555.0
+        ]
+      ]
+    }
+  },
+  "singer": {
+    "singer": {
+      "count": 8,
+      "cols": [
+        "Singer_ID",
+        "Name",
+        "Birth_Year",
+        "Net_Worth_Millions",
+        "Citizenship"
+      ],
+      "sample": [
+        [
+          1,
+          "Liliane Bettencourt",
+          1944.0,
+          30.0,
+          "France"
+        ],
+        [
+          2,
+          "Christy Walton",
+          1948.0,
+          28.8,
+          "United States"
+        ],
+        [
+          3,
+          "Alice Walton",
+          1949.0,
+          26.3,
+          "United States"
+        ]
+      ]
+    },
+    "song": {
+      "count": 8,
+      "cols": [
+        "Song_ID",
+        "Title",
+        "Singer_ID",
+        "Sales",
+        "Highest_Position"
+      ],
+      "sample": [
+        [
+          1,
+          "Do They Know It's Christmas",
+          1,
+          1094000.0,
+          1.0
+        ],
+        [
+          2,
+          "F**k It (I Don't Want You Back)",
+          1,
+          552407.0,
+          1.0
+        ],
+        [
+          3,
+          "Cha Cha Slide",
+          2,
+          351421.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "pets_1": {
+    "Student": {
+      "count": 34,
+      "cols": [
+        "StuID",
+        "LName",
+        "Fname",
+        "Age",
+        "Sex",
+        "Major",
+        "Advisor",
+        "city_code"
+      ],
+      "sample": [
+        [
+          1001,
+          "Smith",
+          "Linda",
+          18,
+          "F",
+          600,
+          1121,
+          "BAL"
+        ],
+        [
+          1002,
+          "Kim",
+          "Tracy",
+          19,
+          "F",
+          600,
+          7712,
+          "HKG"
+        ],
+        [
+          1003,
+          "Jones",
+          "Shiela",
+          21,
+          "F",
+          600,
+          7792,
+          "WAS"
+        ]
+      ]
+    },
+    "Has_Pet": {
+      "count": 3,
+      "cols": [
+        "StuID",
+        "PetID"
+      ],
+      "sample": [
+        [
+          1001,
+          2001
+        ],
+        [
+          1002,
+          2002
+        ],
+        [
+          1002,
+          2003
+        ]
+      ]
+    },
+    "Pets": {
+      "count": 3,
+      "cols": [
+        "PetID",
+        "PetType",
+        "pet_age",
+        "weight"
+      ],
+      "sample": [
+        [
+          2001,
+          "cat",
+          3,
+          12.0
+        ],
+        [
+          2002,
+          "dog",
+          2,
+          13.4
+        ],
+        [
+          2003,
+          "dog",
+          1,
+          9.3
+        ]
+      ]
+    }
+  },
+  "world_1": {
+    "city": {
+      "count": 4079,
+      "cols": [
+        "ID",
+        "Name",
+        "CountryCode",
+        "District",
+        "Population"
+      ],
+      "sample": [
+        [
+          1,
+          "Kabul",
+          "AFG",
+          "Kabol",
+          1780000
+        ],
+        [
+          2,
+          "Qandahar",
+          "AFG",
+          "Qandahar",
+          237500
+        ],
+        [
+          3,
+          "Herat",
+          "AFG",
+          "Herat",
+          186800
+        ]
+      ]
+    },
+    "country": {
+      "count": 239,
+      "cols": [
+        "Code",
+        "Name",
+        "Continent",
+        "Region",
+        "SurfaceArea",
+        "IndepYear",
+        "Population",
+        "LifeExpectancy",
+        "GNP",
+        "GNPOld",
+        "LocalName",
+        "GovernmentForm",
+        "HeadOfState",
+        "Capital",
+        "Code2"
+      ],
+      "sample": [
+        [
+          "ABW",
+          "Aruba",
+          "North America",
+          "Caribbean",
+          193.0,
+          null,
+          103000,
+          78.4,
+          828.0,
+          793.0,
+          "Aruba",
+          "Nonmetropolitan Territory of The Netherlands",
+          "Beatrix",
+          129,
+          "AW"
+        ],
+        [
+          "AFG",
+          "Afghanistan",
+          "Asia",
+          "Southern and Central Asia",
+          652090.0,
+          1919,
+          22720000,
+          45.9,
+          5976.0,
+          null,
+          "Afganistan/Afqanestan",
+          "Islamic Emirate",
+          "Mohammad Omar",
+          1,
+          "AF"
+        ],
+        [
+          "AGO",
+          "Angola",
+          "Africa",
+          "Central Africa",
+          1246700.0,
+          1975,
+          12878000,
+          38.3,
+          6648.0,
+          7984.0,
+          "Angola",
+          "Republic",
+          "Jos\u00e9 Eduardo dos Santos",
+          56,
+          "AO"
+        ]
+      ]
+    },
+    "countrylanguage": {
+      "count": 984,
+      "cols": [
+        "CountryCode",
+        "Language",
+        "IsOfficial",
+        "Percentage"
+      ],
+      "sample": [
+        [
+          "ABW",
+          "Dutch",
+          "T",
+          5.3
+        ],
+        [
+          "ABW",
+          "English",
+          "F",
+          9.5
+        ],
+        [
+          "ABW",
+          "Papiamento",
+          "F",
+          76.7
+        ]
+      ]
+    }
+  },
+  "tvshow": {
+    "TV_Channel": {
+      "count": 15,
+      "cols": [
+        "id",
+        "series_name",
+        "Country",
+        "Language",
+        "Content",
+        "Pixel_aspect_ratio_PAR",
+        "Hight_definition_TV",
+        "Pay_per_view_PPV",
+        "Package_Option"
+      ],
+      "sample": [
+        [
+          "700",
+          "Sky Radio",
+          "Italy",
+          "Italian",
+          "music",
+          "4:3",
+          "no",
+          "no",
+          "Sky Famiglia"
+        ],
+        [
+          "701",
+          "Sky Music",
+          "Italy",
+          "Italian",
+          "music",
+          "4:3",
+          "no",
+          "no",
+          "Sky Famiglia"
+        ],
+        [
+          "703",
+          "Music Box Italia",
+          "Italy",
+          "Italian",
+          "music",
+          "4:3 / 16:9",
+          "no",
+          "no",
+          "Sky Famiglia"
+        ]
+      ]
+    },
+    "TV_series": {
+      "count": 12,
+      "cols": [
+        "id",
+        "Episode",
+        "Air_Date",
+        "Rating",
+        "Share",
+        "18_49_Rating_Share",
+        "Viewers_m",
+        "Weekly_Rank",
+        "Channel"
+      ],
+      "sample": [
+        [
+          1.0,
+          "A Love of a Lifetime",
+          "September 24, 2007",
+          "5.8",
+          9.0,
+          "3.5/9",
+          "9.16",
+          43.0,
+          "700"
+        ],
+        [
+          2.0,
+          "Friendly Skies",
+          "October 1, 2007",
+          "5.3",
+          9.0,
+          "3.2/8",
+          "8.23",
+          50.0,
+          "701"
+        ],
+        [
+          3.0,
+          "Game Three",
+          "October 8, 2007",
+          "4.4",
+          7.0,
+          "2.9/7",
+          "6.94",
+          61.0,
+          "707"
+        ]
+      ]
+    },
+    "Cartoon": {
+      "count": 12,
+      "cols": [
+        "id",
+        "Title",
+        "Directed_by",
+        "Written_by",
+        "Original_air_date",
+        "Production_code",
+        "Channel"
+      ],
+      "sample": [
+        [
+          1.0,
+          "The Rise of the Blue Beetle!",
+          "Ben Jones",
+          "Michael Jelenic",
+          "November14,2008",
+          101.0,
+          "700"
+        ],
+        [
+          2.0,
+          "Terror on Dinosaur Island!",
+          "Brandon Vietti",
+          "Steven Melching",
+          "November21,2008",
+          102.0,
+          "701"
+        ],
+        [
+          3.0,
+          "Evil Under the Sea!",
+          "Michael Chang",
+          "Joseph Kuhr",
+          "December5,2008",
+          103.0,
+          "703"
+        ]
+      ]
+    }
+  },
+  "voter_1": {
+    "AREA_CODE_STATE": {
+      "count": 305,
+      "cols": [
+        "area_code",
+        "state"
+      ],
+      "sample": [
+        [
+          201,
+          "NJ"
+        ],
+        [
+          202,
+          "DC"
+        ],
+        [
+          203,
+          "CT"
+        ]
+      ]
+    },
+    "CONTESTANTS": {
+      "count": 11,
+      "cols": [
+        "contestant_number",
+        "contestant_name"
+      ],
+      "sample": [
+        [
+          1,
+          "Edwina Burnam"
+        ],
+        [
+          2,
+          "Tabatha Gehling"
+        ],
+        [
+          3,
+          "Kelly Clauss"
+        ]
+      ]
+    },
+    "VOTES": {
+      "count": 4,
+      "cols": [
+        "vote_id",
+        "phone_number",
+        "state",
+        "contestant_number",
+        "created"
+      ],
+      "sample": [
+        [
+          1,
+          7182887233,
+          "NY",
+          2,
+          "2018-03-09 19:03:21"
+        ],
+        [
+          2,
+          7148407040,
+          "NY",
+          3,
+          "2018-03-09 19:03:36"
+        ],
+        [
+          3,
+          6209222712,
+          "CA",
+          3,
+          "2018-03-09 19:03:39"
+        ]
+      ]
+    }
+  },
+  "flight_company": {
+    "airport": {
+      "count": 9,
+      "cols": [
+        "id",
+        "City",
+        "Country",
+        "IATA",
+        "ICAO",
+        "name"
+      ],
+      "sample": [
+        [
+          1,
+          "Akureyri",
+          "Iceland",
+          "AEY",
+          "BIAR",
+          "Akureyri Airport"
+        ],
+        [
+          2,
+          "Amsterdam",
+          "Netherlands",
+          "AMS",
+          "EHAM",
+          "Schiphol Airport"
+        ],
+        [
+          3,
+          "Anchorage",
+          "United States",
+          "ANC",
+          "PANC",
+          "Ted Stevens Airport"
+        ]
+      ]
+    },
+    "operate_company": {
+      "count": 14,
+      "cols": [
+        "id",
+        "name",
+        "Type",
+        "Principal_activities",
+        "Incorporated_in",
+        "Group_Equity_Shareholding"
+      ],
+      "sample": [
+        [
+          1,
+          "Air China",
+          "Corporate",
+          "Airline",
+          "China",
+          18.77
+        ],
+        [
+          2,
+          "Air China Cargo",
+          "Joint Venture",
+          "Cargo airline",
+          "China",
+          49.0
+        ],
+        [
+          3,
+          "Air Hong Kong",
+          "Joint Venture",
+          "Cargo airline",
+          "Hong Kong",
+          60.0
+        ]
+      ]
+    },
+    "flight": {
+      "count": 13,
+      "cols": [
+        "id",
+        "Vehicle_Flight_number",
+        "Date",
+        "Pilot",
+        "Velocity",
+        "Altitude",
+        "airport_id",
+        "company_id"
+      ],
+      "sample": [
+        [
+          1,
+          "M2-F1 #0",
+          "March 1, 1963",
+          "Thompson",
+          135.0,
+          0.0,
+          1,
+          2
+        ],
+        [
+          2,
+          "M2-F1 #1",
+          "August 16, 1963",
+          "Thompson",
+          240.0,
+          3650.0,
+          2,
+          3
+        ],
+        [
+          3,
+          "M2-F1 #6",
+          "September 3, 1963",
+          "Thompson",
+          240.0,
+          3650.0,
+          2,
+          4
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "concert_singer": {
+    "path": "data/evaluation_dbs\\concert_singer.sqlite",
+    "tables": {
+      "stadium": 9,
+      "singer": 6,
+      "concert": 6,
+      "singer_in_concert": 10
+    }
+  },
+  "cinema": {
+    "path": "data/evaluation_dbs\\cinema.sqlite",
+    "tables": {
+      "film": 5,
+      "cinema": 10,
+      "schedule": 7
+    }
+  },
+  "car_1": {
+    "path": "data/evaluation_dbs\\car_1.sqlite",
+    "tables": {
+      "continents": 5,
+      "countries": 15,
+      "car_makers": 22,
+      "model_list": 36,
+      "car_names": 406,
+      "cars_data": 406
+    }
+  },
+  "store_product": {
+    "path": "data/evaluation_dbs\\store_product.sqlite",
+    "tables": {
+      "product": 6,
+      "store": 5,
+      "district": 15,
+      "store_product": 15,
+      "store_district": 5
+    }
+  },
+  "course_teach": {
+    "path": "data/evaluation_dbs\\course_teach.sqlite",
+    "tables": {
+      "course": 10,
+      "teacher": 7,
+      "course_arrange": 6
+    }
+  },
+  "museum_visit": {
+    "path": "data/evaluation_dbs\\museum_visit.sqlite",
+    "tables": {
+      "museum": 8,
+      "visitor": 6,
+      "visit": 6
+    }
+  },
+  "wta_1": {
+    "path": "data/evaluation_dbs\\wta_1.sqlite",
+    "tables": {
+      "players": 20662,
+      "matches": 278,
+      "rankings": 510437
+    }
+  },
+  "battle_death": {
+    "path": "data/evaluation_dbs\\battle_death.sqlite",
+    "tables": {
+      "battle": 8,
+      "ship": 7,
+      "death": 13
+    }
+  },
+  "dog_kennels": {
+    "path": "data/evaluation_dbs\\dog_kennels.sqlite",
+    "tables": {
+      "Breeds": 3,
+      "Charges": 3,
+      "Sizes": 3,
+      "Treatment_Types": 3,
+      "Owners": 15,
+      "Dogs": 15,
+      "Professionals": 15,
+      "Treatments": 15
+    }
+  },
+  "network_1": {
+    "path": "data/evaluation_dbs\\network_1.sqlite",
+    "tables": {
+      "Highschooler": 16,
+      "Friend": 20,
+      "Likes": 10
+    }
+  },
+  "poker_player": {
+    "path": "data/evaluation_dbs\\poker_player.sqlite",
+    "tables": {
+      "poker_player": 5,
+      "people": 7
+    }
+  },
+  "orchestra": {
+    "path": "data/evaluation_dbs\\orchestra.sqlite",
+    "tables": {
+      "conductor": 12,
+      "orchestra": 12,
+      "performance": 11,
+      "show": 5
+    }
+  },
+  "singer": {
+    "path": "data/evaluation_dbs\\singer.sqlite",
+    "tables": {
+      "singer": 8,
+      "song": 8
+    }
+  },
+  "pets_1": {
+    "path": "data/evaluation_dbs\\pets_1.sqlite",
+    "tables": {
+      "Student": 34,
+      "Has_Pet": 3,
+      "Pets": 3
+    }
+  },
+  "world_1": {
+    "path": "data/evaluation_dbs\\world_1.sqlite",
+    "tables": {
+      "city": 4079,
+      "country": 239,
+      "countrylanguage": 984
+    }
+  },
+  "tvshow": {
+    "path": "data/evaluation_dbs\\tvshow.sqlite",
+    "tables": {
+      "TV_Channel": 15,
+      "TV_series": 12,
+      "Cartoon": 12
+    }
+  },
+  "voter_1": {
+    "path": "data/evaluation_dbs\\voter_1.sqlite",
+    "tables": {
+      "AREA_CODE_STATE": 305,
+      "CONTESTANTS": 11,
+      "VOTES": 4
+    }
+  },
+  "flight_company": {
+    "path": "data/evaluation_dbs\\flight_company.sqlite",
+    "tables": {
+      "airport": 9,
+      "operate_company": 14,
+      "flight": 13
+    }
+  }
+}

@@ -1,0 +1,426 @@
+{
+  "Always-ALLOW": {
+    "variant_a": {
+      "R_block_unsafe": 0.0,
+      "ci_block": [
+        0.0,
+        1.343961130920062
+      ],
+      "R_intercept": 0.0,
+      "R_confirm_unsafe": 0.0,
+      "ci_intercept": [
+        0.0,
+        1.343961130920062
+      ],
+      "R_worst_escape": 100.0,
+      "ci_worst": [
+        98.65603886907994,
+        100.0
+      ],
+      "catastrophic_escapes": 101,
+      "FBR": 0.0,
+      "ci_fbr": [
+        0.0,
+        3.0771794017378817
+      ],
+      "IR": 0.0,
+      "ci_ir": [
+        0.0,
+        3.0771794017378817
+      ],
+      "OER": 0.0,
+      "ci_oer": [
+        0.0,
+        6.3141008783463946
+      ],
+      "Youden_J": 0.0,
+      "matrix": {
+        "ALLOW": {
+          "ALLOW": 57,
+          "CONFIRM": 0,
+          "BLOCK": 0
+        },
+        "CONFIRM": {
+          "ALLOW": 64,
+          "CONFIRM": 0,
+          "BLOCK": 0
+        },
+        "BLOCK": {
+          "ALLOW": 282,
+          "CONFIRM": 0,
+          "BLOCK": 0
+        }
+      }
+    },
+    "variant_b": {
+      "R_block_unsafe": 0.0,
+      "ci_block": [
+        0.0,
+        1.343961130920062
+      ],
+      "R_intercept": 0.0,
+      "R_confirm_unsafe": 0.0,
+      "ci_intercept": [
+        0.0,
+        1.343961130920062
+      ],
+      "R_worst_escape": 100.0,
+      "ci_worst": [
+        98.65603886907994,
+        100.0
+      ],
+      "catastrophic_escapes": 101,
+      "FBR": 0.0,
+      "ci_fbr": [
+        0.0,
+        3.0771794017378817
+      ],
+      "IR": 0.0,
+      "ci_ir": [
+        0.0,
+        3.0771794017378817
+      ],
+      "OER": 0.0,
+      "ci_oer": [
+        0.0,
+        12.064720365810762
+      ],
+      "Youden_J": 0.0,
+      "matrix": {
+        "ALLOW": {
+          "ALLOW": 28,
+          "CONFIRM": 0,
+          "BLOCK": 0
+        },
+        "CONFIRM": {
+          "ALLOW": 93,
+          "CONFIRM": 0,
+          "BLOCK": 0
+        },
+        "BLOCK": {
+          "ALLOW": 282,
+          "CONFIRM": 0,
+          "BLOCK": 0
+        }
+      }
+    }
+  },
+  "Always-CONFIRM": {
+    "variant_a": {
+      "R_block_unsafe": 0.0,
+      "ci_block": [
+        0.0,
+        1.343961130920062
+      ],
+      "R_intercept": 100.0,
+      "R_confirm_unsafe": 100.0,
+      "ci_intercept": [
+        98.65603886907994,
+        100.0
+      ],
+      "R_worst_escape": 100.0,
+      "ci_worst": [
+        98.65603886907994,
+        100.0
+      ],
+      "catastrophic_escapes": 0,
+      "FBR": 0.0,
+      "ci_fbr": [
+        0.0,
+        3.0771794017378817
+      ],
+      "IR": 100.0,
+      "ci_ir": [
+        96.9228205982621,
+        99.99999999999999
+      ],
+      "OER": 100.0,
+      "ci_oer": [
+        93.6858991216536,
+        99.99999999999999
+      ],
+      "Youden_J": 0.0,
+      "matrix": {
+        "ALLOW": {
+          "ALLOW": 0,
+          "CONFIRM": 57,
+          "BLOCK": 0
+        },
+        "CONFIRM": {
+          "ALLOW": 0,
+          "CONFIRM": 64,
+          "BLOCK": 0
+        },
+        "BLOCK": {
+          "ALLOW": 0,
+          "CONFIRM": 282,
+          "BLOCK": 0
+        }
+      }
+    },
+    "variant_b": {
+      "R_block_unsafe": 0.0,
+      "ci_block": [
+        0.0,
+        1.343961130920062
+      ],
+      "R_intercept": 100.0,
+      "R_confirm_unsafe": 100.0,
+      "ci_intercept": [
+        98.65603886907994,
+        100.0
+      ],
+      "R_worst_escape": 100.0,
+      "ci_worst": [
+        98.65603886907994,
+        100.0
+      ],
+      "catastrophic_escapes": 0,
+      "FBR": 0.0,
+      "ci_fbr": [
+        0.0,
+        3.0771794017378817
+      ],
+      "IR": 100.0,
+      "ci_ir": [
+        96.9228205982621,
+        99.99999999999999
+      ],
+      "OER": 100.0,
+      "ci_oer": [
+        87.93527963418923,
+        100.0
+      ],
+      "Youden_J": 0.0,
+      "matrix": {
+        "ALLOW": {
+          "ALLOW": 0,
+          "CONFIRM": 28,
+          "BLOCK": 0
+        },
+        "CONFIRM": {
+          "ALLOW": 0,
+          "CONFIRM": 93,
+          "BLOCK": 0
+        },
+        "BLOCK": {
+          "ALLOW": 0,
+          "CONFIRM": 282,
+          "BLOCK": 0
+        }
+      }
+    }
+  },
+  "Always-BLOCK": {
+    "variant_a": {
+      "R_block_unsafe": 100.0,
+      "ci_block": [
+        98.65603886907994,
+        100.0
+      ],
+      "R_intercept": 100.0,
+      "R_confirm_unsafe": 0.0,
+      "ci_intercept": [
+        98.65603886907994,
+        100.0
+      ],
+      "R_worst_escape": 0.0,
+      "ci_worst": [
+        0.0,
+        1.343961130920062
+      ],
+      "catastrophic_escapes": 0,
+      "FBR": 100.0,
+      "ci_fbr": [
+        96.9228205982621,
+        99.99999999999999
+      ],
+      "IR": 0.0,
+      "ci_ir": [
+        0.0,
+        3.0771794017378817
+      ],
+      "OER": 0.0,
+      "ci_oer": [
+        0.0,
+        6.3141008783463946
+      ],
+      "Youden_J": 0.0,
+      "matrix": {
+        "ALLOW": {
+          "ALLOW": 0,
+          "CONFIRM": 0,
+          "BLOCK": 57
+        },
+        "CONFIRM": {
+          "ALLOW": 0,
+          "CONFIRM": 0,
+          "BLOCK": 64
+        },
+        "BLOCK": {
+          "ALLOW": 0,
+          "CONFIRM": 0,
+          "BLOCK": 282
+        }
+      }
+    },
+    "variant_b": {
+      "R_block_unsafe": 100.0,
+      "ci_block": [
+        98.65603886907994,
+        100.0
+      ],
+      "R_intercept": 100.0,
+      "R_confirm_unsafe": 0.0,
+      "ci_intercept": [
+        98.65603886907994,
+        100.0
+      ],
+      "R_worst_escape": 0.0,
+      "ci_worst": [
+        0.0,
+        1.343961130920062
+      ],
+      "catastrophic_escapes": 0,
+      "FBR": 100.0,
+      "ci_fbr": [
+        96.9228205982621,
+        99.99999999999999
+      ],
+      "IR": 0.0,
+      "ci_ir": [
+        0.0,
+        3.0771794017378817
+      ],
+      "OER": 0.0,
+      "ci_oer": [
+        0.0,
+        12.064720365810762
+      ],
+      "Youden_J": 0.0,
+      "matrix": {
+        "ALLOW": {
+          "ALLOW": 0,
+          "CONFIRM": 0,
+          "BLOCK": 28
+        },
+        "CONFIRM": {
+          "ALLOW": 0,
+          "CONFIRM": 0,
+          "BLOCK": 93
+        },
+        "BLOCK": {
+          "ALLOW": 0,
+          "CONFIRM": 0,
+          "BLOCK": 282
+        }
+      }
+    }
+  },
+  "SQLGlot-Structural-Rule": {
+    "variant_a": {
+      "R_block_unsafe": 48.226950354609926,
+      "ci_block": [
+        42.45790918612923,
+        54.04364971922254
+      ],
+      "R_intercept": 58.51063829787234,
+      "R_confirm_unsafe": 10.28368794326241,
+      "ci_intercept": [
+        52.68323254844963,
+        64.10928470586185
+      ],
+      "R_worst_escape": 51.77304964539007,
+      "ci_worst": [
+        45.95635028077745,
+        57.54209081387076
+      ],
+      "catastrophic_escapes": 0,
+      "FBR": 0.0,
+      "ci_fbr": [
+        0.0,
+        3.0771794017378817
+      ],
+      "IR": 28.09917355371901,
+      "ci_ir": [
+        20.85956290113622,
+        36.68663964673243
+      ],
+      "OER": 0.0,
+      "ci_oer": [
+        0.0,
+        6.3141008783463946
+      ],
+      "Youden_J": 0.48226950354609927,
+      "matrix": {
+        "ALLOW": {
+          "ALLOW": 57,
+          "CONFIRM": 0,
+          "BLOCK": 0
+        },
+        "CONFIRM": {
+          "ALLOW": 30,
+          "CONFIRM": 34,
+          "BLOCK": 0
+        },
+        "BLOCK": {
+          "ALLOW": 117,
+          "CONFIRM": 29,
+          "BLOCK": 136
+        }
+      }
+    },
+    "variant_b": {
+      "R_block_unsafe": 48.226950354609926,
+      "ci_block": [
+        42.45790918612923,
+        54.04364971922254
+      ],
+      "R_intercept": 58.51063829787234,
+      "R_confirm_unsafe": 10.28368794326241,
+      "ci_intercept": [
+        52.68323254844963,
+        64.10928470586185
+      ],
+      "R_worst_escape": 51.77304964539007,
+      "ci_worst": [
+        45.95635028077745,
+        57.54209081387076
+      ],
+      "catastrophic_escapes": 0,
+      "FBR": 0.0,
+      "ci_fbr": [
+        0.0,
+        3.0771794017378817
+      ],
+      "IR": 28.09917355371901,
+      "ci_ir": [
+        20.85956290113622,
+        36.68663964673243
+      ],
+      "OER": 0.0,
+      "ci_oer": [
+        0.0,
+        12.064720365810762
+      ],
+      "Youden_J": 0.48226950354609927,
+      "matrix": {
+        "ALLOW": {
+          "ALLOW": 28,
+          "CONFIRM": 0,
+          "BLOCK": 0
+        },
+        "CONFIRM": {
+          "ALLOW": 59,
+          "CONFIRM": 34,
+          "BLOCK": 0
+        },
+        "BLOCK": {
+          "ALLOW": 117,
+          "CONFIRM": 29,
+          "BLOCK": 136
+        }
+      }
+    }
+  }
+}
