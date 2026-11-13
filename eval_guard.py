@@ -4,23 +4,23 @@ from datetime import datetime
 MANIFEST_PATH = "test_manifest.json"
 LOG_PATH = "results/test_runs.log"
 
-# v1.2 dataset hashes (canonical record)
-V12_HASHES = {
-    "data/evaluation_splits/dev_dataset_v1.2.json":  "bb537ede40a93d0f2a1865c49947c51919142aa6dec86ca8a905577880204a6f",
-    "data/evaluation_splits/test_dataset_v1.2.json": "44e35b7a13be6585b1540e1b5edf40044be324f62d74fe4cd9a3fe0b1cf401f3",
+# v1.3 dataset hashes (canonical active record)
+V13_HASHES = {
+    "data/evaluation_splits/dev_dataset_v1.3.json":          "eb478515cbc1fa5bbab12c7cd4b2ae18cf16d9469b754476fcbd233be55e5e23",
+    "data/evaluation_splits/test_dataset_v1.3.json":         "627308abd02ff2308a8ac4c5f14fd7351888b8e006ac18ac3c62689af65ddbd7",
+    "data/evaluation_splits/dev_extended_dataset_v1.3.json": "0f1531a46c57b03cbc3ad2dd3b94e561887f4957fa18e317cfd9bdbad8d9bf77"
 }
 
 def _sha256(path):
     return hashlib.sha256(open(path, "rb").read()).hexdigest()
 
 def verify_and_log_eval(split_name, config_desc="GUARDIAN_DISABLE_LLM=1", intent_track="Track A/B",
-                        pipeline_version="v1.2", dataset_version="v1.2"):
+                        pipeline_version="v1.3", dataset_version="v1.3", allow_test_evaluation=False):
     """
     Mandatory evaluation guard. Every evaluation script must invoke this function first.
-    Refuses execution on the test split if any cryptographic digest differs.
+    Refuses execution on the test split unless allow_test_evaluation=True (final logged run).
+    Blocks pipeline-design and iterative development scripts from reading TEST.
     Appends execution audit records to results/test_runs.log.
-    
-    dataset_version: "v1.1" (legacy) or "v1.2" (default, regenerated dataset)
     """
     if not os.path.exists(MANIFEST_PATH):
         raise RuntimeError(f"FATAL: {MANIFEST_PATH} missing! Evaluation cannot proceed.")
@@ -28,7 +28,7 @@ def verify_and_log_eval(split_name, config_desc="GUARDIAN_DISABLE_LLM=1", intent
     with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
         manifest = json.load(f)
 
-    # 1. Verify prereg hashes (policy files — unchanged between v1.1 and v1.2)
+    # 1. Verify prereg hashes (policy files — unchanged across all prereg versions)
     for fname, exp_hash in manifest.get("verified_prereg_hashes", {}).items():
         if not os.path.exists(fname):
             raise RuntimeError(f"FATAL: Frozen pre-registration file {fname} not found!")
@@ -39,22 +39,26 @@ def verify_and_log_eval(split_name, config_desc="GUARDIAN_DISABLE_LLM=1", intent
                 f"Expected {exp_hash}, got {act_hash}"
             )
 
-    # 2. Select dataset version
-    if dataset_version == "v1.2":
-        v12 = manifest.get("dataset_v1.2", {})
+    # 2. Select dataset paths and expected hashes
+    if dataset_version == "v1.3":
+        test_path = "data/evaluation_splits/test_dataset_v1.3.json"
+        dev_path  = "data/evaluation_splits/dev_dataset_v1.3.json"
+        exp_test_hash = V13_HASHES.get(test_path)
+        exp_dev_hash  = V13_HASHES.get(dev_path)
+    else:
         test_path = "data/evaluation_splits/test_dataset_v1.2.json"
         dev_path  = "data/evaluation_splits/dev_dataset_v1.2.json"
-        exp_test_hash = V12_HASHES.get(test_path)
-        exp_dev_hash  = V12_HASHES.get(dev_path)
-    else:
-        # Legacy v1.1 paths
-        test_path = manifest["dataset_files"]["test_dataset.json"]["path"]
-        dev_path  = manifest["dataset_files"]["dev_dataset.json"]["path"]
-        exp_test_hash = manifest["dataset_files"]["test_dataset.json"]["sha256"]
-        exp_dev_hash  = manifest["dataset_files"]["dev_dataset.json"].get("sha256")
+        exp_test_hash = "44e35b7a13be6585b1540e1b5edf40044be324f62d74fe4cd9a3fe0b1cf401f3"
+        exp_dev_hash  = "bb537ede40a93d0f2a1865c49947c51919142aa6dec86ca8a905577880204a6f"
 
-    # 3. Verify split integrity
+    # 3. Verify split integrity and block unauthorized TEST access
     if split_name.lower() == "test":
+        if not allow_test_evaluation:
+            raise PermissionError(
+                "EVAL_GUARD ACCESS DENIED: Evaluation or pipeline execution on TEST split is strictly locked.\n"
+                "Pipeline iteration, tuning, and design must be performed on DEV only.\n"
+                "Final benchmark execution requires explicit allow_test_evaluation=True authorization."
+            )
         if not os.path.exists(test_path):
             raise RuntimeError(f"FATAL: Test split file {test_path} missing!")
         act_hash = _sha256(test_path)

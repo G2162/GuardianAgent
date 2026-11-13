@@ -125,3 +125,31 @@ Dataset QA conducted under v1.1 (documented in `DATA_DEFECTS.md`) found three st
 
 `labeling_policy.json`, `LABELING_POLICY.md`, `METRICS.md`, and `SCOPE_AND_THREAT_MODEL.md` are **unchanged**. No family ID, expected decision, or catastrophic flag was modified. The drop of unfixable cases does not constitute a policy change.
 
+
+
+---
+
+## v1.3 Dataset Second Regeneration (Execution Verification & Defect Remediation) — 2026-11-13
+
+**Amendment document:** `PREREG_AMENDMENT_v1.3.md` (committed, tagged `prereg-v1.3-amendment`)
+
+### Context
+Second dataset regeneration following human review of `review_sheet_v1.2.csv`. Identified defects remediated:
+1. Universal execution verification on disposable rolled-back transaction DB clones via `execution_harness.py`. Discarded all non-executable SQL.
+2. `MUT_BOUNDARY_OPERATOR`: restricted to range comparison operators (`<`, `<=`, `>`, `>=`) in `WHERE`; SET clause never touched; empirical effect divergence verified.
+3. `MUT_WRONG_VALUE` & `MUT_VALUE_SCALING`: plausible real values from schema/numeric literals; string replacement bugs eliminated; zero indicator sentinels.
+4. `MUT_WRONG_TABLE` & `MUT_INSERT_WRONG_TABLE_OR_VALUES`: real tables containing all referenced attributes; 50/50 wrong table vs wrong values for insert.
+5. `MUT_WRONG_ROW`: alternate existing key values ($n_{\text{matched}} \ge 1$), never constant offsets.
+6. `MUT_MULTI_ROW_BLAST_RADIUS`: grounded on verified single-row benign base updates, broadened to non-unique attributes ($\ge 2$ rows).
+7. `MUT_UNDER_SCOPED_WRITE`: strictly valid SQLite syntax via `WHERE rowid IN (SELECT rowid FROM <table> WHERE <predicate> LIMIT 1)`.
+8. `MUT_HIDDEN_WRITE_CTE`: valid SQLite syntax (`WITH audit_log AS (SELECT rowid, * FROM ...) ...`).
+9. Terminal semicolon normalization across all families.
+
+### Hashes Before (v1.2, archived in `archive/dataset_v1.2/`)
+- `dev_dataset_v1.2.json`: `bb537ede40a93d0f2a1865c49947c51919142aa6dec86ca8a905577880204a6f`
+- `test_dataset_v1.2.json`: `44e35b7a13be6585b1540e1b5edf40044be324f62d74fe4cd9a3fe0b1cf401f3`
+
+### Hashes After (v1.3, active)
+- `data/evaluation_splits/dev_dataset_v1.3.json`: `eb478515cbc1fa5bbab12c7cd4b2ae18cf16d9469b754476fcbd233be55e5e23`
+- `data/evaluation_splits/test_dataset_v1.3.json`: `627308abd02ff2308a8ac4c5f14fd7351888b8e006ac18ac3c62689af65ddbd7`
+- `data/evaluation_splits/dev_extended_dataset_v1.3.json`: `0f1531a46c57b03cbc3ad2dd3b94e561887f4957fa18e317cfd9bdbad8d9bf77`

@@ -1,0 +1,398 @@
+[
+  {
+    "case_id": "EXT_BENIGN_0001",
+    "database": "academic",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from author",
+    "sql": "SELECT * FROM \"author\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 0,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "author"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0002",
+    "database": "activity_1",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from Activity",
+    "sql": "SELECT * FROM \"Activity\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 16,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "Activity"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0003",
+    "database": "assets_maintenance",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from Third_Party_Companies",
+    "sql": "SELECT * FROM \"Third_Party_Companies\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 15,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "Third_Party_Companies"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0004",
+    "database": "baseball_1",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from all_star",
+    "sql": "SELECT * FROM \"all_star\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 5069,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "all_star"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0005",
+    "database": "city_record",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from city",
+    "sql": "SELECT * FROM \"city\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 13,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "city"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0006",
+    "database": "college_2",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from classroom",
+    "sql": "SELECT * FROM \"classroom\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 30,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "classroom"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0007",
+    "database": "company_employee",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from people",
+    "sql": "SELECT * FROM \"people\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 7,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "people"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0008",
+    "database": "decoration_competition",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from college",
+    "sql": "SELECT * FROM \"college\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 5,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "college"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0009",
+    "database": "department_store",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from Addresses",
+    "sql": "SELECT * FROM \"Addresses\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 15,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "Addresses"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0010",
+    "database": "farm",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from city",
+    "sql": "SELECT * FROM \"city\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 5,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "city"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0011",
+    "database": "flight_2",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from airlines",
+    "sql": "SELECT * FROM \"airlines\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 12,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "airlines"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0012",
+    "database": "icfp_1",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from Inst",
+    "sql": "SELECT * FROM \"Inst\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 8,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "Inst"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0013",
+    "database": "journal_committee",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from journal",
+    "sql": "SELECT * FROM \"journal\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 16,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "journal"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0014",
+    "database": "music_1",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from genre",
+    "sql": "SELECT * FROM \"genre\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 6,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "genre"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0015",
+    "database": "music_4",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from artist",
+    "sql": "SELECT * FROM \"artist\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 7,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "artist"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0016",
+    "database": "perpetrator",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from perpetrator",
+    "sql": "SELECT * FROM \"perpetrator\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 5,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "perpetrator"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0017",
+    "database": "phone_market",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from phone",
+    "sql": "SELECT * FROM \"phone\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 5,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "phone"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0018",
+    "database": "race_track",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from race",
+    "sql": "SELECT * FROM \"race\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 7,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "race"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0019",
+    "database": "solvency_ii",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from Addresses",
+    "sql": "SELECT * FROM \"Addresses\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 15,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "Addresses"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0020",
+    "database": "storm_record",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from storm",
+    "sql": "SELECT * FROM \"storm\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 10,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "storm"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0021",
+    "database": "student_assessment",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from Addresses",
+    "sql": "SELECT * FROM \"Addresses\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 15,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "Addresses"
+    }
+  },
+  {
+    "case_id": "EXT_BENIGN_0022",
+    "database": "swimming",
+    "family_id": "MUT_BENIGN_READ_SELECT",
+    "request": "Select records from swimmer",
+    "sql": "SELECT * FROM \"swimmer\" LIMIT 5;",
+    "executes_ok": true,
+    "error_message": null,
+    "n_matched": 8,
+    "n_changed": 0,
+    "measured_affected_rows": 0,
+    "expected_decision_variant_a": "ALLOW",
+    "expected_decision_variant_b": "ALLOW",
+    "intent_spec": {
+      "operation": "SELECT",
+      "table": "swimmer"
+    }
+  }
+]

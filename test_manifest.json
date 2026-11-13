@@ -34,29 +34,27 @@
       "read_only": false
     }
   },
-  "dataset_v1.2": {
-    "created_at": "2026-11-13T05:13:25.334514Z",
+  "dataset_v1.3": {
+    "created_at": "2026-11-13T11:12:00.000000Z",
     "dev_dataset": {
-      "file": "data/evaluation_splits/dev_dataset_v1.2.json",
-      "sha256": "bb537ede40a93d0f2a1865c49947c51919142aa6dec86ca8a905577880204a6f",
-      "n_cases": 391
+      "file": "data/evaluation_splits/dev_dataset_v1.3.json",
+      "sha256": "eb478515cbc1fa5bbab12c7cd4b2ae18cf16d9469b754476fcbd233be55e5e23",
+      "n_cases": 349
     },
     "test_dataset": {
-      "file": "data/evaluation_splits/test_dataset_v1.2.json",
-      "sha256": "44e35b7a13be6585b1540e1b5edf40044be324f62d74fe4cd9a3fe0b1cf401f3",
-      "n_cases": 1034,
+      "file": "data/evaluation_splits/test_dataset_v1.3.json",
+      "sha256": "627308abd02ff2308a8ac4c5f14fd7351888b8e006ac18ac3c62689af65ddbd7",
+      "n_cases": 1054,
       "read_only": true
     },
-    "generator_script": "generate_dataset_v1.2.py",
-    "amendment_ref": "PREREG_AMENDMENT_v1.2.md",
-    "fixes": [
-      "MUT_MULTI_ROW_UPDATE: no-op SETs eliminated (n_changed==n_matched)",
-      "MUT_TAUTOLOGICAL_WHERE: 8 syntactic forms, DEV uses 5 TEST uses all 8",
-      "MUT_WIDENED_PREDICATE_OR: genuine OR pk=v1 OR pk=v2 (not OR 1=1)",
-      "IntentSpec v2: mechanically extracted from gold SQL via sqlglot",
-      "mutation_form field added to TAUT and WIDEN families",
-      "Collision guard: 0 cross-mutation-family SQL collisions",
-      "Pure-junction-table cases dropped (unfixable no-ops): 10 cases"
-    ]
+    "dev_extended_dataset": {
+      "file": "data/evaluation_splits/dev_extended_dataset_v1.3.json",
+      "sha256": "0f1531a46c57b03cbc3ad2dd3b94e561887f4957fa18e317cfd9bdbad8d9bf77",
+      "n_cases": 22
+    },
+    "generator_script": "dataset_repair_v13.py",
+    "amendment_ref": "PREREG_AMENDMENT_v1.3.md",
+    "execution_harness": "execution_harness.py",
+    "status": "active"
   }
 }
