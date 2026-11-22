@@ -1,0 +1,3132 @@
+{
+  "views": {
+    "pairs_only": {
+      "oracle_variant_a": {
+        "tune": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion_matrix": [
+            [
+              75,
+              0,
+              0
+            ],
+            [
+              0,
+              24,
+              0
+            ],
+            [
+              0,
+              0,
+              232
+            ]
+          ],
+          "n": 331,
+          "total": 331,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.983711755027227,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.24568965517241378,
+            "layer2": 0.0,
+            "layer3": 0.7543103448275862
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.037353065865379016
+          ],
+          "ir": 0.24242424242424243,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        }
+      },
+      "oracle_variant_b": {
+        "tune": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion_matrix": [
+            [
+              60,
+              0,
+              0
+            ],
+            [
+              0,
+              39,
+              0
+            ],
+            [
+              0,
+              0,
+              232
+            ]
+          ],
+          "n": 331,
+          "total": 331,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.983711755027227,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.24568965517241378,
+            "layer2": 0.0,
+            "layer3": 0.7543103448275862
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.037353065865379016
+          ],
+          "ir": 0.3939393939393939,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        }
+      },
+      "linker_variant_a": {
+        "tune": {
+          "accuracy": 0.7583081570996979,
+          "balanced_accuracy": 0.5213026819923372,
+          "macro_f1": 0.5531892378499547,
+          "confusion_matrix": [
+            [
+              41,
+              12,
+              22
+            ],
+            [
+              0,
+              3,
+              21
+            ],
+            [
+              0,
+              25,
+              207
+            ]
+          ],
+          "n": 331,
+          "total": 331,
+          "r_block_unsafe": 0.8922413793103449,
+          "r_block_ci": [
+            0.8457665559394681,
+            0.9259383553318911
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.10775862068965517,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.24568965517241378,
+            "layer2": 0.0,
+            "layer3": 0.646551724137931
+          },
+          "fbr": 0.43434343434343436,
+          "fbr_ci": [
+            0.3409665805285863,
+            0.5326252362012109
+          ],
+          "ir": 0.5858585858585859,
+          "oer": 0.43434343434343436,
+          "r_timeout": 0.0
+        }
+      },
+      "linker_variant_b": {
+        "tune": {
+          "accuracy": 0.7583081570996979,
+          "balanced_accuracy": 0.5897214854111406,
+          "macro_f1": 0.6143702950486281,
+          "confusion_matrix": [
+            [
+              28,
+              12,
+              20
+            ],
+            [
+              0,
+              16,
+              23
+            ],
+            [
+              0,
+              25,
+              207
+            ]
+          ],
+          "n": 331,
+          "total": 331,
+          "r_block_unsafe": 0.8922413793103449,
+          "r_block_ci": [
+            0.8457665559394681,
+            0.9259383553318911
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.10775862068965517,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.24568965517241378,
+            "layer2": 0.0,
+            "layer3": 0.646551724137931
+          },
+          "fbr": 0.43434343434343436,
+          "fbr_ci": [
+            0.3409665805285863,
+            0.5326252362012109
+          ],
+          "ir": 0.7171717171717171,
+          "oer": 0.43434343434343436,
+          "r_timeout": 0.0
+        }
+      },
+      "llm_variant_a": {
+        "tune": {
+          "accuracy": 0.8036253776435045,
+          "balanced_accuracy": 0.5398467432950191,
+          "macro_f1": 0.572898576917939,
+          "confusion_matrix": [
+            [
+              40,
+              8,
+              27
+            ],
+            [
+              0,
+              3,
+              21
+            ],
+            [
+              0,
+              9,
+              223
+            ]
+          ],
+          "n": 331,
+          "total": 331,
+          "r_block_unsafe": 0.9612068965517241,
+          "r_block_ci": [
+            0.9279304606756784,
+            0.9794588305994361
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.03879310344827586,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.24568965517241378,
+            "layer2": 0.0,
+            "layer3": 0.7155172413793104
+          },
+          "fbr": 0.48484848484848486,
+          "fbr_ci": [
+            0.38882245476146166,
+            0.5820064260223377
+          ],
+          "ir": 0.5959595959595959,
+          "oer": 0.48484848484848486,
+          "r_timeout": 0.0
+        }
+      },
+      "llm_variant_b": {
+        "tune": {
+          "accuracy": 0.8036253776435045,
+          "balanced_accuracy": 0.6041629826112584,
+          "macro_f1": 0.6485262560361263,
+          "confusion_matrix": [
+            [
+              28,
+              8,
+              24
+            ],
+            [
+              0,
+              15,
+              24
+            ],
+            [
+              0,
+              9,
+              223
+            ]
+          ],
+          "n": 331,
+          "total": 331,
+          "r_block_unsafe": 0.9612068965517241,
+          "r_block_ci": [
+            0.9279304606756784,
+            0.9794588305994361
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.03879310344827586,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.24568965517241378,
+            "layer2": 0.0,
+            "layer3": 0.7155172413793104
+          },
+          "fbr": 0.48484848484848486,
+          "fbr_ci": [
+            0.38882245476146166,
+            0.5820064260223377
+          ],
+          "ir": 0.7171717171717171,
+          "oer": 0.48484848484848486,
+          "r_timeout": 0.0
+        }
+      }
+    },
+    "full_paired": {
+      "oracle_variant_a": {
+        "tune": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion_matrix": [
+            [
+              171,
+              0,
+              0
+            ],
+            [
+              0,
+              110,
+              0
+            ],
+            [
+              0,
+              0,
+              297
+            ]
+          ],
+          "n": 578,
+          "total": 578,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9872310039444073,
+            0.9999999999999999
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.6835016835016835
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.013486251011869685
+          ],
+          "ir": 0.3914590747330961,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion_matrix": [
+            [
+              24,
+              0,
+              0
+            ],
+            [
+              0,
+              16,
+              0
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "n": 80,
+          "total": 80,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.08762127615041208
+          ],
+          "ir": 0.4,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "bootstrap_ci": {
+            "accuracy": [
+              1.0,
+              1.0
+            ],
+            "balanced_accuracy": [
+              1.0,
+              1.0
+            ],
+            "macro_f1": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "oracle_variant_b": {
+        "tune": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion_matrix": [
+            [
+              114,
+              0,
+              0
+            ],
+            [
+              0,
+              167,
+              0
+            ],
+            [
+              0,
+              0,
+              297
+            ]
+          ],
+          "n": 578,
+          "total": 578,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9872310039444073,
+            0.9999999999999999
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.6835016835016835
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.013486251011869685
+          ],
+          "ir": 0.594306049822064,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion_matrix": [
+            [
+              16,
+              0,
+              0
+            ],
+            [
+              0,
+              24,
+              0
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "n": 80,
+          "total": 80,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.08762127615041208
+          ],
+          "ir": 0.6,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "bootstrap_ci": {
+            "accuracy": [
+              1.0,
+              1.0
+            ],
+            "balanced_accuracy": [
+              1.0,
+              1.0
+            ],
+            "macro_f1": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "linker_variant_a": {
+        "tune": {
+          "accuracy": 0.7387543252595156,
+          "balanced_accuracy": 0.6874121330261681,
+          "macro_f1": 0.6900178381793377,
+          "confusion_matrix": [
+            [
+              81,
+              38,
+              52
+            ],
+            [
+              0,
+              74,
+              36
+            ],
+            [
+              0,
+              25,
+              272
+            ]
+          ],
+          "n": 578,
+          "total": 578,
+          "r_block_unsafe": 0.9158249158249159,
+          "r_block_ci": [
+            0.8786946604696648,
+            0.942335837760196
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.08417508417508418,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.5993265993265994
+          },
+          "fbr": 0.31316725978647686,
+          "fbr_ci": [
+            0.261768902158131,
+            0.36960496387833275
+          ],
+          "ir": 0.7117437722419929,
+          "oer": 0.31316725978647686,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 0.825,
+          "balanced_accuracy": 0.8055555555555557,
+          "macro_f1": 0.7612958226768969,
+          "confusion_matrix": [
+            [
+              10,
+              14,
+              0
+            ],
+            [
+              0,
+              16,
+              0
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "n": 80,
+          "total": 80,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.08762127615041208
+          ],
+          "ir": 0.75,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "bootstrap_ci": {
+            "accuracy": [
+              0.8,
+              0.8503124999999997
+            ],
+            "balanced_accuracy": [
+              0.7777777777777777,
+              0.8336805555555553
+            ],
+            "macro_f1": [
+              0.7222222222222222,
+              0.7984210426070887
+            ]
+          }
+        }
+      },
+      "linker_variant_b": {
+        "tune": {
+          "accuracy": 0.7612456747404844,
+          "balanced_accuracy": 0.6786510268493671,
+          "macro_f1": 0.6984701464559443,
+          "confusion_matrix": [
+            [
+              41,
+              25,
+              48
+            ],
+            [
+              0,
+              127,
+              40
+            ],
+            [
+              0,
+              25,
+              272
+            ]
+          ],
+          "n": 578,
+          "total": 578,
+          "r_block_unsafe": 0.9158249158249159,
+          "r_block_ci": [
+            0.8786946604696648,
+            0.942335837760196
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.08417508417508418,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.5993265993265994
+          },
+          "fbr": 0.31316725978647686,
+          "fbr_ci": [
+            0.261768902158131,
+            0.36960496387833275
+          ],
+          "ir": 0.8540925266903915,
+          "oer": 0.31316725978647686,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 0.9,
+          "balanced_accuracy": 0.8333333333333334,
+          "macro_f1": 0.8412698412698413,
+          "confusion_matrix": [
+            [
+              8,
+              8,
+              0
+            ],
+            [
+              0,
+              24,
+              0
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "n": 80,
+          "total": 80,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.08762127615041208
+          ],
+          "ir": 0.8,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "bootstrap_ci": {
+            "accuracy": [
+              0.9,
+              0.9
+            ],
+            "balanced_accuracy": [
+              0.8333333333333334,
+              0.8333333333333334
+            ],
+            "macro_f1": [
+              0.8412698412698413,
+              0.8412698412698413
+            ]
+          }
+        }
+      },
+      "llm_variant_a": {
+        "tune": {
+          "accuracy": 0.759515570934256,
+          "balanced_accuracy": 0.6983991966448108,
+          "macro_f1": 0.7080838003815714,
+          "confusion_matrix": [
+            [
+              78,
+              32,
+              61
+            ],
+            [
+              0,
+              74,
+              36
+            ],
+            [
+              0,
+              10,
+              287
+            ]
+          ],
+          "n": 578,
+          "total": 578,
+          "r_block_unsafe": 0.9663299663299664,
+          "r_block_ci": [
+            0.9391406760898022,
+            0.9816101255687866
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.03367003367003367,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.6498316498316499
+          },
+          "fbr": 0.34519572953736655,
+          "fbr_ci": [
+            0.2920319252056086,
+            0.4025349923674614
+          ],
+          "ir": 0.7224199288256228,
+          "oer": 0.34519572953736655,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 0.825,
+          "balanced_accuracy": 0.8055555555555557,
+          "macro_f1": 0.7612958226768969,
+          "confusion_matrix": [
+            [
+              10,
+              14,
+              0
+            ],
+            [
+              0,
+              16,
+              0
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "n": 80,
+          "total": 80,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.08762127615041208
+          ],
+          "ir": 0.75,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "bootstrap_ci": {
+            "accuracy": [
+              0.8,
+              0.8503124999999997
+            ],
+            "balanced_accuracy": [
+              0.7777777777777777,
+              0.8336805555555553
+            ],
+            "macro_f1": [
+              0.7222222222222222,
+              0.7984210426070887
+            ]
+          }
+        }
+      },
+      "llm_variant_b": {
+        "tune": {
+          "accuracy": 0.7802768166089965,
+          "balanced_accuracy": 0.6875020117482561,
+          "macro_f1": 0.7135534594918921,
+          "confusion_matrix": [
+            [
+              41,
+              20,
+              53
+            ],
+            [
+              0,
+              123,
+              44
+            ],
+            [
+              0,
+              10,
+              287
+            ]
+          ],
+          "n": 578,
+          "total": 578,
+          "r_block_unsafe": 0.9663299663299664,
+          "r_block_ci": [
+            0.9391406760898022,
+            0.9816101255687866
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.03367003367003367,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.6498316498316499
+          },
+          "fbr": 0.34519572953736655,
+          "fbr_ci": [
+            0.2920319252056086,
+            0.4025349923674614
+          ],
+          "ir": 0.8540925266903915,
+          "oer": 0.34519572953736655,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 0.9,
+          "balanced_accuracy": 0.8333333333333334,
+          "macro_f1": 0.8412698412698413,
+          "confusion_matrix": [
+            [
+              8,
+              8,
+              0
+            ],
+            [
+              0,
+              24,
+              0
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "n": 80,
+          "total": 80,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.08762127615041208
+          ],
+          "ir": 0.8,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "bootstrap_ci": {
+            "accuracy": [
+              0.9,
+              0.9
+            ],
+            "balanced_accuracy": [
+              0.8333333333333334,
+              0.8333333333333334
+            ],
+            "macro_f1": [
+              0.8412698412698413,
+              0.8412698412698413
+            ]
+          }
+        }
+      }
+    },
+    "write_only": {
+      "oracle_variant_a": {
+        "tune": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion_matrix": [
+            [
+              130,
+              0,
+              0
+            ],
+            [
+              0,
+              110,
+              0
+            ],
+            [
+              0,
+              0,
+              297
+            ]
+          ],
+          "n": 537,
+          "total": 537,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9872310039444073,
+            0.9999999999999999
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.6835016835016835
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.015753856896360406
+          ],
+          "ir": 0.4583333333333333,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion_matrix": [
+            [
+              16,
+              0,
+              0
+            ],
+            [
+              0,
+              16,
+              0
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "n": 72,
+          "total": 72,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.10717880917888133
+          ],
+          "ir": 0.5,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "bootstrap_ci": {
+            "accuracy": [
+              1.0,
+              1.0
+            ],
+            "balanced_accuracy": [
+              1.0,
+              1.0
+            ],
+            "macro_f1": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "oracle_variant_b": {
+        "tune": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion_matrix": [
+            [
+              73,
+              0,
+              0
+            ],
+            [
+              0,
+              167,
+              0
+            ],
+            [
+              0,
+              0,
+              297
+            ]
+          ],
+          "n": 537,
+          "total": 537,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9872310039444073,
+            0.9999999999999999
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.6835016835016835
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.015753856896360406
+          ],
+          "ir": 0.6958333333333333,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "confusion_matrix": [
+            [
+              8,
+              0,
+              0
+            ],
+            [
+              0,
+              24,
+              0
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "n": 72,
+          "total": 72,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.10717880917888133
+          ],
+          "ir": 0.75,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "bootstrap_ci": {
+            "accuracy": [
+              1.0,
+              1.0
+            ],
+            "balanced_accuracy": [
+              1.0,
+              1.0
+            ],
+            "macro_f1": [
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "linker_variant_a": {
+        "tune": {
+          "accuracy": 0.7188081936685289,
+          "balanced_accuracy": 0.6320814987481654,
+          "macro_f1": 0.6325948689916627,
+          "confusion_matrix": [
+            [
+              40,
+              38,
+              52
+            ],
+            [
+              0,
+              74,
+              36
+            ],
+            [
+              0,
+              25,
+              272
+            ]
+          ],
+          "n": 537,
+          "total": 537,
+          "r_block_unsafe": 0.9158249158249159,
+          "r_block_ci": [
+            0.8786946604696648,
+            0.942335837760196
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.08417508417508418,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.5993265993265994
+          },
+          "fbr": 0.36666666666666664,
+          "fbr_ci": [
+            0.30824604562637836,
+            0.42928831621265107
+          ],
+          "ir": 0.8333333333333334,
+          "oer": 0.36666666666666664,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 0.8055555555555556,
+          "balanced_accuracy": 0.7083333333333334,
+          "macro_f1": 0.639291465378422,
+          "confusion_matrix": [
+            [
+              2,
+              14,
+              0
+            ],
+            [
+              0,
+              16,
+              0
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "n": 72,
+          "total": 72,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.10717880917888133
+          ],
+          "ir": 0.9375,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "bootstrap_ci": {
+            "accuracy": [
+              0.7777777777777778,
+              0.8336805555555553
+            ],
+            "balanced_accuracy": [
+              0.6666666666666666,
+              0.7505208333333329
+            ],
+            "macro_f1": [
+              0.5555555555555555,
+              0.7098667740528197
+            ]
+          }
+        }
+      },
+      "linker_variant_b": {
+        "tune": {
+          "accuracy": 0.7430167597765364,
+          "balanced_accuracy": 0.5587679859136946,
+          "macro_f1": 0.5221260604344389,
+          "confusion_matrix": [
+            [
+              0,
+              25,
+              48
+            ],
+            [
+              0,
+              127,
+              40
+            ],
+            [
+              0,
+              25,
+              272
+            ]
+          ],
+          "n": 537,
+          "total": 537,
+          "r_block_unsafe": 0.9158249158249159,
+          "r_block_ci": [
+            0.8786946604696648,
+            0.942335837760196
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.08417508417508418,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.5993265993265994
+          },
+          "fbr": 0.36666666666666664,
+          "fbr_ci": [
+            0.30824604562637836,
+            0.42928831621265107
+          ],
+          "ir": 1.0,
+          "oer": 0.36666666666666664,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 0.8888888888888888,
+          "balanced_accuracy": 0.6666666666666666,
+          "macro_f1": 0.6190476190476191,
+          "confusion_matrix": [
+            [
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              24,
+              0
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "n": 72,
+          "total": 72,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.10717880917888133
+          ],
+          "ir": 1.0,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "bootstrap_ci": {
+            "accuracy": [
+              0.8888888888888888,
+              0.8888888888888888
+            ],
+            "balanced_accuracy": [
+              0.6666666666666666,
+              0.6666666666666666
+            ],
+            "macro_f1": [
+              0.6190476190476191,
+              0.6190476190476191
+            ]
+          }
+        }
+      },
+      "llm_variant_a": {
+        "tune": {
+          "accuracy": 0.7411545623836127,
+          "balanced_accuracy": 0.6412242078908745,
+          "macro_f1": 0.6469530498344728,
+          "confusion_matrix": [
+            [
+              37,
+              32,
+              61
+            ],
+            [
+              0,
+              74,
+              36
+            ],
+            [
+              0,
+              10,
+              287
+            ]
+          ],
+          "n": 537,
+          "total": 537,
+          "r_block_unsafe": 0.9663299663299664,
+          "r_block_ci": [
+            0.9391406760898022,
+            0.9816101255687866
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.03367003367003367,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.6498316498316499
+          },
+          "fbr": 0.4041666666666667,
+          "fbr_ci": [
+            0.34406423965105215,
+            0.46728858292075026
+          ],
+          "ir": 0.8458333333333333,
+          "oer": 0.4041666666666667,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 0.8055555555555556,
+          "balanced_accuracy": 0.7083333333333334,
+          "macro_f1": 0.639291465378422,
+          "confusion_matrix": [
+            [
+              2,
+              14,
+              0
+            ],
+            [
+              0,
+              16,
+              0
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "n": 72,
+          "total": 72,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.10717880917888133
+          ],
+          "ir": 0.9375,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "bootstrap_ci": {
+            "accuracy": [
+              0.7777777777777778,
+              0.8336805555555553
+            ],
+            "balanced_accuracy": [
+              0.6666666666666666,
+              0.7505208333333329
+            ],
+            "macro_f1": [
+              0.5555555555555555,
+              0.7098667740528197
+            ]
+          }
+        }
+      },
+      "llm_variant_b": {
+        "tune": {
+          "accuracy": 0.7635009310986964,
+          "balanced_accuracy": 0.5676189708125836,
+          "macro_f1": 0.5372093734703868,
+          "confusion_matrix": [
+            [
+              0,
+              20,
+              53
+            ],
+            [
+              0,
+              123,
+              44
+            ],
+            [
+              0,
+              10,
+              287
+            ]
+          ],
+          "n": 537,
+          "total": 537,
+          "r_block_unsafe": 0.9663299663299664,
+          "r_block_ci": [
+            0.9391406760898022,
+            0.9816101255687866
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.03367003367003367,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.6498316498316499
+          },
+          "fbr": 0.4041666666666667,
+          "fbr_ci": [
+            0.34406423965105215,
+            0.46728858292075026
+          ],
+          "ir": 1.0,
+          "oer": 0.4041666666666667,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 0.8888888888888888,
+          "balanced_accuracy": 0.6666666666666666,
+          "macro_f1": 0.6190476190476191,
+          "confusion_matrix": [
+            [
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              24,
+              0
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "n": 72,
+          "total": 72,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.10717880917888133
+          ],
+          "ir": 1.0,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "bootstrap_ci": {
+            "accuracy": [
+              0.8888888888888888,
+              0.8888888888888888
+            ],
+            "balanced_accuracy": [
+              0.6666666666666666,
+              0.6666666666666666
+            ],
+            "macro_f1": [
+              0.6190476190476191,
+              0.6190476190476191
+            ]
+          }
+        }
+      }
+    }
+  },
+  "ablations": {
+    "linker": {
+      "layer_1": {
+        "tune": {
+          "accuracy": 0.458477508650519,
+          "balanced_accuracy": 0.43883277216610556,
+          "macro_f1": 0.33431860630080107,
+          "confusion_matrix": [
+            [
+              171,
+              0,
+              0
+            ],
+            [
+              110,
+              0,
+              0
+            ],
+            [
+              203,
+              0,
+              94
+            ]
+          ],
+          "n": 578,
+          "total": 578,
+          "r_block_unsafe": 0.3164983164983165,
+          "r_block_ci": [
+            0.26623184350732254,
+            0.3714510540349656
+          ],
+          "r_escape": 0.6835016835016835,
+          "r_worst": 0.6835016835016835,
+          "catastrophic_escapes": {
+            "MUT_HIDDEN_WRITE_CTE": 16,
+            "MUT_UNREQUESTED_DDL_DROP": 15,
+            "MUT_UNREQUESTED_DDL_ALTER": 15
+          },
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.0
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.013486251011869685
+          ],
+          "ir": 0.0,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 0.5875,
+          "balanced_accuracy": 0.525,
+          "macro_f1": 0.4409171075837743,
+          "confusion_matrix": [
+            [
+              24,
+              0,
+              0
+            ],
+            [
+              16,
+              0,
+              0
+            ],
+            [
+              17,
+              0,
+              23
+            ]
+          ],
+          "n": 80,
+          "total": 80,
+          "r_block_unsafe": 0.575,
+          "r_block_ci": [
+            0.42195098203720116,
+            0.714905826540237
+          ],
+          "r_escape": 0.425,
+          "r_worst": 0.425,
+          "catastrophic_escapes": {
+            "MUT_HIDDEN_WRITE_CTE": 1
+          },
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.0
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.08762127615041208
+          ],
+          "ir": 0.0,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        }
+      },
+      "layer_2": {
+        "tune": {
+          "accuracy": 0.5519031141868512,
+          "balanced_accuracy": 0.6467895327544451,
+          "macro_f1": 0.5522691094688009,
+          "confusion_matrix": [
+            [
+              130,
+              41,
+              0
+            ],
+            [
+              15,
+              95,
+              0
+            ],
+            [
+              125,
+              78,
+              94
+            ]
+          ],
+          "n": 578,
+          "total": 578,
+          "r_block_unsafe": 0.3164983164983165,
+          "r_block_ci": [
+            0.26623184350732254,
+            0.3714510540349656
+          ],
+          "r_escape": 0.4208754208754209,
+          "r_worst": 0.6835016835016835,
+          "catastrophic_escapes": {
+            "MUT_HIDDEN_WRITE_CTE": 16,
+            "MUT_UNREQUESTED_DDL_DROP": 15,
+            "MUT_UNREQUESTED_DDL_ALTER": 15
+          },
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.26262626262626265,
+            "layer3": 0.0
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.013486251011869685
+          ],
+          "ir": 0.48398576512455516,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 0.6875,
+          "balanced_accuracy": 0.7472222222222222,
+          "macro_f1": 0.6832955404383975,
+          "confusion_matrix": [
+            [
+              16,
+              8,
+              0
+            ],
+            [
+              0,
+              16,
+              0
+            ],
+            [
+              9,
+              8,
+              23
+            ]
+          ],
+          "n": 80,
+          "total": 80,
+          "r_block_unsafe": 0.575,
+          "r_block_ci": [
+            0.42195098203720116,
+            0.714905826540237
+          ],
+          "r_escape": 0.225,
+          "r_worst": 0.425,
+          "catastrophic_escapes": {
+            "MUT_HIDDEN_WRITE_CTE": 1
+          },
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.2,
+            "layer3": 0.0
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.08762127615041208
+          ],
+          "ir": 0.6,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        }
+      },
+      "layer_3": {
+        "tune": {
+          "accuracy": 0.7387543252595156,
+          "balanced_accuracy": 0.6874121330261681,
+          "macro_f1": 0.6900178381793377,
+          "confusion_matrix": [
+            [
+              81,
+              38,
+              52
+            ],
+            [
+              0,
+              74,
+              36
+            ],
+            [
+              0,
+              25,
+              272
+            ]
+          ],
+          "n": 578,
+          "total": 578,
+          "r_block_unsafe": 0.9158249158249159,
+          "r_block_ci": [
+            0.8786946604696648,
+            0.942335837760196
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.08417508417508418,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.5993265993265994
+          },
+          "fbr": 0.31316725978647686,
+          "fbr_ci": [
+            0.261768902158131,
+            0.36960496387833275
+          ],
+          "ir": 0.7117437722419929,
+          "oer": 0.31316725978647686,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 0.825,
+          "balanced_accuracy": 0.8055555555555557,
+          "macro_f1": 0.7612958226768969,
+          "confusion_matrix": [
+            [
+              10,
+              14,
+              0
+            ],
+            [
+              0,
+              16,
+              0
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "n": 80,
+          "total": 80,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.08762127615041208
+          ],
+          "ir": 0.75,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        }
+      }
+    },
+    "llm": {
+      "layer_1": {
+        "tune": {
+          "accuracy": 0.458477508650519,
+          "balanced_accuracy": 0.43883277216610556,
+          "macro_f1": 0.33431860630080107,
+          "confusion_matrix": [
+            [
+              171,
+              0,
+              0
+            ],
+            [
+              110,
+              0,
+              0
+            ],
+            [
+              203,
+              0,
+              94
+            ]
+          ],
+          "n": 578,
+          "total": 578,
+          "r_block_unsafe": 0.3164983164983165,
+          "r_block_ci": [
+            0.26623184350732254,
+            0.3714510540349656
+          ],
+          "r_escape": 0.6835016835016835,
+          "r_worst": 0.6835016835016835,
+          "catastrophic_escapes": {
+            "MUT_HIDDEN_WRITE_CTE": 16,
+            "MUT_UNREQUESTED_DDL_DROP": 15,
+            "MUT_UNREQUESTED_DDL_ALTER": 15
+          },
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.0
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.013486251011869685
+          ],
+          "ir": 0.0,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 0.5875,
+          "balanced_accuracy": 0.525,
+          "macro_f1": 0.4409171075837743,
+          "confusion_matrix": [
+            [
+              24,
+              0,
+              0
+            ],
+            [
+              16,
+              0,
+              0
+            ],
+            [
+              17,
+              0,
+              23
+            ]
+          ],
+          "n": 80,
+          "total": 80,
+          "r_block_unsafe": 0.575,
+          "r_block_ci": [
+            0.42195098203720116,
+            0.714905826540237
+          ],
+          "r_escape": 0.425,
+          "r_worst": 0.425,
+          "catastrophic_escapes": {
+            "MUT_HIDDEN_WRITE_CTE": 1
+          },
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.0
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.08762127615041208
+          ],
+          "ir": 0.0,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        }
+      },
+      "layer_2": {
+        "tune": {
+          "accuracy": 0.5519031141868512,
+          "balanced_accuracy": 0.6467895327544451,
+          "macro_f1": 0.5522691094688009,
+          "confusion_matrix": [
+            [
+              130,
+              41,
+              0
+            ],
+            [
+              15,
+              95,
+              0
+            ],
+            [
+              125,
+              78,
+              94
+            ]
+          ],
+          "n": 578,
+          "total": 578,
+          "r_block_unsafe": 0.3164983164983165,
+          "r_block_ci": [
+            0.26623184350732254,
+            0.3714510540349656
+          ],
+          "r_escape": 0.4208754208754209,
+          "r_worst": 0.6835016835016835,
+          "catastrophic_escapes": {
+            "MUT_HIDDEN_WRITE_CTE": 16,
+            "MUT_UNREQUESTED_DDL_DROP": 15,
+            "MUT_UNREQUESTED_DDL_ALTER": 15
+          },
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.26262626262626265,
+            "layer3": 0.0
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.013486251011869685
+          ],
+          "ir": 0.48398576512455516,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 0.6875,
+          "balanced_accuracy": 0.7472222222222222,
+          "macro_f1": 0.6832955404383975,
+          "confusion_matrix": [
+            [
+              16,
+              8,
+              0
+            ],
+            [
+              0,
+              16,
+              0
+            ],
+            [
+              9,
+              8,
+              23
+            ]
+          ],
+          "n": 80,
+          "total": 80,
+          "r_block_unsafe": 0.575,
+          "r_block_ci": [
+            0.42195098203720116,
+            0.714905826540237
+          ],
+          "r_escape": 0.225,
+          "r_worst": 0.425,
+          "catastrophic_escapes": {
+            "MUT_HIDDEN_WRITE_CTE": 1
+          },
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.2,
+            "layer3": 0.0
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.08762127615041208
+          ],
+          "ir": 0.6,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        }
+      },
+      "layer_3": {
+        "tune": {
+          "accuracy": 0.759515570934256,
+          "balanced_accuracy": 0.6983991966448108,
+          "macro_f1": 0.7080838003815714,
+          "confusion_matrix": [
+            [
+              78,
+              32,
+              61
+            ],
+            [
+              0,
+              74,
+              36
+            ],
+            [
+              0,
+              10,
+              287
+            ]
+          ],
+          "n": 578,
+          "total": 578,
+          "r_block_unsafe": 0.9663299663299664,
+          "r_block_ci": [
+            0.9391406760898022,
+            0.9816101255687866
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.03367003367003367,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.6498316498316499
+          },
+          "fbr": 0.34519572953736655,
+          "fbr_ci": [
+            0.2920319252056086,
+            0.4025349923674614
+          ],
+          "ir": 0.7224199288256228,
+          "oer": 0.34519572953736655,
+          "r_timeout": 0.0
+        },
+        "val": {
+          "accuracy": 0.825,
+          "balanced_accuracy": 0.8055555555555557,
+          "macro_f1": 0.7612958226768969,
+          "confusion_matrix": [
+            [
+              10,
+              14,
+              0
+            ],
+            [
+              0,
+              16,
+              0
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "n": 80,
+          "total": 80,
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "catastrophic_escapes": {},
+          "intercept_layers": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "fbr": 0.0,
+          "fbr_ci": [
+            0.0,
+            0.08762127615041208
+          ],
+          "ir": 0.75,
+          "oer": 0.0,
+          "r_timeout": 0.0
+        }
+      }
+    }
+  },
+  "baselines": {
+    "Always_ALLOW": {
+      "tune": {
+        "accuracy": 0.2958477508650519,
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.15220293724966621,
+        "confusion_matrix": [
+          [
+            171,
+            0,
+            0
+          ],
+          [
+            110,
+            0,
+            0
+          ],
+          [
+            297,
+            0,
+            0
+          ]
+        ],
+        "n": 578
+      },
+      "val": {
+        "accuracy": 0.3,
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.15384615384615385,
+        "confusion_matrix": [
+          [
+            24,
+            0,
+            0
+          ],
+          [
+            16,
+            0,
+            0
+          ],
+          [
+            40,
+            0,
+            0
+          ]
+        ],
+        "n": 80
+      }
+    },
+    "Always_CONFIRM": {
+      "tune": {
+        "accuracy": 0.1903114186851211,
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.10658914728682171,
+        "confusion_matrix": [
+          [
+            0,
+            171,
+            0
+          ],
+          [
+            0,
+            110,
+            0
+          ],
+          [
+            0,
+            297,
+            0
+          ]
+        ],
+        "n": 578
+      },
+      "val": {
+        "accuracy": 0.2,
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.1111111111111111,
+        "confusion_matrix": [
+          [
+            0,
+            24,
+            0
+          ],
+          [
+            0,
+            16,
+            0
+          ],
+          [
+            0,
+            40,
+            0
+          ]
+        ],
+        "n": 80
+      }
+    },
+    "Always_BLOCK": {
+      "tune": {
+        "accuracy": 0.513840830449827,
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.22628571428571428,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            171
+          ],
+          [
+            0,
+            0,
+            110
+          ],
+          [
+            0,
+            0,
+            297
+          ]
+        ],
+        "n": 578
+      },
+      "val": {
+        "accuracy": 0.5,
+        "balanced_accuracy": 0.3333333333333333,
+        "macro_f1": 0.2222222222222222,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            24
+          ],
+          [
+            0,
+            0,
+            16
+          ],
+          [
+            0,
+            0,
+            40
+          ]
+        ],
+        "n": 80
+      }
+    },
+    "Row_count_dry_run": {
+      "tune": {
+        "accuracy": 0.47231833910034604,
+        "balanced_accuracy": 0.6023569023569023,
+        "macro_f1": 0.43571765338148216,
+        "confusion_matrix": [
+          [
+            171,
+            0,
+            0
+          ],
+          [
+            29,
+            81,
+            0
+          ],
+          [
+            166,
+            110,
+            21
+          ]
+        ],
+        "n": 578,
+        "total": 578,
+        "r_block_unsafe": 0.0707070707070707,
+        "r_block_ci": [
+          0.04670874748964283,
+          0.10566867336616895
+        ],
+        "r_escape": 0.5589225589225589,
+        "r_worst": 0.9292929292929293,
+        "catastrophic_escapes": {
+          "MUT_MISSING_WHERE_UPDATE": 27,
+          "MUT_TAUTOLOGICAL_WHERE": 14,
+          "MUT_HIDDEN_WRITE_CTE": 27,
+          "MUT_STACKED_SQL": 14,
+          "MUT_UNREQUESTED_DDL_DROP": 15,
+          "MUT_UNREQUESTED_DDL_ALTER": 15,
+          "MUT_MISSING_WHERE_DELETE": 13
+        },
+        "intercept_layers": {
+          "layer1": 0.0,
+          "layer2": 0.44107744107744107,
+          "layer3": 0.0
+        },
+        "fbr": 0.0,
+        "fbr_ci": [
+          0.0,
+          0.013486251011869685
+        ],
+        "ir": 0.28825622775800713,
+        "oer": 0.0,
+        "r_timeout": 0.0
+      },
+      "val": {
+        "accuracy": 0.4,
+        "balanced_accuracy": 0.5,
+        "macro_f1": 0.3333333333333333,
+        "confusion_matrix": [
+          [
+            24,
+            0,
+            0
+          ],
+          [
+            8,
+            8,
+            0
+          ],
+          [
+            16,
+            24,
+            0
+          ]
+        ],
+        "n": 80,
+        "total": 80,
+        "r_block_unsafe": 0.0,
+        "r_block_ci": [
+          0.0,
+          0.08762127615041208
+        ],
+        "r_escape": 0.4,
+        "r_worst": 1.0,
+        "catastrophic_escapes": {
+          "MUT_MISSING_WHERE_DELETE": 8,
+          "MUT_MISSING_WHERE_UPDATE": 8,
+          "MUT_HIDDEN_WRITE_CTE": 8
+        },
+        "intercept_layers": {
+          "layer1": 0.0,
+          "layer2": 0.6,
+          "layer3": 0.0
+        },
+        "fbr": 0.0,
+        "fbr_ci": [
+          0.0,
+          0.08762127615041208
+        ],
+        "ir": 0.2,
+        "oer": 0.0,
+        "r_timeout": 0.0
+      }
+    }
+  },
+  "paraphrase_eval": {
+    "linker": {
+      "orig_tune": {
+        "accuracy": 0.7387543252595156,
+        "balanced_accuracy": 0.6874121330261681,
+        "macro_f1": 0.6900178381793377,
+        "confusion_matrix": [
+          [
+            81,
+            38,
+            52
+          ],
+          [
+            0,
+            74,
+            36
+          ],
+          [
+            0,
+            25,
+            272
+          ]
+        ],
+        "n": 578,
+        "total": 578,
+        "r_block_unsafe": 0.9158249158249159,
+        "r_block_ci": [
+          0.8786946604696648,
+          0.942335837760196
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.08417508417508418,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.3164983164983165,
+          "layer2": 0.0,
+          "layer3": 0.5993265993265994
+        },
+        "fbr": 0.31316725978647686,
+        "fbr_ci": [
+          0.261768902158131,
+          0.36960496387833275
+        ],
+        "ir": 0.7117437722419929,
+        "oer": 0.31316725978647686,
+        "r_timeout": 0.0
+      },
+      "para_tune": {
+        "accuracy": 0.7076124567474048,
+        "balanced_accuracy": 0.619758993443204,
+        "macro_f1": 0.6111540941328175,
+        "confusion_matrix": [
+          [
+            49,
+            58,
+            64
+          ],
+          [
+            0,
+            63,
+            47
+          ],
+          [
+            0,
+            0,
+            297
+          ]
+        ],
+        "n": 578,
+        "total": 578,
+        "r_block_unsafe": 1.0,
+        "r_block_ci": [
+          0.9872310039444073,
+          0.9999999999999999
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.0,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.32996632996632996,
+          "layer2": 0.0,
+          "layer3": 0.67003367003367
+        },
+        "fbr": 0.39501779359430605,
+        "fbr_ci": [
+          0.33964512733951213,
+          0.45322209262383417
+        ],
+        "ir": 0.8256227758007118,
+        "oer": 0.39501779359430605,
+        "r_timeout": 0.0
+      },
+      "orig_val": {
+        "accuracy": 0.825,
+        "balanced_accuracy": 0.8055555555555557,
+        "macro_f1": 0.7612958226768969,
+        "confusion_matrix": [
+          [
+            10,
+            14,
+            0
+          ],
+          [
+            0,
+            16,
+            0
+          ],
+          [
+            0,
+            0,
+            40
+          ]
+        ],
+        "n": 80,
+        "total": 80,
+        "r_block_unsafe": 1.0,
+        "r_block_ci": [
+          0.9123787238495881,
+          1.0
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.0,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.575,
+          "layer2": 0.0,
+          "layer3": 0.425
+        },
+        "fbr": 0.0,
+        "fbr_ci": [
+          0.0,
+          0.08762127615041208
+        ],
+        "ir": 0.75,
+        "oer": 0.0,
+        "r_timeout": 0.0
+      },
+      "para_val": {
+        "accuracy": 0.825,
+        "balanced_accuracy": 0.8055555555555557,
+        "macro_f1": 0.7612958226768969,
+        "confusion_matrix": [
+          [
+            10,
+            14,
+            0
+          ],
+          [
+            0,
+            16,
+            0
+          ],
+          [
+            0,
+            0,
+            40
+          ]
+        ],
+        "n": 80,
+        "total": 80,
+        "r_block_unsafe": 1.0,
+        "r_block_ci": [
+          0.9123787238495881,
+          1.0
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.0,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.4,
+          "layer2": 0.0,
+          "layer3": 0.6
+        },
+        "fbr": 0.0,
+        "fbr_ci": [
+          0.0,
+          0.08762127615041208
+        ],
+        "ir": 0.75,
+        "oer": 0.0,
+        "r_timeout": 0.0
+      }
+    },
+    "llm": {
+      "orig_tune": {
+        "accuracy": 0.759515570934256,
+        "balanced_accuracy": 0.6983991966448108,
+        "macro_f1": 0.7080838003815714,
+        "confusion_matrix": [
+          [
+            78,
+            32,
+            61
+          ],
+          [
+            0,
+            74,
+            36
+          ],
+          [
+            0,
+            10,
+            287
+          ]
+        ],
+        "n": 578,
+        "total": 578,
+        "r_block_unsafe": 0.9663299663299664,
+        "r_block_ci": [
+          0.9391406760898022,
+          0.9816101255687866
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.03367003367003367,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.3164983164983165,
+          "layer2": 0.0,
+          "layer3": 0.6498316498316499
+        },
+        "fbr": 0.34519572953736655,
+        "fbr_ci": [
+          0.2920319252056086,
+          0.4025349923674614
+        ],
+        "ir": 0.7224199288256228,
+        "oer": 0.34519572953736655,
+        "r_timeout": 0.0
+      },
+      "para_tune": {
+        "accuracy": 0.7076124567474048,
+        "balanced_accuracy": 0.619758993443204,
+        "macro_f1": 0.6115468019273906,
+        "confusion_matrix": [
+          [
+            49,
+            57,
+            65
+          ],
+          [
+            0,
+            63,
+            47
+          ],
+          [
+            0,
+            0,
+            297
+          ]
+        ],
+        "n": 578,
+        "total": 578,
+        "r_block_unsafe": 1.0,
+        "r_block_ci": [
+          0.9872310039444073,
+          0.9999999999999999
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.0,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.32996632996632996,
+          "layer2": 0.0,
+          "layer3": 0.67003367003367
+        },
+        "fbr": 0.398576512455516,
+        "fbr_ci": [
+          0.3430698737327907,
+          0.4568187964012896
+        ],
+        "ir": 0.8256227758007118,
+        "oer": 0.398576512455516,
+        "r_timeout": 0.0
+      },
+      "orig_val": {
+        "accuracy": 0.825,
+        "balanced_accuracy": 0.8055555555555557,
+        "macro_f1": 0.7612958226768969,
+        "confusion_matrix": [
+          [
+            10,
+            14,
+            0
+          ],
+          [
+            0,
+            16,
+            0
+          ],
+          [
+            0,
+            0,
+            40
+          ]
+        ],
+        "n": 80,
+        "total": 80,
+        "r_block_unsafe": 1.0,
+        "r_block_ci": [
+          0.9123787238495881,
+          1.0
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.0,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.575,
+          "layer2": 0.0,
+          "layer3": 0.425
+        },
+        "fbr": 0.0,
+        "fbr_ci": [
+          0.0,
+          0.08762127615041208
+        ],
+        "ir": 0.75,
+        "oer": 0.0,
+        "r_timeout": 0.0
+      },
+      "para_val": {
+        "accuracy": 0.825,
+        "balanced_accuracy": 0.8055555555555557,
+        "macro_f1": 0.7612958226768969,
+        "confusion_matrix": [
+          [
+            10,
+            14,
+            0
+          ],
+          [
+            0,
+            16,
+            0
+          ],
+          [
+            0,
+            0,
+            40
+          ]
+        ],
+        "n": 80,
+        "total": 80,
+        "r_block_unsafe": 1.0,
+        "r_block_ci": [
+          0.9123787238495881,
+          1.0
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.0,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.4,
+          "layer2": 0.0,
+          "layer3": 0.6
+        },
+        "fbr": 0.0,
+        "fbr_ci": [
+          0.0,
+          0.08762127615041208
+        ],
+        "ir": 0.75,
+        "oer": 0.0,
+        "r_timeout": 0.0
+      }
+    }
+  },
+  "llm_thresholds": {
+    "thresh_0.3": {
+      "tune": {
+        "accuracy": 0.759515570934256,
+        "balanced_accuracy": 0.6983991966448108,
+        "macro_f1": 0.7080838003815714,
+        "confusion_matrix": [
+          [
+            78,
+            32,
+            61
+          ],
+          [
+            0,
+            74,
+            36
+          ],
+          [
+            0,
+            10,
+            287
+          ]
+        ],
+        "n": 578,
+        "total": 578,
+        "r_block_unsafe": 0.9663299663299664,
+        "r_block_ci": [
+          0.9391406760898022,
+          0.9816101255687866
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.03367003367003367,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.3164983164983165,
+          "layer2": 0.0,
+          "layer3": 0.6498316498316499
+        },
+        "fbr": 0.34519572953736655,
+        "fbr_ci": [
+          0.2920319252056086,
+          0.4025349923674614
+        ],
+        "ir": 0.7224199288256228,
+        "oer": 0.34519572953736655,
+        "r_timeout": 0.0
+      },
+      "val": {
+        "accuracy": 0.825,
+        "balanced_accuracy": 0.8055555555555557,
+        "macro_f1": 0.7612958226768969,
+        "confusion_matrix": [
+          [
+            10,
+            14,
+            0
+          ],
+          [
+            0,
+            16,
+            0
+          ],
+          [
+            0,
+            0,
+            40
+          ]
+        ],
+        "n": 80,
+        "total": 80,
+        "r_block_unsafe": 1.0,
+        "r_block_ci": [
+          0.9123787238495881,
+          1.0
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.0,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.575,
+          "layer2": 0.0,
+          "layer3": 0.425
+        },
+        "fbr": 0.0,
+        "fbr_ci": [
+          0.0,
+          0.08762127615041208
+        ],
+        "ir": 0.75,
+        "oer": 0.0,
+        "r_timeout": 0.0
+      }
+    },
+    "thresh_0.5": {
+      "tune": {
+        "accuracy": 0.759515570934256,
+        "balanced_accuracy": 0.6983991966448108,
+        "macro_f1": 0.7080838003815714,
+        "confusion_matrix": [
+          [
+            78,
+            32,
+            61
+          ],
+          [
+            0,
+            74,
+            36
+          ],
+          [
+            0,
+            10,
+            287
+          ]
+        ],
+        "n": 578,
+        "total": 578,
+        "r_block_unsafe": 0.9663299663299664,
+        "r_block_ci": [
+          0.9391406760898022,
+          0.9816101255687866
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.03367003367003367,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.3164983164983165,
+          "layer2": 0.0,
+          "layer3": 0.6498316498316499
+        },
+        "fbr": 0.34519572953736655,
+        "fbr_ci": [
+          0.2920319252056086,
+          0.4025349923674614
+        ],
+        "ir": 0.7224199288256228,
+        "oer": 0.34519572953736655,
+        "r_timeout": 0.0
+      },
+      "val": {
+        "accuracy": 0.825,
+        "balanced_accuracy": 0.8055555555555557,
+        "macro_f1": 0.7612958226768969,
+        "confusion_matrix": [
+          [
+            10,
+            14,
+            0
+          ],
+          [
+            0,
+            16,
+            0
+          ],
+          [
+            0,
+            0,
+            40
+          ]
+        ],
+        "n": 80,
+        "total": 80,
+        "r_block_unsafe": 1.0,
+        "r_block_ci": [
+          0.9123787238495881,
+          1.0
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.0,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.575,
+          "layer2": 0.0,
+          "layer3": 0.425
+        },
+        "fbr": 0.0,
+        "fbr_ci": [
+          0.0,
+          0.08762127615041208
+        ],
+        "ir": 0.75,
+        "oer": 0.0,
+        "r_timeout": 0.0
+      }
+    },
+    "thresh_0.7": {
+      "tune": {
+        "accuracy": 0.759515570934256,
+        "balanced_accuracy": 0.6983991966448108,
+        "macro_f1": 0.7080838003815714,
+        "confusion_matrix": [
+          [
+            78,
+            32,
+            61
+          ],
+          [
+            0,
+            74,
+            36
+          ],
+          [
+            0,
+            10,
+            287
+          ]
+        ],
+        "n": 578,
+        "total": 578,
+        "r_block_unsafe": 0.9663299663299664,
+        "r_block_ci": [
+          0.9391406760898022,
+          0.9816101255687866
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.03367003367003367,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.3164983164983165,
+          "layer2": 0.0,
+          "layer3": 0.6498316498316499
+        },
+        "fbr": 0.34519572953736655,
+        "fbr_ci": [
+          0.2920319252056086,
+          0.4025349923674614
+        ],
+        "ir": 0.7224199288256228,
+        "oer": 0.34519572953736655,
+        "r_timeout": 0.0
+      },
+      "val": {
+        "accuracy": 0.825,
+        "balanced_accuracy": 0.8055555555555557,
+        "macro_f1": 0.7612958226768969,
+        "confusion_matrix": [
+          [
+            10,
+            14,
+            0
+          ],
+          [
+            0,
+            16,
+            0
+          ],
+          [
+            0,
+            0,
+            40
+          ]
+        ],
+        "n": 80,
+        "total": 80,
+        "r_block_unsafe": 1.0,
+        "r_block_ci": [
+          0.9123787238495881,
+          1.0
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.0,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.575,
+          "layer2": 0.0,
+          "layer3": 0.425
+        },
+        "fbr": 0.0,
+        "fbr_ci": [
+          0.0,
+          0.08762127615041208
+        ],
+        "ir": 0.75,
+        "oer": 0.0,
+        "r_timeout": 0.0
+      }
+    },
+    "thresh_0.9": {
+      "tune": {
+        "accuracy": 0.759515570934256,
+        "balanced_accuracy": 0.6983991966448108,
+        "macro_f1": 0.7080838003815714,
+        "confusion_matrix": [
+          [
+            78,
+            32,
+            61
+          ],
+          [
+            0,
+            74,
+            36
+          ],
+          [
+            0,
+            10,
+            287
+          ]
+        ],
+        "n": 578,
+        "total": 578,
+        "r_block_unsafe": 0.9663299663299664,
+        "r_block_ci": [
+          0.9391406760898022,
+          0.9816101255687866
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.03367003367003367,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.3164983164983165,
+          "layer2": 0.0,
+          "layer3": 0.6498316498316499
+        },
+        "fbr": 0.34519572953736655,
+        "fbr_ci": [
+          0.2920319252056086,
+          0.4025349923674614
+        ],
+        "ir": 0.7224199288256228,
+        "oer": 0.34519572953736655,
+        "r_timeout": 0.0
+      },
+      "val": {
+        "accuracy": 0.825,
+        "balanced_accuracy": 0.8055555555555557,
+        "macro_f1": 0.7612958226768969,
+        "confusion_matrix": [
+          [
+            10,
+            14,
+            0
+          ],
+          [
+            0,
+            16,
+            0
+          ],
+          [
+            0,
+            0,
+            40
+          ]
+        ],
+        "n": 80,
+        "total": 80,
+        "r_block_unsafe": 1.0,
+        "r_block_ci": [
+          0.9123787238495881,
+          1.0
+        ],
+        "r_escape": 0.0,
+        "r_worst": 0.0,
+        "catastrophic_escapes": {},
+        "intercept_layers": {
+          "layer1": 0.575,
+          "layer2": 0.0,
+          "layer3": 0.425
+        },
+        "fbr": 0.0,
+        "fbr_ci": [
+          0.0,
+          0.08762127615041208
+        ],
+        "ir": 0.75,
+        "oer": 0.0,
+        "r_timeout": 0.0
+      }
+    }
+  }
+}

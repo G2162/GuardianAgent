@@ -2,6 +2,9 @@
 intent_spec_v2.py
 =================
 IntentSpec v2 and Intent Comparison Engine.
+Fails closed: For any write where any required intent field (operation, table,
+filter, set values, cardinality) is unknown or unverifiable, decision is CONFIRM, never ALLOW.
+ALLOW requires every verifiable field to match AND measured cardinality consistent with request.
 """
 from dataclasses import dataclass, field
 from typing import Dict, List, Any, Optional
@@ -55,6 +58,8 @@ def extract_sql_components(sql_str):
         comp['operation'] = 'DROP'
     elif isinstance(tree, exp.Alter):
         comp['operation'] = 'ALTER'
+    elif isinstance(tree, exp.Create):
+        comp['operation'] = 'CREATE'
         
     tbl = tree.find(exp.Table)
     if tbl:
@@ -89,13 +94,14 @@ def extract_sql_components(sql_str):
 def compare_intent_and_sql(intent: IntentSpecV2, sql_comp: dict, measured_effects: dict, risk_mode="rules", variant="variant_a"):
     violations = []
     reasons = []
+    unverifiable = list(intent.unverifiable_fields)
     risk_score = 0.0
 
     # 1. Operation Modality / Verb Mismatch
     if intent.operation != "unknown":
         int_op = intent.operation.upper()
         sql_op = sql_comp['operation'].upper()
-        if int_op == "SELECT" and sql_op in ("UPDATE", "DELETE", "INSERT", "DROP", "ALTER"):
+        if int_op == "SELECT" and sql_op in ("UPDATE", "DELETE", "INSERT", "DROP", "ALTER", "CREATE"):
             violations.append("MUT_OP_MODALITY_MISMATCH")
             reasons.append(f"Write operation {sql_op} attempted for read-only intent")
             risk_score += 100.0
@@ -107,6 +113,8 @@ def compare_intent_and_sql(intent: IntentSpecV2, sql_comp: dict, measured_effect
             violations.append("MUT_OP_VERB_MISMATCH")
             reasons.append(f"Operation verb mismatch: intent is {int_op} but SQL is {sql_op}")
             risk_score += 90.0
+    else:
+        unverifiable.append("operation")
 
     # 2. Target Table Mismatch
     if intent.table and sql_comp['table']:
@@ -114,19 +122,21 @@ def compare_intent_and_sql(intent: IntentSpecV2, sql_comp: dict, measured_effect
             violations.append("MUT_WRONG_TABLE")
             reasons.append(f"Table mismatch: intent table '{intent.table}' != SQL table '{sql_comp['table']}'")
             risk_score += 100.0
+    elif not intent.table and sql_comp['operation'] not in ('SELECT'):
+        unverifiable.append("target_table")
 
     # 3. SET Column and Value Mismatches (UPDATE)
-    if intent.set_assignments and sql_comp['set_assignments']:
-        for col, val in intent.set_assignments.items():
-            c_low = col.lower()
-            if c_low not in [sc.lower() for sc in sql_comp['set_assignments']]:
-                violations.append("MUT_WRONG_COLUMN")
-                reasons.append(f"Target column '{col}' missing from SQL SET assignments")
-                risk_score += 80.0
-            else:
-                actual_val = str(sql_comp['set_assignments'].get(c_low, '')).strip('\'"')
-                expected_val = str(val).strip('\'"')
-                if expected_val != "Standard":
+    if sql_comp['operation'] == 'UPDATE':
+        if intent.set_assignments and sql_comp['set_assignments']:
+            for col, val in intent.set_assignments.items():
+                c_low = col.lower()
+                if c_low not in [sc.lower() for sc in sql_comp['set_assignments']]:
+                    violations.append("MUT_WRONG_COLUMN")
+                    reasons.append(f"Target column '{col}' missing from SQL SET assignments")
+                    risk_score += 80.0
+                else:
+                    actual_val = str(sql_comp['set_assignments'].get(c_low, '')).strip('\'"')
+                    expected_val = str(val).strip('\'"')
                     if actual_val.lower() != expected_val.lower():
                         try:
                             act_num = float(actual_val)
@@ -144,6 +154,8 @@ def compare_intent_and_sql(intent: IntentSpecV2, sql_comp: dict, measured_effect
                             violations.append("MUT_WRONG_VALUE")
                             reasons.append(f"Value mismatch on {col}: expected {expected_val}, got {actual_val}")
                             risk_score += 80.0
+        elif not intent.set_assignments:
+            unverifiable.append("set_assignments")
 
     # 4. Filter Column & Target Row Mismatches (WHERE)
     if intent.where_val and sql_comp['where_val']:
@@ -162,6 +174,8 @@ def compare_intent_and_sql(intent: IntentSpecV2, sql_comp: dict, measured_effect
                 violations.append("MUT_WRONG_COLUMN")
                 reasons.append(f"Filter column '{c}' missing in SQL WHERE clause")
                 risk_score += 70.0
+    elif not intent.filter_columns and sql_comp['operation'] in ('UPDATE', 'DELETE') and sql_comp['has_where']:
+        unverifiable.append("filter_columns")
 
     # 5. Cardinality & Blast-Radius Check
     n_matched = measured_effects.get('n_matched', 0)
@@ -179,19 +193,26 @@ def compare_intent_and_sql(intent: IntentSpecV2, sql_comp: dict, measured_effect
                 violations.append("MUT_UNDER_SCOPED_WRITE")
                 reasons.append("Under-scoped write: expected multi-row batch, but only 1 row affected")
                 risk_score += 60.0
+        elif intent.expected_cardinality == "unknown":
+            unverifiable.append("cardinality")
+
+    # FAIL CLOSED RULE:
+    # For any write where any required intent field is unknown or unverifiable,
+    # decision can NEVER be ALLOW. It fails closed to CONFIRM.
+    has_unverifiable_write = bool(unverifiable) and sql_op in ('UPDATE', 'DELETE', 'INSERT', 'DROP', 'ALTER', 'CREATE')
 
     # Decision mapping
     if risk_mode == "weighted":
         if risk_score >= 80.0:
             decision = "BLOCK"
-        elif risk_score >= 30.0:
+        elif risk_score >= 30.0 or has_unverifiable_write:
             decision = "CONFIRM"
         else:
             if sql_comp['operation'] == 'DELETE' and variant == 'variant_b':
                 decision = "CONFIRM"
             elif n_matched > 1 or n_changed > 1:
                 decision = "CONFIRM"
-            elif sql_comp['operation'] in ('INSERT', 'DROP', 'ALTER'):
+            elif sql_comp['operation'] in ('INSERT', 'DROP', 'ALTER', 'CREATE'):
                 decision = "CONFIRM"
             else:
                 decision = "ALLOW"
@@ -211,6 +232,10 @@ def compare_intent_and_sql(intent: IntentSpecV2, sql_comp: dict, measured_effect
                 decision = "BLOCK"
             else:
                 decision = "CONFIRM"
+        elif has_unverifiable_write:
+            # Fails closed to CONFIRM
+            decision = "CONFIRM"
+            reasons.append(f"Unverifiable intent fields for write: {unverifiable}")
         else:
             if sql_op == "SELECT":
                 decision = "ALLOW"
@@ -229,7 +254,7 @@ def compare_intent_and_sql(intent: IntentSpecV2, sql_comp: dict, measured_effect
                         decision = "ALLOW"
             elif sql_op == "INSERT":
                 decision = "CONFIRM" # MUT_INTENT_INSERT
-            elif sql_op in ("DROP", "ALTER"):
+            elif sql_op in ("DROP", "ALTER", "CREATE"):
                 decision = "CONFIRM" # MUT_BENIGN_DDL
             else:
                 decision = "ALLOW"
@@ -239,5 +264,5 @@ def compare_intent_and_sql(intent: IntentSpecV2, sql_comp: dict, measured_effect
         'violations': violations,
         'reasons': reasons,
         'risk_score': risk_score,
-        'unverifiable_fields': intent.unverifiable_fields
+        'unverifiable_fields': unverifiable
     }

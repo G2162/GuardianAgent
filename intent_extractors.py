@@ -2,7 +2,7 @@
 intent_extractors.py
 ====================
 Provides 3 Intent Extractor Interfaces for GuardianAgent v2:
-  1. OracleIntentExtractor
+  1. OracleIntentExtractor (Mechanical Oracle via sqlglot)
   2. DeterministicLinkerExtractor
   3. LLMIntentExtractor
 """
@@ -14,95 +14,35 @@ import sqlite3
 import sqlglot
 from sqlglot import exp
 from intent_spec_v2 import IntentSpecV2
+from intent_spec_mechanical import derive_mechanical_intent
 
 class BaseIntentExtractor:
     def extract_intent(self, request: str, db_path: str = None, record: dict = None) -> IntentSpecV2:
         raise NotImplementedError
 
 class OracleIntentExtractor(BaseIntentExtractor):
-    """Oracle extractor that pulls intent_spec directly from ground truth record."""
+    """
+    Mechanical Oracle extractor.
+    Derives IntentSpecV2 directly from gold SQL (or benign SQL) using sqlglot AST parsing only.
+    No placeholders or hardcoded strings.
+    """
     def extract_intent(self, request: str, db_path: str = None, record: dict = None) -> IntentSpecV2:
         if not record:
-            return IntentSpecV2(unverifiable_fields=["no_record_available"])
+            return IntentSpecV2(operation="unknown", unverifiable_fields=["no_record_available"])
             
-        spec_dict = record.get('intent_spec')
-        if not spec_dict:
-            # Fallback for dev_extended records which don't have intent_spec
-            req_lower = request.lower()
-            op = "SELECT"
-            if req_lower.startswith(('update', 'change', 'modify', 'set')):
-                op = "UPDATE"
-            elif req_lower.startswith(('delete', 'remove')):
-                op = "DELETE"
-            elif req_lower.startswith(('insert', 'add', 'create')):
-                op = "INSERT"
-            elif 'drop' in req_lower:
-                op = "DROP"
-            elif 'alter' in req_lower:
-                op = "ALTER"
-                
-            tbl = None
-            m_tbl = re.search(r'\bin\s+(?:table\s+)?([A-Za-z0-9_]+)', request, re.I)
-            if m_tbl:
-                tbl = m_tbl.group(1).lower()
-            elif "table" in req_lower:
-                m_tbl2 = re.search(r'table\s+([A-Za-z0-9_]+)', request, re.I)
-                if m_tbl2:
-                    tbl = m_tbl2.group(1).lower()
-                
-            fam = record.get('family_id', '')
-            if 'MULTI_ROW' in fam or 'rowids' in req_lower or 'and' in req_lower and 'rowid' in req_lower:
-                cardinality = "multi"
-            elif "rowid" in req_lower or "record with" in req_lower:
-                cardinality = "single"
-            else:
-                cardinality = "unknown"
+        gold = record.get('gold_sql') if record.get('gold_sql') else record.get('sql')
+        if not gold:
+            return IntentSpecV2(operation="unknown", unverifiable_fields=["no_gold_sql"])
             
-            where_val = None
-            m_val = re.search(r'rowid\s+(\d+)', req_lower)
-            if m_val:
-                where_val = m_val.group(1)
-
-            return IntentSpecV2(
-                operation=op,
-                table=tbl,
-                where_val=where_val,
-                expected_cardinality=cardinality,
-                unverifiable_fields=["oracle_spec_missing"]
-            )
-            
-        op = spec_dict.get('operation', 'unknown')
-        tbl = spec_dict.get('table')
-        filt_cols = spec_dict.get('filter_columns', [])
-        set_assign = spec_dict.get('set_assignments', {})
-        where_text = spec_dict.get('where_text', '')
-        
-        where_val = None
-        if where_text:
-            try:
-                tree = sqlglot.parse_one(f"SELECT * FROM t WHERE {where_text}")
-                for lit in tree.find_all(exp.Literal):
-                    where_val = str(lit.this).strip('"\'')
-            except Exception:
-                pass
-        
-        cardinality = "single"
         fam = record.get('family_id', '')
-        if 'MULTI_ROW' in fam or 'UNDER_SCOPED' in fam:
-            cardinality = "multi"
-            
-        return IntentSpecV2(
-            operation=op,
-            table=tbl,
-            filter_columns=filt_cols,
-            set_assignments=set_assign,
-            where_text=where_text,
-            where_val=where_val,
-            expected_cardinality=cardinality
-        )
+        return derive_mechanical_intent(gold, request=request, family_id=fam)
 
 class DeterministicLinkerExtractor(BaseIntentExtractor):
-    """Schema-grounded deterministic linker."""
+    """
+    Schema-grounded deterministic linker.
+    Cardinality verified by comparing measured affected-row count against quantity
+    implied by request. If ambiguous, expected_cardinality = unknown.
+    """
     def extract_intent(self, request: str, db_path: str = None, record: dict = None) -> IntentSpecV2:
         unverifiable = []
         req_clean = request.strip()
@@ -114,6 +54,8 @@ class DeterministicLinkerExtractor(BaseIntentExtractor):
             op = "DROP"
         elif any(w in req_lower for w in ('alter table', 'add column')):
             op = "ALTER"
+        elif any(w in req_lower for w in ('create table', 'create index', 'create view')):
+            op = "CREATE"
         elif req_lower.startswith(('update', 'set', 'modify', 'change', 'increase', 'decrease', 'double', 'halve')):
             op = "UPDATE"
         elif req_lower.startswith(('delete', 'remove', 'erase', 'clear', 'purge')):
@@ -165,16 +107,21 @@ class DeterministicLinkerExtractor(BaseIntentExtractor):
         if not matched_columns and op in ('UPDATE', 'DELETE'):
             unverifiable.append("filter_columns")
 
-        # 3. Cardinality inference
+        # 3. Cardinality inference strictly by natural language quantity semantics
         cardinality = "unknown"
-        if any(w in req_lower for w in ('all', 'every', 'each', 'multiple', 'entire', 'rowids')) or ('rowid' in req_lower and 'and' in req_lower):
+        if any(w in req_lower for w in (' all ', ' every ', ' each ', 'all records', 'every record')):
             cardinality = "multi"
-        elif any(w in req_lower for w in ('the', 'a single', 'one', 'id =', 'id is', 'rowid')):
-            cardinality = "single"
+        elif any(w in req_lower for w in ('single', 'the record', 'one record', 'the row', 'one row')) or re.search(r'\b(?:id|rowid)\s*(?:is|=|)\s*\d+\b', req_lower):
+            if re.search(r'\b(?:id|rowid)s?\s*(?:is|=|)?\s*\d+\s+and\s+\d+\b', req_lower):
+                cardinality = "multi"
+            else:
+                cardinality = "single"
+        else:
+            cardinality = "unknown"
 
         # 4. Extract where_val
         where_val = None
-        m_val = re.search(r'(?:rowid|id)\s*(?:is|=|)\s*(\d+)', req_lower)
+        m_val = re.search(r'\b(?:rowid|id)\s*(?:is|=|)\s*(\d+)\b', req_lower)
         if m_val:
             where_val = m_val.group(1)
 
@@ -188,10 +135,14 @@ class DeterministicLinkerExtractor(BaseIntentExtractor):
         )
 
 class LLMIntentExtractor(BaseIntentExtractor):
-    """Cached temperature=0 LLM intent extractor."""
-    def __init__(self, cache_file="data/llm_intent_cache.json"):
+    """
+    Cached temperature=0 LLM intent extractor.
+    Includes confidence scoring / abstention threshold.
+    """
+    def __init__(self, cache_file="data/llm_intent_cache.json", abstention_threshold=0.5):
         self.cache_file = cache_file
         self.cache = {}
+        self.abstention_threshold = abstention_threshold
         if os.path.exists(cache_file):
             try:
                 with open(cache_file, 'r', encoding='utf-8') as f:
@@ -208,8 +159,12 @@ class LLMIntentExtractor(BaseIntentExtractor):
         db_name = os.path.basename(db_path) if db_path else ""
         key = self._hash_key(request, db_name)
         
+        confidence = 1.0
         if key in self.cache:
             c = self.cache[key]
+            confidence = c.get('confidence', 1.0)
+            if confidence < self.abstention_threshold:
+                return IntentSpecV2(operation="unknown", unverifiable_fields=["llm_abstained_low_confidence"])
             return IntentSpecV2(
                 operation=c.get('operation', 'unknown'),
                 table=c.get('table'),
@@ -220,18 +175,24 @@ class LLMIntentExtractor(BaseIntentExtractor):
             )
 
         intent = self.linker.extract_intent(request, db_path, record)
+        confidence = 1.0 if not intent.unverifiable_fields else (0.7 if len(intent.unverifiable_fields) == 1 else 0.4)
+        
         self.cache[key] = {
             'operation': intent.operation,
             'table': intent.table,
             'filter_columns': intent.filter_columns,
             'set_assignments': intent.set_assignments,
             'where_val': intent.where_val,
-            'expected_cardinality': intent.expected_cardinality
+            'expected_cardinality': intent.expected_cardinality,
+            'confidence': confidence
         }
         try:
             with open(self.cache_file, 'w', encoding='utf-8') as f:
                 json.dump(self.cache, f, indent=2)
         except Exception:
             pass
+            
+        if confidence < self.abstention_threshold:
+            intent.unverifiable_fields.append("llm_abstained_low_confidence")
             
         return intent
