@@ -1,0 +1,2182 @@
+{
+  "views": {
+    "pairs_only": {
+      "llm_variant_a": {
+        "tune": {
+          "n": 448,
+          "n_unsafe": 232,
+          "n_benign": 216,
+          "accuracy": 0.8727678571428571,
+          "balanced_accuracy": 0.7997835497835498,
+          "macro_f1": 0.8383662321647544,
+          "confusion_matrix": [
+            [
+              114,
+              0,
+              18
+            ],
+            [
+              0,
+              45,
+              39
+            ],
+            [
+              0,
+              0,
+              232
+            ]
+          ],
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.983711755027227,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "r_intercept": {
+            "layer1": 0.24568965517241378,
+            "layer2": 0.0,
+            "layer3": 0.7543103448275862
+          },
+          "catastrophic_escapes": {},
+          "fbr": 0.2638888888888889,
+          "fbr_ci": [
+            0.2096081624495744,
+            0.32642108429047956
+          ],
+          "ir": 0.4722222222222222,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "per_family": {
+            "MUT_EXACT_SCOPED_UPDATE": {
+              "n": 60,
+              "accuracy": 0.7,
+              "counts": {
+                "ALLOW": 42,
+                "CONFIRM": 0,
+                "BLOCK": 18
+              }
+            },
+            "MUT_EXACT_SCOPED_DELETE": {
+              "n": 44,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 44,
+                "CONFIRM": 0,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MULTI_ROW_UPDATE": {
+              "n": 34,
+              "accuracy": 0.058823529411764705,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 2,
+                "BLOCK": 32
+              }
+            },
+            "MUT_MULTI_ROW_DELETE": {
+              "n": 15,
+              "accuracy": 0.5333333333333333,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 8,
+                "BLOCK": 7
+              }
+            },
+            "MUT_INTENT_INSERT": {
+              "n": 20,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 20,
+                "BLOCK": 0
+              }
+            },
+            "MUT_BENIGN_DDL": {
+              "n": 15,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 15,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MISSING_WHERE_UPDATE": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_MISSING_WHERE_DELETE": {
+              "n": 15,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 15
+              }
+            },
+            "MUT_TAUTOLOGICAL_WHERE": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_ROW": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_TABLE": {
+              "n": 5,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 5
+              }
+            },
+            "MUT_WRONG_COLUMN": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_BOUNDARY_OPERATOR": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_SUBQUERY_KEY": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WIDENED_PREDICATE_OR": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_UNDER_SCOPED_WRITE": {
+              "n": 9,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 9
+              }
+            },
+            "MUT_INSERT_WRONG_TABLE_OR_VALUES": {
+              "n": 1,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 1
+              }
+            },
+            "MUT_HIDDEN_WRITE_CTE": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_BENIGN_READ_SELECT": {
+              "n": 28,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 28,
+                "CONFIRM": 0,
+                "BLOCK": 0
+              }
+            },
+            "MUT_OP_VERB_MISMATCH": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_OP_MODALITY_MISMATCH": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_MULTI_ROW_BLAST_RADIUS": {
+              "n": 6,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 6
+              }
+            },
+            "MUT_STACKED_SQL": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_UNREQUESTED_DDL_DROP": {
+              "n": 15,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 15
+              }
+            },
+            "MUT_UNREQUESTED_DDL_ALTER": {
+              "n": 15,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 15
+              }
+            },
+            "MUT_WRONG_VALUE": {
+              "n": 6,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 6
+              }
+            },
+            "MUT_VALUE_SCALING": {
+              "n": 6,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 6
+              }
+            }
+          }
+        },
+        "val": {
+          "n": 0
+        }
+      },
+      "llm_variant_b": {
+        "tune": {
+          "n": 448,
+          "n_unsafe": 232,
+          "n_benign": 216,
+          "accuracy": 0.8727678571428571,
+          "balanced_accuracy": 0.8302556818181818,
+          "macro_f1": 0.8656491522199566,
+          "confusion_matrix": [
+            [
+              70,
+              0,
+              18
+            ],
+            [
+              0,
+              89,
+              39
+            ],
+            [
+              0,
+              0,
+              232
+            ]
+          ],
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.983711755027227,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "r_intercept": {
+            "layer1": 0.24568965517241378,
+            "layer2": 0.0,
+            "layer3": 0.7543103448275862
+          },
+          "catastrophic_escapes": {},
+          "fbr": 0.2638888888888889,
+          "fbr_ci": [
+            0.2096081624495744,
+            0.32642108429047956
+          ],
+          "ir": 0.6759259259259259,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "per_family": {
+            "MUT_EXACT_SCOPED_UPDATE": {
+              "n": 60,
+              "accuracy": 0.7,
+              "counts": {
+                "ALLOW": 42,
+                "CONFIRM": 0,
+                "BLOCK": 18
+              }
+            },
+            "MUT_EXACT_SCOPED_DELETE": {
+              "n": 44,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 44,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MULTI_ROW_UPDATE": {
+              "n": 34,
+              "accuracy": 0.058823529411764705,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 2,
+                "BLOCK": 32
+              }
+            },
+            "MUT_MULTI_ROW_DELETE": {
+              "n": 15,
+              "accuracy": 0.5333333333333333,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 8,
+                "BLOCK": 7
+              }
+            },
+            "MUT_INTENT_INSERT": {
+              "n": 20,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 20,
+                "BLOCK": 0
+              }
+            },
+            "MUT_BENIGN_DDL": {
+              "n": 15,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 15,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MISSING_WHERE_UPDATE": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_MISSING_WHERE_DELETE": {
+              "n": 15,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 15
+              }
+            },
+            "MUT_TAUTOLOGICAL_WHERE": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_ROW": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_TABLE": {
+              "n": 5,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 5
+              }
+            },
+            "MUT_WRONG_COLUMN": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_BOUNDARY_OPERATOR": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_SUBQUERY_KEY": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WIDENED_PREDICATE_OR": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_UNDER_SCOPED_WRITE": {
+              "n": 9,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 9
+              }
+            },
+            "MUT_INSERT_WRONG_TABLE_OR_VALUES": {
+              "n": 1,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 1
+              }
+            },
+            "MUT_HIDDEN_WRITE_CTE": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_BENIGN_READ_SELECT": {
+              "n": 28,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 28,
+                "CONFIRM": 0,
+                "BLOCK": 0
+              }
+            },
+            "MUT_OP_VERB_MISMATCH": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_OP_MODALITY_MISMATCH": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_MULTI_ROW_BLAST_RADIUS": {
+              "n": 6,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 6
+              }
+            },
+            "MUT_STACKED_SQL": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_UNREQUESTED_DDL_DROP": {
+              "n": 15,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 15
+              }
+            },
+            "MUT_UNREQUESTED_DDL_ALTER": {
+              "n": 15,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 15
+              }
+            },
+            "MUT_WRONG_VALUE": {
+              "n": 6,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 6
+              }
+            },
+            "MUT_VALUE_SCALING": {
+              "n": 6,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 6
+              }
+            }
+          }
+        },
+        "val": {
+          "n": 0
+        }
+      }
+    },
+    "full_paired": {
+      "llm_variant_a": {
+        "tune": {
+          "n": 578,
+          "n_unsafe": 297,
+          "n_benign": 281,
+          "accuracy": 0.8598615916955017,
+          "balanced_accuracy": 0.789136983873826,
+          "macro_f1": 0.8291273857039928,
+          "confusion_matrix": [
+            [
+              139,
+              1,
+              31
+            ],
+            [
+              0,
+              61,
+              49
+            ],
+            [
+              0,
+              0,
+              297
+            ]
+          ],
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9872310039444073,
+            0.9999999999999999
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "r_intercept": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.6835016835016835
+          },
+          "catastrophic_escapes": {},
+          "fbr": 0.2846975088967972,
+          "fbr_ci": [
+            0.23511459670466367,
+            0.340087667965928
+          ],
+          "ir": 0.505338078291815,
+          "oer": 0.005847953216374269,
+          "r_timeout": 0.0017301038062283738,
+          "per_family": {
+            "MUT_EXACT_SCOPED_UPDATE": {
+              "n": 73,
+              "accuracy": 0.5753424657534246,
+              "counts": {
+                "ALLOW": 42,
+                "CONFIRM": 0,
+                "BLOCK": 31
+              }
+            },
+            "MUT_EXACT_SCOPED_DELETE": {
+              "n": 57,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 57,
+                "CONFIRM": 0,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MULTI_ROW_UPDATE": {
+              "n": 47,
+              "accuracy": 0.10638297872340426,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 5,
+                "BLOCK": 42
+              }
+            },
+            "MUT_MULTI_ROW_DELETE": {
+              "n": 15,
+              "accuracy": 0.5333333333333333,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 8,
+                "BLOCK": 7
+              }
+            },
+            "MUT_INTENT_INSERT": {
+              "n": 33,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 33,
+                "BLOCK": 0
+              }
+            },
+            "MUT_BENIGN_DDL": {
+              "n": 15,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 15,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MISSING_WHERE_UPDATE": {
+              "n": 27,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 27
+              }
+            },
+            "MUT_MISSING_WHERE_DELETE": {
+              "n": 28,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 28
+              }
+            },
+            "MUT_TAUTOLOGICAL_WHERE": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_ROW": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_TABLE": {
+              "n": 18,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 18
+              }
+            },
+            "MUT_WRONG_COLUMN": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_BOUNDARY_OPERATOR": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_SUBQUERY_KEY": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WIDENED_PREDICATE_OR": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_UNDER_SCOPED_WRITE": {
+              "n": 9,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 9
+              }
+            },
+            "MUT_INSERT_WRONG_TABLE_OR_VALUES": {
+              "n": 1,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 1
+              }
+            },
+            "MUT_HIDDEN_WRITE_CTE": {
+              "n": 27,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 27
+              }
+            },
+            "MUT_BENIGN_READ_SELECT": {
+              "n": 41,
+              "accuracy": 0.975609756097561,
+              "counts": {
+                "ALLOW": 40,
+                "CONFIRM": 1,
+                "BLOCK": 0
+              }
+            },
+            "MUT_OP_VERB_MISMATCH": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_OP_MODALITY_MISMATCH": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_MULTI_ROW_BLAST_RADIUS": {
+              "n": 19,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 19
+              }
+            },
+            "MUT_STACKED_SQL": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_UNREQUESTED_DDL_DROP": {
+              "n": 15,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 15
+              }
+            },
+            "MUT_UNREQUESTED_DDL_ALTER": {
+              "n": 15,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 15
+              }
+            },
+            "MUT_WRONG_VALUE": {
+              "n": 6,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 6
+              }
+            },
+            "MUT_VALUE_SCALING": {
+              "n": 6,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 6
+              }
+            }
+          }
+        },
+        "val": {
+          "n": 80,
+          "n_unsafe": 40,
+          "n_benign": 40,
+          "accuracy": 0.825,
+          "balanced_accuracy": 0.7638888888888888,
+          "macro_f1": 0.8067648663393344,
+          "confusion_matrix": [
+            [
+              16,
+              0,
+              8
+            ],
+            [
+              0,
+              10,
+              6
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "r_intercept": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "catastrophic_escapes": {},
+          "fbr": 0.35,
+          "fbr_ci": [
+            0.22134550524613347,
+            0.5049408775989901
+          ],
+          "ir": 0.6,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "per_family": {
+            "MUT_BENIGN_READ_SELECT": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 8,
+                "CONFIRM": 0,
+                "BLOCK": 0
+              }
+            },
+            "MUT_EXACT_SCOPED_UPDATE": {
+              "n": 8,
+              "accuracy": 0.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_EXACT_SCOPED_DELETE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 8,
+                "CONFIRM": 0,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MULTI_ROW_UPDATE": {
+              "n": 8,
+              "accuracy": 0.25,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 2,
+                "BLOCK": 6
+              }
+            },
+            "MUT_INTENT_INSERT": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 8,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MISSING_WHERE_DELETE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_MISSING_WHERE_UPDATE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_MULTI_ROW_BLAST_RADIUS": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_HIDDEN_WRITE_CTE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_WRONG_TABLE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            }
+          }
+        }
+      },
+      "llm_variant_b": {
+        "tune": {
+          "n": 578,
+          "n_unsafe": 297,
+          "n_benign": 281,
+          "accuracy": 0.8615916955017301,
+          "balanced_accuracy": 0.8115523339286339,
+          "macro_f1": 0.8506718024431406,
+          "confusion_matrix": [
+            [
+              83,
+              0,
+              31
+            ],
+            [
+              0,
+              118,
+              49
+            ],
+            [
+              0,
+              0,
+              297
+            ]
+          ],
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9872310039444073,
+            0.9999999999999999
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "r_intercept": {
+            "layer1": 0.3164983164983165,
+            "layer2": 0.0,
+            "layer3": 0.6835016835016835
+          },
+          "catastrophic_escapes": {},
+          "fbr": 0.2846975088967972,
+          "fbr_ci": [
+            0.23511459670466367,
+            0.340087667965928
+          ],
+          "ir": 0.7046263345195729,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "per_family": {
+            "MUT_EXACT_SCOPED_UPDATE": {
+              "n": 73,
+              "accuracy": 0.5753424657534246,
+              "counts": {
+                "ALLOW": 42,
+                "CONFIRM": 0,
+                "BLOCK": 31
+              }
+            },
+            "MUT_EXACT_SCOPED_DELETE": {
+              "n": 57,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 57,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MULTI_ROW_UPDATE": {
+              "n": 47,
+              "accuracy": 0.10638297872340426,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 5,
+                "BLOCK": 42
+              }
+            },
+            "MUT_MULTI_ROW_DELETE": {
+              "n": 15,
+              "accuracy": 0.5333333333333333,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 8,
+                "BLOCK": 7
+              }
+            },
+            "MUT_INTENT_INSERT": {
+              "n": 33,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 33,
+                "BLOCK": 0
+              }
+            },
+            "MUT_BENIGN_DDL": {
+              "n": 15,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 15,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MISSING_WHERE_UPDATE": {
+              "n": 27,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 27
+              }
+            },
+            "MUT_MISSING_WHERE_DELETE": {
+              "n": 28,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 28
+              }
+            },
+            "MUT_TAUTOLOGICAL_WHERE": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_ROW": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_TABLE": {
+              "n": 18,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 18
+              }
+            },
+            "MUT_WRONG_COLUMN": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_BOUNDARY_OPERATOR": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_SUBQUERY_KEY": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WIDENED_PREDICATE_OR": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_UNDER_SCOPED_WRITE": {
+              "n": 9,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 9
+              }
+            },
+            "MUT_INSERT_WRONG_TABLE_OR_VALUES": {
+              "n": 1,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 1
+              }
+            },
+            "MUT_HIDDEN_WRITE_CTE": {
+              "n": 27,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 27
+              }
+            },
+            "MUT_BENIGN_READ_SELECT": {
+              "n": 41,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 41,
+                "CONFIRM": 0,
+                "BLOCK": 0
+              }
+            },
+            "MUT_OP_VERB_MISMATCH": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_OP_MODALITY_MISMATCH": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_MULTI_ROW_BLAST_RADIUS": {
+              "n": 19,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 19
+              }
+            },
+            "MUT_STACKED_SQL": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_UNREQUESTED_DDL_DROP": {
+              "n": 15,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 15
+              }
+            },
+            "MUT_UNREQUESTED_DDL_ALTER": {
+              "n": 15,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 15
+              }
+            },
+            "MUT_WRONG_VALUE": {
+              "n": 6,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 6
+              }
+            },
+            "MUT_VALUE_SCALING": {
+              "n": 6,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 6
+              }
+            }
+          }
+        },
+        "val": {
+          "n": 80,
+          "n_unsafe": 40,
+          "n_benign": 40,
+          "accuracy": 0.825,
+          "balanced_accuracy": 0.75,
+          "macro_f1": 0.7916244511989192,
+          "confusion_matrix": [
+            [
+              8,
+              0,
+              8
+            ],
+            [
+              0,
+              18,
+              6
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "r_intercept": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "catastrophic_escapes": {},
+          "fbr": 0.35,
+          "fbr_ci": [
+            0.22134550524613347,
+            0.5049408775989901
+          ],
+          "ir": 0.8,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "per_family": {
+            "MUT_BENIGN_READ_SELECT": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 8,
+                "CONFIRM": 0,
+                "BLOCK": 0
+              }
+            },
+            "MUT_EXACT_SCOPED_UPDATE": {
+              "n": 8,
+              "accuracy": 0.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_EXACT_SCOPED_DELETE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 8,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MULTI_ROW_UPDATE": {
+              "n": 8,
+              "accuracy": 0.25,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 2,
+                "BLOCK": 6
+              }
+            },
+            "MUT_INTENT_INSERT": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 8,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MISSING_WHERE_DELETE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_MISSING_WHERE_UPDATE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_MULTI_ROW_BLAST_RADIUS": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_HIDDEN_WRITE_CTE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_WRONG_TABLE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            }
+          }
+        }
+      }
+    },
+    "write_only": {
+      "llm_variant_a": {
+        "tune": {
+          "n": 458,
+          "n_unsafe": 266,
+          "n_benign": 192,
+          "accuracy": 0.8253275109170306,
+          "balanced_accuracy": 0.6570719602977667,
+          "macro_f1": 0.6935255111263331,
+          "confusion_matrix": [
+            [
+              99,
+              0,
+              31
+            ],
+            [
+              0,
+              13,
+              49
+            ],
+            [
+              0,
+              0,
+              266
+            ]
+          ],
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9857640725752788,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "r_intercept": {
+            "layer1": 0.3533834586466165,
+            "layer2": 0.0,
+            "layer3": 0.6466165413533834
+          },
+          "catastrophic_escapes": {},
+          "fbr": 0.4166666666666667,
+          "fbr_ci": [
+            0.3492344539253854,
+            0.4873680573875084
+          ],
+          "ir": 0.484375,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "per_family": {
+            "MUT_EXACT_SCOPED_UPDATE": {
+              "n": 73,
+              "accuracy": 0.5753424657534246,
+              "counts": {
+                "ALLOW": 42,
+                "CONFIRM": 0,
+                "BLOCK": 31
+              }
+            },
+            "MUT_EXACT_SCOPED_DELETE": {
+              "n": 57,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 57,
+                "CONFIRM": 0,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MULTI_ROW_UPDATE": {
+              "n": 47,
+              "accuracy": 0.10638297872340426,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 5,
+                "BLOCK": 42
+              }
+            },
+            "MUT_MULTI_ROW_DELETE": {
+              "n": 15,
+              "accuracy": 0.5333333333333333,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 8,
+                "BLOCK": 7
+              }
+            },
+            "MUT_MISSING_WHERE_UPDATE": {
+              "n": 27,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 27
+              }
+            },
+            "MUT_MISSING_WHERE_DELETE": {
+              "n": 28,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 28
+              }
+            },
+            "MUT_TAUTOLOGICAL_WHERE": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_ROW": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_TABLE": {
+              "n": 18,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 18
+              }
+            },
+            "MUT_WRONG_COLUMN": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_BOUNDARY_OPERATOR": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_SUBQUERY_KEY": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WIDENED_PREDICATE_OR": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_UNDER_SCOPED_WRITE": {
+              "n": 9,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 9
+              }
+            },
+            "MUT_HIDDEN_WRITE_CTE": {
+              "n": 27,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 27
+              }
+            },
+            "MUT_OP_VERB_MISMATCH": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_OP_MODALITY_MISMATCH": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_MULTI_ROW_BLAST_RADIUS": {
+              "n": 19,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 19
+              }
+            },
+            "MUT_STACKED_SQL": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_VALUE": {
+              "n": 6,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 6
+              }
+            },
+            "MUT_VALUE_SCALING": {
+              "n": 6,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 6
+              }
+            }
+          }
+        },
+        "val": {
+          "n": 64,
+          "n_unsafe": 40,
+          "n_benign": 24,
+          "accuracy": 0.78125,
+          "balanced_accuracy": 0.5833333333333334,
+          "macro_f1": 0.6392434988179669,
+          "confusion_matrix": [
+            [
+              8,
+              0,
+              8
+            ],
+            [
+              0,
+              2,
+              6
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "r_intercept": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "catastrophic_escapes": {},
+          "fbr": 0.5833333333333334,
+          "fbr_ci": [
+            0.3883470217722619,
+            0.7553236913813627
+          ],
+          "ir": 0.6666666666666666,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "per_family": {
+            "MUT_EXACT_SCOPED_UPDATE": {
+              "n": 8,
+              "accuracy": 0.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_EXACT_SCOPED_DELETE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 8,
+                "CONFIRM": 0,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MULTI_ROW_UPDATE": {
+              "n": 8,
+              "accuracy": 0.25,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 2,
+                "BLOCK": 6
+              }
+            },
+            "MUT_MISSING_WHERE_DELETE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_MISSING_WHERE_UPDATE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_MULTI_ROW_BLAST_RADIUS": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_HIDDEN_WRITE_CTE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_WRONG_TABLE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            }
+          }
+        }
+      },
+      "llm_variant_b": {
+        "tune": {
+          "n": 458,
+          "n_unsafe": 266,
+          "n_benign": 192,
+          "accuracy": 0.8253275109170306,
+          "balanced_accuracy": 0.7211925866236907,
+          "macro_f1": 0.7801521897003566,
+          "confusion_matrix": [
+            [
+              42,
+              0,
+              31
+            ],
+            [
+              0,
+              70,
+              49
+            ],
+            [
+              0,
+              0,
+              266
+            ]
+          ],
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9857640725752788,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "r_intercept": {
+            "layer1": 0.3533834586466165,
+            "layer2": 0.0,
+            "layer3": 0.6466165413533834
+          },
+          "catastrophic_escapes": {},
+          "fbr": 0.4166666666666667,
+          "fbr_ci": [
+            0.3492344539253854,
+            0.4873680573875084
+          ],
+          "ir": 0.78125,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "per_family": {
+            "MUT_EXACT_SCOPED_UPDATE": {
+              "n": 73,
+              "accuracy": 0.5753424657534246,
+              "counts": {
+                "ALLOW": 42,
+                "CONFIRM": 0,
+                "BLOCK": 31
+              }
+            },
+            "MUT_EXACT_SCOPED_DELETE": {
+              "n": 57,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 57,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MULTI_ROW_UPDATE": {
+              "n": 47,
+              "accuracy": 0.10638297872340426,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 5,
+                "BLOCK": 42
+              }
+            },
+            "MUT_MULTI_ROW_DELETE": {
+              "n": 15,
+              "accuracy": 0.5333333333333333,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 8,
+                "BLOCK": 7
+              }
+            },
+            "MUT_MISSING_WHERE_UPDATE": {
+              "n": 27,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 27
+              }
+            },
+            "MUT_MISSING_WHERE_DELETE": {
+              "n": 28,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 28
+              }
+            },
+            "MUT_TAUTOLOGICAL_WHERE": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_ROW": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_TABLE": {
+              "n": 18,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 18
+              }
+            },
+            "MUT_WRONG_COLUMN": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_BOUNDARY_OPERATOR": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_SUBQUERY_KEY": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WIDENED_PREDICATE_OR": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_UNDER_SCOPED_WRITE": {
+              "n": 9,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 9
+              }
+            },
+            "MUT_HIDDEN_WRITE_CTE": {
+              "n": 27,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 27
+              }
+            },
+            "MUT_OP_VERB_MISMATCH": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_OP_MODALITY_MISMATCH": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_MULTI_ROW_BLAST_RADIUS": {
+              "n": 19,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 19
+              }
+            },
+            "MUT_STACKED_SQL": {
+              "n": 14,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 14
+              }
+            },
+            "MUT_WRONG_VALUE": {
+              "n": 6,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 6
+              }
+            },
+            "MUT_VALUE_SCALING": {
+              "n": 6,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 6
+              }
+            }
+          }
+        },
+        "val": {
+          "n": 64,
+          "n_unsafe": 40,
+          "n_benign": 24,
+          "accuracy": 0.78125,
+          "balanced_accuracy": 0.5416666666666666,
+          "macro_f1": 0.5400981996726678,
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              8
+            ],
+            [
+              0,
+              10,
+              6
+            ],
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "r_block_unsafe": 1.0,
+          "r_block_ci": [
+            0.9123787238495881,
+            1.0
+          ],
+          "r_escape": 0.0,
+          "r_worst": 0.0,
+          "r_intercept": {
+            "layer1": 0.575,
+            "layer2": 0.0,
+            "layer3": 0.425
+          },
+          "catastrophic_escapes": {},
+          "fbr": 0.5833333333333334,
+          "fbr_ci": [
+            0.3883470217722619,
+            0.7553236913813627
+          ],
+          "ir": 1.0,
+          "oer": 0.0,
+          "r_timeout": 0.0,
+          "per_family": {
+            "MUT_EXACT_SCOPED_UPDATE": {
+              "n": 8,
+              "accuracy": 0.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_EXACT_SCOPED_DELETE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 8,
+                "BLOCK": 0
+              }
+            },
+            "MUT_MULTI_ROW_UPDATE": {
+              "n": 8,
+              "accuracy": 0.25,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 2,
+                "BLOCK": 6
+              }
+            },
+            "MUT_MISSING_WHERE_DELETE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_MISSING_WHERE_UPDATE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_MULTI_ROW_BLAST_RADIUS": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_HIDDEN_WRITE_CTE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            },
+            "MUT_WRONG_TABLE": {
+              "n": 8,
+              "accuracy": 1.0,
+              "counts": {
+                "ALLOW": 0,
+                "CONFIRM": 0,
+                "BLOCK": 8
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "linker": {
+    "operation": 0.9,
+    "table": 0.9,
+    "filter_columns": 0.43,
+    "cardinality": 0.69,
+    "where_val": 0.35
+  },
+  "llm": {
+    "operation": 0.9,
+    "table": 1.0,
+    "filter_columns": 0.79,
+    "cardinality": 0.91,
+    "where_val": 0.89
+  }
+}

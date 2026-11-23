@@ -357,7 +357,8 @@ def run_robustness():
                         "case_id": record.get("case_id"),
                         "original": orig_sql,
                         "rewrite": rew_sql,
-                        "proof": proof
+                        "proof": proof,
+                        "record": record
                     })
             else:
                 discarded.append((proof, orig_sql, rew_sql))
@@ -367,7 +368,7 @@ def run_robustness():
         total_eq = len(equiv_pairs)
         agreement_by_family = {}
         for pair in equiv_pairs[:50]:
-            rec = next((r for r in write_cases if r.get("sql","").strip() == pair["original"].strip()), None)
+            rec = pair.get("record")
             if not rec:
                 continue
             db_path = resolve_db_path(rec["database"])

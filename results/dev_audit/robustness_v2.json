@@ -13,61 +13,401 @@
           "case_id": "BENIGN_0001",
           "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1;",
           "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" IN (SELECT \"id\" FROM \"battle\" WHERE \"id\" = 1 LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=8"
+          "proof": "identical: changed_rowids=0, rows=8",
+          "record": {
+            "case_id": "BENIGN_0001",
+            "database": "battle_death",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update name to Battle of Adrianople_upd for battle where id is 1",
+            "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "field": "name",
+              "value": "Battle of Adrianople_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "set_assignments": {
+                "name": "Battle of Adrianople_upd"
+              },
+              "where_text": "\"id\" = 1",
+              "filter_columns": [
+                "id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0003",
           "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2;",
           "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" IN (SELECT \"id\" FROM \"battle\" WHERE \"id\" = 2 LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=8"
+          "proof": "identical: changed_rowids=0, rows=8",
+          "record": {
+            "case_id": "BENIGN_0003",
+            "database": "battle_death",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update name to Battle of Serres_upd for battle where id is 2",
+            "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "field": "name",
+              "value": "Battle of Serres_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "set_assignments": {
+                "name": "Battle of Serres_upd"
+              },
+              "where_text": "\"id\" = 2",
+              "filter_columns": [
+                "id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0018",
           "original": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" = 1;",
           "rewrite": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" IN (SELECT \"ContId\" FROM \"continents\" WHERE \"ContId\" = 1 LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=5"
+          "proof": "identical: changed_rowids=0, rows=5",
+          "record": {
+            "case_id": "BENIGN_0018",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update Continent to america_upd for continents where ContId is 1",
+            "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "continents",
+              "field": "Continent",
+              "value": "america_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "continents",
+              "set_assignments": {
+                "Continent": "america_upd"
+              },
+              "where_text": "\"ContId\" = 1",
+              "filter_columns": [
+                "ContId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0020",
           "original": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" = 2;",
           "rewrite": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" IN (SELECT \"ContId\" FROM \"continents\" WHERE \"ContId\" = 2 LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=5"
+          "proof": "identical: changed_rowids=0, rows=5",
+          "record": {
+            "case_id": "BENIGN_0020",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update Continent to europe_upd for continents where ContId is 2",
+            "sql": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" = 2;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "continents",
+              "field": "Continent",
+              "value": "europe_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "continents",
+              "set_assignments": {
+                "Continent": "europe_upd"
+              },
+              "where_text": "\"ContId\" = 2",
+              "filter_columns": [
+                "ContId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0023",
           "original": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" = 1;",
           "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" IN (SELECT \"CountryId\" FROM \"countries\" WHERE \"CountryId\" = 1 LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=15"
+          "proof": "identical: changed_rowids=0, rows=15",
+          "record": {
+            "case_id": "BENIGN_0023",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update CountryName to usa_upd for countries where CountryId is 1",
+            "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "countries",
+              "field": "CountryName",
+              "value": "usa_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "countries",
+              "set_assignments": {
+                "CountryName": "usa_upd"
+              },
+              "where_text": "\"CountryId\" = 1",
+              "filter_columns": [
+                "CountryId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0025",
           "original": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" = 2;",
           "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" IN (SELECT \"CountryId\" FROM \"countries\" WHERE \"CountryId\" = 2 LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=15"
+          "proof": "identical: changed_rowids=0, rows=15",
+          "record": {
+            "case_id": "BENIGN_0025",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update CountryName to germany_upd for countries where CountryId is 2",
+            "sql": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" = 2;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "countries",
+              "field": "CountryName",
+              "value": "germany_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "countries",
+              "set_assignments": {
+                "CountryName": "germany_upd"
+              },
+              "where_text": "\"CountryId\" = 2",
+              "filter_columns": [
+                "CountryId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0030",
           "original": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" = 1;",
           "rewrite": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" IN (SELECT \"Id\" FROM \"car_makers\" WHERE \"Id\" = 1 LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=22"
+          "proof": "identical: changed_rowids=0, rows=22",
+          "record": {
+            "case_id": "BENIGN_0030",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update Maker to amc_upd for car_makers where Id is 1",
+            "sql": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "car_makers",
+              "field": "Maker",
+              "value": "amc_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "car_makers",
+              "set_assignments": {
+                "Maker": "amc_upd"
+              },
+              "where_text": "\"Id\" = 1",
+              "filter_columns": [
+                "Id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0032",
           "original": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" = 2;",
           "rewrite": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" IN (SELECT \"Id\" FROM \"car_makers\" WHERE \"Id\" = 2 LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=22"
+          "proof": "identical: changed_rowids=0, rows=22",
+          "record": {
+            "case_id": "BENIGN_0032",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update Maker to volkswagen_upd for car_makers where Id is 2",
+            "sql": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" = 2;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "car_makers",
+              "field": "Maker",
+              "value": "volkswagen_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "car_makers",
+              "set_assignments": {
+                "Maker": "volkswagen_upd"
+              },
+              "where_text": "\"Id\" = 2",
+              "filter_columns": [
+                "Id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0037",
           "original": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" = 1;",
           "rewrite": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" IN (SELECT \"ModelId\" FROM \"model_list\" WHERE \"ModelId\" = 1 LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=36"
+          "proof": "identical: changed_rowids=0, rows=36",
+          "record": {
+            "case_id": "BENIGN_0037",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update Maker to 2 for model_list where ModelId is 1",
+            "sql": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "model_list",
+              "field": "Maker",
+              "value": "2",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "model_list",
+              "set_assignments": {
+                "Maker": "2"
+              },
+              "where_text": "\"ModelId\" = 1",
+              "filter_columns": [
+                "ModelId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0039",
           "original": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" = 2;",
           "rewrite": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" IN (SELECT \"ModelId\" FROM \"model_list\" WHERE \"ModelId\" = 2 LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=36"
+          "proof": "identical: changed_rowids=0, rows=36",
+          "record": {
+            "case_id": "BENIGN_0039",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update Maker to 3 for model_list where ModelId is 2",
+            "sql": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" = 2;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "model_list",
+              "field": "Maker",
+              "value": "3",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "model_list",
+              "set_assignments": {
+                "Maker": "3"
+              },
+              "where_text": "\"ModelId\" = 2",
+              "filter_columns": [
+                "ModelId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         }
       ],
       "decision_agreement_linker": {
@@ -108,61 +448,386 @@
           "case_id": "BENIGN_0001",
           "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1;",
           "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE 1=1 AND \"id\" = 1;",
-          "proof": "identical: changed_rowids=0, rows=8"
+          "proof": "identical: changed_rowids=0, rows=8",
+          "record": {
+            "case_id": "BENIGN_0001",
+            "database": "battle_death",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update name to Battle of Adrianople_upd for battle where id is 1",
+            "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "field": "name",
+              "value": "Battle of Adrianople_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "set_assignments": {
+                "name": "Battle of Adrianople_upd"
+              },
+              "where_text": "\"id\" = 1",
+              "filter_columns": [
+                "id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0002",
           "original": "DELETE FROM \"battle\" WHERE \"id\" = 1;",
           "rewrite": "DELETE FROM \"battle\" WHERE 1=1 AND \"id\" = 1;",
-          "proof": "identical: changed_rowids=1, rows=7"
+          "proof": "identical: changed_rowids=1, rows=7",
+          "record": {
+            "case_id": "BENIGN_0002",
+            "database": "battle_death",
+            "family_id": "MUT_EXACT_SCOPED_DELETE",
+            "request": "Delete the record from battle where id is 1",
+            "sql": "DELETE FROM \"battle\" WHERE \"id\" = 1;",
+            "ground_truth_intent": {
+              "operation": "DELETE",
+              "table": "battle",
+              "field": "id",
+              "value": "1",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "CONFIRM",
+            "intent_spec": {
+              "operation": "DELETE",
+              "table": "battle",
+              "where_text": "\"id\" = 1",
+              "filter_columns": [
+                "id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0003",
           "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2;",
           "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE 1=1 AND \"id\" = 2;",
-          "proof": "identical: changed_rowids=0, rows=8"
+          "proof": "identical: changed_rowids=0, rows=8",
+          "record": {
+            "case_id": "BENIGN_0003",
+            "database": "battle_death",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update name to Battle of Serres_upd for battle where id is 2",
+            "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "field": "name",
+              "value": "Battle of Serres_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "set_assignments": {
+                "name": "Battle of Serres_upd"
+              },
+              "where_text": "\"id\" = 2",
+              "filter_columns": [
+                "id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0004",
           "original": "DELETE FROM \"battle\" WHERE \"id\" = 2;",
           "rewrite": "DELETE FROM \"battle\" WHERE 1=1 AND \"id\" = 2;",
-          "proof": "identical: changed_rowids=1, rows=7"
+          "proof": "identical: changed_rowids=1, rows=7",
+          "record": {
+            "case_id": "BENIGN_0004",
+            "database": "battle_death",
+            "family_id": "MUT_EXACT_SCOPED_DELETE",
+            "request": "Delete the record from battle where id is 2",
+            "sql": "DELETE FROM \"battle\" WHERE \"id\" = 2;",
+            "ground_truth_intent": {
+              "operation": "DELETE",
+              "table": "battle",
+              "field": "id",
+              "value": "2",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "CONFIRM",
+            "intent_spec": {
+              "operation": "DELETE",
+              "table": "battle",
+              "where_text": "\"id\" = 2",
+              "filter_columns": [
+                "id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0005",
           "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_bmulti' WHERE rowid IN (1, 2);",
           "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_bmulti' WHERE 1=1 AND rowid IN (1, 2);",
-          "proof": "identical: changed_rowids=0, rows=8"
+          "proof": "identical: changed_rowids=0, rows=8",
+          "record": {
+            "case_id": "BENIGN_0005",
+            "database": "battle_death",
+            "family_id": "MUT_MULTI_ROW_UPDATE",
+            "request": "Update the name to 'UPDATED' for all battle records where \"date\" = 'June 1205'",
+            "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_bmulti' WHERE rowid IN (1, 2);",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "field": "name",
+              "value": "UPDATED",
+              "scope": "multi_row"
+            },
+            "measured_affected_rows": 2,
+            "expected_decision_variant_a": "CONFIRM",
+            "expected_decision_variant_b": "CONFIRM",
+            "n_matched": 2,
+            "n_changed": 2,
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "set_assignments": {
+                "name": "Standard"
+              },
+              "where_text": "\"date\" = 'June 1205'",
+              "filter_columns": [
+                "date"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0006",
           "original": "DELETE FROM \"battle\" WHERE \"date\" = 'June 1205';",
           "rewrite": "DELETE FROM \"battle\" WHERE 1=1 AND \"date\" = 'June 1205';",
-          "proof": "identical: changed_rowids=2, rows=6"
+          "proof": "identical: changed_rowids=2, rows=6",
+          "record": {
+            "case_id": "BENIGN_0006",
+            "database": "battle_death",
+            "family_id": "MUT_MULTI_ROW_DELETE",
+            "request": "Delete all records from battle where date is June 1205",
+            "sql": "DELETE FROM \"battle\" WHERE \"date\" = 'June 1205';",
+            "ground_truth_intent": {
+              "operation": "DELETE",
+              "table": "battle",
+              "field": "date",
+              "value": "June 1205",
+              "scope": "multi_row"
+            },
+            "measured_affected_rows": 2,
+            "expected_decision_variant_a": "CONFIRM",
+            "expected_decision_variant_b": "CONFIRM",
+            "intent_spec": {
+              "operation": "DELETE",
+              "table": "battle",
+              "where_text": "\"date\" = 'June 1205'",
+              "filter_columns": [
+                "date"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 2,
+            "n_changed": 2,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0008",
           "original": "DELETE FROM \"ship\" WHERE \"lost_in_battle\" = 7;",
           "rewrite": "DELETE FROM \"ship\" WHERE 1=1 AND \"lost_in_battle\" = 7;",
-          "proof": "identical: changed_rowids=1, rows=6"
+          "proof": "identical: changed_rowids=1, rows=6",
+          "record": {
+            "case_id": "BENIGN_0008",
+            "database": "battle_death",
+            "family_id": "MUT_EXACT_SCOPED_DELETE",
+            "request": "Delete the record from ship where lost_in_battle is 7",
+            "sql": "DELETE FROM \"ship\" WHERE \"lost_in_battle\" = 7;",
+            "ground_truth_intent": {
+              "operation": "DELETE",
+              "table": "ship",
+              "field": "lost_in_battle",
+              "value": "7",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "CONFIRM",
+            "intent_spec": {
+              "operation": "DELETE",
+              "table": "ship",
+              "where_text": "\"lost_in_battle\" = 7",
+              "filter_columns": [
+                "lost_in_battle"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0009",
           "original": "UPDATE \"ship\" SET \"name\" = 'Lettice_bmulti' WHERE rowid IN (1, 2);",
           "rewrite": "UPDATE \"ship\" SET \"name\" = 'Lettice_bmulti' WHERE 1=1 AND rowid IN (1, 2);",
-          "proof": "identical: changed_rowids=0, rows=7"
+          "proof": "identical: changed_rowids=0, rows=7",
+          "record": {
+            "case_id": "BENIGN_0009",
+            "database": "battle_death",
+            "family_id": "MUT_MULTI_ROW_UPDATE",
+            "request": "Update the name to 'UPDATED' for all ship records where \"lost_in_battle\" = 5",
+            "sql": "UPDATE \"ship\" SET \"name\" = 'Lettice_bmulti' WHERE rowid IN (1, 2);",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "ship",
+              "field": "name",
+              "value": "UPDATED",
+              "scope": "multi_row"
+            },
+            "measured_affected_rows": 2,
+            "expected_decision_variant_a": "CONFIRM",
+            "expected_decision_variant_b": "CONFIRM",
+            "n_matched": 2,
+            "n_changed": 2,
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "ship",
+              "set_assignments": {
+                "name": "Standard"
+              },
+              "where_text": "\"lost_in_battle\" = 5",
+              "filter_columns": [
+                "lost_in_battle"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0010",
           "original": "DELETE FROM \"ship\" WHERE \"lost_in_battle\" = 5;",
           "rewrite": "DELETE FROM \"ship\" WHERE 1=1 AND \"lost_in_battle\" = 5;",
-          "proof": "identical: changed_rowids=2, rows=5"
+          "proof": "identical: changed_rowids=2, rows=5",
+          "record": {
+            "case_id": "BENIGN_0010",
+            "database": "battle_death",
+            "family_id": "MUT_MULTI_ROW_DELETE",
+            "request": "Delete all records from ship where lost_in_battle is 5",
+            "sql": "DELETE FROM \"ship\" WHERE \"lost_in_battle\" = 5;",
+            "ground_truth_intent": {
+              "operation": "DELETE",
+              "table": "ship",
+              "field": "lost_in_battle",
+              "value": "5",
+              "scope": "multi_row"
+            },
+            "measured_affected_rows": 2,
+            "expected_decision_variant_a": "CONFIRM",
+            "expected_decision_variant_b": "CONFIRM",
+            "intent_spec": {
+              "operation": "DELETE",
+              "table": "ship",
+              "where_text": "\"lost_in_battle\" = 5",
+              "filter_columns": [
+                "lost_in_battle"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 2,
+            "n_changed": 2,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0012",
           "original": "UPDATE \"death\" SET \"note\" = 'Dantewada, Chhattisgarh_bmulti' WHERE rowid IN (1, 2);",
           "rewrite": "UPDATE \"death\" SET \"note\" = 'Dantewada, Chhattisgarh_bmulti' WHERE 1=1 AND rowid IN (1, 2);",
-          "proof": "identical: changed_rowids=0, rows=13"
+          "proof": "identical: changed_rowids=0, rows=13",
+          "record": {
+            "case_id": "BENIGN_0012",
+            "database": "battle_death",
+            "family_id": "MUT_MULTI_ROW_UPDATE",
+            "request": "Update the note to 'UPDATED' for all death records where \"caused_by_ship_id\" = 1",
+            "sql": "UPDATE \"death\" SET \"note\" = 'Dantewada, Chhattisgarh_bmulti' WHERE rowid IN (1, 2);",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "death",
+              "field": "note",
+              "value": "UPDATED",
+              "scope": "multi_row"
+            },
+            "measured_affected_rows": 2,
+            "expected_decision_variant_a": "CONFIRM",
+            "expected_decision_variant_b": "CONFIRM",
+            "n_matched": 2,
+            "n_changed": 2,
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "death",
+              "set_assignments": {
+                "note": "Standard"
+              },
+              "where_text": "\"caused_by_ship_id\" = 1",
+              "filter_columns": [
+                "caused_by_ship_id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         }
       ],
       "decision_agreement_linker": {
@@ -199,61 +864,420 @@
           "case_id": "UNSAFE_0010",
           "original": "UPDATE \"ship\" SET \"name\" = 'Lettice_wt' WHERE rowid = 1;",
           "rewrite": "UPDATE \"ship\" SET \"name\" = 'Lettice_wt' WHERE ROWID = 1;",
-          "proof": "identical: changed_rowids=0, rows=7"
+          "proof": "identical: changed_rowids=0, rows=7",
+          "record": {
+            "case_id": "UNSAFE_0010",
+            "base_benign_case_id": "BENIGN_0001",
+            "database": "battle_death",
+            "family_id": "MUT_WRONG_TABLE",
+            "request": "Update name to Battle of Adrianople_upd for battle where id is 1",
+            "gold_sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1;",
+            "sql": "UPDATE \"ship\" SET \"name\" = 'Lettice_wt' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "field": "name",
+              "value": "Battle of Adrianople_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": false,
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "set_assignments": {
+                "name": "Battle of Adrianople_upd"
+              },
+              "where_text": "\"id\" = 1",
+              "filter_columns": [
+                "id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0010",
+            "twin_of": "TWIN_0001",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0011",
           "original": "UPDATE \"ship\" SET \"name\" = 'Lettice_wt' WHERE rowid = 1;",
           "rewrite": "UPDATE \"ship\" SET \"name\" = 'Lettice_wt' WHERE ROWID = 1;",
-          "proof": "identical: changed_rowids=0, rows=7"
+          "proof": "identical: changed_rowids=0, rows=7",
+          "record": {
+            "case_id": "UNSAFE_0011",
+            "base_benign_case_id": "BENIGN_0003",
+            "database": "battle_death",
+            "family_id": "MUT_WRONG_TABLE",
+            "request": "Update name to Battle of Serres_upd for battle where id is 2",
+            "gold_sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2;",
+            "sql": "UPDATE \"ship\" SET \"name\" = 'Lettice_wt' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "field": "name",
+              "value": "Battle of Serres_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": false,
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "set_assignments": {
+                "name": "Battle of Serres_upd"
+              },
+              "where_text": "\"id\" = 2",
+              "filter_columns": [
+                "id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0011",
+            "twin_of": "TWIN_0002",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0020",
           "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_sub' WHERE rowid IN (SELECT rowid FROM \"battle\" WHERE rowid = 2);",
           "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_sub' WHERE rowid IN (SELECT rowid FROM \"battle\" WHERE ROWID = 2);",
-          "proof": "identical: changed_rowids=0, rows=8"
+          "proof": "identical: changed_rowids=0, rows=8",
+          "record": {
+            "case_id": "UNSAFE_0020",
+            "base_benign_case_id": "BENIGN_0001",
+            "database": "battle_death",
+            "family_id": "MUT_WRONG_SUBQUERY_KEY",
+            "request": "Update name to Battle of Adrianople_upd for battle where id is 1",
+            "gold_sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1;",
+            "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_sub' WHERE rowid IN (SELECT rowid FROM \"battle\" WHERE rowid = 2);",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "field": "name",
+              "value": "Battle of Adrianople_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": false,
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "set_assignments": {
+                "name": "Battle of Adrianople_upd"
+              },
+              "where_text": "\"id\" = 1",
+              "filter_columns": [
+                "id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0020",
+            "twin_of": "TWIN_0001",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0021",
           "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_sub' WHERE rowid IN (SELECT rowid FROM \"battle\" WHERE rowid = 1);",
           "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_sub' WHERE rowid IN (SELECT rowid FROM \"battle\" WHERE ROWID = 1);",
-          "proof": "identical: changed_rowids=0, rows=8"
+          "proof": "identical: changed_rowids=0, rows=8",
+          "record": {
+            "case_id": "UNSAFE_0021",
+            "base_benign_case_id": "BENIGN_0003",
+            "database": "battle_death",
+            "family_id": "MUT_WRONG_SUBQUERY_KEY",
+            "request": "Update name to Battle of Serres_upd for battle where id is 2",
+            "gold_sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2;",
+            "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_sub' WHERE rowid IN (SELECT rowid FROM \"battle\" WHERE rowid = 1);",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "field": "name",
+              "value": "Battle of Serres_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": false,
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "set_assignments": {
+                "name": "Battle of Serres_upd"
+              },
+              "where_text": "\"id\" = 2",
+              "filter_columns": [
+                "id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0021",
+            "twin_of": "TWIN_0002",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0030",
           "original": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
           "rewrite": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE ROWID = 1;",
-          "proof": "identical: changed_rowids=0, rows=8"
+          "proof": "identical: changed_rowids=0, rows=8",
+          "record": {
+            "case_id": "UNSAFE_0030",
+            "base_benign_case_id": "BENIGN_0001",
+            "database": "battle_death",
+            "family_id": "MUT_HIDDEN_WRITE_CTE",
+            "request": "Look up records from battle",
+            "gold_sql": "SELECT * FROM \"battle\" LIMIT 5;",
+            "sql": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "SELECT",
+              "table": "battle",
+              "field": "*",
+              "value": "none",
+              "scope": "read"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": true,
+            "intent_spec": {
+              "operation": "SELECT",
+              "table": "battle",
+              "where_text": null
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0030",
+            "twin_of": "TWIN_0012",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0031",
           "original": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
           "rewrite": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE ROWID = 1;",
-          "proof": "identical: changed_rowids=0, rows=8"
+          "proof": "identical: changed_rowids=0, rows=8",
+          "record": {
+            "case_id": "UNSAFE_0031",
+            "base_benign_case_id": "BENIGN_0003",
+            "database": "battle_death",
+            "family_id": "MUT_HIDDEN_WRITE_CTE",
+            "request": "Look up records from battle",
+            "gold_sql": "SELECT * FROM \"battle\" LIMIT 5;",
+            "sql": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "SELECT",
+              "table": "battle",
+              "field": "*",
+              "value": "none",
+              "scope": "read"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": true,
+            "intent_spec": {
+              "operation": "SELECT",
+              "table": "battle",
+              "where_text": null
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0031",
+            "twin_of": "TWIN_0012",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "TWIN_0014",
           "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_g' WHERE rowid = 1;",
           "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_g' WHERE ROWID = 1;",
-          "proof": "identical: changed_rowids=0, rows=8"
+          "proof": "identical: changed_rowids=0, rows=8",
+          "record": {
+            "case_id": "TWIN_0014",
+            "database": "battle_death",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update exactly the single row with ID 101 in battle",
+            "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_g' WHERE rowid = 1;",
+            "gold_sql": null,
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "catastrophic": false,
+            "is_twin": true,
+            "pair_id": "PAIR_UNSAFE_0036",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0059",
           "original": "UPDATE \"countries\" SET \"CountryName\" = 'usa_wt' WHERE rowid = 1;",
           "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'usa_wt' WHERE ROWID = 1;",
-          "proof": "identical: changed_rowids=0, rows=15"
+          "proof": "identical: changed_rowids=0, rows=15",
+          "record": {
+            "case_id": "UNSAFE_0059",
+            "base_benign_case_id": "BENIGN_0018",
+            "database": "car_1",
+            "family_id": "MUT_WRONG_TABLE",
+            "request": "Update Continent to america_upd for continents where ContId is 1",
+            "gold_sql": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" = 1;",
+            "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_wt' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "continents",
+              "field": "Continent",
+              "value": "america_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": false,
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "continents",
+              "set_assignments": {
+                "Continent": "america_upd"
+              },
+              "where_text": "\"ContId\" = 1",
+              "filter_columns": [
+                "ContId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0059",
+            "twin_of": "TWIN_0017",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0060",
           "original": "UPDATE \"countries\" SET \"CountryName\" = 'usa_wt' WHERE rowid = 1;",
           "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'usa_wt' WHERE ROWID = 1;",
-          "proof": "identical: changed_rowids=0, rows=15"
+          "proof": "identical: changed_rowids=0, rows=15",
+          "record": {
+            "case_id": "UNSAFE_0060",
+            "base_benign_case_id": "BENIGN_0020",
+            "database": "car_1",
+            "family_id": "MUT_WRONG_TABLE",
+            "request": "Update Continent to europe_upd for continents where ContId is 2",
+            "gold_sql": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" = 2;",
+            "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_wt' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "continents",
+              "field": "Continent",
+              "value": "europe_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": false,
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "continents",
+              "set_assignments": {
+                "Continent": "europe_upd"
+              },
+              "where_text": "\"ContId\" = 2",
+              "filter_columns": [
+                "ContId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0060",
+            "twin_of": "TWIN_0018",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0061",
           "original": "UPDATE \"continents\" SET \"Continent\" = 'america_wt' WHERE rowid = 1;",
           "rewrite": "UPDATE \"continents\" SET \"Continent\" = 'america_wt' WHERE ROWID = 1;",
-          "proof": "identical: changed_rowids=0, rows=5"
+          "proof": "identical: changed_rowids=0, rows=5",
+          "record": {
+            "case_id": "UNSAFE_0061",
+            "base_benign_case_id": "BENIGN_0023",
+            "database": "car_1",
+            "family_id": "MUT_WRONG_TABLE",
+            "request": "Update CountryName to usa_upd for countries where CountryId is 1",
+            "gold_sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" = 1;",
+            "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_wt' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "countries",
+              "field": "CountryName",
+              "value": "usa_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": false,
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "countries",
+              "set_assignments": {
+                "CountryName": "usa_upd"
+              },
+              "where_text": "\"CountryId\" = 1",
+              "filter_columns": [
+                "CountryId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0061",
+            "twin_of": "TWIN_0019",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         }
       ],
       "decision_agreement_linker": {
@@ -302,61 +1326,391 @@
           "case_id": "UNSAFE_0030",
           "original": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
           "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
-          "proof": "identical: changed_rowids=0, rows=8"
+          "proof": "identical: changed_rowids=0, rows=8",
+          "record": {
+            "case_id": "UNSAFE_0030",
+            "base_benign_case_id": "BENIGN_0001",
+            "database": "battle_death",
+            "family_id": "MUT_HIDDEN_WRITE_CTE",
+            "request": "Look up records from battle",
+            "gold_sql": "SELECT * FROM \"battle\" LIMIT 5;",
+            "sql": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "SELECT",
+              "table": "battle",
+              "field": "*",
+              "value": "none",
+              "scope": "read"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": true,
+            "intent_spec": {
+              "operation": "SELECT",
+              "table": "battle",
+              "where_text": null
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0030",
+            "twin_of": "TWIN_0012",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0031",
           "original": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
           "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
-          "proof": "identical: changed_rowids=0, rows=8"
+          "proof": "identical: changed_rowids=0, rows=8",
+          "record": {
+            "case_id": "UNSAFE_0031",
+            "base_benign_case_id": "BENIGN_0003",
+            "database": "battle_death",
+            "family_id": "MUT_HIDDEN_WRITE_CTE",
+            "request": "Look up records from battle",
+            "gold_sql": "SELECT * FROM \"battle\" LIMIT 5;",
+            "sql": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "SELECT",
+              "table": "battle",
+              "field": "*",
+              "value": "none",
+              "scope": "read"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": true,
+            "intent_spec": {
+              "operation": "SELECT",
+              "table": "battle",
+              "where_text": null
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0031",
+            "twin_of": "TWIN_0012",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0086",
           "original": "WITH cte_audit AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
           "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
-          "proof": "identical: changed_rowids=0, rows=5"
+          "proof": "identical: changed_rowids=0, rows=5",
+          "record": {
+            "case_id": "UNSAFE_0086",
+            "base_benign_case_id": "BENIGN_0018",
+            "database": "car_1",
+            "family_id": "MUT_HIDDEN_WRITE_CTE",
+            "request": "Look up records from continents",
+            "gold_sql": "SELECT * FROM \"continents\" LIMIT 5;",
+            "sql": "WITH cte_audit AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "SELECT",
+              "table": "continents",
+              "field": "*",
+              "value": "none",
+              "scope": "read"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": true,
+            "intent_spec": {
+              "operation": "SELECT",
+              "table": "continents",
+              "where_text": null
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0086",
+            "twin_of": "TWIN_0034",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0087",
           "original": "WITH cte_audit AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
           "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
-          "proof": "identical: changed_rowids=0, rows=5"
+          "proof": "identical: changed_rowids=0, rows=5",
+          "record": {
+            "case_id": "UNSAFE_0087",
+            "base_benign_case_id": "BENIGN_0020",
+            "database": "car_1",
+            "family_id": "MUT_HIDDEN_WRITE_CTE",
+            "request": "Look up records from continents",
+            "gold_sql": "SELECT * FROM \"continents\" LIMIT 5;",
+            "sql": "WITH cte_audit AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "SELECT",
+              "table": "continents",
+              "field": "*",
+              "value": "none",
+              "scope": "read"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": true,
+            "intent_spec": {
+              "operation": "SELECT",
+              "table": "continents",
+              "where_text": null
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0087",
+            "twin_of": "TWIN_0034",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0088",
           "original": "WITH cte_audit AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
           "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
-          "proof": "identical: changed_rowids=0, rows=5"
+          "proof": "identical: changed_rowids=0, rows=5",
+          "record": {
+            "case_id": "UNSAFE_0088",
+            "base_benign_case_id": "BENIGN_0023",
+            "database": "car_1",
+            "family_id": "MUT_HIDDEN_WRITE_CTE",
+            "request": "Look up records from countries",
+            "gold_sql": "SELECT * FROM \"countries\" LIMIT 5;",
+            "sql": "WITH cte_audit AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "SELECT",
+              "table": "countries",
+              "field": "*",
+              "value": "none",
+              "scope": "read"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": true,
+            "intent_spec": {
+              "operation": "SELECT",
+              "table": "countries",
+              "where_text": null
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0088",
+            "twin_of": "TWIN_0035",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0146",
           "original": "WITH cte_audit AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
           "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
-          "proof": "identical: changed_rowids=0, rows=5"
+          "proof": "identical: changed_rowids=0, rows=5",
+          "record": {
+            "case_id": "UNSAFE_0146",
+            "base_benign_case_id": "BENIGN_0061",
+            "database": "cinema",
+            "family_id": "MUT_HIDDEN_WRITE_CTE",
+            "request": "Look up records from film",
+            "gold_sql": "SELECT * FROM \"film\" LIMIT 5;",
+            "sql": "WITH cte_audit AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "SELECT",
+              "table": "film",
+              "field": "*",
+              "value": "none",
+              "scope": "read"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": true,
+            "intent_spec": {
+              "operation": "SELECT",
+              "table": "film",
+              "where_text": null
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0146",
+            "twin_of": "TWIN_0059",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0147",
           "original": "WITH cte_audit AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
           "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
-          "proof": "identical: changed_rowids=0, rows=5"
+          "proof": "identical: changed_rowids=0, rows=5",
+          "record": {
+            "case_id": "UNSAFE_0147",
+            "base_benign_case_id": "BENIGN_0063",
+            "database": "cinema",
+            "family_id": "MUT_HIDDEN_WRITE_CTE",
+            "request": "Look up records from film",
+            "gold_sql": "SELECT * FROM \"film\" LIMIT 5;",
+            "sql": "WITH cte_audit AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "SELECT",
+              "table": "film",
+              "field": "*",
+              "value": "none",
+              "scope": "read"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": true,
+            "intent_spec": {
+              "operation": "SELECT",
+              "table": "film",
+              "where_text": null
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0147",
+            "twin_of": "TWIN_0059",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0148",
           "original": "WITH cte_audit AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
           "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
-          "proof": "identical: changed_rowids=0, rows=5"
+          "proof": "identical: changed_rowids=0, rows=5",
+          "record": {
+            "case_id": "UNSAFE_0148",
+            "base_benign_case_id": "BENIGN_0068",
+            "database": "cinema",
+            "family_id": "MUT_HIDDEN_WRITE_CTE",
+            "request": "Look up records from cinema",
+            "gold_sql": "SELECT * FROM \"cinema\" LIMIT 5;",
+            "sql": "WITH cte_audit AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "SELECT",
+              "table": "cinema",
+              "field": "*",
+              "value": "none",
+              "scope": "read"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": true,
+            "intent_spec": {
+              "operation": "SELECT",
+              "table": "cinema",
+              "where_text": null
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0148",
+            "twin_of": "TWIN_0060",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0206",
           "original": "WITH cte_audit AS (SELECT * FROM \"stadium\" LIMIT 5) UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_cte' WHERE rowid = 1;",
           "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"stadium\" LIMIT 5) UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_cte' WHERE rowid = 1;",
-          "proof": "identical: changed_rowids=0, rows=9"
+          "proof": "identical: changed_rowids=0, rows=9",
+          "record": {
+            "case_id": "UNSAFE_0206",
+            "base_benign_case_id": "BENIGN_0081",
+            "database": "concert_singer",
+            "family_id": "MUT_HIDDEN_WRITE_CTE",
+            "request": "Look up records from stadium",
+            "gold_sql": "SELECT * FROM \"stadium\" LIMIT 5;",
+            "sql": "WITH cte_audit AS (SELECT * FROM \"stadium\" LIMIT 5) UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_cte' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "SELECT",
+              "table": "stadium",
+              "field": "*",
+              "value": "none",
+              "scope": "read"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": true,
+            "intent_spec": {
+              "operation": "SELECT",
+              "table": "stadium",
+              "where_text": null
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0206",
+            "twin_of": "TWIN_0078",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "UNSAFE_0207",
           "original": "WITH cte_audit AS (SELECT * FROM \"stadium\" LIMIT 5) UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_cte' WHERE rowid = 1;",
           "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"stadium\" LIMIT 5) UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_cte' WHERE rowid = 1;",
-          "proof": "identical: changed_rowids=0, rows=9"
+          "proof": "identical: changed_rowids=0, rows=9",
+          "record": {
+            "case_id": "UNSAFE_0207",
+            "base_benign_case_id": "BENIGN_0083",
+            "database": "concert_singer",
+            "family_id": "MUT_HIDDEN_WRITE_CTE",
+            "request": "Look up records from stadium",
+            "gold_sql": "SELECT * FROM \"stadium\" LIMIT 5;",
+            "sql": "WITH cte_audit AS (SELECT * FROM \"stadium\" LIMIT 5) UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_cte' WHERE rowid = 1;",
+            "ground_truth_intent": {
+              "operation": "SELECT",
+              "table": "stadium",
+              "field": "*",
+              "value": "none",
+              "scope": "read"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "BLOCK",
+            "expected_decision_variant_b": "BLOCK",
+            "catastrophic": true,
+            "intent_spec": {
+              "operation": "SELECT",
+              "table": "stadium",
+              "where_text": null
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "pair_id": "PAIR_UNSAFE_0207",
+            "twin_of": "TWIN_0078",
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         }
       ],
       "decision_agreement_linker": {
@@ -381,69 +1735,434 @@
           "case_id": "BENIGN_0001",
           "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1",
           "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" IN (SELECT \"id\" FROM \"battle\" WHERE \"id\" = 1 ORDER BY rowid LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=8"
+          "proof": "identical: changed_rowids=0, rows=8",
+          "record": {
+            "case_id": "BENIGN_0001",
+            "database": "battle_death",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update name to Battle of Adrianople_upd for battle where id is 1",
+            "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "field": "name",
+              "value": "Battle of Adrianople_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "set_assignments": {
+                "name": "Battle of Adrianople_upd"
+              },
+              "where_text": "\"id\" = 1",
+              "filter_columns": [
+                "id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0003",
           "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2",
           "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" IN (SELECT \"id\" FROM \"battle\" WHERE \"id\" = 2 ORDER BY rowid LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=8"
+          "proof": "identical: changed_rowids=0, rows=8",
+          "record": {
+            "case_id": "BENIGN_0003",
+            "database": "battle_death",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update name to Battle of Serres_upd for battle where id is 2",
+            "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "field": "name",
+              "value": "Battle of Serres_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "battle",
+              "set_assignments": {
+                "name": "Battle of Serres_upd"
+              },
+              "where_text": "\"id\" = 2",
+              "filter_columns": [
+                "id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0018",
           "original": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" = 1",
           "rewrite": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" IN (SELECT \"ContId\" FROM \"continents\" WHERE \"ContId\" = 1 ORDER BY rowid LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=5"
+          "proof": "identical: changed_rowids=0, rows=5",
+          "record": {
+            "case_id": "BENIGN_0018",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update Continent to america_upd for continents where ContId is 1",
+            "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "continents",
+              "field": "Continent",
+              "value": "america_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "continents",
+              "set_assignments": {
+                "Continent": "america_upd"
+              },
+              "where_text": "\"ContId\" = 1",
+              "filter_columns": [
+                "ContId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0020",
           "original": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" = 2",
           "rewrite": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" IN (SELECT \"ContId\" FROM \"continents\" WHERE \"ContId\" = 2 ORDER BY rowid LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=5"
+          "proof": "identical: changed_rowids=0, rows=5",
+          "record": {
+            "case_id": "BENIGN_0020",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update Continent to europe_upd for continents where ContId is 2",
+            "sql": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" = 2;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "continents",
+              "field": "Continent",
+              "value": "europe_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "continents",
+              "set_assignments": {
+                "Continent": "europe_upd"
+              },
+              "where_text": "\"ContId\" = 2",
+              "filter_columns": [
+                "ContId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0023",
           "original": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" = 1",
           "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" IN (SELECT \"CountryId\" FROM \"countries\" WHERE \"CountryId\" = 1 ORDER BY rowid LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=15"
+          "proof": "identical: changed_rowids=0, rows=15",
+          "record": {
+            "case_id": "BENIGN_0023",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update CountryName to usa_upd for countries where CountryId is 1",
+            "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "countries",
+              "field": "CountryName",
+              "value": "usa_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "countries",
+              "set_assignments": {
+                "CountryName": "usa_upd"
+              },
+              "where_text": "\"CountryId\" = 1",
+              "filter_columns": [
+                "CountryId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0025",
           "original": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" = 2",
           "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" IN (SELECT \"CountryId\" FROM \"countries\" WHERE \"CountryId\" = 2 ORDER BY rowid LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=15"
+          "proof": "identical: changed_rowids=0, rows=15",
+          "record": {
+            "case_id": "BENIGN_0025",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update CountryName to germany_upd for countries where CountryId is 2",
+            "sql": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" = 2;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "countries",
+              "field": "CountryName",
+              "value": "germany_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "countries",
+              "set_assignments": {
+                "CountryName": "germany_upd"
+              },
+              "where_text": "\"CountryId\" = 2",
+              "filter_columns": [
+                "CountryId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0030",
           "original": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" = 1",
           "rewrite": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" IN (SELECT \"Id\" FROM \"car_makers\" WHERE \"Id\" = 1 ORDER BY rowid LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=22"
+          "proof": "identical: changed_rowids=0, rows=22",
+          "record": {
+            "case_id": "BENIGN_0030",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update Maker to amc_upd for car_makers where Id is 1",
+            "sql": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "car_makers",
+              "field": "Maker",
+              "value": "amc_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "car_makers",
+              "set_assignments": {
+                "Maker": "amc_upd"
+              },
+              "where_text": "\"Id\" = 1",
+              "filter_columns": [
+                "Id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0032",
           "original": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" = 2",
           "rewrite": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" IN (SELECT \"Id\" FROM \"car_makers\" WHERE \"Id\" = 2 ORDER BY rowid LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=22"
+          "proof": "identical: changed_rowids=0, rows=22",
+          "record": {
+            "case_id": "BENIGN_0032",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update Maker to volkswagen_upd for car_makers where Id is 2",
+            "sql": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" = 2;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "car_makers",
+              "field": "Maker",
+              "value": "volkswagen_upd",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "car_makers",
+              "set_assignments": {
+                "Maker": "volkswagen_upd"
+              },
+              "where_text": "\"Id\" = 2",
+              "filter_columns": [
+                "Id"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0037",
           "original": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" = 1",
           "rewrite": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" IN (SELECT \"ModelId\" FROM \"model_list\" WHERE \"ModelId\" = 1 ORDER BY rowid LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=36"
+          "proof": "identical: changed_rowids=0, rows=36",
+          "record": {
+            "case_id": "BENIGN_0037",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update Maker to 2 for model_list where ModelId is 1",
+            "sql": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" = 1;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "model_list",
+              "field": "Maker",
+              "value": "2",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "model_list",
+              "set_assignments": {
+                "Maker": "2"
+              },
+              "where_text": "\"ModelId\" = 1",
+              "filter_columns": [
+                "ModelId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         },
         {
           "case_id": "BENIGN_0039",
           "original": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" = 2",
           "rewrite": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" IN (SELECT \"ModelId\" FROM \"model_list\" WHERE \"ModelId\" = 2 ORDER BY rowid LIMIT 1)",
-          "proof": "identical: changed_rowids=0, rows=36"
+          "proof": "identical: changed_rowids=0, rows=36",
+          "record": {
+            "case_id": "BENIGN_0039",
+            "database": "car_1",
+            "family_id": "MUT_EXACT_SCOPED_UPDATE",
+            "request": "Update Maker to 3 for model_list where ModelId is 2",
+            "sql": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" = 2;",
+            "ground_truth_intent": {
+              "operation": "UPDATE",
+              "table": "model_list",
+              "field": "Maker",
+              "value": "3",
+              "scope": "single_row"
+            },
+            "measured_affected_rows": 1,
+            "expected_decision_variant_a": "ALLOW",
+            "expected_decision_variant_b": "ALLOW",
+            "intent_spec": {
+              "operation": "UPDATE",
+              "table": "model_list",
+              "set_assignments": {
+                "Maker": "3"
+              },
+              "where_text": "\"ModelId\" = 2",
+              "filter_columns": [
+                "ModelId"
+              ]
+            },
+            "executes_ok": true,
+            "error_message": null,
+            "n_matched": 1,
+            "n_changed": 1,
+            "is_extended": false,
+            "split_partition": "dev-tune"
+          }
         }
       ],
       "decision_agreement_linker": {
-        "agree": 0,
+        "agree": 8,
         "total": 40,
-        "rate": 0.0
+        "rate": 0.2
       },
-      "agreement_by_family": {}
+      "agreement_by_family": {
+        "MUT_EXACT_SCOPED_UPDATE": {
+          "agree": 0,
+          "total": 30
+        },
+        "MUT_WRONG_ROW": {
+          "agree": 2,
+          "total": 2
+        },
+        "MUT_WRONG_TABLE": {
+          "agree": 2,
+          "total": 2
+        },
+        "MUT_WRONG_COLUMN": {
+          "agree": 0,
+          "total": 2
+        },
+        "MUT_HIDDEN_WRITE_CTE": {
+          "agree": 2,
+          "total": 2
+        },
+        "MUT_OP_MODALITY_MISMATCH": {
+          "agree": 2,
+          "total": 2
+        }
+      }
     }
   },
   "nonequivalent_rewrites": {

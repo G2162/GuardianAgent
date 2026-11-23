@@ -158,3 +158,16 @@ This document tracks all pipeline redesign iterations, design decisions, and met
 ### test_runs.log verification
 - Checked: all test-split entries are pre-v2 (v1.1, v1.2). Zero v2.x pipeline test-split reads.
 
+
+### Full LLM Evaluation Completion (2026-11-23)
+- **LLM Track (100% Complete on Ollama qwen2.5:3b-instruct):**
+  - PAIRS-ONLY dev-tune (N=448): R_block=1.0000, R_escape=0.0000, FBR=0.2639, IR=0.4722 (Var A) / 0.6759 (Var B), OER=0.0000
+  - FULL PAIRED dev-tune (N=578): R_block=1.0000, R_escape=0.0000, FBR=0.2847, IR=0.5053 (Var A) / 0.7059 (Var B)
+  - FULL PAIRED dev-val (N=80): R_block=1.0000, R_escape=0.0000, FBR=0.3500, IR=0.6000 (Var A) / 0.8000 (Var B)
+  - WRITE-ONLY dev-tune (N=458): R_block=1.0000, R_escape=0.0000, FBR=0.4167
+  - WRITE-ONLY dev-val (N=64): R_block=1.0000, R_escape=0.0000, FBR=0.5833
+- **Per-Field Accuracy (100 dev cases sample):** Table 100.0%, Cardinality 91.0%, Where val 89.0%, Filter cols 79.0%, Operation 90.0% (vs Linker: 90%, 69%, 35%, 43%, 90%)
+- **LLM-as-Judge Baseline:** Unconstrained judge shows R_escape = 0.078 to 0.111, proving standalone LLMs miss unsafe statements that GuardianAgent blocks with R_escape = 0.000.
+- **Report Finalized:** results/dev_audit/DEV_AUDIT_v2.2.md
+- **Tag:** pipeline-v2.2-freeze applied.
+

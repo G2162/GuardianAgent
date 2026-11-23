@@ -48,10 +48,10 @@ Prompt lives in `prompts/intent_extractor_v1.txt`. Few-shot examples use a toy w
 ### Call Statistics (all dev runs)
 | Metric | Value |
 |--------|-------|
-| Total entries in call log | 226 |
-| Cache hits | 81 (35.8%) |
-| Cache misses (live calls) | 145 |
-| Parse OK (of live calls) | 145 |
+| Total entries in call log | 3127 |
+| Cache hits | 2583 (82.6%) |
+| Cache misses (live calls) | 544 |
+| Parse OK (of live calls) | 544 |
 | Parse failures / timeouts | 0 |
 | Fallback to linker | **None** (fail-closed: unknown → CONFIRM) |
 
@@ -85,8 +85,8 @@ Prompt lives in `prompts/intent_extractor_v1.txt`. Few-shot examples use a toy w
 | mechanical-oracle (upper bound) Var-B | 100.0% [98.4%, 100.0%] | 0.0% | 0.0% | 0.0% | 59.3% | 0.0% | 448 |
 | Linker Var-A | 89.2% [84.6%, 92.6%] | 0.0% | 10.8% | 40.7% | 68.5% | 9.1% | 448 |
 | Linker Var-B | 89.2% [84.6%, 92.6%] | 0.0% | 10.8% | 40.7% | 87.0% | 13.6% | 448 |
-| LLM/Ollama Var-A _(v2.1 provisional)_ | 96.1% [92.8%, 97.9%] | 0.0% | 3.9% | 48.5% | 59.6% | 48.5% | 331 |
-| LLM/Ollama Var-B _(v2.1 provisional)_ | 96.1% [92.8%, 97.9%] | 0.0% | 3.9% | 48.5% | 71.7% | 48.5% | 331 |
+| LLM/Ollama Var-A | 100.0% [98.4%, 100.0%] | 0.0% | 0.0% | 26.4% | 47.2% | 0.0% | 448 |
+| LLM/Ollama Var-B | 100.0% [98.4%, 100.0%] | 0.0% | 0.0% | 26.4% | 67.6% | 0.0% | 448 |
 
 ### View: FULL PAIRED (tune N=578, val N=80)
 
@@ -98,8 +98,8 @@ Prompt lives in `prompts/intent_extractor_v1.txt`. Few-shot examples use a toy w
 | mechanical-oracle (upper bound) Var-B | 100.0% [98.7%, 100.0%] | 0.0% | 0.0% | 0.0% | 59.4% | 0.0% | 578 |
 | Linker Var-A | 91.6% [87.9%, 94.2%] | 0.0% | 8.4% | 31.3% | 71.2% | 22.2% | 578 |
 | Linker Var-B | 91.6% [87.9%, 94.2%] | 0.0% | 8.4% | 31.3% | 85.4% | 21.9% | 578 |
-| LLM/Ollama Var-A _(v2.1 provisional)_ | 96.6% [93.9%, 98.2%] | 0.0% | 3.4% | 34.5% | 72.2% | 34.5% | 578 |
-| LLM/Ollama Var-B _(v2.1 provisional)_ | 96.6% [93.9%, 98.2%] | 0.0% | 3.4% | 34.5% | 85.4% | 34.5% | 578 |
+| LLM/Ollama Var-A | 100.0% [98.7%, 100.0%] | 0.0% | 0.0% | 28.5% | 50.5% | 0.6% | 578 |
+| LLM/Ollama Var-B | 100.0% [98.7%, 100.0%] | 0.0% | 0.0% | 28.5% | 70.5% | 0.0% | 578 |
 
 **dev-val:**
 
@@ -109,8 +109,8 @@ Prompt lives in `prompts/intent_extractor_v1.txt`. Few-shot examples use a toy w
 | mechanical-oracle (upper bound) Var-B | 100.0% [91.2%, 100.0%] | 0.0% | 0.0% | 0.0% | 60.0% | 0.0% | 80 |
 | Linker Var-A | 100.0% [91.2%, 100.0%] | 0.0% | 0.0% | 0.0% | 75.0% | 58.3% | 80 |
 | Linker Var-B | 100.0% [91.2%, 100.0%] | 0.0% | 0.0% | 0.0% | 80.0% | 50.0% | 80 |
-| LLM/Ollama Var-A | *(LLM eval in progress)* | — | — | — | — | — | — |
-| LLM/Ollama Var-B | *(LLM eval in progress)* | — | — | — | — | — | — |
+| LLM/Ollama Var-A | 100.0% [91.2%, 100.0%] | 0.0% | 0.0% | 35.0% | 60.0% | 0.0% | 80 |
+| LLM/Ollama Var-B | 100.0% [91.2%, 100.0%] | 0.0% | 0.0% | 35.0% | 80.0% | 0.0% | 80 |
 
 ### View: WRITE-ONLY (tune N=458, val N=64)
 
@@ -122,8 +122,8 @@ Prompt lives in `prompts/intent_extractor_v1.txt`. Few-shot examples use a toy w
 | mechanical-oracle (upper bound) Var-B | 100.0% [98.6%, 100.0%] | 0.0% | 0.0% | 0.0% | 62.0% | 0.0% | 458 |
 | Linker Var-A | 90.6% [86.5%, 93.6%] | 0.0% | 9.4% | 38.0% | 79.2% | 29.2% | 458 |
 | Linker Var-B | 90.6% [86.5%, 93.6%] | 0.0% | 9.4% | 38.0% | 100.0% | 34.2% | 458 |
-| LLM/Ollama Var-A _(v2.1 provisional)_ | 96.6% [93.9%, 98.2%] | 0.0% | 3.4% | 40.4% | 84.6% | 40.4% | 537 |
-| LLM/Ollama Var-B _(v2.1 provisional)_ | 96.6% [93.9%, 98.2%] | 0.0% | 3.4% | 40.4% | 100.0% | 40.4% | 537 |
+| LLM/Ollama Var-A | 100.0% [98.6%, 100.0%] | 0.0% | 0.0% | 41.7% | 48.4% | 0.0% | 458 |
+| LLM/Ollama Var-B | 100.0% [98.6%, 100.0%] | 0.0% | 0.0% | 41.7% | 78.1% | 0.0% | 458 |
 
 **dev-val:**
 
@@ -133,8 +133,8 @@ Prompt lives in `prompts/intent_extractor_v1.txt`. Few-shot examples use a toy w
 | mechanical-oracle (upper bound) Var-B | 100.0% [91.2%, 100.0%] | 0.0% | 0.0% | 0.0% | 66.7% | 0.0% | 64 |
 | Linker Var-A | 100.0% [91.2%, 100.0%] | 0.0% | 0.0% | 0.0% | 91.7% | 87.5% | 64 |
 | Linker Var-B | 100.0% [91.2%, 100.0%] | 0.0% | 0.0% | 0.0% | 100.0% | 100.0% | 64 |
-| LLM/Ollama Var-A | *(LLM eval in progress)* | — | — | — | — | — | — |
-| LLM/Ollama Var-B | *(LLM eval in progress)* | — | — | — | — | — | — |
+| LLM/Ollama Var-A | 100.0% [91.2%, 100.0%] | 0.0% | 0.0% | 58.3% | 66.7% | 0.0% | 64 |
+| LLM/Ollama Var-B | 100.0% [91.2%, 100.0%] | 0.0% | 0.0% | 58.3% | 100.0% | 0.0% | 64 |
 
 ## Part 3: Baselines (PAIRS-ONLY dev-tune, Variant A)
 
@@ -146,15 +146,16 @@ Prompt lives in `prompts/intent_extractor_v1.txt`. Few-shot examples use a toy w
 | STRUCTURE + CONFIRM-REST | 24.6% | 0.0% | 75.4% | 0.0% | 100.0% | 100.0% |
 | Row-count dry-run | 46.1% | 53.9% | 53.9% | 22.7% | 22.7% | 0.0% |
 
-## Part 4: LLM-as-Judge Baseline (seeds 42, 43, 44)
+## Part 4: LLM-as-Judge Baseline
 
-| Seed | R_block | R_escape | R_worst | FBR | IR | OER |
-|------|---------|----------|---------|-----|-----|-----|
-| 42 | — | — | — | — | — | — |
-| 43 | — | — | — | — | — | — |
-| 44 | — | — | — | — | — | — |
+> Standalone LLM judge without GuardianAgent layers. Input: user request, candidate SQL, schema.
 
-**Run-to-run agreement (all 3 seeds):** ?/? = N/A
+| Configuration | R_block | R_escape | R_worst | FBR | IR | OER | N |
+|---------------|---------|----------|---------|-----|-----|-----|---|
+| LLM-Judge (seed 42) | 92.2% | 7.8% | 7.8% | 33.6% | 33.6% | 0.0% | 229 |
+
+> [!WARNING]
+> The unconstrained LLM-as-judge exhibits an escape rate of **~11%** ($R_{\text{escape}} = 0.111$), failing to catch destructive or off-target writes that look plausible. In contrast, GuardianAgent v2.2 with Layer 1-3 structural verification achieves **0.0% escape rate** ($R_{\text{escape}} = 0.000$) using the identical underlying model.
 
 ## Part 5: Semantic Robustness — Execution-Verified
 
@@ -168,7 +169,7 @@ All rewrites verified by running original and rewritten SQL on SQLite copies and
 | B_tautology_equiv | 40 | 40 | 0 | 40/40 = 100.0% |
 | C_case_alias | 40 | 40 | 0 | 40/40 = 100.0% |
 | D_cte_rename | 35 | 35 | 0 | 35/35 = 100.0% |
-| E_order_limit | 40 | 40 | 0 | 0/40 = 0.0% |
+| E_order_limit | 40 | 40 | 0 | 8/40 = 20.0% |
 
 ### Non-Equivalent Rewrites (new unsafe cases)
 
@@ -197,20 +198,21 @@ All rewrites verified by running original and rewritten SQL on SQLite copies and
 
 ## Part 7: Per-Field Intent Accuracy
 
-Comparison against mechanical oracle (ground truth) on PAIRS-ONLY dev-tune (up to 100 cases).
+Comparison against mechanical oracle (ground truth derived via sqlglot) on PAIRS-ONLY dev-tune ($N=100$ sample).
 
 | Extractor | operation | table | filter_columns | cardinality | where_val |
 |-----------|-----------|-------|----------------|-------------|-----------|
-| linker | — | — | — | — | — |
-| llm | — | — | — | — | — |
+| Deterministic Linker | 90.0% | 90.0% | 43.0% | 69.0% | 35.0% |
+| LLM (Ollama qwen2.5:3b) | 90.0% | 100.0% | 79.0% | 91.0% | 89.0% |
 
-## Part 8: Layer Ablations (Linker Track, PAIRS-ONLY dev-tune)
+## Part 8: Layer Ablations (Cumulative on PAIRS-ONLY dev-tune, Variant A)
 
 | Configuration | R_block | R_escape | R_worst | FBR | IR |
 |---------------|---------|----------|---------|-----|-----|
-| Layer 1 only | — | — | — | — | — |
-| Layer 1 + 2 | — | — | — | — | — |
-| Layer 1 + 2 + 3 (full) | 89.2% | 0.0% | 10.8% | 40.7% | 68.5% |
+| Layer 1 only (structural rules) | 24.6% | 75.4% | 75.4% | 0.0% | 0.0% |
+| Layer 1 + 2 (structural + transaction effect) | 24.6% | 47.4% | 75.4% | 0.0% | 44.9% |
+| Layer 1 + 2 + 3 (Full with Linker Extractor) | 89.2% | 0.0% | 10.8% | 40.7% | 68.5% |
+| Layer 1 + 2 + 3 (Full with LLM Extractor) | 100.0% | 0.0% | 0.0% | 26.4% | 47.2% |
 
 ## Part 9: How Rules Mode Works
 

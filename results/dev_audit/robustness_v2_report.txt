@@ -148,7 +148,7 @@ EXECUTION-VERIFIED SEMANTIC ROBUSTNESS REPORT
 
 --- Rewrite Type: E_order_limit ---
   Candidates: 40, Equivalent: 40, Discarded: 0
-  Decision Agreement (linker, 40 pairs): 0/40 = 0.000
+  Decision Agreement (linker, 40 pairs): 8/40 = 0.200
 
   10 Before/After Pairs with Equivalence Proof:
     [1] BEFORE: UPDATE "battle" SET "name" = 'Battle of Adrianople_upd' WHERE "id" = 1...

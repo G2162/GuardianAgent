@@ -38,3 +38,6 @@ data/test_v1.4.7z
 # Ollama local cache
 cache/ollama/
 
+
+data/llm_intent_cache.json
+
