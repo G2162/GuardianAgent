@@ -34,3 +34,7 @@ bird_eval/databases/
 data/evaluation_splits/test_dataset_v1.4.json
 data/evaluation_splits/test_paired_dataset_v1.4.json
 data/test_v1.4.7z
+
+# Ollama local cache
+cache/ollama/
+

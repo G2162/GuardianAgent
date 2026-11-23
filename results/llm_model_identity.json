@@ -1,0 +1,9 @@
+{
+  "model_tag": "qwen2.5:3b-instruct",
+  "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+  "parameter_size": "3.1B",
+  "quantization": "Q4_K_M",
+  "family": "qwen2",
+  "ollama_version": "0.40.17",
+  "host": "http://localhost:11434"
+}

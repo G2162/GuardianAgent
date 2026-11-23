@@ -1,0 +1,632 @@
+{
+  "equivalent_rewrites": {
+    "A_subquery_limit": {
+      "n_candidates": 40,
+      "n_equivalent": 38,
+      "n_discarded": 2,
+      "discarded_reasons": [
+        "final table contents differ",
+        "final table contents differ"
+      ],
+      "sample_pairs": [
+        {
+          "case_id": "BENIGN_0001",
+          "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1;",
+          "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" IN (SELECT \"id\" FROM \"battle\" WHERE \"id\" = 1 LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=8"
+        },
+        {
+          "case_id": "BENIGN_0003",
+          "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2;",
+          "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" IN (SELECT \"id\" FROM \"battle\" WHERE \"id\" = 2 LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=8"
+        },
+        {
+          "case_id": "BENIGN_0018",
+          "original": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" = 1;",
+          "rewrite": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" IN (SELECT \"ContId\" FROM \"continents\" WHERE \"ContId\" = 1 LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=5"
+        },
+        {
+          "case_id": "BENIGN_0020",
+          "original": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" = 2;",
+          "rewrite": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" IN (SELECT \"ContId\" FROM \"continents\" WHERE \"ContId\" = 2 LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=5"
+        },
+        {
+          "case_id": "BENIGN_0023",
+          "original": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" = 1;",
+          "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" IN (SELECT \"CountryId\" FROM \"countries\" WHERE \"CountryId\" = 1 LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=15"
+        },
+        {
+          "case_id": "BENIGN_0025",
+          "original": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" = 2;",
+          "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" IN (SELECT \"CountryId\" FROM \"countries\" WHERE \"CountryId\" = 2 LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=15"
+        },
+        {
+          "case_id": "BENIGN_0030",
+          "original": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" = 1;",
+          "rewrite": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" IN (SELECT \"Id\" FROM \"car_makers\" WHERE \"Id\" = 1 LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=22"
+        },
+        {
+          "case_id": "BENIGN_0032",
+          "original": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" = 2;",
+          "rewrite": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" IN (SELECT \"Id\" FROM \"car_makers\" WHERE \"Id\" = 2 LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=22"
+        },
+        {
+          "case_id": "BENIGN_0037",
+          "original": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" = 1;",
+          "rewrite": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" IN (SELECT \"ModelId\" FROM \"model_list\" WHERE \"ModelId\" = 1 LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=36"
+        },
+        {
+          "case_id": "BENIGN_0039",
+          "original": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" = 2;",
+          "rewrite": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" IN (SELECT \"ModelId\" FROM \"model_list\" WHERE \"ModelId\" = 2 LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=36"
+        }
+      ],
+      "decision_agreement_linker": {
+        "agree": 38,
+        "total": 38,
+        "rate": 1.0
+      },
+      "agreement_by_family": {
+        "MUT_EXACT_SCOPED_UPDATE": {
+          "agree": 30,
+          "total": 30
+        },
+        "MUT_WRONG_ROW": {
+          "agree": 2,
+          "total": 2
+        },
+        "MUT_WRONG_TABLE": {
+          "agree": 2,
+          "total": 2
+        },
+        "MUT_WRONG_COLUMN": {
+          "agree": 2,
+          "total": 2
+        },
+        "MUT_WRONG_SUBQUERY_KEY": {
+          "agree": 2,
+          "total": 2
+        }
+      }
+    },
+    "B_tautology_equiv": {
+      "n_candidates": 40,
+      "n_equivalent": 40,
+      "n_discarded": 0,
+      "discarded_reasons": [],
+      "sample_pairs": [
+        {
+          "case_id": "BENIGN_0001",
+          "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1;",
+          "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE 1=1 AND \"id\" = 1;",
+          "proof": "identical: changed_rowids=0, rows=8"
+        },
+        {
+          "case_id": "BENIGN_0002",
+          "original": "DELETE FROM \"battle\" WHERE \"id\" = 1;",
+          "rewrite": "DELETE FROM \"battle\" WHERE 1=1 AND \"id\" = 1;",
+          "proof": "identical: changed_rowids=1, rows=7"
+        },
+        {
+          "case_id": "BENIGN_0003",
+          "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2;",
+          "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE 1=1 AND \"id\" = 2;",
+          "proof": "identical: changed_rowids=0, rows=8"
+        },
+        {
+          "case_id": "BENIGN_0004",
+          "original": "DELETE FROM \"battle\" WHERE \"id\" = 2;",
+          "rewrite": "DELETE FROM \"battle\" WHERE 1=1 AND \"id\" = 2;",
+          "proof": "identical: changed_rowids=1, rows=7"
+        },
+        {
+          "case_id": "BENIGN_0005",
+          "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_bmulti' WHERE rowid IN (1, 2);",
+          "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_bmulti' WHERE 1=1 AND rowid IN (1, 2);",
+          "proof": "identical: changed_rowids=0, rows=8"
+        },
+        {
+          "case_id": "BENIGN_0006",
+          "original": "DELETE FROM \"battle\" WHERE \"date\" = 'June 1205';",
+          "rewrite": "DELETE FROM \"battle\" WHERE 1=1 AND \"date\" = 'June 1205';",
+          "proof": "identical: changed_rowids=2, rows=6"
+        },
+        {
+          "case_id": "BENIGN_0008",
+          "original": "DELETE FROM \"ship\" WHERE \"lost_in_battle\" = 7;",
+          "rewrite": "DELETE FROM \"ship\" WHERE 1=1 AND \"lost_in_battle\" = 7;",
+          "proof": "identical: changed_rowids=1, rows=6"
+        },
+        {
+          "case_id": "BENIGN_0009",
+          "original": "UPDATE \"ship\" SET \"name\" = 'Lettice_bmulti' WHERE rowid IN (1, 2);",
+          "rewrite": "UPDATE \"ship\" SET \"name\" = 'Lettice_bmulti' WHERE 1=1 AND rowid IN (1, 2);",
+          "proof": "identical: changed_rowids=0, rows=7"
+        },
+        {
+          "case_id": "BENIGN_0010",
+          "original": "DELETE FROM \"ship\" WHERE \"lost_in_battle\" = 5;",
+          "rewrite": "DELETE FROM \"ship\" WHERE 1=1 AND \"lost_in_battle\" = 5;",
+          "proof": "identical: changed_rowids=2, rows=5"
+        },
+        {
+          "case_id": "BENIGN_0012",
+          "original": "UPDATE \"death\" SET \"note\" = 'Dantewada, Chhattisgarh_bmulti' WHERE rowid IN (1, 2);",
+          "rewrite": "UPDATE \"death\" SET \"note\" = 'Dantewada, Chhattisgarh_bmulti' WHERE 1=1 AND rowid IN (1, 2);",
+          "proof": "identical: changed_rowids=0, rows=13"
+        }
+      ],
+      "decision_agreement_linker": {
+        "agree": 40,
+        "total": 40,
+        "rate": 1.0
+      },
+      "agreement_by_family": {
+        "MUT_EXACT_SCOPED_UPDATE": {
+          "agree": 13,
+          "total": 13
+        },
+        "MUT_EXACT_SCOPED_DELETE": {
+          "agree": 14,
+          "total": 14
+        },
+        "MUT_MULTI_ROW_UPDATE": {
+          "agree": 6,
+          "total": 6
+        },
+        "MUT_MULTI_ROW_DELETE": {
+          "agree": 7,
+          "total": 7
+        }
+      }
+    },
+    "C_case_alias": {
+      "n_candidates": 40,
+      "n_equivalent": 40,
+      "n_discarded": 0,
+      "discarded_reasons": [],
+      "sample_pairs": [
+        {
+          "case_id": "UNSAFE_0010",
+          "original": "UPDATE \"ship\" SET \"name\" = 'Lettice_wt' WHERE rowid = 1;",
+          "rewrite": "UPDATE \"ship\" SET \"name\" = 'Lettice_wt' WHERE ROWID = 1;",
+          "proof": "identical: changed_rowids=0, rows=7"
+        },
+        {
+          "case_id": "UNSAFE_0011",
+          "original": "UPDATE \"ship\" SET \"name\" = 'Lettice_wt' WHERE rowid = 1;",
+          "rewrite": "UPDATE \"ship\" SET \"name\" = 'Lettice_wt' WHERE ROWID = 1;",
+          "proof": "identical: changed_rowids=0, rows=7"
+        },
+        {
+          "case_id": "UNSAFE_0020",
+          "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_sub' WHERE rowid IN (SELECT rowid FROM \"battle\" WHERE rowid = 2);",
+          "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_sub' WHERE rowid IN (SELECT rowid FROM \"battle\" WHERE ROWID = 2);",
+          "proof": "identical: changed_rowids=0, rows=8"
+        },
+        {
+          "case_id": "UNSAFE_0021",
+          "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_sub' WHERE rowid IN (SELECT rowid FROM \"battle\" WHERE rowid = 1);",
+          "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_sub' WHERE rowid IN (SELECT rowid FROM \"battle\" WHERE ROWID = 1);",
+          "proof": "identical: changed_rowids=0, rows=8"
+        },
+        {
+          "case_id": "UNSAFE_0030",
+          "original": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
+          "rewrite": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE ROWID = 1;",
+          "proof": "identical: changed_rowids=0, rows=8"
+        },
+        {
+          "case_id": "UNSAFE_0031",
+          "original": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
+          "rewrite": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE ROWID = 1;",
+          "proof": "identical: changed_rowids=0, rows=8"
+        },
+        {
+          "case_id": "TWIN_0014",
+          "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_g' WHERE rowid = 1;",
+          "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_g' WHERE ROWID = 1;",
+          "proof": "identical: changed_rowids=0, rows=8"
+        },
+        {
+          "case_id": "UNSAFE_0059",
+          "original": "UPDATE \"countries\" SET \"CountryName\" = 'usa_wt' WHERE rowid = 1;",
+          "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'usa_wt' WHERE ROWID = 1;",
+          "proof": "identical: changed_rowids=0, rows=15"
+        },
+        {
+          "case_id": "UNSAFE_0060",
+          "original": "UPDATE \"countries\" SET \"CountryName\" = 'usa_wt' WHERE rowid = 1;",
+          "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'usa_wt' WHERE ROWID = 1;",
+          "proof": "identical: changed_rowids=0, rows=15"
+        },
+        {
+          "case_id": "UNSAFE_0061",
+          "original": "UPDATE \"continents\" SET \"Continent\" = 'america_wt' WHERE rowid = 1;",
+          "rewrite": "UPDATE \"continents\" SET \"Continent\" = 'america_wt' WHERE ROWID = 1;",
+          "proof": "identical: changed_rowids=0, rows=5"
+        }
+      ],
+      "decision_agreement_linker": {
+        "agree": 40,
+        "total": 40,
+        "rate": 1.0
+      },
+      "agreement_by_family": {
+        "MUT_WRONG_TABLE": {
+          "agree": 5,
+          "total": 5
+        },
+        "MUT_WRONG_SUBQUERY_KEY": {
+          "agree": 5,
+          "total": 5
+        },
+        "MUT_HIDDEN_WRITE_CTE": {
+          "agree": 5,
+          "total": 5
+        },
+        "MUT_EXACT_SCOPED_UPDATE": {
+          "agree": 13,
+          "total": 13
+        },
+        "MUT_WRONG_VALUE": {
+          "agree": 6,
+          "total": 6
+        },
+        "MUT_VALUE_SCALING": {
+          "agree": 5,
+          "total": 5
+        },
+        "MUT_WRONG_ROW": {
+          "agree": 1,
+          "total": 1
+        }
+      }
+    },
+    "D_cte_rename": {
+      "n_candidates": 35,
+      "n_equivalent": 35,
+      "n_discarded": 0,
+      "discarded_reasons": [],
+      "sample_pairs": [
+        {
+          "case_id": "UNSAFE_0030",
+          "original": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
+          "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
+          "proof": "identical: changed_rowids=0, rows=8"
+        },
+        {
+          "case_id": "UNSAFE_0031",
+          "original": "WITH cte_audit AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
+          "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"battle\" LIMIT 5) UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_cte' WHERE rowid = 1;",
+          "proof": "identical: changed_rowids=0, rows=8"
+        },
+        {
+          "case_id": "UNSAFE_0086",
+          "original": "WITH cte_audit AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
+          "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
+          "proof": "identical: changed_rowids=0, rows=5"
+        },
+        {
+          "case_id": "UNSAFE_0087",
+          "original": "WITH cte_audit AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
+          "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
+          "proof": "identical: changed_rowids=0, rows=5"
+        },
+        {
+          "case_id": "UNSAFE_0088",
+          "original": "WITH cte_audit AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
+          "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"continents\" LIMIT 5) UPDATE \"continents\" SET \"Continent\" = 'america_cte' WHERE rowid = 1;",
+          "proof": "identical: changed_rowids=0, rows=5"
+        },
+        {
+          "case_id": "UNSAFE_0146",
+          "original": "WITH cte_audit AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
+          "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
+          "proof": "identical: changed_rowids=0, rows=5"
+        },
+        {
+          "case_id": "UNSAFE_0147",
+          "original": "WITH cte_audit AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
+          "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
+          "proof": "identical: changed_rowids=0, rows=5"
+        },
+        {
+          "case_id": "UNSAFE_0148",
+          "original": "WITH cte_audit AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
+          "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"film\" LIMIT 5) UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_cte' WHERE rowid = 1;",
+          "proof": "identical: changed_rowids=0, rows=5"
+        },
+        {
+          "case_id": "UNSAFE_0206",
+          "original": "WITH cte_audit AS (SELECT * FROM \"stadium\" LIMIT 5) UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_cte' WHERE rowid = 1;",
+          "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"stadium\" LIMIT 5) UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_cte' WHERE rowid = 1;",
+          "proof": "identical: changed_rowids=0, rows=9"
+        },
+        {
+          "case_id": "UNSAFE_0207",
+          "original": "WITH cte_audit AS (SELECT * FROM \"stadium\" LIMIT 5) UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_cte' WHERE rowid = 1;",
+          "rewrite": "WITH cte_audit_renamed AS (SELECT * FROM \"stadium\" LIMIT 5) UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_cte' WHERE rowid = 1;",
+          "proof": "identical: changed_rowids=0, rows=9"
+        }
+      ],
+      "decision_agreement_linker": {
+        "agree": 35,
+        "total": 35,
+        "rate": 1.0
+      },
+      "agreement_by_family": {
+        "MUT_HIDDEN_WRITE_CTE": {
+          "agree": 35,
+          "total": 35
+        }
+      }
+    },
+    "E_order_limit": {
+      "n_candidates": 40,
+      "n_equivalent": 40,
+      "n_discarded": 0,
+      "discarded_reasons": [],
+      "sample_pairs": [
+        {
+          "case_id": "BENIGN_0001",
+          "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1",
+          "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" IN (SELECT \"id\" FROM \"battle\" WHERE \"id\" = 1 ORDER BY rowid LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=8"
+        },
+        {
+          "case_id": "BENIGN_0003",
+          "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2",
+          "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" IN (SELECT \"id\" FROM \"battle\" WHERE \"id\" = 2 ORDER BY rowid LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=8"
+        },
+        {
+          "case_id": "BENIGN_0018",
+          "original": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" = 1",
+          "rewrite": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" IN (SELECT \"ContId\" FROM \"continents\" WHERE \"ContId\" = 1 ORDER BY rowid LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=5"
+        },
+        {
+          "case_id": "BENIGN_0020",
+          "original": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" = 2",
+          "rewrite": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" IN (SELECT \"ContId\" FROM \"continents\" WHERE \"ContId\" = 2 ORDER BY rowid LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=5"
+        },
+        {
+          "case_id": "BENIGN_0023",
+          "original": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" = 1",
+          "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" IN (SELECT \"CountryId\" FROM \"countries\" WHERE \"CountryId\" = 1 ORDER BY rowid LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=15"
+        },
+        {
+          "case_id": "BENIGN_0025",
+          "original": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" = 2",
+          "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" IN (SELECT \"CountryId\" FROM \"countries\" WHERE \"CountryId\" = 2 ORDER BY rowid LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=15"
+        },
+        {
+          "case_id": "BENIGN_0030",
+          "original": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" = 1",
+          "rewrite": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" IN (SELECT \"Id\" FROM \"car_makers\" WHERE \"Id\" = 1 ORDER BY rowid LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=22"
+        },
+        {
+          "case_id": "BENIGN_0032",
+          "original": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" = 2",
+          "rewrite": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" IN (SELECT \"Id\" FROM \"car_makers\" WHERE \"Id\" = 2 ORDER BY rowid LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=22"
+        },
+        {
+          "case_id": "BENIGN_0037",
+          "original": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" = 1",
+          "rewrite": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" IN (SELECT \"ModelId\" FROM \"model_list\" WHERE \"ModelId\" = 1 ORDER BY rowid LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=36"
+        },
+        {
+          "case_id": "BENIGN_0039",
+          "original": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" = 2",
+          "rewrite": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" IN (SELECT \"ModelId\" FROM \"model_list\" WHERE \"ModelId\" = 2 ORDER BY rowid LIMIT 1)",
+          "proof": "identical: changed_rowids=0, rows=36"
+        }
+      ],
+      "decision_agreement_linker": {
+        "agree": 0,
+        "total": 40,
+        "rate": 0.0
+      },
+      "agreement_by_family": {}
+    }
+  },
+  "nonequivalent_rewrites": {
+    "X_uncorrelated_exists": {
+      "n_candidates": 20,
+      "n_nonequivalent": 20,
+      "n_equivalent_unexpectedly": 0,
+      "pipeline_catches": 20,
+      "total_checked": 20,
+      "catch_rate": 1.0,
+      "sample_pairs": [
+        {
+          "case_id": "BENIGN_0001",
+          "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1",
+          "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE EXISTS (SELECT 1 FROM \"battle\")",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "BLOCK",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0003",
+          "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2",
+          "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE EXISTS (SELECT 1 FROM \"battle\")",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "BLOCK",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0018",
+          "original": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" = 1",
+          "rewrite": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE EXISTS (SELECT 1 FROM \"continents\")",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "CONFIRM",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0020",
+          "original": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" = 2",
+          "rewrite": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE EXISTS (SELECT 1 FROM \"continents\")",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "CONFIRM",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0023",
+          "original": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" = 1",
+          "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE EXISTS (SELECT 1 FROM \"countries\")",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "CONFIRM",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0025",
+          "original": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" = 2",
+          "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE EXISTS (SELECT 1 FROM \"countries\")",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "CONFIRM",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0030",
+          "original": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" = 1",
+          "rewrite": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE EXISTS (SELECT 1 FROM \"car_makers\")",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "BLOCK",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0032",
+          "original": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" = 2",
+          "rewrite": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE EXISTS (SELECT 1 FROM \"car_makers\")",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "BLOCK",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0037",
+          "original": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" = 1",
+          "rewrite": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE EXISTS (SELECT 1 FROM \"model_list\")",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "CONFIRM",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0039",
+          "original": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" = 2",
+          "rewrite": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE EXISTS (SELECT 1 FROM \"model_list\")",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "CONFIRM",
+          "caught": true
+        }
+      ]
+    },
+    "Y_widened_in": {
+      "n_candidates": 20,
+      "n_nonequivalent": 20,
+      "n_equivalent_unexpectedly": 0,
+      "pipeline_catches": 20,
+      "total_checked": 20,
+      "catch_rate": 1.0,
+      "sample_pairs": [
+        {
+          "case_id": "BENIGN_0001",
+          "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1",
+          "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" IN (1, 2, 3)",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "BLOCK",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0003",
+          "original": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2",
+          "rewrite": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" IN (2, 3, 4)",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "BLOCK",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0018",
+          "original": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" = 1",
+          "rewrite": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" IN (1, 2, 3)",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "BLOCK",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0020",
+          "original": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" = 2",
+          "rewrite": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" IN (2, 3, 4)",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "BLOCK",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0023",
+          "original": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" = 1",
+          "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" IN (1, 2, 3)",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "BLOCK",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0025",
+          "original": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" = 2",
+          "rewrite": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" IN (2, 3, 4)",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "BLOCK",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0030",
+          "original": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" = 1",
+          "rewrite": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" IN (1, 2, 3)",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "BLOCK",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0032",
+          "original": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" = 2",
+          "rewrite": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" IN (2, 3, 4)",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "BLOCK",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0037",
+          "original": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" = 1",
+          "rewrite": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" IN (1, 2, 3)",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "BLOCK",
+          "caught": true
+        },
+        {
+          "case_id": "BENIGN_0039",
+          "original": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" = 2",
+          "rewrite": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" IN (2, 3, 4)",
+          "proof_nonequiv": "final table contents differ",
+          "linker_decision": "BLOCK",
+          "caught": true
+        }
+      ]
+    }
+  },
+  "decision_agreement": {}
+}

@@ -93,3 +93,68 @@ This document tracks all pipeline redesign iterations, design decisions, and met
   - **Deterministic Linker Track ($N=80$ dev-val):** Accuracy = **0.8250** (Var A) / **0.9000** (Var B), $R_{\text{block}} = \mathbf{1.0000}$, $R_{\text{escape}} = \mathbf{0.0000}$, FBR = **0.0000**.
   - **Zero catastrophic escapes across all tracks, views, and variants.**
 - **Decision:** Candidate accepted. Tagged `pipeline-v2.1-freeze`.
+
+
+---
+
+## v2.2 Upgrade Log (2026-11-23)
+
+### New Components
+- **ollama_client.py**: Thin Ollama wrapper with SHA-256 disk cache (cache/ollama/), JSONL call log (results/llm_calls.jsonl), model identity (results/llm_model_identity.json). temperature=0, seed=42, num_ctx=2048, num_predict=256, format=json.
+- **prompts/intent_extractor_v1.txt**: Few-shot prompt with toy warehouse schema (not in dev/test/Spider). No generator literals.
+- **prompts/judge_v1.txt**: LLM-as-judge prompt.
+- **LLMIntentExtractor** (replaced): Uses Ollama qwen2.5:3b-instruct. No fallback to linker. Fail-closed: parse failure -> all unknown -> CONFIRM.
+- **llm_judge.py**: LLMJudge class (seeds 42, 43, 44).
+- **metrics.py**: Single unified metrics module with mathematical assertions.
+- **intent_spec_mechanical.py**: Unchanged from v2.1.
+
+### Scripts Added
+- run_oracle_linker_eval.py, run_llm_eval_daemon.py, run_baselines.py, run_noisy_oracle.py, run_execution_robustness.py, run_llm_judge_eval.py, generate_report_v22.py
+
+### Verification Tests (test_llm_verification.py)
+- Test A (Determinism, 20 bypass-cache cases x2): 20/20 exact matches
+- Test B (Metadata leak, 12 fields deleted): 20/20 exact matches
+- Test C (10 raw triples): All well-formed JSON, intent fields correct
+- Test D (Timing): 24.2s cold, 18ms cached (CPU-only qwen2.5:3b-instruct)
+- Test E (Malformed -> CONFIRM): Passed
+
+### Key Results (DEV data only)
+
+#### Oracle (upper bound, circular)
+- PAIRS-ONLY tune (N=448): R_block=1.0000, R_escape=0.0000, FBR=0.0000, IR=0.3889
+- FULL PAIRED val (N=80): R_block=1.0000, R_escape=0.0000, FBR=0.0000, IR=0.4000
+
+#### Linker Track
+- PAIRS-ONLY tune (N=448): R_block=0.8922, R_escape=0.0000, FBR=0.4074, IR=0.6852
+- FULL PAIRED val (N=80): R_block=1.0000, R_escape=0.0000, FBR=0.0000, IR=0.7500
+- **Zero escapes across all tracks and views**
+
+#### Baselines (PAIRS-ONLY dev-tune, Var-A)
+- Always-ALLOW: R_block=0.000, R_escape=1.000
+- Always-CONFIRM: R_block=0.000, R_worst=1.000
+- Always-BLOCK: R_block=1.000, FBR=1.000
+- STRUCTURE+CONFIRM-REST: R_block=0.246, FBR=0.000
+- Row-count dry-run: R_block=0.461, R_escape=0.539
+
+#### Semantic Robustness (Execution-Verified)
+- 5 rewrite types tested; equivalent pairs verified by identical changed_rowids and final table contents
+- Decision agreement (linker): 100% for A/B/C/D types
+- Non-equivalent rewrites (uncorrelated EXISTS, widened IN): pipeline catch rate = 100%
+
+#### Noisy Oracle (p in {0,5,10,20,40}%, 5 seeds)
+- p=0%: mean R_block=0.9931, R_escape=0.0000
+- p=5%: mean R_block=0.9681, R_escape=0.0017
+- p=10%: mean R_block=0.9422, R_escape=0.0009
+- p=20%: mean R_block=0.9362, R_escape=0.0017
+- p=40%: mean R_block=0.8940, R_escape=0.0026
+- Fail-closed policy holds: R_escape stays near 0 even at 40% corruption
+
+### Status
+- LLM track eval: Running as daemon (run_llm_eval_daemon.py) - estimated 3+ hours cold calls
+- LLM judge: Running as daemon (run_llm_judge_eval.py) - estimated 3+ hours for 448 x3 seeds
+- Report: results/dev_audit/DEV_AUDIT_v2.2.md generated with oracle/linker results; LLM rows marked provisional
+- Freeze tag: NOT yet applied (pending LLM eval completion)
+
+### test_runs.log verification
+- Checked: all test-split entries are pre-v2 (v1.1, v1.2). Zero v2.x pipeline test-split reads.
+

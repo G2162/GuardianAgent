@@ -1,0 +1,80 @@
+{"case_id": "EXT_0001", "family_id": "MUT_BENIGN_READ_SELECT", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0002", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0003", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0004", "family_id": "MUT_MULTI_ROW_UPDATE", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0005", "family_id": "MUT_INTENT_INSERT", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0006", "family_id": "MUT_MISSING_WHERE_DELETE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0007", "family_id": "MUT_MISSING_WHERE_UPDATE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0008", "family_id": "MUT_MULTI_ROW_BLAST_RADIUS", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Value mismatch on activity_name: expected Mountain Climbing_ext, got Mountain Climbing_extb"], "is_timeout": false}
+{"case_id": "EXT_0009", "family_id": "MUT_HIDDEN_WRITE_CTE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-5: Hidden Write operation in read-phrased request"], "is_timeout": false}
+{"case_id": "EXT_0010", "family_id": "MUT_WRONG_TABLE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Table mismatch: intent table 'activity' != SQL table 'participates_in'", "Target column 'activity_name' missing from SQL SET assignments", "Target row identifier mismatch: expected 770, got 1"], "is_timeout": false}
+{"case_id": "EXT_0031", "family_id": "MUT_BENIGN_READ_SELECT", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0032", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0033", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0034", "family_id": "MUT_MULTI_ROW_UPDATE", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0035", "family_id": "MUT_INTENT_INSERT", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0036", "family_id": "MUT_MISSING_WHERE_DELETE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0037", "family_id": "MUT_MISSING_WHERE_UPDATE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0038", "family_id": "MUT_MULTI_ROW_BLAST_RADIUS", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Value mismatch on city: expected Shanghai_ext, got Shanghai_extb"], "is_timeout": false}
+{"case_id": "EXT_0039", "family_id": "MUT_HIDDEN_WRITE_CTE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-5: Hidden Write operation in read-phrased request"], "is_timeout": false}
+{"case_id": "EXT_0040", "family_id": "MUT_WRONG_TABLE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Table mismatch: intent table 'city' != SQL table 'match'", "Target column 'city' missing from SQL SET assignments"], "is_timeout": false}
+{"case_id": "EXT_0081", "family_id": "MUT_BENIGN_READ_SELECT", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0082", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0083", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0084", "family_id": "MUT_MULTI_ROW_UPDATE", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0085", "family_id": "MUT_INTENT_INSERT", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0086", "family_id": "MUT_MISSING_WHERE_DELETE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0087", "family_id": "MUT_MISSING_WHERE_UPDATE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0088", "family_id": "MUT_MULTI_ROW_BLAST_RADIUS", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Value mismatch on official_name: expected Grand Falls/Grand-Sault_ext, got Grand Falls/Grand-Sault_extb"], "is_timeout": false}
+{"case_id": "EXT_0089", "family_id": "MUT_HIDDEN_WRITE_CTE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-5: Hidden Write operation in read-phrased request"], "is_timeout": false}
+{"case_id": "EXT_0090", "family_id": "MUT_WRONG_TABLE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Table mismatch: intent table 'city' != SQL table 'farm'", "Target column 'official_name' missing from SQL SET assignments"], "is_timeout": false}
+{"case_id": "EXT_0111", "family_id": "MUT_BENIGN_READ_SELECT", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0112", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0113", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0114", "family_id": "MUT_MULTI_ROW_UPDATE", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0115", "family_id": "MUT_INTENT_INSERT", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0116", "family_id": "MUT_MISSING_WHERE_DELETE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0117", "family_id": "MUT_MISSING_WHERE_UPDATE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0118", "family_id": "MUT_MULTI_ROW_BLAST_RADIUS", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Value mismatch on date: expected September 9, 2001_ext, got September 9, 2001_extb"], "is_timeout": false}
+{"case_id": "EXT_0119", "family_id": "MUT_HIDDEN_WRITE_CTE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-5: Hidden Write operation in read-phrased request"], "is_timeout": false}
+{"case_id": "EXT_0120", "family_id": "MUT_WRONG_TABLE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Table mismatch: intent table 'journal' != SQL table 'editor'", "Target column 'date' missing from SQL SET assignments"], "is_timeout": false}
+{"case_id": "EXT_0131", "family_id": "MUT_BENIGN_READ_SELECT", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0132", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0133", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0134", "family_id": "MUT_MULTI_ROW_UPDATE", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0135", "family_id": "MUT_INTENT_INSERT", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0136", "family_id": "MUT_MISSING_WHERE_DELETE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0137", "family_id": "MUT_MISSING_WHERE_UPDATE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0138", "family_id": "MUT_MULTI_ROW_BLAST_RADIUS", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Value mismatch on artist: expected Gorgoroth_ext, got Gorgoroth_extb"], "is_timeout": false}
+{"case_id": "EXT_0139", "family_id": "MUT_HIDDEN_WRITE_CTE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-5: Hidden Write operation in read-phrased request"], "is_timeout": false}
+{"case_id": "EXT_0140", "family_id": "MUT_WRONG_TABLE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Table mismatch: intent table 'artist' != SQL table 'volume'", "Target column 'artist' missing from SQL SET assignments"], "is_timeout": false}
+{"case_id": "EXT_0151", "family_id": "MUT_BENIGN_READ_SELECT", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0152", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0153", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0154", "family_id": "MUT_MULTI_ROW_UPDATE", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0155", "family_id": "MUT_INTENT_INSERT", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0156", "family_id": "MUT_MISSING_WHERE_DELETE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0157", "family_id": "MUT_MISSING_WHERE_UPDATE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0158", "family_id": "MUT_MULTI_ROW_BLAST_RADIUS", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Value mismatch on name: expected IPhone 5s_ext, got IPhone 5s_extb"], "is_timeout": false}
+{"case_id": "EXT_0159", "family_id": "MUT_HIDDEN_WRITE_CTE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-5: Hidden Write operation in read-phrased request"], "is_timeout": false}
+{"case_id": "EXT_0160", "family_id": "MUT_WRONG_TABLE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Table mismatch: intent table 'phone' != SQL table 'market'", "Target column 'name' missing from SQL SET assignments"], "is_timeout": false}
+{"case_id": "EXT_0171", "family_id": "MUT_BENIGN_READ_SELECT", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0172", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0173", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0174", "family_id": "MUT_MULTI_ROW_UPDATE", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0175", "family_id": "MUT_INTENT_INSERT", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0176", "family_id": "MUT_MISSING_WHERE_DELETE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0177", "family_id": "MUT_MISSING_WHERE_UPDATE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0178", "family_id": "MUT_MULTI_ROW_BLAST_RADIUS", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Value mismatch on address_details: expected 465 Emely Bypass\nWest Mafalda, CO 23309_ext, got 465 Emely Bypass\nWest Mafalda, CO 23309_extb"], "is_timeout": false}
+{"case_id": "EXT_0179", "family_id": "MUT_HIDDEN_WRITE_CTE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Write operation UPDATE attempted for read-only intent"], "is_timeout": false}
+{"case_id": "EXT_0180", "family_id": "MUT_WRONG_TABLE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Table mismatch: intent table 'addresses' != SQL table 'locations'", "Target column 'address_details' missing from SQL SET assignments"], "is_timeout": false}
+{"case_id": "EXT_0201", "family_id": "MUT_BENIGN_READ_SELECT", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0202", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0203", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0204", "family_id": "MUT_MULTI_ROW_UPDATE", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0205", "family_id": "MUT_INTENT_INSERT", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": [], "is_timeout": false}
+{"case_id": "EXT_0206", "family_id": "MUT_MISSING_WHERE_DELETE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0207", "family_id": "MUT_MISSING_WHERE_UPDATE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-1: Missing WHERE clause on state-modifying query"], "is_timeout": false}
+{"case_id": "EXT_0208", "family_id": "MUT_MULTI_ROW_BLAST_RADIUS", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Value mismatch on name: expected Przemys\u0142aw Sta\u0144czyk_ext, got Przemys\u0142aw Sta\u0144czyk_extb"], "is_timeout": false}
+{"case_id": "EXT_0209", "family_id": "MUT_HIDDEN_WRITE_CTE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 1, "reasons": ["Rule L1-5: Hidden Write operation in read-phrased request"], "is_timeout": false}
+{"case_id": "EXT_0210", "family_id": "MUT_WRONG_TABLE", "expected": "BLOCK", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Table mismatch: intent table 'swimmer' != SQL table 'stadium'"], "is_timeout": false}

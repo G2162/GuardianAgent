@@ -1,0 +1,237 @@
+{
+  "Always_ALLOW": {
+    "n": 448,
+    "n_unsafe": 232,
+    "n_benign": 216,
+    "accuracy": 0.29464285714285715,
+    "balanced_accuracy": 0.3333333333333333,
+    "macro_f1": 0.15172413793103448,
+    "confusion_matrix": [
+      [
+        132,
+        0,
+        0
+      ],
+      [
+        84,
+        0,
+        0
+      ],
+      [
+        232,
+        0,
+        0
+      ]
+    ],
+    "r_block_unsafe": 0.0,
+    "r_block_ci": [
+      0.0,
+      0.01628824497277304
+    ],
+    "r_escape": 1.0,
+    "r_worst": 1.0,
+    "r_intercept": {
+      "layer1": 0.0,
+      "layer2": 0.0,
+      "layer3": 0.0
+    },
+    "catastrophic_escapes": {},
+    "fbr": 0.0,
+    "fbr_ci": [
+      1.734723475976807e-18,
+      0.017473698978937753
+    ],
+    "ir": 0.0,
+    "oer": 0.0,
+    "r_timeout": 0.0,
+    "per_family": {}
+  },
+  "Always_CONFIRM": {
+    "n": 448,
+    "n_unsafe": 232,
+    "n_benign": 216,
+    "accuracy": 0.1875,
+    "balanced_accuracy": 0.3333333333333333,
+    "macro_f1": 0.10526315789473684,
+    "confusion_matrix": [
+      [
+        0,
+        132,
+        0
+      ],
+      [
+        0,
+        84,
+        0
+      ],
+      [
+        0,
+        232,
+        0
+      ]
+    ],
+    "r_block_unsafe": 0.0,
+    "r_block_ci": [
+      0.0,
+      0.01628824497277304
+    ],
+    "r_escape": 0.0,
+    "r_worst": 1.0,
+    "r_intercept": {
+      "layer1": 0.0,
+      "layer2": 0.0,
+      "layer3": 0.0
+    },
+    "catastrophic_escapes": {},
+    "fbr": 0.0,
+    "fbr_ci": [
+      1.734723475976807e-18,
+      0.017473698978937753
+    ],
+    "ir": 1.0,
+    "oer": 1.0,
+    "r_timeout": 0.0,
+    "per_family": {}
+  },
+  "Always_BLOCK": {
+    "n": 448,
+    "n_unsafe": 232,
+    "n_benign": 216,
+    "accuracy": 0.5178571428571429,
+    "balanced_accuracy": 0.3333333333333333,
+    "macro_f1": 0.22745098039215692,
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        132
+      ],
+      [
+        0,
+        0,
+        84
+      ],
+      [
+        0,
+        0,
+        232
+      ]
+    ],
+    "r_block_unsafe": 1.0,
+    "r_block_ci": [
+      0.983711755027227,
+      1.0
+    ],
+    "r_escape": 0.0,
+    "r_worst": 0.0,
+    "r_intercept": {
+      "layer1": 0.0,
+      "layer2": 0.0,
+      "layer3": 0.0
+    },
+    "catastrophic_escapes": {},
+    "fbr": 1.0,
+    "fbr_ci": [
+      0.9825263010210622,
+      0.9999999999999999
+    ],
+    "ir": 1.0,
+    "oer": 0.0,
+    "r_timeout": 0.0,
+    "per_family": {}
+  },
+  "STRUCTURE_CONFIRM_REST": {
+    "n": 448,
+    "n_unsafe": 232,
+    "n_benign": 216,
+    "accuracy": 0.31473214285714285,
+    "balanced_accuracy": 0.4152298850574712,
+    "macro_f1": 0.2493826261154617,
+    "confusion_matrix": [
+      [
+        0,
+        132,
+        0
+      ],
+      [
+        0,
+        84,
+        0
+      ],
+      [
+        0,
+        175,
+        57
+      ]
+    ],
+    "r_block_unsafe": 0.24568965517241378,
+    "r_block_ci": [
+      0.1947338506289235,
+      0.30492999810722826
+    ],
+    "r_escape": 0.0,
+    "r_worst": 0.7543103448275862,
+    "r_intercept": {
+      "layer1": 0.0,
+      "layer2": 0.0,
+      "layer3": 0.0
+    },
+    "catastrophic_escapes": {},
+    "fbr": 0.0,
+    "fbr_ci": [
+      1.734723475976807e-18,
+      0.017473698978937753
+    ],
+    "ir": 1.0,
+    "oer": 1.0,
+    "r_timeout": 0.0,
+    "per_family": {}
+  },
+  "Row_count_dry_run": {
+    "n": 448,
+    "n_unsafe": 232,
+    "n_benign": 216,
+    "accuracy": 0.5334821428571429,
+    "balanced_accuracy": 0.4870689655172414,
+    "macro_f1": 0.39139596706217983,
+    "confusion_matrix": [
+      [
+        132,
+        0,
+        0
+      ],
+      [
+        35,
+        0,
+        49
+      ],
+      [
+        125,
+        0,
+        107
+      ]
+    ],
+    "r_block_unsafe": 0.46120689655172414,
+    "r_block_ci": [
+      0.39821527996422484,
+      0.5254622562836627
+    ],
+    "r_escape": 0.5387931034482759,
+    "r_worst": 0.5387931034482759,
+    "r_intercept": {
+      "layer1": 0.0,
+      "layer2": 0.0,
+      "layer3": 0.0
+    },
+    "catastrophic_escapes": {},
+    "fbr": 0.22685185185185186,
+    "fbr_ci": [
+      0.17605953493424226,
+      0.2871899858042515
+    ],
+    "ir": 0.22685185185185186,
+    "oer": 0.0,
+    "r_timeout": 0.0,
+    "per_family": {}
+  }
+}

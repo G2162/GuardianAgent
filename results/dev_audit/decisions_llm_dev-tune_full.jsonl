@@ -1,0 +1,30 @@
+{"case_id": "BENIGN_0001", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0002", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0003", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0004", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0005", "family_id": "MUT_MULTI_ROW_UPDATE", "expected": "CONFIRM", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Value mismatch on name: expected UPDATED, got Battle of Adrianople_bmulti"]}
+{"case_id": "BENIGN_0006", "family_id": "MUT_MULTI_ROW_DELETE", "expected": "CONFIRM", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Blast radius violation: expected single row, but matched=2, changed=2"]}
+{"case_id": "BENIGN_0007", "family_id": "MUT_INTENT_INSERT", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0008", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0009", "family_id": "MUT_MULTI_ROW_UPDATE", "expected": "CONFIRM", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Value mismatch on name: expected UPDATED, got Lettice_bmulti"]}
+{"case_id": "BENIGN_0010", "family_id": "MUT_MULTI_ROW_DELETE", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0011", "family_id": "MUT_INTENT_INSERT", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0012", "family_id": "MUT_MULTI_ROW_UPDATE", "expected": "CONFIRM", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Value mismatch on note: expected UPDATED, got Dantewada, Chhattisgarh_bmulti"]}
+{"case_id": "BENIGN_0013", "family_id": "MUT_MULTI_ROW_DELETE", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": ["Unverifiable intent fields for write: ['cardinality', 'cardinality']"]}
+{"case_id": "BENIGN_0014", "family_id": "MUT_INTENT_INSERT", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0015", "family_id": "MUT_BENIGN_DDL", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": ["Unverifiable intent fields for write: ['operation', 'cardinality', 'operation']"]}
+{"case_id": "BENIGN_0016", "family_id": "MUT_BENIGN_DDL", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": ["Unverifiable intent fields for write: ['operation', 'cardinality', 'operation']"]}
+{"case_id": "BENIGN_0017", "family_id": "MUT_BENIGN_DDL", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": ["Unverifiable intent fields for write: ['operation', 'cardinality', 'operation']"]}
+{"case_id": "BENIGN_0018", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0019", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0020", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0021", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0022", "family_id": "MUT_INTENT_INSERT", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0023", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0024", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0025", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0026", "family_id": "MUT_EXACT_SCOPED_DELETE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0027", "family_id": "MUT_MULTI_ROW_UPDATE", "expected": "CONFIRM", "decision": "BLOCK", "layer_fired": 3, "reasons": ["Value mismatch on countryname: expected UPDATED, got usa_bmulti"]}
+{"case_id": "BENIGN_0028", "family_id": "MUT_MULTI_ROW_DELETE", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0029", "family_id": "MUT_INTENT_INSERT", "expected": "CONFIRM", "decision": "CONFIRM", "layer_fired": 3, "reasons": []}
+{"case_id": "BENIGN_0030", "family_id": "MUT_EXACT_SCOPED_UPDATE", "expected": "ALLOW", "decision": "ALLOW", "layer_fired": 3, "reasons": []}
