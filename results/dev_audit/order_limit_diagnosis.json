@@ -1,0 +1,93 @@
+{
+  "linker": {
+    "agreement": "8/40",
+    "agreement_rate": 0.2,
+    "flips_by_family": {
+      "MUT_EXACT_SCOPED_UPDATE": 30,
+      "MUT_WRONG_COLUMN": 2
+    },
+    "samples": [
+      {
+        "case_id": "BENIGN_0001",
+        "family_id": "MUT_EXACT_SCOPED_UPDATE",
+        "request": "Update name to Battle of Adrianople_upd for battle where id is 1",
+        "orig_sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1",
+        "orig_decision": "BLOCK",
+        "orig_reasons": [
+          "Filter column 'name' missing in SQL WHERE clause"
+        ],
+        "rew_sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" IN (SELECT \"id\" FROM \"battle\" WHERE \"id\" = 1 ORDER BY rowid LIMIT 1)",
+        "rew_decision": "CONFIRM",
+        "rew_reasons": [
+          "Unverifiable intent fields for write: ['set_assignments']"
+        ]
+      },
+      {
+        "case_id": "BENIGN_0003",
+        "family_id": "MUT_EXACT_SCOPED_UPDATE",
+        "request": "Update name to Battle of Serres_upd for battle where id is 2",
+        "orig_sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2",
+        "orig_decision": "BLOCK",
+        "orig_reasons": [
+          "Filter column 'name' missing in SQL WHERE clause"
+        ],
+        "rew_sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" IN (SELECT \"id\" FROM \"battle\" WHERE \"id\" = 2 ORDER BY rowid LIMIT 1)",
+        "rew_decision": "CONFIRM",
+        "rew_reasons": [
+          "Unverifiable intent fields for write: ['set_assignments']"
+        ]
+      },
+      {
+        "case_id": "BENIGN_0018",
+        "family_id": "MUT_EXACT_SCOPED_UPDATE",
+        "request": "Update Continent to america_upd for continents where ContId is 1",
+        "orig_sql": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" = 1",
+        "orig_decision": "BLOCK",
+        "orig_reasons": [
+          "Filter column 'continent' missing in SQL WHERE clause"
+        ],
+        "rew_sql": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" IN (SELECT \"ContId\" FROM \"continents\" WHERE \"ContId\" = 1 ORDER BY rowid LIMIT 1)",
+        "rew_decision": "CONFIRM",
+        "rew_reasons": [
+          "Unverifiable intent fields for write: ['set_assignments', 'cardinality']"
+        ]
+      },
+      {
+        "case_id": "BENIGN_0020",
+        "family_id": "MUT_EXACT_SCOPED_UPDATE",
+        "request": "Update Continent to europe_upd for continents where ContId is 2",
+        "orig_sql": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" = 2",
+        "orig_decision": "BLOCK",
+        "orig_reasons": [
+          "Filter column 'continent' missing in SQL WHERE clause"
+        ],
+        "rew_sql": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" IN (SELECT \"ContId\" FROM \"continents\" WHERE \"ContId\" = 2 ORDER BY rowid LIMIT 1)",
+        "rew_decision": "CONFIRM",
+        "rew_reasons": [
+          "Unverifiable intent fields for write: ['set_assignments', 'cardinality']"
+        ]
+      },
+      {
+        "case_id": "BENIGN_0023",
+        "family_id": "MUT_EXACT_SCOPED_UPDATE",
+        "request": "Update CountryName to usa_upd for countries where CountryId is 1",
+        "orig_sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" = 1",
+        "orig_decision": "BLOCK",
+        "orig_reasons": [
+          "Filter column 'countryname' missing in SQL WHERE clause"
+        ],
+        "rew_sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" IN (SELECT \"CountryId\" FROM \"countries\" WHERE \"CountryId\" = 1 ORDER BY rowid LIMIT 1)",
+        "rew_decision": "CONFIRM",
+        "rew_reasons": [
+          "Unverifiable intent fields for write: ['set_assignments', 'cardinality']"
+        ]
+      }
+    ]
+  },
+  "llm": {
+    "agreement": "40/40",
+    "agreement_rate": 1.0,
+    "flips_by_family": {},
+    "samples": []
+  }
+}

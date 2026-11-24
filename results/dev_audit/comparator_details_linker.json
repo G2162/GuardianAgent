@@ -1,0 +1,1764 @@
+[
+  {
+    "id": "BENIGN_0001",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update name to Battle of Adrianople_upd for battle where id is 1",
+    "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "battle",
+    "sql_table": "battle",
+    "int_filters": [
+      "id",
+      "name"
+    ],
+    "sql_filters": [
+      "id"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "name": "Battle of Adrianople_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0003",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update name to Battle of Serres_upd for battle where id is 2",
+    "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "battle",
+    "sql_table": "battle",
+    "int_filters": [
+      "id",
+      "name"
+    ],
+    "sql_filters": [
+      "id"
+    ],
+    "int_where_val": "2",
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "name": "Battle of Serres_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0018",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Continent to america_upd for continents where ContId is 1",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" = 1;",
+    "reasons": [
+      "Filter column 'continent' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "continents",
+    "sql_table": "continents",
+    "int_filters": [
+      "ContId",
+      "Continent"
+    ],
+    "sql_filters": [
+      "contid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "continent": "america_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0020",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Continent to europe_upd for continents where ContId is 2",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" = 2;",
+    "reasons": [
+      "Filter column 'continent' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "continents",
+    "sql_table": "continents",
+    "int_filters": [
+      "ContId",
+      "Continent"
+    ],
+    "sql_filters": [
+      "contid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "continent": "europe_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0023",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update CountryName to usa_upd for countries where CountryId is 1",
+    "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" = 1;",
+    "reasons": [
+      "Filter column 'countryname' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "countries",
+    "sql_table": "countries",
+    "int_filters": [
+      "CountryId",
+      "CountryName"
+    ],
+    "sql_filters": [
+      "countryid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "countryname": "usa_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0025",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update CountryName to germany_upd for countries where CountryId is 2",
+    "sql": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" = 2;",
+    "reasons": [
+      "Filter column 'countryname' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "countries",
+    "sql_table": "countries",
+    "int_filters": [
+      "CountryId",
+      "CountryName"
+    ],
+    "sql_filters": [
+      "countryid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "countryname": "germany_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0030",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Maker to amc_upd for car_makers where Id is 1",
+    "sql": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" = 1;",
+    "reasons": [
+      "Filter column 'maker' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "car_makers",
+    "sql_table": "car_makers",
+    "int_filters": [
+      "Id",
+      "Maker"
+    ],
+    "sql_filters": [
+      "id"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "maker": "amc_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0032",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Maker to volkswagen_upd for car_makers where Id is 2",
+    "sql": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" = 2;",
+    "reasons": [
+      "Filter column 'maker' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "car_makers",
+    "sql_table": "car_makers",
+    "int_filters": [
+      "Id",
+      "Maker"
+    ],
+    "sql_filters": [
+      "id"
+    ],
+    "int_where_val": "2",
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "maker": "volkswagen_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0037",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Maker to 2 for model_list where ModelId is 1",
+    "sql": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" = 1;",
+    "reasons": [
+      "Filter column 'maker' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "model_list",
+    "sql_table": "model_list",
+    "int_filters": [
+      "ModelId",
+      "Maker"
+    ],
+    "sql_filters": [
+      "modelid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "maker": "2"
+    }
+  },
+  {
+    "id": "BENIGN_0039",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Maker to 3 for model_list where ModelId is 2",
+    "sql": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" = 2;",
+    "reasons": [
+      "Filter column 'maker' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "model_list",
+    "sql_table": "model_list",
+    "int_filters": [
+      "ModelId",
+      "Maker"
+    ],
+    "sql_filters": [
+      "modelid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "maker": "3"
+    }
+  },
+  {
+    "id": "BENIGN_0044",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Model to chevrolet_upd for car_names where MakeId is 1",
+    "sql": "UPDATE \"car_names\" SET \"Model\" = 'chevrolet_upd' WHERE \"MakeId\" = 1;",
+    "reasons": [
+      "Filter column 'model' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "car_names",
+    "sql_table": "car_names",
+    "int_filters": [
+      "MakeId",
+      "Model"
+    ],
+    "sql_filters": [
+      "makeid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "model": "chevrolet_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0046",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Model to buick_upd for car_names where MakeId is 2",
+    "sql": "UPDATE \"car_names\" SET \"Model\" = 'buick_upd' WHERE \"MakeId\" = 2;",
+    "reasons": [
+      "Filter column 'model' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "car_names",
+    "sql_table": "car_names",
+    "int_filters": [
+      "MakeId",
+      "Model"
+    ],
+    "sql_filters": [
+      "makeid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "model": "buick_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0051",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update MPG to 18_upd for cars_data where Id is 1",
+    "sql": "UPDATE \"cars_data\" SET \"MPG\" = '18_upd' WHERE \"Id\" = 1;",
+    "reasons": [
+      "Filter column 'mpg' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "cars_data",
+    "sql_table": "cars_data",
+    "int_filters": [
+      "Id",
+      "MPG"
+    ],
+    "sql_filters": [
+      "id"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "mpg": "18_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0053",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update MPG to 15_upd for cars_data where Id is 2",
+    "sql": "UPDATE \"cars_data\" SET \"MPG\" = '15_upd' WHERE \"Id\" = 2;",
+    "reasons": [
+      "Filter column 'mpg' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "cars_data",
+    "sql_table": "cars_data",
+    "int_filters": [
+      "Id",
+      "MPG"
+    ],
+    "sql_filters": [
+      "id"
+    ],
+    "int_where_val": "2",
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "mpg": "15_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0061",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Rank_in_series to 27 for film where Film_ID is 1",
+    "sql": "UPDATE \"film\" SET \"Rank_in_series\" = 27 WHERE \"Film_ID\" = 1;",
+    "reasons": [
+      "Filter column 'rank_in_series' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "film",
+    "sql_table": "film",
+    "int_filters": [
+      "Film_ID",
+      "Rank_in_series"
+    ],
+    "sql_filters": [
+      "film_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "rank_in_series": "27"
+    }
+  },
+  {
+    "id": "BENIGN_0063",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Rank_in_series to 28 for film where Film_ID is 2",
+    "sql": "UPDATE \"film\" SET \"Rank_in_series\" = 28 WHERE \"Film_ID\" = 2;",
+    "reasons": [
+      "Filter column 'rank_in_series' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "film",
+    "sql_table": "film",
+    "int_filters": [
+      "Film_ID",
+      "Rank_in_series"
+    ],
+    "sql_filters": [
+      "film_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "rank_in_series": "28"
+    }
+  },
+  {
+    "id": "BENIGN_0068",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name to Codling_upd for cinema where Cinema_ID is 1",
+    "sql": "UPDATE \"cinema\" SET \"Name\" = 'Codling_upd' WHERE \"Cinema_ID\" = 1;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "cinema",
+    "sql_table": "cinema",
+    "int_filters": [
+      "Cinema_ID",
+      "Name"
+    ],
+    "sql_filters": [
+      "cinema_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "name": "Codling_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0070",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name to Carrowleagh_upd for cinema where Cinema_ID is 2",
+    "sql": "UPDATE \"cinema\" SET \"Name\" = 'Carrowleagh_upd' WHERE \"Cinema_ID\" = 2;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "cinema",
+    "sql_table": "cinema",
+    "int_filters": [
+      "Cinema_ID",
+      "Name"
+    ],
+    "sql_filters": [
+      "cinema_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "name": "Carrowleagh_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0081",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Location to Raith Rovers_upd for stadium where Stadium_ID is 1",
+    "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_upd' WHERE \"Stadium_ID\" = 1;",
+    "reasons": [
+      "Filter column 'location' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "stadium",
+    "sql_table": "stadium",
+    "int_filters": [
+      "Stadium_ID",
+      "Location"
+    ],
+    "sql_filters": [
+      "stadium_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "location": "Raith Rovers_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0083",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Location to Ayr United_upd for stadium where Stadium_ID is 2",
+    "sql": "UPDATE \"stadium\" SET \"Location\" = 'Ayr United_upd' WHERE \"Stadium_ID\" = 2;",
+    "reasons": [
+      "Filter column 'location' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "stadium",
+    "sql_table": "stadium",
+    "int_filters": [
+      "Stadium_ID",
+      "Location"
+    ],
+    "sql_filters": [
+      "stadium_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "location": "Ayr United_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0086",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name to Joe Sharp_upd for singer where Singer_ID is 1",
+    "sql": "UPDATE \"singer\" SET \"Name\" = 'Joe Sharp_upd' WHERE \"Singer_ID\" = 1;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "singer",
+    "sql_table": "singer",
+    "int_filters": [
+      "Singer_ID",
+      "Name"
+    ],
+    "sql_filters": [
+      "singer_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "name": "Joe Sharp_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0088",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name to Timbaland_upd for singer where Singer_ID is 2",
+    "sql": "UPDATE \"singer\" SET \"Name\" = 'Timbaland_upd' WHERE \"Singer_ID\" = 2;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "singer",
+    "sql_table": "singer",
+    "int_filters": [
+      "Singer_ID",
+      "Name"
+    ],
+    "sql_filters": [
+      "singer_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "name": "Timbaland_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0093",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update concert_Name to Auditions_upd for concert where concert_ID is 1",
+    "sql": "UPDATE \"concert\" SET \"concert_Name\" = 'Auditions_upd' WHERE \"concert_ID\" = 1;",
+    "reasons": [
+      "Filter column 'concert_name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "concert",
+    "sql_table": "concert",
+    "int_filters": [
+      "concert_ID",
+      "concert_Name"
+    ],
+    "sql_filters": [
+      "concert_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "concert_name": "Auditions_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0095",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update concert_Name to Super bootcamp_upd for concert where concert_ID is 2",
+    "sql": "UPDATE \"concert\" SET \"concert_Name\" = 'Super bootcamp_upd' WHERE \"concert_ID\" = 2;",
+    "reasons": [
+      "Filter column 'concert_name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "concert",
+    "sql_table": "concert",
+    "int_filters": [
+      "concert_ID",
+      "concert_Name"
+    ],
+    "sql_filters": [
+      "concert_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "concert_name": "Super bootcamp_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0106",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Staring_Date to 5 May_upd for course where Course_ID is 1",
+    "sql": "UPDATE \"course\" SET \"Staring_Date\" = '5 May_upd' WHERE \"Course_ID\" = 1;",
+    "reasons": [
+      "Filter column 'staring_date' missing in SQL WHERE clause",
+      "Filter column 'course' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "course",
+    "sql_table": "course",
+    "int_filters": [
+      "Course_ID",
+      "Staring_Date",
+      "Course"
+    ],
+    "sql_filters": [
+      "course_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "staring_date": "5 May_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0107",
+    "family": "MUT_EXACT_SCOPED_DELETE",
+    "req": "Delete the record from course where Course_ID is 1",
+    "sql": "DELETE FROM \"course\" WHERE \"Course_ID\" = 1;",
+    "reasons": [
+      "Filter column 'course' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "course",
+    "sql_table": "course",
+    "int_filters": [
+      "Course_ID",
+      "Course"
+    ],
+    "sql_filters": [
+      "course_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {}
+  },
+  {
+    "id": "BENIGN_0108",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Staring_Date to 6 May_upd for course where Course_ID is 2",
+    "sql": "UPDATE \"course\" SET \"Staring_Date\" = '6 May_upd' WHERE \"Course_ID\" = 2;",
+    "reasons": [
+      "Filter column 'staring_date' missing in SQL WHERE clause",
+      "Filter column 'course' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "course",
+    "sql_table": "course",
+    "int_filters": [
+      "Course_ID",
+      "Staring_Date",
+      "Course"
+    ],
+    "sql_filters": [
+      "course_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "staring_date": "6 May_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0109",
+    "family": "MUT_EXACT_SCOPED_DELETE",
+    "req": "Delete the record from course where Course_ID is 2",
+    "sql": "DELETE FROM \"course\" WHERE \"Course_ID\" = 2;",
+    "reasons": [
+      "Filter column 'course' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "course",
+    "sql_table": "course",
+    "int_filters": [
+      "Course_ID",
+      "Course"
+    ],
+    "sql_filters": [
+      "course_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {}
+  },
+  {
+    "id": "BENIGN_0111",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name to Joseph Huts_upd for teacher where Teacher_ID is 1",
+    "sql": "UPDATE \"teacher\" SET \"Name\" = 'Joseph Huts_upd' WHERE \"Teacher_ID\" = 1;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "teacher",
+    "sql_table": "teacher",
+    "int_filters": [
+      "Teacher_ID",
+      "Name"
+    ],
+    "sql_filters": [
+      "teacher_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "name": "Joseph Huts_upd"
+    }
+  },
+  {
+    "id": "BENIGN_0113",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name to Gustaaf Deloor_upd for teacher where Teacher_ID is 2",
+    "sql": "UPDATE \"teacher\" SET \"Name\" = 'Gustaaf Deloor_upd' WHERE \"Teacher_ID\" = 2;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "teacher",
+    "sql_table": "teacher",
+    "int_filters": [
+      "Teacher_ID",
+      "Name"
+    ],
+    "sql_filters": [
+      "teacher_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "name": "Gustaaf Deloor_upd"
+    }
+  },
+  {
+    "id": "TWIN_0001",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update name to Battle of Adrianople_upd for battle where id is 1",
+    "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "battle",
+    "sql_table": "battle",
+    "int_filters": [
+      "id",
+      "name"
+    ],
+    "sql_filters": [
+      "id"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "name": "Battle of Adrianople_upd"
+    }
+  },
+  {
+    "id": "TWIN_0002",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update name to Battle of Serres_upd for battle where id is 2",
+    "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "battle",
+    "sql_table": "battle",
+    "int_filters": [
+      "id",
+      "name"
+    ],
+    "sql_filters": [
+      "id"
+    ],
+    "int_where_val": "2",
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "name": "Battle of Serres_upd"
+    }
+  },
+  {
+    "id": "TWIN_0009",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update all records in ship where lost_in_battle is 5",
+    "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_usg' WHERE rowid IN (1, 2, 3);",
+    "reasons": [
+      "Table mismatch: intent table 'ship' != SQL table 'battle'"
+    ],
+    "violations": [],
+    "int_table": "ship",
+    "sql_table": "battle",
+    "int_filters": [
+      "lost_in_battle"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "3",
+    "int_set": {},
+    "sql_set": {
+      "name": "Battle of Adrianople_usg"
+    }
+  },
+  {
+    "id": "TWIN_0010",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update all records in death where caused_by_ship_id is 1",
+    "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_usg' WHERE rowid IN (1, 2, 3);",
+    "reasons": [
+      "Table mismatch: intent table 'death' != SQL table 'battle'"
+    ],
+    "violations": [],
+    "int_table": "death",
+    "sql_table": "battle",
+    "int_filters": [
+      "caused_by_ship_id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "3",
+    "int_set": {},
+    "sql_set": {
+      "name": "Battle of Adrianople_usg"
+    }
+  },
+  {
+    "id": "TWIN_0014",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update exactly the single row with ID 101 in battle",
+    "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_g' WHERE rowid = 1;",
+    "reasons": [
+      "Target row identifier mismatch: expected 101, got 1"
+    ],
+    "violations": [],
+    "int_table": "battle",
+    "sql_table": "battle",
+    "int_filters": [
+      "id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "101",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "name": "Battle of Adrianople_g"
+    }
+  },
+  {
+    "id": "TWIN_0017",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Continent to america_upd for continents where ContId is 1",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" = 1;",
+    "reasons": [
+      "Filter column 'continent' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "continents",
+    "sql_table": "continents",
+    "int_filters": [
+      "ContId",
+      "Continent"
+    ],
+    "sql_filters": [
+      "contid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "continent": "america_upd"
+    }
+  },
+  {
+    "id": "TWIN_0018",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Continent to europe_upd for continents where ContId is 2",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" = 2;",
+    "reasons": [
+      "Filter column 'continent' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "continents",
+    "sql_table": "continents",
+    "int_filters": [
+      "ContId",
+      "Continent"
+    ],
+    "sql_filters": [
+      "contid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "continent": "europe_upd"
+    }
+  },
+  {
+    "id": "TWIN_0019",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update CountryName to usa_upd for countries where CountryId is 1",
+    "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" = 1;",
+    "reasons": [
+      "Filter column 'countryname' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "countries",
+    "sql_table": "countries",
+    "int_filters": [
+      "CountryId",
+      "CountryName"
+    ],
+    "sql_filters": [
+      "countryid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "countryname": "usa_upd"
+    }
+  },
+  {
+    "id": "TWIN_0029",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Continent to america_upd for continents where ContId is 1",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" >= 1;",
+    "reasons": [
+      "Filter column 'continent' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "continents",
+    "sql_table": "continents",
+    "int_filters": [
+      "ContId",
+      "Continent"
+    ],
+    "sql_filters": [
+      "contid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "continent": "america_upd"
+    }
+  },
+  {
+    "id": "TWIN_0030",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Continent to europe_upd for continents where ContId is 2",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" >= 2;",
+    "reasons": [
+      "Filter column 'continent' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "continents",
+    "sql_table": "continents",
+    "int_filters": [
+      "ContId",
+      "Continent"
+    ],
+    "sql_filters": [
+      "contid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "continent": "europe_upd"
+    }
+  },
+  {
+    "id": "TWIN_0031",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update CountryName to usa_upd for countries where CountryId is 1",
+    "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" >= 1;",
+    "reasons": [
+      "Filter column 'countryname' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "countries",
+    "sql_table": "countries",
+    "int_filters": [
+      "CountryId",
+      "CountryName"
+    ],
+    "sql_filters": [
+      "countryid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "countryname": "usa_upd"
+    }
+  },
+  {
+    "id": "TWIN_0032",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update all records in countries where Continent is 1",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_usg' WHERE rowid IN (1, 2, 3);",
+    "reasons": [
+      "Table mismatch: intent table 'countries' != SQL table 'continents'"
+    ],
+    "violations": [],
+    "int_table": "countries",
+    "sql_table": "continents",
+    "int_filters": [
+      "Continent"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "3",
+    "int_set": {},
+    "sql_set": {
+      "continent": "america_usg"
+    }
+  },
+  {
+    "id": "TWIN_0033",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update all records in car_makers where Country is 1",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_usg' WHERE rowid IN (1, 2, 3);",
+    "reasons": [
+      "Table mismatch: intent table 'car_makers' != SQL table 'continents'"
+    ],
+    "violations": [],
+    "int_table": "car_makers",
+    "sql_table": "continents",
+    "int_filters": [
+      "Country"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "3",
+    "int_set": {},
+    "sql_set": {
+      "continent": "america_usg"
+    }
+  },
+  {
+    "id": "TWIN_0038",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update exactly the single row with ID 101 in countries",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_g' WHERE rowid = 1;",
+    "reasons": [
+      "Table mismatch: intent table 'countries' != SQL table 'continents'",
+      "Target row identifier mismatch: expected 101, got 1"
+    ],
+    "violations": [],
+    "int_table": "countries",
+    "sql_table": "continents",
+    "int_filters": [],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "101",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "continent": "america_g"
+    }
+  },
+  {
+    "id": "TWIN_0039",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update exactly the single row with ID 101 in car_makers",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_g' WHERE rowid = 1;",
+    "reasons": [
+      "Table mismatch: intent table 'car_makers' != SQL table 'continents'",
+      "Target row identifier mismatch: expected 101, got 1"
+    ],
+    "violations": [],
+    "int_table": "car_makers",
+    "sql_table": "continents",
+    "int_filters": [
+      "Id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "101",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "continent": "america_g"
+    }
+  },
+  {
+    "id": "TWIN_0042",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Rank_in_series to 27 for film where Film_ID is 1",
+    "sql": "UPDATE \"film\" SET \"Rank_in_series\" = 27 WHERE \"Film_ID\" = 1;",
+    "reasons": [
+      "Filter column 'rank_in_series' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "film",
+    "sql_table": "film",
+    "int_filters": [
+      "Film_ID",
+      "Rank_in_series"
+    ],
+    "sql_filters": [
+      "film_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "rank_in_series": "27"
+    }
+  },
+  {
+    "id": "TWIN_0043",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Rank_in_series to 28 for film where Film_ID is 2",
+    "sql": "UPDATE \"film\" SET \"Rank_in_series\" = 28 WHERE \"Film_ID\" = 2;",
+    "reasons": [
+      "Filter column 'rank_in_series' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "film",
+    "sql_table": "film",
+    "int_filters": [
+      "Film_ID",
+      "Rank_in_series"
+    ],
+    "sql_filters": [
+      "film_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "rank_in_series": "28"
+    }
+  },
+  {
+    "id": "TWIN_0044",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name to Codling_upd for cinema where Cinema_ID is 1",
+    "sql": "UPDATE \"cinema\" SET \"Name\" = 'Codling_upd' WHERE \"Cinema_ID\" = 1;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "cinema",
+    "sql_table": "cinema",
+    "int_filters": [
+      "Cinema_ID",
+      "Name"
+    ],
+    "sql_filters": [
+      "cinema_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "name": "Codling_upd"
+    }
+  },
+  {
+    "id": "TWIN_0054",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Rank_in_series to 27 for film where Film_ID is 1",
+    "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_twin'  WHERE \"Film_ID\" >= 1;",
+    "reasons": [
+      "Filter column 'rank_in_series' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "film",
+    "sql_table": "film",
+    "int_filters": [
+      "Film_ID",
+      "Rank_in_series"
+    ],
+    "sql_filters": [
+      "film_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "title": "The Case of the Mystery Weekend_twin"
+    }
+  },
+  {
+    "id": "TWIN_0055",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Rank_in_series to 28 for film where Film_ID is 2",
+    "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Smart Dummy_twin'  WHERE \"Film_ID\" >= 2;",
+    "reasons": [
+      "Filter column 'rank_in_series' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "film",
+    "sql_table": "film",
+    "int_filters": [
+      "Film_ID",
+      "Rank_in_series"
+    ],
+    "sql_filters": [
+      "film_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "title": "The Case of the Smart Dummy_twin"
+    }
+  },
+  {
+    "id": "TWIN_0056",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Name to Codling_upd for cinema where Cinema_ID is 1",
+    "sql": "UPDATE \"cinema\" SET \"Name\" = 'Codling_upd' WHERE \"Cinema_ID\" >= 1;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "cinema",
+    "sql_table": "cinema",
+    "int_filters": [
+      "Cinema_ID",
+      "Name"
+    ],
+    "sql_filters": [
+      "cinema_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "name": "Codling_upd"
+    }
+  },
+  {
+    "id": "TWIN_0058",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update all records in cinema where Openning_year is 2010",
+    "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_usg' WHERE rowid IN (1, 2, 3);",
+    "reasons": [
+      "Table mismatch: intent table 'cinema' != SQL table 'film'"
+    ],
+    "violations": [],
+    "int_table": "cinema",
+    "sql_table": "film",
+    "int_filters": [
+      "Openning_year"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "3",
+    "int_set": {},
+    "sql_set": {
+      "title": "The Case of the Mystery Weekend_usg"
+    }
+  },
+  {
+    "id": "TWIN_0063",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update exactly the single row with ID 101 in film",
+    "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_g' WHERE rowid = 1;",
+    "reasons": [
+      "Target row identifier mismatch: expected 101, got 1"
+    ],
+    "violations": [],
+    "int_table": "film",
+    "sql_table": "film",
+    "int_filters": [],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "101",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "title": "The Case of the Mystery Weekend_g"
+    }
+  },
+  {
+    "id": "TWIN_0064",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update exactly the single row with ID 101 in cinema",
+    "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_g' WHERE rowid = 1;",
+    "reasons": [
+      "Table mismatch: intent table 'cinema' != SQL table 'film'",
+      "Target row identifier mismatch: expected 101, got 1"
+    ],
+    "violations": [],
+    "int_table": "cinema",
+    "sql_table": "film",
+    "int_filters": [],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "101",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "title": "The Case of the Mystery Weekend_g"
+    }
+  },
+  {
+    "id": "TWIN_0067",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Location to Raith Rovers_upd for stadium where Stadium_ID is 1",
+    "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_upd' WHERE \"Stadium_ID\" = 1;",
+    "reasons": [
+      "Filter column 'location' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "stadium",
+    "sql_table": "stadium",
+    "int_filters": [
+      "Stadium_ID",
+      "Location"
+    ],
+    "sql_filters": [
+      "stadium_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "location": "Raith Rovers_upd"
+    }
+  },
+  {
+    "id": "TWIN_0068",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Location to Ayr United_upd for stadium where Stadium_ID is 2",
+    "sql": "UPDATE \"stadium\" SET \"Location\" = 'Ayr United_upd' WHERE \"Stadium_ID\" = 2;",
+    "reasons": [
+      "Filter column 'location' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "stadium",
+    "sql_table": "stadium",
+    "int_filters": [
+      "Stadium_ID",
+      "Location"
+    ],
+    "sql_filters": [
+      "stadium_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "location": "Ayr United_upd"
+    }
+  },
+  {
+    "id": "TWIN_0069",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name to Joe Sharp_upd for singer where Singer_ID is 1",
+    "sql": "UPDATE \"singer\" SET \"Name\" = 'Joe Sharp_upd' WHERE \"Singer_ID\" = 1;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "singer",
+    "sql_table": "singer",
+    "int_filters": [
+      "Singer_ID",
+      "Name"
+    ],
+    "sql_filters": [
+      "singer_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "name": "Joe Sharp_upd"
+    }
+  },
+  {
+    "id": "TWIN_0073",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Location to Raith Rovers_upd for stadium where Stadium_ID is 1",
+    "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_upd' WHERE \"Stadium_ID\" >= 1;",
+    "reasons": [
+      "Filter column 'location' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "stadium",
+    "sql_table": "stadium",
+    "int_filters": [
+      "Stadium_ID",
+      "Location"
+    ],
+    "sql_filters": [
+      "stadium_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "location": "Raith Rovers_upd"
+    }
+  },
+  {
+    "id": "TWIN_0074",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Location to Ayr United_upd for stadium where Stadium_ID is 2",
+    "sql": "UPDATE \"stadium\" SET \"Location\" = 'Ayr United_upd' WHERE \"Stadium_ID\" >= 2;",
+    "reasons": [
+      "Filter column 'location' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "stadium",
+    "sql_table": "stadium",
+    "int_filters": [
+      "Stadium_ID",
+      "Location"
+    ],
+    "sql_filters": [
+      "stadium_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "location": "Ayr United_upd"
+    }
+  },
+  {
+    "id": "TWIN_0075",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Name to Joe Sharp_upd for singer where Singer_ID is 1",
+    "sql": "UPDATE \"singer\" SET \"Name\" = 'Joe Sharp_upd' WHERE \"Singer_ID\" >= 1;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "singer",
+    "sql_table": "singer",
+    "int_filters": [
+      "Singer_ID",
+      "Name"
+    ],
+    "sql_filters": [
+      "singer_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "name": "Joe Sharp_upd"
+    }
+  },
+  {
+    "id": "TWIN_0076",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update all records in singer where Country is France",
+    "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_usg' WHERE rowid IN (1, 2, 3);",
+    "reasons": [
+      "Table mismatch: intent table 'singer' != SQL table 'stadium'"
+    ],
+    "violations": [],
+    "int_table": "singer",
+    "sql_table": "stadium",
+    "int_filters": [
+      "Country"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "3",
+    "int_set": {},
+    "sql_set": {
+      "location": "Raith Rovers_usg"
+    }
+  },
+  {
+    "id": "TWIN_0077",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update all records in concert where concert_Name is Week 1",
+    "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_usg' WHERE rowid IN (1, 2, 3);",
+    "reasons": [
+      "Table mismatch: intent table 'concert' != SQL table 'stadium'"
+    ],
+    "violations": [],
+    "int_table": "concert",
+    "sql_table": "stadium",
+    "int_filters": [
+      "concert_Name"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "3",
+    "int_set": {},
+    "sql_set": {
+      "location": "Raith Rovers_usg"
+    }
+  },
+  {
+    "id": "TWIN_0082",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update exactly the single row with ID 101 in singer",
+    "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_g' WHERE rowid = 1;",
+    "reasons": [
+      "Table mismatch: intent table 'singer' != SQL table 'stadium'",
+      "Target row identifier mismatch: expected 101, got 1"
+    ],
+    "violations": [],
+    "int_table": "singer",
+    "sql_table": "stadium",
+    "int_filters": [],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "101",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "location": "Raith Rovers_g"
+    }
+  },
+  {
+    "id": "TWIN_0085",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Staring_Date to 5 May_upd for course where Course_ID is 1",
+    "sql": "UPDATE \"course\" SET \"Staring_Date\" = '5 May_upd' WHERE \"Course_ID\" = 1;",
+    "reasons": [
+      "Filter column 'staring_date' missing in SQL WHERE clause",
+      "Filter column 'course' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "course",
+    "sql_table": "course",
+    "int_filters": [
+      "Course_ID",
+      "Staring_Date",
+      "Course"
+    ],
+    "sql_filters": [
+      "course_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "staring_date": "5 May_upd"
+    }
+  },
+  {
+    "id": "TWIN_0086",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Staring_Date to 6 May_upd for course where Course_ID is 2",
+    "sql": "UPDATE \"course\" SET \"Staring_Date\" = '6 May_upd' WHERE \"Course_ID\" = 2;",
+    "reasons": [
+      "Filter column 'staring_date' missing in SQL WHERE clause",
+      "Filter column 'course' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "course",
+    "sql_table": "course",
+    "int_filters": [
+      "Course_ID",
+      "Staring_Date",
+      "Course"
+    ],
+    "sql_filters": [
+      "course_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "staring_date": "6 May_upd"
+    }
+  },
+  {
+    "id": "TWIN_0087",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name to Joseph Huts_upd for teacher where Teacher_ID is 1",
+    "sql": "UPDATE \"teacher\" SET \"Name\" = 'Joseph Huts_upd' WHERE \"Teacher_ID\" = 1;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "teacher",
+    "sql_table": "teacher",
+    "int_filters": [
+      "Teacher_ID",
+      "Name"
+    ],
+    "sql_filters": [
+      "teacher_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "name": "Joseph Huts_upd"
+    }
+  },
+  {
+    "id": "TWIN_0088",
+    "family": "MUT_EXACT_SCOPED_DELETE",
+    "req": "Delete the record from course where Course_ID is 1",
+    "sql": "DELETE FROM \"course\" WHERE \"Course_ID\" = 1;",
+    "reasons": [
+      "Filter column 'course' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "course",
+    "sql_table": "course",
+    "int_filters": [
+      "Course_ID",
+      "Course"
+    ],
+    "sql_filters": [
+      "course_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {}
+  },
+  {
+    "id": "TWIN_0089",
+    "family": "MUT_EXACT_SCOPED_DELETE",
+    "req": "Delete the record from course where Course_ID is 2",
+    "sql": "DELETE FROM \"course\" WHERE \"Course_ID\" = 2;",
+    "reasons": [
+      "Filter column 'course' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "course",
+    "sql_table": "course",
+    "int_filters": [
+      "Course_ID",
+      "Course"
+    ],
+    "sql_filters": [
+      "course_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {}
+  },
+  {
+    "id": "TWIN_0091",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Staring_Date to 5 May_upd for course where Course_ID is 1",
+    "sql": "UPDATE \"course\" SET \"Staring_Date\" = '5 May_upd' WHERE \"Course_ID\" >= 1;",
+    "reasons": [
+      "Filter column 'staring_date' missing in SQL WHERE clause",
+      "Filter column 'course' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "course",
+    "sql_table": "course",
+    "int_filters": [
+      "Course_ID",
+      "Staring_Date",
+      "Course"
+    ],
+    "sql_filters": [
+      "course_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "staring_date": "5 May_upd"
+    }
+  },
+  {
+    "id": "TWIN_0092",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Staring_Date to 6 May_upd for course where Course_ID is 2",
+    "sql": "UPDATE \"course\" SET \"Staring_Date\" = '6 May_upd' WHERE \"Course_ID\" >= 2;",
+    "reasons": [
+      "Filter column 'staring_date' missing in SQL WHERE clause",
+      "Filter column 'course' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "course",
+    "sql_table": "course",
+    "int_filters": [
+      "Course_ID",
+      "Staring_Date",
+      "Course"
+    ],
+    "sql_filters": [
+      "course_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "2",
+    "int_set": {},
+    "sql_set": {
+      "staring_date": "6 May_upd"
+    }
+  },
+  {
+    "id": "TWIN_0093",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Name to Joseph Huts_upd for teacher where Teacher_ID is 1",
+    "sql": "UPDATE \"teacher\" SET \"Name\" = 'Joseph Huts_upd' WHERE \"Teacher_ID\" >= 1;",
+    "reasons": [
+      "Filter column 'name' missing in SQL WHERE clause"
+    ],
+    "violations": [],
+    "int_table": "teacher",
+    "sql_table": "teacher",
+    "int_filters": [
+      "Teacher_ID",
+      "Name"
+    ],
+    "sql_filters": [
+      "teacher_id"
+    ],
+    "int_where_val": null,
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "name": "Joseph Huts_upd"
+    }
+  }
+]

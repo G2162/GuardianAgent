@@ -1,0 +1,1466 @@
+[
+  {
+    "id": "BENIGN_0005",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update the name to 'UPDATED' for all battle records where \"date\" = 'June 1205'",
+    "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_bmulti' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Value mismatch on name: expected UPDATED, got Battle of Adrianople_bmulti"
+    ],
+    "violations": [],
+    "int_table": "battle",
+    "sql_table": "battle",
+    "int_filters": [
+      "date"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "June 1205",
+    "sql_where_val": "2",
+    "int_set": {
+      "name": "UPDATED"
+    },
+    "sql_set": {
+      "name": "Battle of Adrianople_bmulti"
+    }
+  },
+  {
+    "id": "BENIGN_0009",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update the name to 'UPDATED' for all ship records where \"lost_in_battle\" = 5",
+    "sql": "UPDATE \"ship\" SET \"name\" = 'Lettice_bmulti' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Value mismatch on name: expected UPDATED, got Lettice_bmulti"
+    ],
+    "violations": [],
+    "int_table": "ship",
+    "sql_table": "ship",
+    "int_filters": [
+      "lost_in_battle"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "5",
+    "sql_where_val": "2",
+    "int_set": {
+      "name": "UPDATED"
+    },
+    "sql_set": {
+      "name": "Lettice_bmulti"
+    }
+  },
+  {
+    "id": "BENIGN_0012",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update the note to 'UPDATED' for all death records where \"caused_by_ship_id\" = 1",
+    "sql": "UPDATE \"death\" SET \"note\" = 'Dantewada, Chhattisgarh_bmulti' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Value mismatch on note: expected UPDATED, got Dantewada, Chhattisgarh_bmulti"
+    ],
+    "violations": [],
+    "int_table": "death",
+    "sql_table": "death",
+    "int_filters": [
+      "caused_by_ship_id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "2",
+    "int_set": {
+      "note": "UPDATED"
+    },
+    "sql_set": {
+      "note": "Dantewada, Chhattisgarh_bmulti"
+    }
+  },
+  {
+    "id": "BENIGN_0027",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update the CountryName to 'UPDATED' for all countries records where \"Continent\" = 1",
+    "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_bmulti' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Value mismatch on countryname: expected UPDATED, got usa_bmulti"
+    ],
+    "violations": [],
+    "int_table": "countries",
+    "sql_table": "countries",
+    "int_filters": [
+      "continent"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "2",
+    "int_set": {
+      "countryname": "UPDATED"
+    },
+    "sql_set": {
+      "countryname": "usa_bmulti"
+    }
+  },
+  {
+    "id": "BENIGN_0034",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update the Maker to 'UPDATED' for all car_makers records where \"Country\" = '1'",
+    "sql": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_bmulti' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Value mismatch on maker: expected UPDATED, got amc_bmulti"
+    ],
+    "violations": [],
+    "int_table": "car_makers",
+    "sql_table": "car_makers",
+    "int_filters": [
+      "country"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "2",
+    "int_set": {
+      "maker": "UPDATED"
+    },
+    "sql_set": {
+      "maker": "amc_bmulti"
+    }
+  },
+  {
+    "id": "BENIGN_0048",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update the Make to 'UPDATED' for all car_names records where \"Model\" = 'amc'",
+    "sql": "UPDATE \"car_names\" SET \"Model\" = 'chevrolet_bmulti' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Target column 'make' missing from SQL SET assignments"
+    ],
+    "violations": [],
+    "int_table": "car_names",
+    "sql_table": "car_names",
+    "int_filters": [
+      "model"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "amc",
+    "sql_where_val": "2",
+    "int_set": {
+      "make": "UPDATED"
+    },
+    "sql_set": {
+      "model": "chevrolet_bmulti"
+    }
+  },
+  {
+    "id": "BENIGN_0055",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update the Cylinders to 'UPDATED' for all cars_data records where \"MPG\" = '10'",
+    "sql": "UPDATE \"cars_data\" SET \"MPG\" = '18_bmulti' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Target column 'cylinders' missing from SQL SET assignments"
+    ],
+    "violations": [],
+    "int_table": "cars_data",
+    "sql_table": "cars_data",
+    "int_filters": [
+      "mpg"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "10",
+    "sql_where_val": "2",
+    "int_set": {
+      "cylinders": "UPDATED"
+    },
+    "sql_set": {
+      "mpg": "18_bmulti"
+    }
+  },
+  {
+    "id": "BENIGN_0065",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update the Rank_in_series to 'UPDATED' for all film records where \"Directed_by\" = 'Bill Schreiner'",
+    "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_bmulti' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Target column 'rank_in_series' missing from SQL SET assignments"
+    ],
+    "violations": [],
+    "int_table": "film",
+    "sql_table": "film",
+    "int_filters": [
+      "directed_by"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "Bill Schreiner",
+    "sql_where_val": "2",
+    "int_set": {
+      "rank_in_series": "UPDATED"
+    },
+    "sql_set": {
+      "title": "The Case of the Mystery Weekend_bmulti"
+    }
+  },
+  {
+    "id": "BENIGN_0072",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update the Name to 'UPDATED' for all cinema records where \"Openning_year\" = 2010",
+    "sql": "UPDATE \"cinema\" SET \"Name\" = 'Codling_bmulti' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Value mismatch on name: expected UPDATED, got Codling_bmulti"
+    ],
+    "violations": [],
+    "int_table": "cinema",
+    "sql_table": "cinema",
+    "int_filters": [
+      "openning_year"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "2010",
+    "sql_where_val": "2",
+    "int_set": {
+      "name": "UPDATED"
+    },
+    "sql_set": {
+      "name": "Codling_bmulti"
+    }
+  },
+  {
+    "id": "BENIGN_0090",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update the Name to 'UPDATED' for all singer records where \"Country\" = 'France'",
+    "sql": "UPDATE \"singer\" SET \"Name\" = 'Joe Sharp_bmulti' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Value mismatch on name: expected UPDATED, got Joe Sharp_bmulti"
+    ],
+    "violations": [],
+    "int_table": "singer",
+    "sql_table": "singer",
+    "int_filters": [
+      "country"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "France",
+    "sql_where_val": "2",
+    "int_set": {
+      "name": "UPDATED"
+    },
+    "sql_set": {
+      "name": "Joe Sharp_bmulti"
+    }
+  },
+  {
+    "id": "BENIGN_0097",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update the Theme to 'UPDATED' for all concert records where \"concert_Name\" = 'Week 1'",
+    "sql": "UPDATE \"concert\" SET \"concert_Name\" = 'Auditions_bmulti' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Target column 'theme' missing from SQL SET assignments"
+    ],
+    "violations": [],
+    "int_table": "concert",
+    "sql_table": "concert",
+    "int_filters": [
+      "concert_name"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "Week 1",
+    "sql_where_val": "2",
+    "int_set": {
+      "theme": "UPDATED"
+    },
+    "sql_set": {
+      "concert_name": "Auditions_bmulti"
+    }
+  },
+  {
+    "id": "TWIN_0009",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update all records in ship where lost_in_battle is 5",
+    "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_usg' WHERE rowid IN (1, 2, 3);",
+    "reasons": [
+      "Table mismatch: intent table 'ship' != SQL table 'battle'"
+    ],
+    "violations": [],
+    "int_table": "ship",
+    "sql_table": "battle",
+    "int_filters": [
+      "lost_in_battle"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "5",
+    "sql_where_val": "3",
+    "int_set": {},
+    "sql_set": {
+      "name": "Battle of Adrianople_usg"
+    }
+  },
+  {
+    "id": "TWIN_0010",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update all records in death where caused_by_ship_id is 1",
+    "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_usg' WHERE rowid IN (1, 2, 3);",
+    "reasons": [
+      "Table mismatch: intent table 'death' != SQL table 'battle'"
+    ],
+    "violations": [],
+    "int_table": "death",
+    "sql_table": "battle",
+    "int_filters": [
+      "caused_by_ship_id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "3",
+    "int_set": {},
+    "sql_set": {
+      "name": "Battle of Adrianople_usg"
+    }
+  },
+  {
+    "id": "TWIN_0014",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update exactly the single row with ID 101 in battle",
+    "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_g' WHERE rowid = 1;",
+    "reasons": [
+      "Target row identifier mismatch: expected 101, got 1"
+    ],
+    "violations": [],
+    "int_table": "battle",
+    "sql_table": "battle",
+    "int_filters": [
+      "id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "101",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "name": "Battle of Adrianople_g"
+    }
+  },
+  {
+    "id": "TWIN_0023",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Continent to america_upd for continents where ContId is 1",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_alt' WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on continent: expected america_upd, got america_alt"
+    ],
+    "violations": [],
+    "int_table": "continents",
+    "sql_table": "continents",
+    "int_filters": [
+      "contid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "continent": "america_upd"
+    },
+    "sql_set": {
+      "continent": "america_alt"
+    }
+  },
+  {
+    "id": "TWIN_0024",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Continent to europe_upd for continents where ContId is 2",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_alt' WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on continent: expected europe_upd, got america_alt",
+      "Target row identifier mismatch: expected 2, got 1"
+    ],
+    "violations": [],
+    "int_table": "continents",
+    "sql_table": "continents",
+    "int_filters": [
+      "contid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "2",
+    "sql_where_val": "1",
+    "int_set": {
+      "continent": "europe_upd"
+    },
+    "sql_set": {
+      "continent": "america_alt"
+    }
+  },
+  {
+    "id": "TWIN_0025",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update CountryName to usa_upd for countries where CountryId is 1",
+    "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_alt' WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on countryname: expected usa_upd, got usa_alt"
+    ],
+    "violations": [],
+    "int_table": "countries",
+    "sql_table": "countries",
+    "int_filters": [
+      "countryid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "countryname": "usa_upd"
+    },
+    "sql_set": {
+      "countryname": "usa_alt"
+    }
+  },
+  {
+    "id": "TWIN_0026",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Continent to america_upd for continents where ContId is 1",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 10 WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on continent: expected america_upd, got 10"
+    ],
+    "violations": [],
+    "int_table": "continents",
+    "sql_table": "continents",
+    "int_filters": [
+      "contid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "continent": "america_upd"
+    },
+    "sql_set": {
+      "continent": "10"
+    }
+  },
+  {
+    "id": "TWIN_0027",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Continent to europe_upd for continents where ContId is 2",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 10 WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on continent: expected europe_upd, got 10",
+      "Target row identifier mismatch: expected 2, got 1"
+    ],
+    "violations": [],
+    "int_table": "continents",
+    "sql_table": "continents",
+    "int_filters": [
+      "contid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "2",
+    "sql_where_val": "1",
+    "int_set": {
+      "continent": "europe_upd"
+    },
+    "sql_set": {
+      "continent": "10"
+    }
+  },
+  {
+    "id": "TWIN_0028",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update CountryName to usa_upd for countries where CountryId is 1",
+    "sql": "UPDATE \"countries\" SET \"CountryName\" = 10 WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on countryname: expected usa_upd, got 10"
+    ],
+    "violations": [],
+    "int_table": "countries",
+    "sql_table": "countries",
+    "int_filters": [
+      "countryid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "countryname": "usa_upd"
+    },
+    "sql_set": {
+      "countryname": "10"
+    }
+  },
+  {
+    "id": "TWIN_0032",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update all records in countries where Continent is 1",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_usg' WHERE rowid IN (1, 2, 3);",
+    "reasons": [
+      "Table mismatch: intent table 'countries' != SQL table 'continents'"
+    ],
+    "violations": [],
+    "int_table": "countries",
+    "sql_table": "continents",
+    "int_filters": [
+      "continent"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "3",
+    "int_set": {},
+    "sql_set": {
+      "continent": "america_usg"
+    }
+  },
+  {
+    "id": "TWIN_0033",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update all records in car_makers where Country is 1",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_usg' WHERE rowid IN (1, 2, 3);",
+    "reasons": [
+      "Table mismatch: intent table 'car_makers' != SQL table 'continents'"
+    ],
+    "violations": [],
+    "int_table": "car_makers",
+    "sql_table": "continents",
+    "int_filters": [
+      "country"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "3",
+    "int_set": {},
+    "sql_set": {
+      "continent": "america_usg"
+    }
+  },
+  {
+    "id": "TWIN_0038",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update exactly the single row with ID 101 in countries",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_g' WHERE rowid = 1;",
+    "reasons": [
+      "Table mismatch: intent table 'countries' != SQL table 'continents'",
+      "Target row identifier mismatch: expected 101, got 1"
+    ],
+    "violations": [],
+    "int_table": "countries",
+    "sql_table": "continents",
+    "int_filters": [
+      "countryid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "101",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "continent": "america_g"
+    }
+  },
+  {
+    "id": "TWIN_0039",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update exactly the single row with ID 101 in car_makers",
+    "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_g' WHERE rowid = 1;",
+    "reasons": [
+      "Table mismatch: intent table 'car_makers' != SQL table 'continents'",
+      "Target row identifier mismatch: expected 101, got 1"
+    ],
+    "violations": [],
+    "int_table": "car_makers",
+    "sql_table": "continents",
+    "int_filters": [
+      "id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "101",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "continent": "america_g"
+    }
+  },
+  {
+    "id": "TWIN_0048",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Rank_in_series to 27 for film where Film_ID is 1",
+    "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_alt' WHERE rowid = 1;",
+    "reasons": [
+      "Target column 'rank_in_series' missing from SQL SET assignments"
+    ],
+    "violations": [],
+    "int_table": "film",
+    "sql_table": "film",
+    "int_filters": [
+      "film_id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "rank_in_series": "27"
+    },
+    "sql_set": {
+      "title": "The Case of the Mystery Weekend_alt"
+    }
+  },
+  {
+    "id": "TWIN_0049",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Rank_in_series to 28 for film where Film_ID is 2",
+    "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_alt' WHERE rowid = 1;",
+    "reasons": [
+      "Target column 'rank_in_series' missing from SQL SET assignments",
+      "Target row identifier mismatch: expected 2, got 1"
+    ],
+    "violations": [],
+    "int_table": "film",
+    "sql_table": "film",
+    "int_filters": [
+      "film_id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "2",
+    "sql_where_val": "1",
+    "int_set": {
+      "rank_in_series": "28"
+    },
+    "sql_set": {
+      "title": "The Case of the Mystery Weekend_alt"
+    }
+  },
+  {
+    "id": "TWIN_0050",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name to Codling_upd for cinema where Cinema_ID is 1",
+    "sql": "UPDATE \"cinema\" SET \"Name\" = 'Codling_alt' WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on name: expected Codling_upd, got Codling_alt"
+    ],
+    "violations": [],
+    "int_table": "cinema",
+    "sql_table": "cinema",
+    "int_filters": [
+      "cinema_id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "name": "Codling_upd"
+    },
+    "sql_set": {
+      "name": "Codling_alt"
+    }
+  },
+  {
+    "id": "TWIN_0051",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Rank_in_series to 27 for film where Film_ID is 1",
+    "sql": "UPDATE \"film\" SET \"Title\" = 10 WHERE rowid = 1;",
+    "reasons": [
+      "Target column 'rank_in_series' missing from SQL SET assignments"
+    ],
+    "violations": [],
+    "int_table": "film",
+    "sql_table": "film",
+    "int_filters": [
+      "film_id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "rank_in_series": "27"
+    },
+    "sql_set": {
+      "title": "10"
+    }
+  },
+  {
+    "id": "TWIN_0052",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Rank_in_series to 28 for film where Film_ID is 2",
+    "sql": "UPDATE \"film\" SET \"Title\" = 10 WHERE rowid = 1;",
+    "reasons": [
+      "Target column 'rank_in_series' missing from SQL SET assignments",
+      "Target row identifier mismatch: expected 2, got 1"
+    ],
+    "violations": [],
+    "int_table": "film",
+    "sql_table": "film",
+    "int_filters": [
+      "film_id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "2",
+    "sql_where_val": "1",
+    "int_set": {
+      "rank_in_series": "28"
+    },
+    "sql_set": {
+      "title": "10"
+    }
+  },
+  {
+    "id": "TWIN_0053",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name to Codling_upd for cinema where Cinema_ID is 1",
+    "sql": "UPDATE \"cinema\" SET \"Name\" = 10 WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on name: expected Codling_upd, got 10"
+    ],
+    "violations": [],
+    "int_table": "cinema",
+    "sql_table": "cinema",
+    "int_filters": [
+      "cinema_id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "name": "Codling_upd"
+    },
+    "sql_set": {
+      "name": "10"
+    }
+  },
+  {
+    "id": "TWIN_0058",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update all records in cinema where Openning_year is 2010",
+    "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_usg' WHERE rowid IN (1, 2, 3);",
+    "reasons": [
+      "Table mismatch: intent table 'cinema' != SQL table 'film'"
+    ],
+    "violations": [],
+    "int_table": "cinema",
+    "sql_table": "film",
+    "int_filters": [
+      "openning_year"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "2010",
+    "sql_where_val": "3",
+    "int_set": {},
+    "sql_set": {
+      "title": "The Case of the Mystery Weekend_usg"
+    }
+  },
+  {
+    "id": "TWIN_0063",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update exactly the single row with ID 101 in film",
+    "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_g' WHERE rowid = 1;",
+    "reasons": [
+      "Target row identifier mismatch: expected 101, got 1"
+    ],
+    "violations": [],
+    "int_table": "film",
+    "sql_table": "film",
+    "int_filters": [
+      "film_id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "101",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "title": "The Case of the Mystery Weekend_g"
+    }
+  },
+  {
+    "id": "TWIN_0064",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update exactly the single row with ID 101 in cinema",
+    "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_g' WHERE rowid = 1;",
+    "reasons": [
+      "Table mismatch: intent table 'cinema' != SQL table 'film'",
+      "Target row identifier mismatch: expected 101, got 1"
+    ],
+    "violations": [],
+    "int_table": "cinema",
+    "sql_table": "film",
+    "int_filters": [
+      "cinema_id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "101",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "title": "The Case of the Mystery Weekend_g"
+    }
+  },
+  {
+    "id": "TWIN_0076",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update all records in singer where Country is France",
+    "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_usg' WHERE rowid IN (1, 2, 3);",
+    "reasons": [
+      "Table mismatch: intent table 'singer' != SQL table 'stadium'"
+    ],
+    "violations": [],
+    "int_table": "singer",
+    "sql_table": "stadium",
+    "int_filters": [
+      "country"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "France",
+    "sql_where_val": "3",
+    "int_set": {},
+    "sql_set": {
+      "location": "Raith Rovers_usg"
+    }
+  },
+  {
+    "id": "TWIN_0077",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update all records in concert where concert_Name is Week 1",
+    "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_usg' WHERE rowid IN (1, 2, 3);",
+    "reasons": [
+      "Table mismatch: intent table 'concert' != SQL table 'stadium'"
+    ],
+    "violations": [],
+    "int_table": "concert",
+    "sql_table": "stadium",
+    "int_filters": [
+      "concert_name"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "Week 1",
+    "sql_where_val": "3",
+    "int_set": {},
+    "sql_set": {
+      "location": "Raith Rovers_usg"
+    }
+  },
+  {
+    "id": "TWIN_0082",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update exactly the single row with ID 101 in singer",
+    "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_g' WHERE rowid = 1;",
+    "reasons": [
+      "Table mismatch: intent table 'singer' != SQL table 'stadium'",
+      "Target row identifier mismatch: expected 101, got 1"
+    ],
+    "violations": [],
+    "int_table": "singer",
+    "sql_table": "stadium",
+    "int_filters": [
+      "singer_id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "101",
+    "sql_where_val": "1",
+    "int_set": {},
+    "sql_set": {
+      "location": "Raith Rovers_g"
+    }
+  },
+  {
+    "id": "EXT_0012",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update company_type for record with rowid 1 in Third_Party_Companies",
+    "sql": "UPDATE \"Third_Party_Companies\" SET \"company_type\" = 'Maintenance Contractor_ext' WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on company_type: expected None, got Maintenance Contractor_ext"
+    ],
+    "violations": [],
+    "int_table": "third_party_companies",
+    "sql_table": "third_party_companies",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "company_type": "None"
+    },
+    "sql_set": {
+      "company_type": "Maintenance Contractor_ext"
+    }
+  },
+  {
+    "id": "EXT_0014",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update company_type for records with rowids 1 and 2 in Third_Party_Companies",
+    "sql": "UPDATE \"Third_Party_Companies\" SET \"company_type\" = 'Maintenance Contractor_extb' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Value mismatch on company_type: expected None, got Maintenance Contractor_extb"
+    ],
+    "violations": [],
+    "int_table": "third_party_companies",
+    "sql_table": "third_party_companies",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1, 2",
+    "sql_where_val": "2",
+    "int_set": {
+      "company_type": "None"
+    },
+    "sql_set": {
+      "company_type": "Maintenance Contractor_extb"
+    }
+  },
+  {
+    "id": "EXT_0022",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update player_id for record with rowid 1 in all_star",
+    "sql": "UPDATE \"all_star\" SET \"player_id\" = 'gomezle01_ext' WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on player_id: expected None, got gomezle01_ext"
+    ],
+    "violations": [],
+    "int_table": "all_star",
+    "sql_table": "all_star",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "player_id": "None"
+    },
+    "sql_set": {
+      "player_id": "gomezle01_ext"
+    }
+  },
+  {
+    "id": "EXT_0024",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update player_id for records with rowids 1 and 2 in all_star",
+    "sql": "UPDATE \"all_star\" SET \"player_id\" = 'gomezle01_extb' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Value mismatch on player_id: expected None, got gomezle01_extb"
+    ],
+    "violations": [],
+    "int_table": "all_star",
+    "sql_table": "all_star",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1, 2",
+    "sql_where_val": "2",
+    "int_set": {
+      "player_id": "None"
+    },
+    "sql_set": {
+      "player_id": "gomezle01_extb"
+    }
+  },
+  {
+    "id": "EXT_0042",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update capacity for record with rowid 1 in classroom",
+    "sql": "UPDATE \"classroom\" SET \"capacity\" = 20 WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on capacity: expected None, got 20"
+    ],
+    "violations": [],
+    "int_table": "classroom",
+    "sql_table": "classroom",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "capacity": "None"
+    },
+    "sql_set": {
+      "capacity": "20"
+    }
+  },
+  {
+    "id": "EXT_0052",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name for record with rowid 1 in people",
+    "sql": "UPDATE \"people\" SET \"Name\" = 'Reggie Lewis_ext' WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on name: expected None, got Reggie Lewis_ext"
+    ],
+    "violations": [],
+    "int_table": "people",
+    "sql_table": "people",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "name": "None"
+    },
+    "sql_set": {
+      "name": "Reggie Lewis_ext"
+    }
+  },
+  {
+    "id": "EXT_0054",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Name for records with rowids 1 and 2 in people",
+    "sql": "UPDATE \"people\" SET \"Name\" = 'Reggie Lewis_extb' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Value mismatch on name: expected None, got Reggie Lewis_extb"
+    ],
+    "violations": [],
+    "int_table": "people",
+    "sql_table": "people",
+    "int_filters": [
+      "people_id"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1, 2",
+    "sql_where_val": "2",
+    "int_set": {
+      "name": "None"
+    },
+    "sql_set": {
+      "name": "Reggie Lewis_extb"
+    }
+  },
+  {
+    "id": "EXT_0062",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name for record with rowid 1 in college",
+    "sql": "UPDATE \"college\" SET \"Name\" = 'Saskatchewan School_ext' WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on name: expected None, got Saskatchewan School_ext"
+    ],
+    "violations": [],
+    "int_table": "college",
+    "sql_table": "college",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "name": "None"
+    },
+    "sql_set": {
+      "name": "Saskatchewan School_ext"
+    }
+  },
+  {
+    "id": "EXT_0064",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Name for records with rowids 1 and 2 in college",
+    "sql": "UPDATE \"college\" SET \"Name\" = 'Saskatchewan School_extb' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Value mismatch on name: expected None, got Saskatchewan School_extb"
+    ],
+    "violations": [],
+    "int_table": "college",
+    "sql_table": "college",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1, 2",
+    "sql_where_val": "2",
+    "int_set": {
+      "name": "None"
+    },
+    "sql_set": {
+      "name": "Saskatchewan School_extb"
+    }
+  },
+  {
+    "id": "EXT_0092",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Airline for record with rowid 1 in airlines",
+    "sql": "UPDATE \"airlines\" SET \"Airline\" = 'United Airlines_ext' WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on airline: expected , got United Airlines_ext"
+    ],
+    "violations": [],
+    "int_table": "airlines",
+    "sql_table": "airlines",
+    "int_filters": [
+      "uid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "airline": ""
+    },
+    "sql_set": {
+      "airline": "United Airlines_ext"
+    }
+  },
+  {
+    "id": "EXT_0102",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update name for record with rowid 1000 in Inst",
+    "sql": "UPDATE \"Inst\" SET \"name\" = 'University of Oxford_ext' WHERE rowid = 1000;",
+    "reasons": [
+      "Value mismatch on name: expected None, got University of Oxford_ext"
+    ],
+    "violations": [],
+    "int_table": "inst",
+    "sql_table": "inst",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1000",
+    "sql_where_val": "1000",
+    "int_set": {
+      "name": "None"
+    },
+    "sql_set": {
+      "name": "University of Oxford_ext"
+    }
+  },
+  {
+    "id": "EXT_0104",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update name for records with rowids 1000 and 1010 in Inst",
+    "sql": "UPDATE \"Inst\" SET \"name\" = 'University of Oxford_extb' WHERE rowid IN (1000, 1010);",
+    "reasons": [
+      "Value mismatch on name: expected None, got University of Oxford_extb"
+    ],
+    "violations": [],
+    "int_table": "inst",
+    "sql_table": "inst",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1000,1010",
+    "sql_where_val": "1010",
+    "int_set": {
+      "name": "None"
+    },
+    "sql_set": {
+      "name": "University of Oxford_extb"
+    }
+  },
+  {
+    "id": "EXT_0122",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update rating for record with rowid 1 in genre",
+    "sql": "UPDATE \"genre\" SET \"rating\" = '8_ext' WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on rating: expected , got 8_ext"
+    ],
+    "violations": [],
+    "int_table": "genre",
+    "sql_table": "genre",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "rating": ""
+    },
+    "sql_set": {
+      "rating": "8_ext"
+    }
+  },
+  {
+    "id": "EXT_0142",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Date for record with rowid 1 in perpetrator",
+    "sql": "UPDATE \"perpetrator\" SET \"Date\" = '04.26 April 26/27_ext' WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on date: expected None, got 04.26 April 26/27_ext"
+    ],
+    "violations": [],
+    "int_table": "perpetrator",
+    "sql_table": "perpetrator",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "date": "None"
+    },
+    "sql_set": {
+      "date": "04.26 April 26/27_ext"
+    }
+  },
+  {
+    "id": "EXT_0144",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Date for records with rowids 1 and 2 in perpetrator",
+    "sql": "UPDATE \"perpetrator\" SET \"Date\" = '04.26 April 26/27_extb' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Value mismatch on date: expected CURRENT_DATE, got 04.26 April 26/27_extb"
+    ],
+    "violations": [],
+    "int_table": "perpetrator",
+    "sql_table": "perpetrator",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1, 2",
+    "sql_where_val": "2",
+    "int_set": {
+      "date": "CURRENT_DATE"
+    },
+    "sql_set": {
+      "date": "04.26 April 26/27_extb"
+    }
+  },
+  {
+    "id": "EXT_0162",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name for record with rowid 1 in race",
+    "sql": "UPDATE \"race\" SET \"Name\" = 'Rolex 24 At Daytona_ext' WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on name: expected None, got Rolex 24 At Daytona_ext"
+    ],
+    "violations": [],
+    "int_table": "race",
+    "sql_table": "race",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "name": "None"
+    },
+    "sql_set": {
+      "name": "Rolex 24 At Daytona_ext"
+    }
+  },
+  {
+    "id": "EXT_0164",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Name for records with rowids 1 and 2 in race",
+    "sql": "UPDATE \"race\" SET \"Name\" = 'Rolex 24 At Daytona_extb' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Value mismatch on name: expected None, got Rolex 24 At Daytona_extb"
+    ],
+    "violations": [],
+    "int_table": "race",
+    "sql_table": "race",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1, 2",
+    "sql_where_val": "2",
+    "int_set": {
+      "name": "None"
+    },
+    "sql_set": {
+      "name": "Rolex 24 At Daytona_extb"
+    }
+  },
+  {
+    "id": "EXT_0182",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update Name for record with rowid 1 in storm",
+    "sql": "UPDATE \"storm\" SET \"Name\" = 'One_ext' WHERE rowid = 1;",
+    "reasons": [
+      "Value mismatch on name: expected None, got One_ext"
+    ],
+    "violations": [],
+    "int_table": "storm",
+    "sql_table": "storm",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1",
+    "sql_where_val": "1",
+    "int_set": {
+      "name": "None"
+    },
+    "sql_set": {
+      "name": "One_ext"
+    }
+  },
+  {
+    "id": "EXT_0184",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update Name for records with rowids 1 and 2 in storm",
+    "sql": "UPDATE \"storm\" SET \"Name\" = 'One_extb' WHERE rowid IN (1, 2);",
+    "reasons": [
+      "Value mismatch on name: expected None, got One_extb"
+    ],
+    "violations": [],
+    "int_table": "storm",
+    "sql_table": "storm",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "1, 2",
+    "sql_where_val": "2",
+    "int_set": {
+      "name": "None"
+    },
+    "sql_set": {
+      "name": "One_extb"
+    }
+  },
+  {
+    "id": "EXT_0192",
+    "family": "MUT_EXACT_SCOPED_UPDATE",
+    "req": "Update line_1 for record with rowid 5 in Addresses",
+    "sql": "UPDATE \"Addresses\" SET \"line_1\" = '0900 Roderick Oval\nNew Albina, WA 19200-7914_ext' WHERE rowid = 5;",
+    "reasons": [
+      "Value mismatch on line_1: expected , got 0900 Roderick Oval\nNew Albina, WA 19200-7914_ext"
+    ],
+    "violations": [],
+    "int_table": "addresses",
+    "sql_table": "addresses",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "5",
+    "sql_where_val": "5",
+    "int_set": {
+      "line_1": ""
+    },
+    "sql_set": {
+      "line_1": "0900 Roderick Oval\nNew Albina, WA 19200-7914_ext"
+    }
+  },
+  {
+    "id": "EXT_0194",
+    "family": "MUT_MULTI_ROW_UPDATE",
+    "req": "Update line_1 for records with rowids 5 and 9 in Addresses",
+    "sql": "UPDATE \"Addresses\" SET \"line_1\" = '0900 Roderick Oval\nNew Albina, WA 19200-7914_extb' WHERE rowid IN (5, 9);",
+    "reasons": [
+      "Value mismatch on line_1: expected <new_value>, got 0900 Roderick Oval\nNew Albina, WA 19200-7914_extb"
+    ],
+    "violations": [],
+    "int_table": "addresses",
+    "sql_table": "addresses",
+    "int_filters": [
+      "rowid"
+    ],
+    "sql_filters": [
+      "rowid"
+    ],
+    "int_where_val": "5,9",
+    "sql_where_val": "9",
+    "int_set": {
+      "line_1": "<new_value>"
+    },
+    "sql_set": {
+      "line_1": "0900 Roderick Oval\nNew Albina, WA 19200-7914_extb"
+    }
+  }
+]

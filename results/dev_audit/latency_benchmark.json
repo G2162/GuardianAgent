@@ -1,0 +1,44 @@
+{
+  "llm_extractor_cold": {
+    "p50_ms": 11518.38,
+    "p95_ms": 22009.31,
+    "p99_ms": 35169.68,
+    "mean_ms": 13053.62,
+    "count": 1742
+  },
+  "llm_extractor_cached": {
+    "p50_ms": 1.7,
+    "p95_ms": 2.63,
+    "p99_ms": 64.83,
+    "mean_ms": 63.55,
+    "count": 100
+  },
+  "layer2_dry_run": {
+    "p50_ms": 5.01,
+    "p95_ms": 9.33,
+    "p99_ms": 60.95,
+    "mean_ms": 6.8,
+    "count": 100
+  },
+  "llm_judge_cold": {
+    "p50_ms": 9790.62,
+    "p95_ms": 18707.91,
+    "p99_ms": 29894.23,
+    "mean_ms": 11095.58
+  },
+  "llm_judge_cached": {
+    "p50_ms": 1.7,
+    "p95_ms": 2.63,
+    "p99_ms": 64.83,
+    "mean_ms": 63.55,
+    "count": 100
+  },
+  "test_set_projection": {
+    "test_cases": 1419,
+    "per_case_p50_sec": 11.52,
+    "total_seconds": 16351.7,
+    "total_minutes": 272.5,
+    "total_hours": 4.54,
+    "hardware_spec": "Ollama qwen2.5:3b-instruct, CPU only, 8 GB RAM"
+  }
+}

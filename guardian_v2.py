@@ -35,9 +35,10 @@ def guardian_check_v2(
     record: dict = None,
     layer: int = 3,
     risk_mode: str = "rules",
-    extractor: str = "oracle",
+    extractor: any = "oracle",
     variant: str = "variant_a",
-    timeout_ms: int = 500
+    timeout_ms: int = 500,
+    operating_point: str = "STRICT"
 ):
     """
     Evaluates candidate SQL through the GuardianAgent v2 Pipeline.
@@ -151,7 +152,13 @@ def guardian_check_v2(
     # -------------------------------------------------------------
     # Layer 3: Intent Comparison (IntentSpec v2)
     # -------------------------------------------------------------
-    ext = EXTRACTORS.get(extractor, EXTRACTORS['oracle'])
+    if hasattr(extractor, 'extract_intent'):
+        ext = extractor
+        extractor_name = getattr(extractor, 'name', 'custom')
+    else:
+        ext = EXTRACTORS.get(extractor, EXTRACTORS['oracle'])
+        extractor_name = extractor
+
     intent_spec = ext.extract_intent(user_request, db_path=db_path, record=record)
     sql_comp = extract_sql_components(sql_str)
     
@@ -163,11 +170,53 @@ def guardian_check_v2(
         variant=variant
     )
     
+    final_decision = comp_res['decision']
+    reasons = list(comp_res['reasons'])
+
+    # Operating Point Calibration (STRICT vs BALANCED)
+    if operating_point == "BALANCED" and final_decision == "BLOCK":
+        # Check invariants:
+        # 1. Verb & Modality Invariant:
+        is_verb_modality = any(
+            v in ("MUT_OP_VERB_MISMATCH", "MUT_OP_MODALITY_MISMATCH")
+            for v in comp_res.get("violations", [])
+        )
+        # 2. Supported by measured effects (Layer 2)
+        n_matched = effects.get('n_matched', 0)
+        n_changed = effects.get('n_changed', 0)
+        is_effect_supported = (
+            "MUT_MULTI_ROW_BLAST_RADIUS" in comp_res.get("violations", [])
+            and (n_matched > 1 or n_changed > 1)
+        )
+        
+        # 3. Dual-extractor corroboration
+        is_dual_corroborated = False
+        if not is_verb_modality and not is_effect_supported:
+            other_name = "linker" if extractor_name == "llm" else ("llm" if extractor_name == "linker" else None)
+            if other_name and other_name in EXTRACTORS:
+                other_ext = EXTRACTORS[other_name]
+                other_intent = other_ext.extract_intent(user_request, db_path=db_path, record=record)
+                other_comp = compare_intent_and_sql(
+                    intent=other_intent,
+                    sql_comp=sql_comp,
+                    measured_effects=effects,
+                    risk_mode=risk_mode,
+                    variant=variant
+                )
+                if other_comp['decision'] == 'BLOCK':
+                    is_dual_corroborated = True
+
+        if is_verb_modality or is_effect_supported or is_dual_corroborated:
+            final_decision = "BLOCK"
+        else:
+            final_decision = "CONFIRM"
+            reasons.append("BALANCED policy: single-extractor mismatch calibrated to CONFIRM")
+
     elapsed = (time.perf_counter() - start_time) * 1000.0
     return {
-        'decision': comp_res['decision'],
+        'decision': final_decision,
         'risk_score': comp_res['risk_score'],
-        'reasons': comp_res['reasons'],
+        'reasons': reasons,
         'layer_fired': 3,
         'is_catastrophic': False,
         'is_timeout': False,

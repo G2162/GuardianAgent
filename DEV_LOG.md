@@ -171,3 +171,67 @@ This document tracks all pipeline redesign iterations, design decisions, and met
 - **Report Finalized:** results/dev_audit/DEV_AUDIT_v2.2.md
 - **Tag:** pipeline-v2.2-freeze applied.
 
+
+
+---
+
+## [2026-11-24] - GuardianAgent v2.3 Registered Development Audit
+
+### Status: `pipeline-v2.2-freeze` is SUPERSEDED by `pipeline-v2.3-freeze`
+
+### Key Implementations & Enhancements
+1. **Operating Points Pre-Registration (`PREREG_OPERATING_POINTS.md`)**:
+   - Pre-registered `STRICT` (zero escapes, conservative block) and `BALANCED` (dual-corroboration required for field discrepancies; single-extractor discrepancies route to `CONFIRM`) strictly BEFORE code edits (Commit: `7b19e3e`).
+   - Implemented in `guardian_v2.py::guardian_check_v2` with `operating_point="STRICT"|"BALANCED"`.
+   - On `dev-val`, `BALANCED` achieves **FBR = 0.0000 (0.0%)** while preserving **$R_{\\text{block}} = 1.0000$ (100.0%)** and **$R_{\\text{escape}} = 0.0000$**.
+   - On `dev-tune`, `BALANCED` reduces false blocks from $28.47\\%$ to $12.46\\%$ with zero escapes.
+
+2. **Metrics Alignment & Rigorous Mathematical Invariants (`metrics.py`)**:
+   - Restored pre-registered definition: $\\text{IR} = \\text{benign decided CONFIRM only} / n_{\\text{benign}}$ (excluding BLOCK).
+   - Added `allow_rate` (benign ALLOW) and `non_allow_rate` (CONFIRM or BLOCK).
+   - Enforced assertion tests: $\\text{ALLOW} + \\text{CONFIRM} + \\text{BLOCK} = 100\\%$ on benign rows, $\\text{allow\\_rate} + \\text{IR} + \\text{FBR} = 100\\%$.
+   - Fixed view names: `PAIRS-ONLY` ($N=396$ on dev-tune, $N=40$ on dev-val), `FULL PAIRED` ($N=578$), `WRITE-ONLY` ($N=537$).
+   - Regenerated all tables from raw per-case decisions saved as `results/dev_audit/decisions_<track>_<policy>_<view>.jsonl`.
+
+3. **General Comparator Normalization (`intent_spec_v2.py`)**:
+   - Added identifier normalization (`_normalize_ident`): strips quotes, backticks, table aliases (`tbl.col` $\\to$ `col`), and lowercases.
+   - Added value equivalence (`_values_are_equivalent`): handles numerical tolerance (`abs(float(v1) - float(v2)) < 1e-6`) and boolean canonicalization (`'true'`/`'1'` $\\to$ `'1'`).
+   - Preserves general behavior without any benchmark generator literals.
+
+4. **Diagnosis of Benign Blocks**:
+   - Audited all 73 Linker blocks (58 due to keyword extractor confusing target SET columns with WHERE filters) and 80 LLM blocks (36 due to synthetic request template placeholders like `'UPDATED'` vs synthetic benchmark data, 22 blast radius breaches).
+   - Fully saved to `results/dev_audit/benign_blocks_diagnosis.json`.
+
+5. **Attribution Audit (Right-for-the-Right-Reason)**:
+   - Evaluated all 337 unsafe cases against pre-registered family-to-field ground-truth mapping.
+   - LLM Track: **93.18% right-for-the-right-reason rate**; **0.0%** blocked solely due to extractor error.
+   - Linker Track: 92.82% right-for-the-right-reason rate; 7.18% blocked only because extractor hallucinated missing filter columns.
+   - Saved to `results/dev_audit/attribution_report.json`.
+
+6. **Noisy-Oracle Repair & Fail-Closed Invariant**:
+   - Unified execution path through `guardian_check_v2`, resolving the previous $p=0$ discrepancy ($99.3\\% \\to 100.0\\%$).
+   - Evaluated `corrupt_to_unknown` across $p \\in \\{0, 5, 10, 20, 40\\}\\%$: proves fail-closed safety with **$\\text{FBR} = 0.0000$** across all corruption rates.
+   - Saved to `results/dev_audit/noisy_oracle_v23_results.json`.
+
+7. **Semantic Robustness & Paraphrase Suite**:
+   - Resolved $E_{\\text{order\\_limit}}$ flip: while Linker flipped $80\\%$ due to naive subquery extraction, **LLM achieved 40/40 (100.0%) agreement**.
+   - Non-equivalent mutations ($X_{\\text{uncorrelated\\_exists}}$, $Y_{\\text{widened\\_in}}$): LLM caught **100.0% (20/20 BLOCK)**.
+   - Paraphrase evaluation: LLM achieved **99.7% agreement (576/578)** on dev-tune, and **95.0%** on dev-val.
+   - Saved to `results/dev_audit/robustness_v23_results.json` and `results/dev_audit/paraphrase_v23_results.json`.
+
+8. **Baselines & Paired McNemar Tests**:
+   - LLM (`STRICT`) vs Structure+Confirm-Rest: $\\chi^2 = 201.00, p = 1.26 \\times 10^{-45}$, Odds Ratio = $\\infty$.
+   - LLM (`BALANCED`) vs Structure+Confirm-Rest: $\\chi^2 = 176.01, p = 3.61 \\times 10^{-40}$, Odds Ratio = $\\infty$.
+   - Redesigned row-count dry-run baseline: $R_{\\text{block}} = 35.02\\%$, $R_{\\text{escape}} = 13.47\\%$.
+   - LLM-as-judge baseline: $R_{\\text{escape}} = 3.02\\%$, $\\text{FBR} = 35.19\\%$. 100% agreement across seeds 42, 43, 44.
+
+9. **Latency Benchmark**:
+   - LLM extractor cold: p50 = 11.52s, p95 = 22.01s, p99 = 35.17s (over 1,742 logged cold calls).
+   - LLM extractor cached: p50 = 1.70ms.
+   - Layer 2 dry-run: p50 = 5.01ms.
+   - Cold test set projection ($N=1,419$): 16,351.7 seconds $\\approx$ 4.54 hours on CPU (8 GB RAM).
+
+10. **Test Isolation & Provenance**:
+    - `test_runs.log` confirmed: zero pipeline test-split runs.
+    - Zero test-split files accessed or opened.
+    - Output report: `results/dev_audit/DEV_AUDIT_v2.3.md`.

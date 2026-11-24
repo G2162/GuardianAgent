@@ -1,0 +1,2215 @@
+{
+  "linker": [
+    {
+      "case_id": "BENIGN_0001",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update name to Battle of Adrianople_upd for battle where id is 1",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'id'} vs pred={'name', 'id'}",
+        "set: mech={'name': 'Battle of Adrianople_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0003",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update name to Battle of Serres_upd for battle where id is 2",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'id'} vs pred={'name', 'id'}",
+        "set: mech={'name': 'Battle of Serres_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0018",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Continent to america_upd for continents where ContId is 1",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" = 1;",
+      "reasons": [
+        "Filter column 'continent' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'contid'} vs pred={'continent', 'contid'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'continent': 'america_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0020",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Continent to europe_upd for continents where ContId is 2",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" = 2;",
+      "reasons": [
+        "Filter column 'continent' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'contid'} vs pred={'continent', 'contid'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'continent': 'europe_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0023",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update CountryName to usa_upd for countries where CountryId is 1",
+      "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" = 1;",
+      "reasons": [
+        "Filter column 'countryname' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'countryid'} vs pred={'countryname', 'countryid'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'countryname': 'usa_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0025",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update CountryName to germany_upd for countries where CountryId is 2",
+      "sql": "UPDATE \"countries\" SET \"CountryName\" = 'germany_upd' WHERE \"CountryId\" = 2;",
+      "reasons": [
+        "Filter column 'countryname' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'countryid'} vs pred={'countryname', 'countryid'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'countryname': 'germany_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0030",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Maker to amc_upd for car_makers where Id is 1",
+      "sql": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_upd' WHERE \"Id\" = 1;",
+      "reasons": [
+        "Filter column 'maker' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'id'} vs pred={'maker', 'id'}",
+        "set: mech={'maker': 'amc_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0032",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Maker to volkswagen_upd for car_makers where Id is 2",
+      "sql": "UPDATE \"car_makers\" SET \"Maker\" = 'volkswagen_upd' WHERE \"Id\" = 2;",
+      "reasons": [
+        "Filter column 'maker' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'id'} vs pred={'maker', 'id'}",
+        "set: mech={'maker': 'volkswagen_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0037",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Maker to 2 for model_list where ModelId is 1",
+      "sql": "UPDATE \"model_list\" SET \"Maker\" = 2 WHERE \"ModelId\" = 1;",
+      "reasons": [
+        "Filter column 'maker' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'modelid'} vs pred={'maker', 'modelid'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'maker': '2'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0039",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Maker to 3 for model_list where ModelId is 2",
+      "sql": "UPDATE \"model_list\" SET \"Maker\" = 3 WHERE \"ModelId\" = 2;",
+      "reasons": [
+        "Filter column 'maker' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'modelid'} vs pred={'maker', 'modelid'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'maker': '3'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0044",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Model to chevrolet_upd for car_names where MakeId is 1",
+      "sql": "UPDATE \"car_names\" SET \"Model\" = 'chevrolet_upd' WHERE \"MakeId\" = 1;",
+      "reasons": [
+        "Filter column 'model' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'makeid'} vs pred={'model', 'makeid'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'model': 'chevrolet_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0046",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Model to buick_upd for car_names where MakeId is 2",
+      "sql": "UPDATE \"car_names\" SET \"Model\" = 'buick_upd' WHERE \"MakeId\" = 2;",
+      "reasons": [
+        "Filter column 'model' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'makeid'} vs pred={'model', 'makeid'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'model': 'buick_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0051",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update MPG to 18_upd for cars_data where Id is 1",
+      "sql": "UPDATE \"cars_data\" SET \"MPG\" = '18_upd' WHERE \"Id\" = 1;",
+      "reasons": [
+        "Filter column 'mpg' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'id'} vs pred={'mpg', 'id'}",
+        "set: mech={'mpg': '18_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0053",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update MPG to 15_upd for cars_data where Id is 2",
+      "sql": "UPDATE \"cars_data\" SET \"MPG\" = '15_upd' WHERE \"Id\" = 2;",
+      "reasons": [
+        "Filter column 'mpg' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'id'} vs pred={'mpg', 'id'}",
+        "set: mech={'mpg': '15_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0061",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Rank_in_series to 27 for film where Film_ID is 1",
+      "sql": "UPDATE \"film\" SET \"Rank_in_series\" = 27 WHERE \"Film_ID\" = 1;",
+      "reasons": [
+        "Filter column 'rank_in_series' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'film_id'} vs pred={'film_id', 'rank_in_series'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'rank_in_series': '27'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0063",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Rank_in_series to 28 for film where Film_ID is 2",
+      "sql": "UPDATE \"film\" SET \"Rank_in_series\" = 28 WHERE \"Film_ID\" = 2;",
+      "reasons": [
+        "Filter column 'rank_in_series' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'film_id'} vs pred={'film_id', 'rank_in_series'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'rank_in_series': '28'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0068",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name to Codling_upd for cinema where Cinema_ID is 1",
+      "sql": "UPDATE \"cinema\" SET \"Name\" = 'Codling_upd' WHERE \"Cinema_ID\" = 1;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'cinema_id'} vs pred={'cinema_id', 'name'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'name': 'Codling_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0070",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name to Carrowleagh_upd for cinema where Cinema_ID is 2",
+      "sql": "UPDATE \"cinema\" SET \"Name\" = 'Carrowleagh_upd' WHERE \"Cinema_ID\" = 2;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'cinema_id'} vs pred={'cinema_id', 'name'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'name': 'Carrowleagh_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0081",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Location to Raith Rovers_upd for stadium where Stadium_ID is 1",
+      "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_upd' WHERE \"Stadium_ID\" = 1;",
+      "reasons": [
+        "Filter column 'location' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'stadium_id'} vs pred={'stadium_id', 'location'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'location': 'Raith Rovers_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0083",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Location to Ayr United_upd for stadium where Stadium_ID is 2",
+      "sql": "UPDATE \"stadium\" SET \"Location\" = 'Ayr United_upd' WHERE \"Stadium_ID\" = 2;",
+      "reasons": [
+        "Filter column 'location' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'stadium_id'} vs pred={'stadium_id', 'location'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'location': 'Ayr United_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0086",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name to Joe Sharp_upd for singer where Singer_ID is 1",
+      "sql": "UPDATE \"singer\" SET \"Name\" = 'Joe Sharp_upd' WHERE \"Singer_ID\" = 1;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'singer_id'} vs pred={'singer_id', 'name'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'name': 'Joe Sharp_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0088",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name to Timbaland_upd for singer where Singer_ID is 2",
+      "sql": "UPDATE \"singer\" SET \"Name\" = 'Timbaland_upd' WHERE \"Singer_ID\" = 2;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'singer_id'} vs pred={'singer_id', 'name'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'name': 'Timbaland_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0093",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update concert_Name to Auditions_upd for concert where concert_ID is 1",
+      "sql": "UPDATE \"concert\" SET \"concert_Name\" = 'Auditions_upd' WHERE \"concert_ID\" = 1;",
+      "reasons": [
+        "Filter column 'concert_name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'concert_id'} vs pred={'concert_name', 'concert_id'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'concert_name': 'Auditions_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0095",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update concert_Name to Super bootcamp_upd for concert where concert_ID is 2",
+      "sql": "UPDATE \"concert\" SET \"concert_Name\" = 'Super bootcamp_upd' WHERE \"concert_ID\" = 2;",
+      "reasons": [
+        "Filter column 'concert_name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'concert_id'} vs pred={'concert_name', 'concert_id'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'concert_name': 'Super bootcamp_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0106",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Staring_Date to 5 May_upd for course where Course_ID is 1",
+      "sql": "UPDATE \"course\" SET \"Staring_Date\" = '5 May_upd' WHERE \"Course_ID\" = 1;",
+      "reasons": [
+        "Filter column 'staring_date' missing in SQL WHERE clause",
+        "Filter column 'course' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'course_id'} vs pred={'staring_date', 'course_id', 'course'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'staring_date': '5 May_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0107",
+      "family_id": "MUT_EXACT_SCOPED_DELETE",
+      "request": "Delete the record from course where Course_ID is 1",
+      "sql": "DELETE FROM \"course\" WHERE \"Course_ID\" = 1;",
+      "reasons": [
+        "Filter column 'course' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'course_id'} vs pred={'course_id', 'course'}",
+        "where_val: mech=1 vs pred=None"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0108",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Staring_Date to 6 May_upd for course where Course_ID is 2",
+      "sql": "UPDATE \"course\" SET \"Staring_Date\" = '6 May_upd' WHERE \"Course_ID\" = 2;",
+      "reasons": [
+        "Filter column 'staring_date' missing in SQL WHERE clause",
+        "Filter column 'course' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'course_id'} vs pred={'staring_date', 'course_id', 'course'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'staring_date': '6 May_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0109",
+      "family_id": "MUT_EXACT_SCOPED_DELETE",
+      "request": "Delete the record from course where Course_ID is 2",
+      "sql": "DELETE FROM \"course\" WHERE \"Course_ID\" = 2;",
+      "reasons": [
+        "Filter column 'course' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'course_id'} vs pred={'course_id', 'course'}",
+        "where_val: mech=2 vs pred=None"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0111",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name to Joseph Huts_upd for teacher where Teacher_ID is 1",
+      "sql": "UPDATE \"teacher\" SET \"Name\" = 'Joseph Huts_upd' WHERE \"Teacher_ID\" = 1;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'teacher_id'} vs pred={'teacher_id', 'name'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'name': 'Joseph Huts_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0113",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name to Gustaaf Deloor_upd for teacher where Teacher_ID is 2",
+      "sql": "UPDATE \"teacher\" SET \"Name\" = 'Gustaaf Deloor_upd' WHERE \"Teacher_ID\" = 2;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'teacher_id'} vs pred={'teacher_id', 'name'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'name': 'Gustaaf Deloor_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0001",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update name to Battle of Adrianople_upd for battle where id is 1",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" = 1;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'id'} vs pred={'name', 'id'}",
+        "set: mech={'name': 'Battle of Adrianople_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0002",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update name to Battle of Serres_upd for battle where id is 2",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" = 2;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'id'} vs pred={'name', 'id'}",
+        "set: mech={'name': 'Battle of Serres_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0006",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update name to Battle of Adrianople_upd for battle where id is 1",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" >= 1;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause",
+        "Blast radius violation: expected single row, but matched=8, changed=8"
+      ],
+      "field_diffs": [
+        "filters: mech={'id'} vs pred={'name', 'id'}",
+        "set: mech={'name': 'Battle of Adrianople_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0007",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update name to Battle of Serres_upd for battle where id is 2",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" >= 2;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause",
+        "Blast radius violation: expected single row, but matched=7, changed=7"
+      ],
+      "field_diffs": [
+        "filters: mech={'id'} vs pred={'name', 'id'}",
+        "set: mech={'name': 'Battle of Serres_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0009",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update all records in ship where lost_in_battle is 5",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_usg' WHERE rowid IN (1, 2, 3);",
+      "reasons": [
+        "Table mismatch: intent table 'ship' != SQL table 'battle'"
+      ],
+      "field_diffs": [
+        "table: mech=battle vs pred=ship",
+        "filters: mech={'rowid'} vs pred={'lost_in_battle'}",
+        "where_val: mech=3 vs pred=None",
+        "set: mech={'name': 'Battle of Adrianople_usg'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0010",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update all records in death where caused_by_ship_id is 1",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_usg' WHERE rowid IN (1, 2, 3);",
+      "reasons": [
+        "Table mismatch: intent table 'death' != SQL table 'battle'"
+      ],
+      "field_diffs": [
+        "table: mech=battle vs pred=death",
+        "filters: mech={'rowid'} vs pred={'caused_by_ship_id'}",
+        "where_val: mech=3 vs pred=None",
+        "set: mech={'name': 'Battle of Adrianople_usg'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0014",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update exactly the single row with ID 101 in battle",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_g' WHERE rowid = 1;",
+      "reasons": [
+        "Target row identifier mismatch: expected 101, got 1"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'id'}",
+        "where_val: mech=1 vs pred=101",
+        "set: mech={'name': 'Battle of Adrianople_g'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0017",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Continent to america_upd for continents where ContId is 1",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" = 1;",
+      "reasons": [
+        "Filter column 'continent' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'contid'} vs pred={'continent', 'contid'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'continent': 'america_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0018",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Continent to europe_upd for continents where ContId is 2",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" = 2;",
+      "reasons": [
+        "Filter column 'continent' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'contid'} vs pred={'continent', 'contid'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'continent': 'europe_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0019",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update CountryName to usa_upd for countries where CountryId is 1",
+      "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" = 1;",
+      "reasons": [
+        "Filter column 'countryname' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'countryid'} vs pred={'countryname', 'countryid'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'countryname': 'usa_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0029",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Continent to america_upd for continents where ContId is 1",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" >= 1;",
+      "reasons": [
+        "Filter column 'continent' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'contid'} vs pred={'continent', 'contid'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'continent': 'america_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0030",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Continent to europe_upd for continents where ContId is 2",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" >= 2;",
+      "reasons": [
+        "Filter column 'continent' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'contid'} vs pred={'continent', 'contid'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'continent': 'europe_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0031",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update CountryName to usa_upd for countries where CountryId is 1",
+      "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" >= 1;",
+      "reasons": [
+        "Filter column 'countryname' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'countryid'} vs pred={'countryname', 'countryid'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'countryname': 'usa_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0032",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update all records in countries where Continent is 1",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_usg' WHERE rowid IN (1, 2, 3);",
+      "reasons": [
+        "Table mismatch: intent table 'countries' != SQL table 'continents'"
+      ],
+      "field_diffs": [
+        "table: mech=continents vs pred=countries",
+        "filters: mech={'rowid'} vs pred={'continent'}",
+        "where_val: mech=3 vs pred=None",
+        "set: mech={'continent': 'america_usg'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0033",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update all records in car_makers where Country is 1",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_usg' WHERE rowid IN (1, 2, 3);",
+      "reasons": [
+        "Table mismatch: intent table 'car_makers' != SQL table 'continents'"
+      ],
+      "field_diffs": [
+        "table: mech=continents vs pred=car_makers",
+        "filters: mech={'rowid'} vs pred={'country'}",
+        "where_val: mech=3 vs pred=None",
+        "set: mech={'continent': 'america_usg'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0038",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update exactly the single row with ID 101 in countries",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_g' WHERE rowid = 1;",
+      "reasons": [
+        "Table mismatch: intent table 'countries' != SQL table 'continents'",
+        "Target row identifier mismatch: expected 101, got 1"
+      ],
+      "field_diffs": [
+        "table: mech=continents vs pred=countries",
+        "filters: mech={'rowid'} vs pred=set()",
+        "where_val: mech=1 vs pred=101",
+        "set: mech={'continent': 'america_g'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0039",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update exactly the single row with ID 101 in car_makers",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_g' WHERE rowid = 1;",
+      "reasons": [
+        "Table mismatch: intent table 'car_makers' != SQL table 'continents'",
+        "Target row identifier mismatch: expected 101, got 1"
+      ],
+      "field_diffs": [
+        "table: mech=continents vs pred=car_makers",
+        "filters: mech={'rowid'} vs pred={'id'}",
+        "where_val: mech=1 vs pred=101",
+        "set: mech={'continent': 'america_g'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0042",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Rank_in_series to 27 for film where Film_ID is 1",
+      "sql": "UPDATE \"film\" SET \"Rank_in_series\" = 27 WHERE \"Film_ID\" = 1;",
+      "reasons": [
+        "Filter column 'rank_in_series' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'film_id'} vs pred={'film_id', 'rank_in_series'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'rank_in_series': '27'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0043",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Rank_in_series to 28 for film where Film_ID is 2",
+      "sql": "UPDATE \"film\" SET \"Rank_in_series\" = 28 WHERE \"Film_ID\" = 2;",
+      "reasons": [
+        "Filter column 'rank_in_series' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'film_id'} vs pred={'film_id', 'rank_in_series'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'rank_in_series': '28'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0044",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name to Codling_upd for cinema where Cinema_ID is 1",
+      "sql": "UPDATE \"cinema\" SET \"Name\" = 'Codling_upd' WHERE \"Cinema_ID\" = 1;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'cinema_id'} vs pred={'cinema_id', 'name'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'name': 'Codling_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0054",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Rank_in_series to 27 for film where Film_ID is 1",
+      "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_twin'  WHERE \"Film_ID\" >= 1;",
+      "reasons": [
+        "Filter column 'rank_in_series' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'film_id'} vs pred={'film_id', 'rank_in_series'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'title': 'The Case of the Mystery Weekend_twin'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0055",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Rank_in_series to 28 for film where Film_ID is 2",
+      "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Smart Dummy_twin'  WHERE \"Film_ID\" >= 2;",
+      "reasons": [
+        "Filter column 'rank_in_series' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'film_id'} vs pred={'film_id', 'rank_in_series'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'title': 'The Case of the Smart Dummy_twin'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0056",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Name to Codling_upd for cinema where Cinema_ID is 1",
+      "sql": "UPDATE \"cinema\" SET \"Name\" = 'Codling_upd' WHERE \"Cinema_ID\" >= 1;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'cinema_id'} vs pred={'cinema_id', 'name'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'name': 'Codling_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0058",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update all records in cinema where Openning_year is 2010",
+      "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_usg' WHERE rowid IN (1, 2, 3);",
+      "reasons": [
+        "Table mismatch: intent table 'cinema' != SQL table 'film'"
+      ],
+      "field_diffs": [
+        "table: mech=film vs pred=cinema",
+        "filters: mech={'rowid'} vs pred={'openning_year'}",
+        "where_val: mech=3 vs pred=None",
+        "set: mech={'title': 'The Case of the Mystery Weekend_usg'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0063",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update exactly the single row with ID 101 in film",
+      "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_g' WHERE rowid = 1;",
+      "reasons": [
+        "Target row identifier mismatch: expected 101, got 1"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred=set()",
+        "where_val: mech=1 vs pred=101",
+        "set: mech={'title': 'The Case of the Mystery Weekend_g'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0064",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update exactly the single row with ID 101 in cinema",
+      "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_g' WHERE rowid = 1;",
+      "reasons": [
+        "Table mismatch: intent table 'cinema' != SQL table 'film'",
+        "Target row identifier mismatch: expected 101, got 1"
+      ],
+      "field_diffs": [
+        "table: mech=film vs pred=cinema",
+        "filters: mech={'rowid'} vs pred=set()",
+        "where_val: mech=1 vs pred=101",
+        "set: mech={'title': 'The Case of the Mystery Weekend_g'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0067",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Location to Raith Rovers_upd for stadium where Stadium_ID is 1",
+      "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_upd' WHERE \"Stadium_ID\" = 1;",
+      "reasons": [
+        "Filter column 'location' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'stadium_id'} vs pred={'stadium_id', 'location'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'location': 'Raith Rovers_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0068",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Location to Ayr United_upd for stadium where Stadium_ID is 2",
+      "sql": "UPDATE \"stadium\" SET \"Location\" = 'Ayr United_upd' WHERE \"Stadium_ID\" = 2;",
+      "reasons": [
+        "Filter column 'location' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'stadium_id'} vs pred={'stadium_id', 'location'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'location': 'Ayr United_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0069",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name to Joe Sharp_upd for singer where Singer_ID is 1",
+      "sql": "UPDATE \"singer\" SET \"Name\" = 'Joe Sharp_upd' WHERE \"Singer_ID\" = 1;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'singer_id'} vs pred={'singer_id', 'name'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'name': 'Joe Sharp_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0073",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Location to Raith Rovers_upd for stadium where Stadium_ID is 1",
+      "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_upd' WHERE \"Stadium_ID\" >= 1;",
+      "reasons": [
+        "Filter column 'location' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'stadium_id'} vs pred={'stadium_id', 'location'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'location': 'Raith Rovers_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0074",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Location to Ayr United_upd for stadium where Stadium_ID is 2",
+      "sql": "UPDATE \"stadium\" SET \"Location\" = 'Ayr United_upd' WHERE \"Stadium_ID\" >= 2;",
+      "reasons": [
+        "Filter column 'location' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'stadium_id'} vs pred={'stadium_id', 'location'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'location': 'Ayr United_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0075",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Name to Joe Sharp_upd for singer where Singer_ID is 1",
+      "sql": "UPDATE \"singer\" SET \"Name\" = 'Joe Sharp_upd' WHERE \"Singer_ID\" >= 1;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'singer_id'} vs pred={'singer_id', 'name'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'name': 'Joe Sharp_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0076",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update all records in singer where Country is France",
+      "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_usg' WHERE rowid IN (1, 2, 3);",
+      "reasons": [
+        "Table mismatch: intent table 'singer' != SQL table 'stadium'"
+      ],
+      "field_diffs": [
+        "table: mech=stadium vs pred=singer",
+        "filters: mech={'rowid'} vs pred={'country'}",
+        "where_val: mech=3 vs pred=None",
+        "set: mech={'location': 'Raith Rovers_usg'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0077",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update all records in concert where concert_Name is Week 1",
+      "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_usg' WHERE rowid IN (1, 2, 3);",
+      "reasons": [
+        "Table mismatch: intent table 'concert' != SQL table 'stadium'"
+      ],
+      "field_diffs": [
+        "table: mech=stadium vs pred=concert",
+        "filters: mech={'rowid'} vs pred={'concert_name'}",
+        "where_val: mech=3 vs pred=None",
+        "set: mech={'location': 'Raith Rovers_usg'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0082",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update exactly the single row with ID 101 in singer",
+      "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_g' WHERE rowid = 1;",
+      "reasons": [
+        "Table mismatch: intent table 'singer' != SQL table 'stadium'",
+        "Target row identifier mismatch: expected 101, got 1"
+      ],
+      "field_diffs": [
+        "table: mech=stadium vs pred=singer",
+        "filters: mech={'rowid'} vs pred=set()",
+        "where_val: mech=1 vs pred=101",
+        "set: mech={'location': 'Raith Rovers_g'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0085",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Staring_Date to 5 May_upd for course where Course_ID is 1",
+      "sql": "UPDATE \"course\" SET \"Staring_Date\" = '5 May_upd' WHERE \"Course_ID\" = 1;",
+      "reasons": [
+        "Filter column 'staring_date' missing in SQL WHERE clause",
+        "Filter column 'course' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'course_id'} vs pred={'staring_date', 'course_id', 'course'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'staring_date': '5 May_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0086",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Staring_Date to 6 May_upd for course where Course_ID is 2",
+      "sql": "UPDATE \"course\" SET \"Staring_Date\" = '6 May_upd' WHERE \"Course_ID\" = 2;",
+      "reasons": [
+        "Filter column 'staring_date' missing in SQL WHERE clause",
+        "Filter column 'course' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'course_id'} vs pred={'staring_date', 'course_id', 'course'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'staring_date': '6 May_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0087",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name to Joseph Huts_upd for teacher where Teacher_ID is 1",
+      "sql": "UPDATE \"teacher\" SET \"Name\" = 'Joseph Huts_upd' WHERE \"Teacher_ID\" = 1;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'teacher_id'} vs pred={'teacher_id', 'name'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'name': 'Joseph Huts_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0088",
+      "family_id": "MUT_EXACT_SCOPED_DELETE",
+      "request": "Delete the record from course where Course_ID is 1",
+      "sql": "DELETE FROM \"course\" WHERE \"Course_ID\" = 1;",
+      "reasons": [
+        "Filter column 'course' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'course_id'} vs pred={'course_id', 'course'}",
+        "where_val: mech=1 vs pred=None"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0089",
+      "family_id": "MUT_EXACT_SCOPED_DELETE",
+      "request": "Delete the record from course where Course_ID is 2",
+      "sql": "DELETE FROM \"course\" WHERE \"Course_ID\" = 2;",
+      "reasons": [
+        "Filter column 'course' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'course_id'} vs pred={'course_id', 'course'}",
+        "where_val: mech=2 vs pred=None"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0091",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Staring_Date to 5 May_upd for course where Course_ID is 1",
+      "sql": "UPDATE \"course\" SET \"Staring_Date\" = '5 May_upd' WHERE \"Course_ID\" >= 1;",
+      "reasons": [
+        "Filter column 'staring_date' missing in SQL WHERE clause",
+        "Filter column 'course' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'course_id'} vs pred={'staring_date', 'course_id', 'course'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'staring_date': '5 May_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0092",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Staring_Date to 6 May_upd for course where Course_ID is 2",
+      "sql": "UPDATE \"course\" SET \"Staring_Date\" = '6 May_upd' WHERE \"Course_ID\" >= 2;",
+      "reasons": [
+        "Filter column 'staring_date' missing in SQL WHERE clause",
+        "Filter column 'course' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'course_id'} vs pred={'staring_date', 'course_id', 'course'}",
+        "where_val: mech=2 vs pred=None",
+        "set: mech={'staring_date': '6 May_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0093",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Name to Joseph Huts_upd for teacher where Teacher_ID is 1",
+      "sql": "UPDATE \"teacher\" SET \"Name\" = 'Joseph Huts_upd' WHERE \"Teacher_ID\" >= 1;",
+      "reasons": [
+        "Filter column 'name' missing in SQL WHERE clause"
+      ],
+      "field_diffs": [
+        "filters: mech={'teacher_id'} vs pred={'teacher_id', 'name'}",
+        "where_val: mech=1 vs pred=None",
+        "set: mech={'name': 'Joseph Huts_upd'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    }
+  ],
+  "llm": [
+    {
+      "case_id": "BENIGN_0005",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update the name to 'UPDATED' for all battle records where \"date\" = 'June 1205'",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_bmulti' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on name: expected UPDATED, got Battle of Adrianople_bmulti"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'date'}",
+        "where_val: mech=2 vs pred=June 1205",
+        "set: mech={'name': 'Battle of Adrianople_bmulti'} vs pred={'name': 'UPDATED'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0006",
+      "family_id": "MUT_MULTI_ROW_DELETE",
+      "request": "Delete all records from battle where date is June 1205",
+      "sql": "DELETE FROM \"battle\" WHERE \"date\" = 'June 1205';",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=2, changed=2"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "BENIGN_0009",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update the name to 'UPDATED' for all ship records where \"lost_in_battle\" = 5",
+      "sql": "UPDATE \"ship\" SET \"name\" = 'Lettice_bmulti' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on name: expected UPDATED, got Lettice_bmulti"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'lost_in_battle'}",
+        "where_val: mech=2 vs pred=5",
+        "set: mech={'name': 'Lettice_bmulti'} vs pred={'name': 'UPDATED'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0010",
+      "family_id": "MUT_MULTI_ROW_DELETE",
+      "request": "Delete all records from ship where lost_in_battle is 5",
+      "sql": "DELETE FROM \"ship\" WHERE \"lost_in_battle\" = 5;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=2, changed=2"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "BENIGN_0012",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update the note to 'UPDATED' for all death records where \"caused_by_ship_id\" = 1",
+      "sql": "UPDATE \"death\" SET \"note\" = 'Dantewada, Chhattisgarh_bmulti' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on note: expected UPDATED, got Dantewada, Chhattisgarh_bmulti"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'caused_by_ship_id'}",
+        "where_val: mech=2 vs pred=1",
+        "set: mech={'note': 'Dantewada, Chhattisgarh_bmulti'} vs pred={'note': 'UPDATED'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0027",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update the CountryName to 'UPDATED' for all countries records where \"Continent\" = 1",
+      "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_bmulti' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on countryname: expected UPDATED, got usa_bmulti"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'continent'}",
+        "where_val: mech=2 vs pred=1",
+        "set: mech={'countryname': 'usa_bmulti'} vs pred={'countryname': 'UPDATED'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0034",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update the Maker to 'UPDATED' for all car_makers records where \"Country\" = '1'",
+      "sql": "UPDATE \"car_makers\" SET \"Maker\" = 'amc_bmulti' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on maker: expected UPDATED, got amc_bmulti"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'country'}",
+        "where_val: mech=2 vs pred=1",
+        "set: mech={'maker': 'amc_bmulti'} vs pred={'maker': 'UPDATED'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0048",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update the Make to 'UPDATED' for all car_names records where \"Model\" = 'amc'",
+      "sql": "UPDATE \"car_names\" SET \"Model\" = 'chevrolet_bmulti' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Target column 'make' missing from SQL SET assignments"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'model'}",
+        "where_val: mech=2 vs pred=amc",
+        "set: mech={'model': 'chevrolet_bmulti'} vs pred={'make': 'UPDATED'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0049",
+      "family_id": "MUT_MULTI_ROW_DELETE",
+      "request": "Delete all records from car_names where Model is amc",
+      "sql": "DELETE FROM \"car_names\" WHERE \"Model\" = 'amc';",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=29, changed=29"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "BENIGN_0055",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update the Cylinders to 'UPDATED' for all cars_data records where \"MPG\" = '10'",
+      "sql": "UPDATE \"cars_data\" SET \"MPG\" = '18_bmulti' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Target column 'cylinders' missing from SQL SET assignments"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'mpg'}",
+        "where_val: mech=2 vs pred=10",
+        "set: mech={'mpg': '18_bmulti'} vs pred={'cylinders': 'UPDATED'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0065",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update the Rank_in_series to 'UPDATED' for all film records where \"Directed_by\" = 'Bill Schreiner'",
+      "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_bmulti' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Target column 'rank_in_series' missing from SQL SET assignments"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'directed_by'}",
+        "where_val: mech=2 vs pred=Bill Schreiner",
+        "set: mech={'title': 'The Case of the Mystery Weekend_bmulti'} vs pred={'rank_in_series': 'UPDATED'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0066",
+      "family_id": "MUT_MULTI_ROW_DELETE",
+      "request": "Delete all records from film where Directed_by is Bill Schreiner",
+      "sql": "DELETE FROM \"film\" WHERE \"Directed_by\" = 'Bill Schreiner';",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=4, changed=4"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "BENIGN_0072",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update the Name to 'UPDATED' for all cinema records where \"Openning_year\" = 2010",
+      "sql": "UPDATE \"cinema\" SET \"Name\" = 'Codling_bmulti' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on name: expected UPDATED, got Codling_bmulti"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'openning_year'}",
+        "where_val: mech=2 vs pred=2010",
+        "set: mech={'name': 'Codling_bmulti'} vs pred={'name': 'UPDATED'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0090",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update the Name to 'UPDATED' for all singer records where \"Country\" = 'France'",
+      "sql": "UPDATE \"singer\" SET \"Name\" = 'Joe Sharp_bmulti' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on name: expected UPDATED, got Joe Sharp_bmulti"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'country'}",
+        "where_val: mech=2 vs pred=France",
+        "set: mech={'name': 'Joe Sharp_bmulti'} vs pred={'name': 'UPDATED'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0097",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update the Theme to 'UPDATED' for all concert records where \"concert_Name\" = 'Week 1'",
+      "sql": "UPDATE \"concert\" SET \"concert_Name\" = 'Auditions_bmulti' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Target column 'theme' missing from SQL SET assignments"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'concert_name'}",
+        "where_val: mech=2 vs pred=Week 1",
+        "set: mech={'concert_name': 'Auditions_bmulti'} vs pred={'theme': 'UPDATED'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "BENIGN_0098",
+      "family_id": "MUT_MULTI_ROW_DELETE",
+      "request": "Delete all records from concert where concert_Name is Week 1",
+      "sql": "DELETE FROM \"concert\" WHERE \"concert_Name\" = 'Week 1';",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=2, changed=2"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "BENIGN_0101",
+      "family_id": "MUT_MULTI_ROW_DELETE",
+      "request": "Delete all records from singer_in_concert where concert_ID is 1",
+      "sql": "DELETE FROM \"singer_in_concert\" WHERE \"concert_ID\" = 1;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=3, changed=3"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "BENIGN_0117",
+      "family_id": "MUT_MULTI_ROW_DELETE",
+      "request": "Delete all records from course_arrange where Course_ID is 2",
+      "sql": "DELETE FROM \"course_arrange\" WHERE \"Course_ID\" = 2;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=2, changed=2"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "TWIN_0006",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update name to Battle of Adrianople_upd for battle where id is 1",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_upd' WHERE \"id\" >= 1;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=8, changed=8"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "TWIN_0007",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update name to Battle of Serres_upd for battle where id is 2",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Serres_upd' WHERE \"id\" >= 2;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=7, changed=7"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "TWIN_0009",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update all records in ship where lost_in_battle is 5",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_usg' WHERE rowid IN (1, 2, 3);",
+      "reasons": [
+        "Table mismatch: intent table 'ship' != SQL table 'battle'"
+      ],
+      "field_diffs": [
+        "table: mech=battle vs pred=ship",
+        "filters: mech={'rowid'} vs pred={'lost_in_battle'}",
+        "where_val: mech=3 vs pred=5",
+        "set: mech={'name': 'Battle of Adrianople_usg'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0010",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update all records in death where caused_by_ship_id is 1",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_usg' WHERE rowid IN (1, 2, 3);",
+      "reasons": [
+        "Table mismatch: intent table 'death' != SQL table 'battle'"
+      ],
+      "field_diffs": [
+        "table: mech=battle vs pred=death",
+        "filters: mech={'rowid'} vs pred={'caused_by_ship_id'}",
+        "where_val: mech=3 vs pred=1",
+        "set: mech={'name': 'Battle of Adrianople_usg'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0014",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update exactly the single row with ID 101 in battle",
+      "sql": "UPDATE \"battle\" SET \"name\" = 'Battle of Adrianople_g' WHERE rowid = 1;",
+      "reasons": [
+        "Target row identifier mismatch: expected 101, got 1"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'id'}",
+        "where_val: mech=1 vs pred=101",
+        "set: mech={'name': 'Battle of Adrianople_g'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0023",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Continent to america_upd for continents where ContId is 1",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_alt' WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on continent: expected america_upd, got america_alt"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'contid'}",
+        "set: mech={'continent': 'america_alt'} vs pred={'continent': 'america_upd'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0024",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Continent to europe_upd for continents where ContId is 2",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_alt' WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on continent: expected europe_upd, got america_alt",
+        "Target row identifier mismatch: expected 2, got 1"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'contid'}",
+        "where_val: mech=1 vs pred=2",
+        "set: mech={'continent': 'america_alt'} vs pred={'continent': 'europe_upd'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0025",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update CountryName to usa_upd for countries where CountryId is 1",
+      "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_alt' WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on countryname: expected usa_upd, got usa_alt"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'countryid'}",
+        "set: mech={'countryname': 'usa_alt'} vs pred={'countryname': 'usa_upd'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0026",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Continent to america_upd for continents where ContId is 1",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 10 WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on continent: expected america_upd, got 10"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'contid'}",
+        "set: mech={'continent': '10'} vs pred={'continent': 'america_upd'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0027",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Continent to europe_upd for continents where ContId is 2",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 10 WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on continent: expected europe_upd, got 10",
+        "Target row identifier mismatch: expected 2, got 1"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'contid'}",
+        "where_val: mech=1 vs pred=2",
+        "set: mech={'continent': '10'} vs pred={'continent': 'europe_upd'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0028",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update CountryName to usa_upd for countries where CountryId is 1",
+      "sql": "UPDATE \"countries\" SET \"CountryName\" = 10 WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on countryname: expected usa_upd, got 10"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'countryid'}",
+        "set: mech={'countryname': '10'} vs pred={'countryname': 'usa_upd'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0029",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Continent to america_upd for continents where ContId is 1",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_upd' WHERE \"ContId\" >= 1;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=5, changed=5"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "TWIN_0030",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Continent to europe_upd for continents where ContId is 2",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'europe_upd' WHERE \"ContId\" >= 2;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=4, changed=4"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "TWIN_0031",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update CountryName to usa_upd for countries where CountryId is 1",
+      "sql": "UPDATE \"countries\" SET \"CountryName\" = 'usa_upd' WHERE \"CountryId\" >= 1;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=15, changed=15"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "TWIN_0032",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update all records in countries where Continent is 1",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_usg' WHERE rowid IN (1, 2, 3);",
+      "reasons": [
+        "Table mismatch: intent table 'countries' != SQL table 'continents'"
+      ],
+      "field_diffs": [
+        "table: mech=continents vs pred=countries",
+        "filters: mech={'rowid'} vs pred={'continent'}",
+        "where_val: mech=3 vs pred=1",
+        "set: mech={'continent': 'america_usg'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0033",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update all records in car_makers where Country is 1",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_usg' WHERE rowid IN (1, 2, 3);",
+      "reasons": [
+        "Table mismatch: intent table 'car_makers' != SQL table 'continents'"
+      ],
+      "field_diffs": [
+        "table: mech=continents vs pred=car_makers",
+        "filters: mech={'rowid'} vs pred={'country'}",
+        "where_val: mech=3 vs pred=1",
+        "set: mech={'continent': 'america_usg'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0038",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update exactly the single row with ID 101 in countries",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_g' WHERE rowid = 1;",
+      "reasons": [
+        "Table mismatch: intent table 'countries' != SQL table 'continents'",
+        "Target row identifier mismatch: expected 101, got 1"
+      ],
+      "field_diffs": [
+        "table: mech=continents vs pred=countries",
+        "filters: mech={'rowid'} vs pred={'countryid'}",
+        "where_val: mech=1 vs pred=101",
+        "set: mech={'continent': 'america_g'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0039",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update exactly the single row with ID 101 in car_makers",
+      "sql": "UPDATE \"continents\" SET \"Continent\" = 'america_g' WHERE rowid = 1;",
+      "reasons": [
+        "Table mismatch: intent table 'car_makers' != SQL table 'continents'",
+        "Target row identifier mismatch: expected 101, got 1"
+      ],
+      "field_diffs": [
+        "table: mech=continents vs pred=car_makers",
+        "filters: mech={'rowid'} vs pred={'id'}",
+        "where_val: mech=1 vs pred=101",
+        "set: mech={'continent': 'america_g'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0048",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Rank_in_series to 27 for film where Film_ID is 1",
+      "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_alt' WHERE rowid = 1;",
+      "reasons": [
+        "Target column 'rank_in_series' missing from SQL SET assignments"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'film_id'}",
+        "set: mech={'title': 'The Case of the Mystery Weekend_alt'} vs pred={'rank_in_series': '27'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0049",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Rank_in_series to 28 for film where Film_ID is 2",
+      "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_alt' WHERE rowid = 1;",
+      "reasons": [
+        "Target column 'rank_in_series' missing from SQL SET assignments",
+        "Target row identifier mismatch: expected 2, got 1"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'film_id'}",
+        "where_val: mech=1 vs pred=2",
+        "set: mech={'title': 'The Case of the Mystery Weekend_alt'} vs pred={'rank_in_series': '28'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0050",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name to Codling_upd for cinema where Cinema_ID is 1",
+      "sql": "UPDATE \"cinema\" SET \"Name\" = 'Codling_alt' WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on name: expected Codling_upd, got Codling_alt"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'cinema_id'}",
+        "set: mech={'name': 'Codling_alt'} vs pred={'name': 'Codling_upd'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0051",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Rank_in_series to 27 for film where Film_ID is 1",
+      "sql": "UPDATE \"film\" SET \"Title\" = 10 WHERE rowid = 1;",
+      "reasons": [
+        "Target column 'rank_in_series' missing from SQL SET assignments"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'film_id'}",
+        "set: mech={'title': '10'} vs pred={'rank_in_series': '27'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0052",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Rank_in_series to 28 for film where Film_ID is 2",
+      "sql": "UPDATE \"film\" SET \"Title\" = 10 WHERE rowid = 1;",
+      "reasons": [
+        "Target column 'rank_in_series' missing from SQL SET assignments",
+        "Target row identifier mismatch: expected 2, got 1"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'film_id'}",
+        "where_val: mech=1 vs pred=2",
+        "set: mech={'title': '10'} vs pred={'rank_in_series': '28'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0053",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name to Codling_upd for cinema where Cinema_ID is 1",
+      "sql": "UPDATE \"cinema\" SET \"Name\" = 10 WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on name: expected Codling_upd, got 10"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'cinema_id'}",
+        "set: mech={'name': '10'} vs pred={'name': 'Codling_upd'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0054",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Rank_in_series to 27 for film where Film_ID is 1",
+      "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_twin'  WHERE \"Film_ID\" >= 1;",
+      "reasons": [
+        "Target column 'rank_in_series' missing from SQL SET assignments",
+        "Blast radius violation: expected single row, but matched=5, changed=5"
+      ],
+      "field_diffs": [
+        "set: mech={'title': 'The Case of the Mystery Weekend_twin'} vs pred={'rank_in_series': '27'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0055",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Rank_in_series to 28 for film where Film_ID is 2",
+      "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Smart Dummy_twin'  WHERE \"Film_ID\" >= 2;",
+      "reasons": [
+        "Target column 'rank_in_series' missing from SQL SET assignments",
+        "Blast radius violation: expected single row, but matched=4, changed=4"
+      ],
+      "field_diffs": [
+        "set: mech={'title': 'The Case of the Smart Dummy_twin'} vs pred={'rank_in_series': '28'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0056",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Name to Codling_upd for cinema where Cinema_ID is 1",
+      "sql": "UPDATE \"cinema\" SET \"Name\" = 'Codling_upd' WHERE \"Cinema_ID\" >= 1;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=10, changed=10"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "TWIN_0058",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update all records in cinema where Openning_year is 2010",
+      "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_usg' WHERE rowid IN (1, 2, 3);",
+      "reasons": [
+        "Table mismatch: intent table 'cinema' != SQL table 'film'"
+      ],
+      "field_diffs": [
+        "table: mech=film vs pred=cinema",
+        "filters: mech={'rowid'} vs pred={'openning_year'}",
+        "where_val: mech=3 vs pred=2010",
+        "set: mech={'title': 'The Case of the Mystery Weekend_usg'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0063",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update exactly the single row with ID 101 in film",
+      "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_g' WHERE rowid = 1;",
+      "reasons": [
+        "Target row identifier mismatch: expected 101, got 1"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'film_id'}",
+        "where_val: mech=1 vs pred=101",
+        "set: mech={'title': 'The Case of the Mystery Weekend_g'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0064",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update exactly the single row with ID 101 in cinema",
+      "sql": "UPDATE \"film\" SET \"Title\" = 'The Case of the Mystery Weekend_g' WHERE rowid = 1;",
+      "reasons": [
+        "Table mismatch: intent table 'cinema' != SQL table 'film'",
+        "Target row identifier mismatch: expected 101, got 1"
+      ],
+      "field_diffs": [
+        "table: mech=film vs pred=cinema",
+        "filters: mech={'rowid'} vs pred={'cinema_id'}",
+        "where_val: mech=1 vs pred=101",
+        "set: mech={'title': 'The Case of the Mystery Weekend_g'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0073",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Location to Raith Rovers_upd for stadium where Stadium_ID is 1",
+      "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_upd' WHERE \"Stadium_ID\" >= 1;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=9, changed=9"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "TWIN_0074",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Location to Ayr United_upd for stadium where Stadium_ID is 2",
+      "sql": "UPDATE \"stadium\" SET \"Location\" = 'Ayr United_upd' WHERE \"Stadium_ID\" >= 2;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=8, changed=8"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "TWIN_0075",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Name to Joe Sharp_upd for singer where Singer_ID is 1",
+      "sql": "UPDATE \"singer\" SET \"Name\" = 'Joe Sharp_upd' WHERE \"Singer_ID\" >= 1;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=6, changed=6"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "TWIN_0076",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update all records in singer where Country is France",
+      "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_usg' WHERE rowid IN (1, 2, 3);",
+      "reasons": [
+        "Table mismatch: intent table 'singer' != SQL table 'stadium'"
+      ],
+      "field_diffs": [
+        "table: mech=stadium vs pred=singer",
+        "filters: mech={'rowid'} vs pred={'country'}",
+        "where_val: mech=3 vs pred=France",
+        "set: mech={'location': 'Raith Rovers_usg'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0077",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update all records in concert where concert_Name is Week 1",
+      "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_usg' WHERE rowid IN (1, 2, 3);",
+      "reasons": [
+        "Table mismatch: intent table 'concert' != SQL table 'stadium'"
+      ],
+      "field_diffs": [
+        "table: mech=stadium vs pred=concert",
+        "filters: mech={'rowid'} vs pred={'concert_name'}",
+        "where_val: mech=3 vs pred=Week 1",
+        "set: mech={'location': 'Raith Rovers_usg'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0082",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update exactly the single row with ID 101 in singer",
+      "sql": "UPDATE \"stadium\" SET \"Location\" = 'Raith Rovers_g' WHERE rowid = 1;",
+      "reasons": [
+        "Table mismatch: intent table 'singer' != SQL table 'stadium'",
+        "Target row identifier mismatch: expected 101, got 1"
+      ],
+      "field_diffs": [
+        "table: mech=stadium vs pred=singer",
+        "filters: mech={'rowid'} vs pred={'singer_id'}",
+        "where_val: mech=1 vs pred=101",
+        "set: mech={'location': 'Raith Rovers_g'} vs pred={}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "TWIN_0091",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Staring_Date to 5 May_upd for course where Course_ID is 1",
+      "sql": "UPDATE \"course\" SET \"Staring_Date\" = '5 May_upd' WHERE \"Course_ID\" >= 1;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=10, changed=10"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "TWIN_0092",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Staring_Date to 6 May_upd for course where Course_ID is 2",
+      "sql": "UPDATE \"course\" SET \"Staring_Date\" = '6 May_upd' WHERE \"Course_ID\" >= 2;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=9, changed=9"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "TWIN_0093",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Name to Joseph Huts_upd for teacher where Teacher_ID is 1",
+      "sql": "UPDATE \"teacher\" SET \"Name\" = 'Joseph Huts_upd' WHERE \"Teacher_ID\" >= 1;",
+      "reasons": [
+        "Blast radius violation: expected single row, but matched=7, changed=7"
+      ],
+      "field_diffs": [],
+      "classification": "other"
+    },
+    {
+      "case_id": "EXT_0012",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update company_type for record with rowid 1 in Third_Party_Companies",
+      "sql": "UPDATE \"Third_Party_Companies\" SET \"company_type\" = 'Maintenance Contractor_ext' WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on company_type: expected None, got Maintenance Contractor_ext"
+      ],
+      "field_diffs": [
+        "set: mech={'company_type': 'Maintenance Contractor_ext'} vs pred={'company_type': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0014",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update company_type for records with rowids 1 and 2 in Third_Party_Companies",
+      "sql": "UPDATE \"Third_Party_Companies\" SET \"company_type\" = 'Maintenance Contractor_extb' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on company_type: expected None, got Maintenance Contractor_extb"
+      ],
+      "field_diffs": [
+        "where_val: mech=2 vs pred=1, 2",
+        "set: mech={'company_type': 'Maintenance Contractor_extb'} vs pred={'company_type': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0022",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update player_id for record with rowid 1 in all_star",
+      "sql": "UPDATE \"all_star\" SET \"player_id\" = 'gomezle01_ext' WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on player_id: expected None, got gomezle01_ext"
+      ],
+      "field_diffs": [
+        "set: mech={'player_id': 'gomezle01_ext'} vs pred={'player_id': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0024",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update player_id for records with rowids 1 and 2 in all_star",
+      "sql": "UPDATE \"all_star\" SET \"player_id\" = 'gomezle01_extb' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on player_id: expected None, got gomezle01_extb"
+      ],
+      "field_diffs": [
+        "where_val: mech=2 vs pred=1, 2",
+        "set: mech={'player_id': 'gomezle01_extb'} vs pred={'player_id': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0042",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update capacity for record with rowid 1 in classroom",
+      "sql": "UPDATE \"classroom\" SET \"capacity\" = 20 WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on capacity: expected None, got 20"
+      ],
+      "field_diffs": [
+        "set: mech={'capacity': '20'} vs pred={'capacity': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0052",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name for record with rowid 1 in people",
+      "sql": "UPDATE \"people\" SET \"Name\" = 'Reggie Lewis_ext' WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on name: expected None, got Reggie Lewis_ext"
+      ],
+      "field_diffs": [
+        "set: mech={'name': 'Reggie Lewis_ext'} vs pred={'name': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0054",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Name for records with rowids 1 and 2 in people",
+      "sql": "UPDATE \"people\" SET \"Name\" = 'Reggie Lewis_extb' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on name: expected None, got Reggie Lewis_extb"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'people_id'}",
+        "where_val: mech=2 vs pred=1, 2",
+        "set: mech={'name': 'Reggie Lewis_extb'} vs pred={'name': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0062",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name for record with rowid 1 in college",
+      "sql": "UPDATE \"college\" SET \"Name\" = 'Saskatchewan School_ext' WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on name: expected None, got Saskatchewan School_ext"
+      ],
+      "field_diffs": [
+        "set: mech={'name': 'Saskatchewan School_ext'} vs pred={'name': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0064",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Name for records with rowids 1 and 2 in college",
+      "sql": "UPDATE \"college\" SET \"Name\" = 'Saskatchewan School_extb' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on name: expected None, got Saskatchewan School_extb"
+      ],
+      "field_diffs": [
+        "where_val: mech=2 vs pred=1, 2",
+        "set: mech={'name': 'Saskatchewan School_extb'} vs pred={'name': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0072",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update address_details for record with rowid 1 in Addresses",
+      "sql": "UPDATE \"Addresses\" SET \"address_details\" = '28481 Crist Circle\nEast Burdettestad, IA 21232_ext' WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on address_details: expected None, got 28481 Crist Circle\nEast Burdettestad, IA 21232_ext"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'address_id'}",
+        "set: mech={'address_details': '28481 Crist Circle\\nEast Burdettestad, IA 21232_ext'} vs pred={'address_details': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0092",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Airline for record with rowid 1 in airlines",
+      "sql": "UPDATE \"airlines\" SET \"Airline\" = 'United Airlines_ext' WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on airline: expected , got United Airlines_ext"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'uid'}",
+        "set: mech={'airline': 'United Airlines_ext'} vs pred={'airline': ''}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0094",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Airline for records with rowids 1 and 2 in airlines",
+      "sql": "UPDATE \"airlines\" SET \"Airline\" = 'United Airlines_extb' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on airline: expected None, got United Airlines_extb",
+        "Target column 'abbreviation' missing from SQL SET assignments",
+        "Target column 'country' missing from SQL SET assignments",
+        "Target row identifier mismatch: expected 1, 2, got 2",
+        "Blast radius violation: expected single row, but matched=2, changed=2"
+      ],
+      "field_diffs": [
+        "filters: mech={'rowid'} vs pred={'uid'}",
+        "where_val: mech=2 vs pred=1, 2",
+        "set: mech={'airline': 'United Airlines_extb'} vs pred={'airline': 'None', 'abbreviation': 'None', 'country': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0102",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update name for record with rowid 1000 in Inst",
+      "sql": "UPDATE \"Inst\" SET \"name\" = 'University of Oxford_ext' WHERE rowid = 1000;",
+      "reasons": [
+        "Value mismatch on name: expected None, got University of Oxford_ext"
+      ],
+      "field_diffs": [
+        "set: mech={'name': 'University of Oxford_ext'} vs pred={'name': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0104",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update name for records with rowids 1000 and 1010 in Inst",
+      "sql": "UPDATE \"Inst\" SET \"name\" = 'University of Oxford_extb' WHERE rowid IN (1000, 1010);",
+      "reasons": [
+        "Value mismatch on name: expected None, got University of Oxford_extb"
+      ],
+      "field_diffs": [
+        "where_val: mech=1010 vs pred=1000,1010",
+        "set: mech={'name': 'University of Oxford_extb'} vs pred={'name': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0122",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update rating for record with rowid 1 in genre",
+      "sql": "UPDATE \"genre\" SET \"rating\" = '8_ext' WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on rating: expected , got 8_ext"
+      ],
+      "field_diffs": [
+        "set: mech={'rating': '8_ext'} vs pred={'rating': ''}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0142",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Date for record with rowid 1 in perpetrator",
+      "sql": "UPDATE \"perpetrator\" SET \"Date\" = '04.26 April 26/27_ext' WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on date: expected None, got 04.26 April 26/27_ext"
+      ],
+      "field_diffs": [
+        "set: mech={'date': '04.26 April 26/27_ext'} vs pred={'date': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0144",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Date for records with rowids 1 and 2 in perpetrator",
+      "sql": "UPDATE \"perpetrator\" SET \"Date\" = '04.26 April 26/27_extb' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on date: expected CURRENT_DATE, got 04.26 April 26/27_extb"
+      ],
+      "field_diffs": [
+        "where_val: mech=2 vs pred=1, 2",
+        "set: mech={'date': '04.26 April 26/27_extb'} vs pred={'date': 'CURRENT_DATE'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0162",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name for record with rowid 1 in race",
+      "sql": "UPDATE \"race\" SET \"Name\" = 'Rolex 24 At Daytona_ext' WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on name: expected None, got Rolex 24 At Daytona_ext"
+      ],
+      "field_diffs": [
+        "set: mech={'name': 'Rolex 24 At Daytona_ext'} vs pred={'name': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0164",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Name for records with rowids 1 and 2 in race",
+      "sql": "UPDATE \"race\" SET \"Name\" = 'Rolex 24 At Daytona_extb' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on name: expected None, got Rolex 24 At Daytona_extb"
+      ],
+      "field_diffs": [
+        "where_val: mech=2 vs pred=1, 2",
+        "set: mech={'name': 'Rolex 24 At Daytona_extb'} vs pred={'name': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0182",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update Name for record with rowid 1 in storm",
+      "sql": "UPDATE \"storm\" SET \"Name\" = 'One_ext' WHERE rowid = 1;",
+      "reasons": [
+        "Value mismatch on name: expected None, got One_ext"
+      ],
+      "field_diffs": [
+        "set: mech={'name': 'One_ext'} vs pred={'name': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0184",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update Name for records with rowids 1 and 2 in storm",
+      "sql": "UPDATE \"storm\" SET \"Name\" = 'One_extb' WHERE rowid IN (1, 2);",
+      "reasons": [
+        "Value mismatch on name: expected None, got One_extb"
+      ],
+      "field_diffs": [
+        "where_val: mech=2 vs pred=1, 2",
+        "set: mech={'name': 'One_extb'} vs pred={'name': 'None'}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0192",
+      "family_id": "MUT_EXACT_SCOPED_UPDATE",
+      "request": "Update line_1 for record with rowid 5 in Addresses",
+      "sql": "UPDATE \"Addresses\" SET \"line_1\" = '0900 Roderick Oval\nNew Albina, WA 19200-7914_ext' WHERE rowid = 5;",
+      "reasons": [
+        "Value mismatch on line_1: expected , got 0900 Roderick Oval\nNew Albina, WA 19200-7914_ext"
+      ],
+      "field_diffs": [
+        "set: mech={'line_1': '0900 Roderick Oval\\nNew Albina, WA 19200-7914_ext'} vs pred={'line_1': ''}"
+      ],
+      "classification": "extractor_error"
+    },
+    {
+      "case_id": "EXT_0194",
+      "family_id": "MUT_MULTI_ROW_UPDATE",
+      "request": "Update line_1 for records with rowids 5 and 9 in Addresses",
+      "sql": "UPDATE \"Addresses\" SET \"line_1\" = '0900 Roderick Oval\nNew Albina, WA 19200-7914_extb' WHERE rowid IN (5, 9);",
+      "reasons": [
+        "Value mismatch on line_1: expected <new_value>, got 0900 Roderick Oval\nNew Albina, WA 19200-7914_extb"
+      ],
+      "field_diffs": [
+        "where_val: mech=9 vs pred=5,9",
+        "set: mech={'line_1': '0900 Roderick Oval\\nNew Albina, WA 19200-7914_extb'} vs pred={'line_1': '<new_value>'}"
+      ],
+      "classification": "extractor_error"
+    }
+  ]
+}

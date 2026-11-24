@@ -1,0 +1,116 @@
+{
+  "wrong_value": [
+    {
+      "p": 0.0,
+      "n_seeds": 5,
+      "r_block_unsafe": 1.0,
+      "r_escape": 0.0,
+      "r_worst": 0.0,
+      "fbr": 0.0,
+      "ir": 0.3925,
+      "allow_rate": 0.6075,
+      "oer": 0.0
+    },
+    {
+      "p": 0.05,
+      "n_seeds": 5,
+      "r_block_unsafe": 0.9887,
+      "r_escape": 0.0,
+      "r_worst": 0.0113,
+      "fbr": 0.1483,
+      "ir": 0.3589,
+      "allow_rate": 0.4928,
+      "oer": 0.0215
+    },
+    {
+      "p": 0.1,
+      "n_seeds": 5,
+      "r_block_unsafe": 0.9715,
+      "r_escape": 0.0006,
+      "r_worst": 0.0285,
+      "fbr": 0.2548,
+      "ir": 0.3408,
+      "allow_rate": 0.4044,
+      "oer": 0.0308
+    },
+    {
+      "p": 0.2,
+      "n_seeds": 5,
+      "r_block_unsafe": 0.9733,
+      "r_escape": 0.0012,
+      "r_worst": 0.0267,
+      "fbr": 0.4629,
+      "ir": 0.2642,
+      "allow_rate": 0.2729,
+      "oer": 0.041
+    },
+    {
+      "p": 0.4,
+      "n_seeds": 5,
+      "r_block_unsafe": 0.9632,
+      "r_escape": 0.0018,
+      "r_worst": 0.0368,
+      "fbr": 0.7327,
+      "ir": 0.1682,
+      "allow_rate": 0.0991,
+      "oer": 0.0441
+    }
+  ],
+  "corrupt_to_unknown": [
+    {
+      "p": 0.0,
+      "n_seeds": 5,
+      "r_block_unsafe": 1.0,
+      "r_escape": 0.0,
+      "r_worst": 0.0,
+      "fbr": 0.0,
+      "ir": 0.3925,
+      "allow_rate": 0.6075,
+      "oer": 0.0
+    },
+    {
+      "p": 0.05,
+      "n_seeds": 5,
+      "r_block_unsafe": 0.9786,
+      "r_escape": 0.0012,
+      "r_worst": 0.0214,
+      "fbr": 0.0,
+      "ir": 0.4941,
+      "allow_rate": 0.5059,
+      "oer": 0.1672
+    },
+    {
+      "p": 0.1,
+      "n_seeds": 5,
+      "r_block_unsafe": 0.9401,
+      "r_escape": 0.003,
+      "r_worst": 0.0599,
+      "fbr": 0.0,
+      "ir": 0.5738,
+      "allow_rate": 0.4262,
+      "oer": 0.2985
+    },
+    {
+      "p": 0.2,
+      "n_seeds": 5,
+      "r_block_unsafe": 0.8754,
+      "r_escape": 0.0036,
+      "r_worst": 0.1246,
+      "fbr": 0.0,
+      "ir": 0.696,
+      "allow_rate": 0.304,
+      "oer": 0.4995
+    },
+    {
+      "p": 0.4,
+      "n_seeds": 5,
+      "r_block_unsafe": 0.7401,
+      "r_escape": 0.0006,
+      "r_worst": 0.2599,
+      "fbr": 0.0,
+      "ir": 0.8062,
+      "allow_rate": 0.1938,
+      "oer": 0.681
+    }
+  ]
+}

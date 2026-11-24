@@ -91,6 +91,47 @@ def extract_sql_components(sql_str):
 
     return comp
 
+def _normalize_ident(ident: str) -> str:
+    """Normalize SQL identifier: strip quotes/backticks, strip table qualifier, lowercase."""
+    if not ident:
+        return ""
+    s = str(ident).strip().strip('"`\'')
+    if '.' in s:
+        s = s.split('.')[-1].strip('"`\'')
+    return s.lower()
+
+def _normalize_value_str(val) -> str:
+    """Normalize value for comparison: strip quotes, lowercase, canonicalize numeric/boolean."""
+    if val is None:
+        return ""
+    s = str(val).strip().strip('"`\'')
+    # Boolean canonicalization
+    if s.lower() in ('true', 't'):
+        return '1'
+    if s.lower() in ('false', 'f'):
+        return '0'
+    return s
+
+def _values_are_equivalent(v1, v2) -> bool:
+    """Check value equivalence with type/numeric/string tolerance."""
+    if v1 is None and v2 is None:
+        return True
+    if v1 is None or v2 is None:
+        return False
+    s1 = _normalize_value_str(v1)
+    s2 = _normalize_value_str(v2)
+    if s1.lower() == s2.lower():
+        return True
+    # Try numeric equivalence
+    try:
+        f1 = float(s1)
+        f2 = float(s2)
+        if abs(f1 - f2) < 1e-6:
+            return True
+    except (ValueError, TypeError):
+        pass
+    return False
+
 def compare_intent_and_sql(intent: IntentSpecV2, sql_comp: dict, measured_effects: dict, risk_mode="rules", variant="variant_a"):
     violations = []
     reasons = []
@@ -118,7 +159,9 @@ def compare_intent_and_sql(intent: IntentSpecV2, sql_comp: dict, measured_effect
 
     # 2. Target Table Mismatch
     if intent.table and sql_comp['table']:
-        if intent.table.lower() != sql_comp['table'].lower():
+        int_tbl = _normalize_ident(intent.table)
+        sql_tbl = _normalize_ident(sql_comp['table'])
+        if int_tbl != sql_tbl:
             violations.append("MUT_WRONG_TABLE")
             reasons.append(f"Table mismatch: intent table '{intent.table}' != SQL table '{sql_comp['table']}'")
             risk_score += 100.0
@@ -128,28 +171,29 @@ def compare_intent_and_sql(intent: IntentSpecV2, sql_comp: dict, measured_effect
     # 3. SET Column and Value Mismatches (UPDATE)
     if sql_comp['operation'] == 'UPDATE':
         if intent.set_assignments and sql_comp['set_assignments']:
+            # Normalize sql set assignments keys
+            norm_sql_set = {_normalize_ident(k): v for k, v in sql_comp['set_assignments'].items()}
             for col, val in intent.set_assignments.items():
-                c_low = col.lower()
-                if c_low not in [sc.lower() for sc in sql_comp['set_assignments']]:
+                c_norm = _normalize_ident(col)
+                if c_norm not in norm_sql_set:
                     violations.append("MUT_WRONG_COLUMN")
                     reasons.append(f"Target column '{col}' missing from SQL SET assignments")
                     risk_score += 80.0
                 else:
-                    actual_val = str(sql_comp['set_assignments'].get(c_low, '')).strip('\'"')
-                    expected_val = str(val).strip('\'"')
-                    if actual_val.lower() != expected_val.lower():
+                    actual_val = norm_sql_set[c_norm]
+                    expected_val = val
+                    if not _values_are_equivalent(expected_val, actual_val):
                         try:
-                            act_num = float(actual_val)
-                            exp_num = float(expected_val)
-                            if act_num != exp_num:
-                                ratio = act_num / exp_num if exp_num != 0 else 0
-                                if ratio in (10, 100, 0.1, 0.01):
-                                    violations.append("MUT_VALUE_SCALING")
-                                    reasons.append(f"Value scaling error on {col}: expected {expected_val}, got {actual_val}")
-                                else:
-                                    violations.append("MUT_WRONG_VALUE")
-                                    reasons.append(f"Value mismatch on {col}: expected {expected_val}, got {actual_val}")
-                                risk_score += 80.0
+                            act_num = float(str(actual_val).strip('\'"'))
+                            exp_num = float(str(expected_val).strip('\'"'))
+                            ratio = act_num / exp_num if exp_num != 0 else 0
+                            if ratio in (10, 100, 0.1, 0.01):
+                                violations.append("MUT_VALUE_SCALING")
+                                reasons.append(f"Value scaling error on {col}: expected {expected_val}, got {actual_val}")
+                            else:
+                                violations.append("MUT_WRONG_VALUE")
+                                reasons.append(f"Value mismatch on {col}: expected {expected_val}, got {actual_val}")
+                            risk_score += 80.0
                         except Exception:
                             violations.append("MUT_WRONG_VALUE")
                             reasons.append(f"Value mismatch on {col}: expected {expected_val}, got {actual_val}")
@@ -159,16 +203,14 @@ def compare_intent_and_sql(intent: IntentSpecV2, sql_comp: dict, measured_effect
 
     # 4. Filter Column & Target Row Mismatches (WHERE)
     if intent.where_val and sql_comp['where_val']:
-        int_wv = str(intent.where_val).strip('\'"').lower()
-        sql_wv = str(sql_comp['where_val']).strip('\'"').lower()
-        if int_wv != sql_wv and intent.expected_cardinality == 'single':
+        if not _values_are_equivalent(intent.where_val, sql_comp['where_val']) and intent.expected_cardinality == 'single':
             violations.append("MUT_WRONG_ROW")
-            reasons.append(f"Target row identifier mismatch: expected {int_wv}, got {sql_wv}")
+            reasons.append(f"Target row identifier mismatch: expected {intent.where_val}, got {sql_comp['where_val']}")
             risk_score += 85.0
 
     if intent.filter_columns and sql_comp['filter_columns']:
-        int_cols = [c.lower() for c in intent.filter_columns]
-        sql_cols = [c.lower() for c in sql_comp['filter_columns']]
+        int_cols = [_normalize_ident(c) for c in intent.filter_columns]
+        sql_cols = [_normalize_ident(c) for c in sql_comp['filter_columns']]
         for c in int_cols:
             if c not in sql_cols and 'rowid' not in sql_cols:
                 violations.append("MUT_WRONG_COLUMN")

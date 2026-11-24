@@ -1,0 +1,416 @@
+{
+  "equivalent": {
+    "A_subquery_limit": {
+      "n_total": 40,
+      "n_verified": 38,
+      "n_discarded": 2,
+      "tracks": {
+        "linker": {
+          "agreement_count": 38,
+          "disagreement_count": 0,
+          "agreement_rate": 100.0,
+          "flips_by_family": {},
+          "sample_diffs": [],
+          "outcomes": null
+        },
+        "llm": {
+          "agreement_count": 38,
+          "disagreement_count": 0,
+          "agreement_rate": 100.0,
+          "flips_by_family": {},
+          "sample_diffs": [],
+          "outcomes": null
+        }
+      }
+    },
+    "B_tautology_equiv": {
+      "n_total": 40,
+      "n_verified": 40,
+      "n_discarded": 0,
+      "tracks": {
+        "linker": {
+          "agreement_count": 40,
+          "disagreement_count": 0,
+          "agreement_rate": 100.0,
+          "flips_by_family": {},
+          "sample_diffs": [],
+          "outcomes": null
+        },
+        "llm": {
+          "agreement_count": 40,
+          "disagreement_count": 0,
+          "agreement_rate": 100.0,
+          "flips_by_family": {},
+          "sample_diffs": [],
+          "outcomes": null
+        }
+      }
+    },
+    "C_case_alias": {
+      "n_total": 40,
+      "n_verified": 40,
+      "n_discarded": 0,
+      "tracks": {
+        "linker": {
+          "agreement_count": 40,
+          "disagreement_count": 0,
+          "agreement_rate": 100.0,
+          "flips_by_family": {},
+          "sample_diffs": [],
+          "outcomes": null
+        },
+        "llm": {
+          "agreement_count": 40,
+          "disagreement_count": 0,
+          "agreement_rate": 100.0,
+          "flips_by_family": {},
+          "sample_diffs": [],
+          "outcomes": null
+        }
+      }
+    },
+    "D_cte_rename": {
+      "n_total": 35,
+      "n_verified": 35,
+      "n_discarded": 0,
+      "tracks": {
+        "linker": {
+          "agreement_count": 35,
+          "disagreement_count": 0,
+          "agreement_rate": 100.0,
+          "flips_by_family": {},
+          "sample_diffs": [],
+          "outcomes": null
+        },
+        "llm": {
+          "agreement_count": 35,
+          "disagreement_count": 0,
+          "agreement_rate": 100.0,
+          "flips_by_family": {},
+          "sample_diffs": [],
+          "outcomes": null
+        }
+      }
+    },
+    "E_order_limit": {
+      "n_total": 40,
+      "n_verified": 40,
+      "n_discarded": 0,
+      "tracks": {
+        "linker": {
+          "agreement_count": 8,
+          "disagreement_count": 32,
+          "agreement_rate": 20.0,
+          "flips_by_family": {
+            "MUT_EXACT_SCOPED_UPDATE": 30,
+            "MUT_WRONG_COLUMN": 2
+          },
+          "sample_diffs": [
+            {
+              "case_id": "BENIGN_0001",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "BLOCK",
+              "rew_dec": "CONFIRM",
+              "orig_reasons": [
+                "Filter column 'name' missing in SQL WHERE clause"
+              ],
+              "rew_reasons": [
+                "Unverifiable intent fields for write: ['set_assignments']"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0003",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "BLOCK",
+              "rew_dec": "CONFIRM",
+              "orig_reasons": [
+                "Filter column 'name' missing in SQL WHERE clause"
+              ],
+              "rew_reasons": [
+                "Unverifiable intent fields for write: ['set_assignments']"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0018",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "BLOCK",
+              "rew_dec": "CONFIRM",
+              "orig_reasons": [
+                "Filter column 'continent' missing in SQL WHERE clause"
+              ],
+              "rew_reasons": [
+                "Unverifiable intent fields for write: ['set_assignments', 'cardinality']"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0020",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "BLOCK",
+              "rew_dec": "CONFIRM",
+              "orig_reasons": [
+                "Filter column 'continent' missing in SQL WHERE clause"
+              ],
+              "rew_reasons": [
+                "Unverifiable intent fields for write: ['set_assignments', 'cardinality']"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0023",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "BLOCK",
+              "rew_dec": "CONFIRM",
+              "orig_reasons": [
+                "Filter column 'countryname' missing in SQL WHERE clause"
+              ],
+              "rew_reasons": [
+                "Unverifiable intent fields for write: ['set_assignments', 'cardinality']"
+              ]
+            }
+          ],
+          "outcomes": null
+        },
+        "llm": {
+          "agreement_count": 40,
+          "disagreement_count": 0,
+          "agreement_rate": 100.0,
+          "flips_by_family": {},
+          "sample_diffs": [],
+          "outcomes": null
+        }
+      }
+    }
+  },
+  "nonequivalent": {
+    "X_uncorrelated_exists": {
+      "n_total": 20,
+      "n_verified": 20,
+      "n_discarded": 0,
+      "tracks": {
+        "linker": {
+          "agreement_count": 6,
+          "disagreement_count": 14,
+          "agreement_rate": 30.0,
+          "flips_by_family": {
+            "MUT_EXACT_SCOPED_UPDATE": 14
+          },
+          "sample_diffs": [
+            {
+              "case_id": "BENIGN_0018",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "BLOCK",
+              "rew_dec": "CONFIRM",
+              "orig_reasons": [
+                "Filter column 'continent' missing in SQL WHERE clause"
+              ],
+              "rew_reasons": [
+                "Unverifiable intent fields for write: ['set_assignments', 'cardinality']"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0020",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "BLOCK",
+              "rew_dec": "CONFIRM",
+              "orig_reasons": [
+                "Filter column 'continent' missing in SQL WHERE clause"
+              ],
+              "rew_reasons": [
+                "Unverifiable intent fields for write: ['set_assignments', 'cardinality']"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0023",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "BLOCK",
+              "rew_dec": "CONFIRM",
+              "orig_reasons": [
+                "Filter column 'countryname' missing in SQL WHERE clause"
+              ],
+              "rew_reasons": [
+                "Unverifiable intent fields for write: ['set_assignments', 'cardinality']"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0025",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "BLOCK",
+              "rew_dec": "CONFIRM",
+              "orig_reasons": [
+                "Filter column 'countryname' missing in SQL WHERE clause"
+              ],
+              "rew_reasons": [
+                "Unverifiable intent fields for write: ['set_assignments', 'cardinality']"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0037",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "BLOCK",
+              "rew_dec": "CONFIRM",
+              "orig_reasons": [
+                "Filter column 'maker' missing in SQL WHERE clause"
+              ],
+              "rew_reasons": [
+                "Unverifiable intent fields for write: ['set_assignments', 'cardinality']"
+              ]
+            }
+          ],
+          "outcomes": {
+            "BLOCK": 6,
+            "CONFIRM": 14
+          }
+        },
+        "llm": {
+          "agreement_count": 0,
+          "disagreement_count": 20,
+          "agreement_rate": 0.0,
+          "flips_by_family": {
+            "MUT_EXACT_SCOPED_UPDATE": 20
+          },
+          "sample_diffs": [
+            {
+              "case_id": "BENIGN_0001",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "ALLOW",
+              "rew_dec": "BLOCK",
+              "orig_reasons": [],
+              "rew_reasons": [
+                "Blast radius violation: expected single row, but matched=8, changed=8"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0003",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "ALLOW",
+              "rew_dec": "BLOCK",
+              "orig_reasons": [],
+              "rew_reasons": [
+                "Target row identifier mismatch: expected 2, got 1",
+                "Blast radius violation: expected single row, but matched=8, changed=8"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0018",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "ALLOW",
+              "rew_dec": "BLOCK",
+              "orig_reasons": [],
+              "rew_reasons": [
+                "Blast radius violation: expected single row, but matched=5, changed=5"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0020",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "ALLOW",
+              "rew_dec": "BLOCK",
+              "orig_reasons": [],
+              "rew_reasons": [
+                "Target row identifier mismatch: expected 2, got 1",
+                "Blast radius violation: expected single row, but matched=5, changed=5"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0023",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "ALLOW",
+              "rew_dec": "BLOCK",
+              "orig_reasons": [],
+              "rew_reasons": [
+                "Blast radius violation: expected single row, but matched=15, changed=15"
+              ]
+            }
+          ],
+          "outcomes": {
+            "BLOCK": 20
+          }
+        }
+      }
+    },
+    "Y_widened_in": {
+      "n_total": 20,
+      "n_verified": 20,
+      "n_discarded": 0,
+      "tracks": {
+        "linker": {
+          "agreement_count": 20,
+          "disagreement_count": 0,
+          "agreement_rate": 100.0,
+          "flips_by_family": {},
+          "sample_diffs": [],
+          "outcomes": {
+            "BLOCK": 20
+          }
+        },
+        "llm": {
+          "agreement_count": 0,
+          "disagreement_count": 20,
+          "agreement_rate": 0.0,
+          "flips_by_family": {
+            "MUT_EXACT_SCOPED_UPDATE": 20
+          },
+          "sample_diffs": [
+            {
+              "case_id": "BENIGN_0001",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "ALLOW",
+              "rew_dec": "BLOCK",
+              "orig_reasons": [],
+              "rew_reasons": [
+                "Target row identifier mismatch: expected 1, got 3",
+                "Blast radius violation: expected single row, but matched=3, changed=3"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0003",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "ALLOW",
+              "rew_dec": "BLOCK",
+              "orig_reasons": [],
+              "rew_reasons": [
+                "Target row identifier mismatch: expected 2, got 4",
+                "Blast radius violation: expected single row, but matched=3, changed=3"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0018",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "ALLOW",
+              "rew_dec": "BLOCK",
+              "orig_reasons": [],
+              "rew_reasons": [
+                "Target row identifier mismatch: expected 1, got 3",
+                "Blast radius violation: expected single row, but matched=3, changed=3"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0020",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "ALLOW",
+              "rew_dec": "BLOCK",
+              "orig_reasons": [],
+              "rew_reasons": [
+                "Target row identifier mismatch: expected 2, got 4",
+                "Blast radius violation: expected single row, but matched=3, changed=3"
+              ]
+            },
+            {
+              "case_id": "BENIGN_0023",
+              "family_id": "MUT_EXACT_SCOPED_UPDATE",
+              "orig_dec": "ALLOW",
+              "rew_dec": "BLOCK",
+              "orig_reasons": [],
+              "rew_reasons": [
+                "Target row identifier mismatch: expected 1, got 3",
+                "Blast radius violation: expected single row, but matched=3, changed=3"
+              ]
+            }
+          ],
+          "outcomes": {
+            "BLOCK": 20
+          }
+        }
+      }
+    }
+  }
+}
