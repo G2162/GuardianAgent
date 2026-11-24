@@ -48,10 +48,10 @@ Prompt lives in `prompts/intent_extractor_v1.txt`. Few-shot examples use a toy w
 ### Call Statistics (all dev runs)
 | Metric | Value |
 |--------|-------|
-| Total entries in call log | 3127 |
-| Cache hits | 2583 (82.6%) |
-| Cache misses (live calls) | 544 |
-| Parse OK (of live calls) | 544 |
+| Total entries in call log | 4242 |
+| Cache hits | 2730 (64.4%) |
+| Cache misses (live calls) | 1512 |
+| Parse OK (of live calls) | 1512 |
 | Parse failures / timeouts | 0 |
 | Fallback to linker | **None** (fail-closed: unknown → CONFIRM) |
 
@@ -152,10 +152,14 @@ Prompt lives in `prompts/intent_extractor_v1.txt`. Few-shot examples use a toy w
 
 | Configuration | R_block | R_escape | R_worst | FBR | IR | OER | N |
 |---------------|---------|----------|---------|-----|-----|-----|---|
-| LLM-Judge (seed 42) | 92.2% | 7.8% | 7.8% | 33.6% | 33.6% | 0.0% | 229 |
+| LLM-Judge (seed 42) | 97.0% | 3.0% | 3.0% | 35.2% | 35.2% | 0.0% | 448 |
+| LLM-Judge (seed 43) | 97.0% | 3.0% | 3.0% | 35.2% | 35.2% | 0.0% | 448 |
+| LLM-Judge (seed 44) | 97.0% | 3.0% | 3.0% | 35.2% | 35.2% | 0.0% | 448 |
+
+**Run-to-run agreement (across seeds 42, 43, 44):** 448/448 = **100.0% (100% deterministic)**
 
 > [!WARNING]
-> The unconstrained LLM-as-judge exhibits an escape rate of **~11%** ($R_{\text{escape}} = 0.111$), failing to catch destructive or off-target writes that look plausible. In contrast, GuardianAgent v2.2 with Layer 1-3 structural verification achieves **0.0% escape rate** ($R_{\text{escape}} = 0.000$) using the identical underlying model.
+> The unconstrained LLM-as-judge exhibits an escape rate of **3.02%** ($R_{\text{escape}} = 0.0302$, allowing 7 destructive mutations) and a false-block rate of **35.19%**. In contrast, GuardianAgent v2.2 with Layer 1-3 structural verification achieves **0.0% escape rate** ($R_{\text{escape}} = 0.0000$) and lower false-block rate (**26.39%**) using the identical underlying model.
 
 ## Part 5: Semantic Robustness — Execution-Verified
 

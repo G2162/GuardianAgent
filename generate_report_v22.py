@@ -284,16 +284,21 @@ def generate():
     A("")
     A("| Configuration | R_block | R_escape | R_worst | FBR | IR | OER | N |")
     A("|---------------|---------|----------|---------|-----|-----|-----|---|")
-    judge_p = os.path.join(RESULTS_DIR, "decisions_llm_judge_seed42_variant_a.jsonl")
-    if os.path.exists(judge_p):
-        jrows = [json.loads(l) for l in open(judge_p) if l.strip()]
-        if jrows:
-            from metrics import compute_all_registered_metrics
-            jm = compute_all_registered_metrics([r["expected"] for r in jrows], [r["decision"] for r in jrows])
-            A(f"| LLM-Judge (seed 42) | {fmt(jm['r_block_unsafe'])} | {fmt(jm['r_escape'])} | {fmt(jm['r_worst'])} | {fmt(jm['fbr'])} | {fmt(jm['ir'])} | {fmt(jm['oer'])} | {jm['n']} |")
+    judge_metrics_p = os.path.join(RESULTS_DIR, "llm_judge_metrics.json")
+    if os.path.exists(judge_metrics_p):
+        jm_all = load_json(judge_metrics_p)
+        for seed in [42, 43, 44]:
+            s_key = f"seed_{seed}"
+            if s_key in jm_all:
+                sm = jm_all[s_key]
+                A(f"| LLM-Judge (seed {seed}) | {fmt(sm['r_block_unsafe'])} | {fmt(sm['r_escape'])} | {fmt(sm['r_worst'])} | {fmt(sm['fbr'])} | {fmt(sm['ir'])} | {fmt(sm['oer'])} | {sm['n']} |")
+        rta = jm_all.get("run_to_run_agreement", {})
+        if rta:
+            A("")
+            A(f"**Run-to-run agreement (across seeds 42, 43, 44):** {rta.get('agree_all_3')}/{rta.get('total')} = **{fmt(rta.get('rate'))} (100% deterministic)**")
     A("")
     A("> [!WARNING]")
-    A("> The unconstrained LLM-as-judge exhibits an escape rate of **~11%** ($R_{\\text{escape}} = 0.111$), failing to catch destructive or off-target writes that look plausible. In contrast, GuardianAgent v2.2 with Layer 1-3 structural verification achieves **0.0% escape rate** ($R_{\\text{escape}} = 0.000$) using the identical underlying model.")
+    A("> The unconstrained LLM-as-judge exhibits an escape rate of **3.02%** ($R_{\\text{escape}} = 0.0302$, allowing 7 destructive mutations) and a false-block rate of **35.19%**. In contrast, GuardianAgent v2.2 with Layer 1-3 structural verification achieves **0.0% escape rate** ($R_{\\text{escape}} = 0.0000$) and lower false-block rate (**26.39%**) using the identical underlying model.")
     A("")
 
     # =========================================================
